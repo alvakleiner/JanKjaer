@@ -31,7 +31,12 @@ function Home() {
         <>
             {/* Hero / portrett */}
             <div className="pt-8 pb-10 flex justify-center">
-                <img src="/images/pappa.jpg" alt="portrett" />
+                <div className="hidden sm:block">
+                    <img src="/images/pappa.jpg" alt="portrett" />
+                </div>
+                <div className="sm:hidden">
+                    <img src="/images/pappa-sm.jpg" alt="portrett" />
+                </div>
             </div>
             <section className="bg-white">
                 <div className="max-w-5xl mx-auto px-4 md:px-8 lg:px-12 py-8">
@@ -91,7 +96,7 @@ function Home() {
                     </div>
                 </div>
             </section>
-            <section className="mt-16 mb-16">
+            <section className="mt-16 mb-20">
                 <div className="max-w-5xl mx-auto px-4 md:px-8 lg:px-8 xl:px-10">
 
                     {/* < 800px: scroller */}
