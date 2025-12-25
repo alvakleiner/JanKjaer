@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Playfair+Display:wght@400;500;600&family=Playfair+Display+SC:wght@400;700&display=swap');
 
 /* Tailwind directives - these MUST come after your custom styles */
 @tailwind utilities;

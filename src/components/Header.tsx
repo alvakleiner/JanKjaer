@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import { Search, Globe, Menu, Check } from "lucide-react"
-import { useLanguage } from "./context/LanguageContext" // <- juster sti ved behov
+import { useLanguage } from "../context/LanguageContext" // <- juster sti ved behov
 
 const navLinks = [
   { key: "bio", href: "/biografi", label: { no: "Biografi", en: "Biography" } },
@@ -131,7 +131,7 @@ function Header() {
         <a
         key={link.key}
         href={link.href}
-        className="text-sm tracking-wide text-neutral-800 hover:text-black"
+        className="lg:text-base md:text-sm tracking-wide text-gray-700 hover:text-black"
         >
         {link.label[lang]}
         </a>

@@ -1,16 +1,18 @@
-import Header from './Header'
-import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Header from "./components/Header"
+
+import Home from "./pages/Home"
 
 function App() {
   return (
-    <>
-      <div>
-        <Header />
-      </div>
-      <div className='pt-4 pb-4'>
-        <img src="/images/pappa.jpg" alt="portrett" />
-      </div>
-    </>
+    <BrowserRouter>
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </main>
+    </BrowserRouter>
   )
 }
 
