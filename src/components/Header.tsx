@@ -36,8 +36,8 @@ function Header() {
   }, [])
 
   return (
-    <header className="bg-white pt-2">
-      <div className="flex justify-between p-4">
+    <header className="bg-white pt-2 md:pb-8">
+      <div className="flex justify-between p-4 pb-8 md:pb-0">
         <div className="flex-1 lg:px-4 md:px-4 py-2">
           <button
             aria-label="Menu"
@@ -131,7 +131,7 @@ function Header() {
         <a
         key={link.key}
         href={link.href}
-        className="lg:text-base md:text-sm tracking-wide text-gray-700 hover:text-black"
+        className="lg:text-base md:text-sm tracking-wide pt-2 text-gray-700 hover:text-black"
         >
         {link.label[lang]}
         </a>

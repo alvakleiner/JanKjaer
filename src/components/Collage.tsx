@@ -27,9 +27,6 @@ const covers = [
     "/images/ttk1.jpg",
     "/images/hsfd1.jpg",
     "/images/normans-omraade1.jpg",
-
-
-
 ]
 
 
@@ -37,7 +34,7 @@ const covers = [
 function BibliografiHeaderCollage() {
   return (
     <section className="bg-white">
-      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 pt-10 pb-10">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 pb-10">
         <div
         className="
             grid
