@@ -36,7 +36,7 @@ function Header() {
   }, [])
 
   return (
-    <header className="bg-white">
+    <header className="bg-white pt-2">
       <div className="flex justify-between p-4">
         <div className="flex-1 lg:px-4 md:px-4 py-2">
           <button
@@ -49,7 +49,7 @@ function Header() {
 
         <div className="shrink-0">
           <img
-            src="/images/signatur_eksempel.png"
+            src="/images/signatur.png"
             alt="Jan Kjærstad (signatur)"
             className="h-20 sm:h-24 md:h-28 max-w-md object-contain"
           />
@@ -58,7 +58,7 @@ function Header() {
         <div className="flex flex-1 justify-end items-start lg:px-4 md:px-4 py-2">
           <button
             aria-label="Search"
-            className="p-2 rounded focus-visible:ring-2 focus-visible:ring-black"
+            className="p-2 rounded focus-visible:ring-2 focus-visible:ring-black hidden sm:block"
           >
             <Search size={22} strokeWidth={1.5} />
           </button>

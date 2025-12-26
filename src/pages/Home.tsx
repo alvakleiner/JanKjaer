@@ -30,7 +30,7 @@ function Home() {
     return (
         <>
             {/* Hero / portrett */}
-            <div className="pt-8 pb-10 flex justify-center">
+            <div className="md:pt-8 md:pb-10 pb-4 flex justify-center">
                 <div className="hidden sm:block">
                     <img src="/images/pappa.jpg" alt="portrett" />
                 </div>
