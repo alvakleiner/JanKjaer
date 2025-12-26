@@ -92,7 +92,7 @@ function Header() {
                 >
                   <span className="flex items-center gap-2">
                     <img
-                      src="/images/flag-of-Norway.png"
+                      src="/images/flags/flag-of-Norway.png"
                       alt=""
                       className="h-4 w-6 object-cover rounded-sm"
                     />
@@ -112,7 +112,7 @@ function Header() {
                 >
                   <span className="flex items-center gap-2">
                     <img
-                      src="/images/flag-of-United-Kingdom.png"
+                      src="/images/flags/flag-of-United-Kingdom.png"
                       alt=""
                       className="h-4 w-6 object-cover rounded-sm"
                     />
