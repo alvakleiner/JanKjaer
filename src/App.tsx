@@ -34,6 +34,7 @@ import HomoFalsusEllerDetPerfekteMord from "./pages/Bibliografi/homo-falsus-elle
 import Speil from "./pages/Bibliografi/speil"
 import KlodenDreierStilleRundt from "./pages/Bibliografi/kloden-dreier-stille-rundt"
 
+import Biografi from "./pages/Biografi"
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+
           <Route path="/bibliografi" element={<Bibliografi />} />
           <Route path="/bibliografi/valgdager" element={<Valgdager />} />
           <Route path="/bibliografi/menneskets-bolger" element={<MennesketsBolger />} />
@@ -71,6 +73,8 @@ function App() {
           <Route path="/bibliografi/homo-falsus-eller-det-perfekte-mord" element={<HomoFalsusEllerDetPerfekteMord />}/>
           <Route path="/bibliografi/speil" element={<Speil />} />
           <Route path="/bibliografi/kloden-dreier-stille-rundt" element={<KlodenDreierStilleRundt />} />
+
+          <Route path="/biografi" element={<Biografi />} />
         </Routes>
       </main>
       <Footer />

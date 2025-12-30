@@ -72,7 +72,7 @@ const publisherNote = {
   no: (
     <>
       Alle Jan Kjærstads bøker er utgitt av H. Aschehoug & Co (W. Nygaard), med unntak av:
-      <br />
+      <div className="h-2"/>
       Stein blir kaptein (Gyldendal), Mirandas skattkammer (Magikon), Hos Sheherasad,
       fantasiens dronning (N.W. Damm & Søn), og Tusen og en natt 1-2 (De norske bokklubbene).
     </>
@@ -80,7 +80,7 @@ const publisherNote = {
   en: (
     <>
       All books by Jan Kjærstad are published by H. Aschehoug & Co (W. Nygaard), with the exception of:
-      <br />
+      <div className="h-2"/>
       Stein blir kaptein (Gyldendal), Mirandas skattkammer (Magikon), Hos Sheherasad,
       fantasiens dronning (N.W. Damm & Søn), and Tusen og en natt 1-2 (De norske bokklubbene).
     </>
