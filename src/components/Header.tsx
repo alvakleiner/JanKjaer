@@ -48,12 +48,19 @@ function Header() {
         </div>
 
         <div className="shrink-0">
-          <img
-            src="/images/signatur.png"
-            alt="Jan Kjærstad (signatur)"
-            className="h-20 sm:h-24 md:h-28 max-w-md object-contain"
-          />
+          <a
+            href="/"
+            aria-label="Gå til forsiden"
+            className="inline-block cursor-pointer"
+          >
+            <img
+              src="/images/signatur.png"
+              alt="Jan Kjærstad (signatur)"
+              className="h-20 sm:h-24 md:h-28 max-w-md object-contain transition-opacity hover:opacity-80"
+            />
+          </a>
         </div>
+
 
         <div className="flex flex-1 justify-end items-start lg:px-4 md:px-4 py-2">
           <button

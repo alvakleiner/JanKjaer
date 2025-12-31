@@ -1,5 +1,5 @@
 import { useState, useRef } from "react"
-import { useLanguage } from "../context/LanguageContext"
+import { useLanguage } from "../../context/LanguageContext"
 
 const images = [
   {

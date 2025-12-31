@@ -1,8 +1,12 @@
+import React, { useEffect, useState } from "react"
 import { useLanguage } from "../context/LanguageContext"
-import ImageSlider from "../components/ImageSlider"
+import ImageSlider from "../content/biografi/ImageSlider"
+import article from "../content/biografi/taraChanceArticle"
+import AwardsTimeline from "../components/AwardsTimeline"
 
 function Biografi() {
   const { lang } = useLanguage()
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false)
 
   const BookLink = ({
     href,
@@ -16,9 +20,111 @@ function Biografi() {
     </a>
   )
 
+  const UiLink = ({
+    onClick,
+    children,
+  }: {
+    onClick: () => void
+    children: React.ReactNode
+  }) => (
+    <button
+      type="button"
+      onClick={onClick}
+      className="underline underline-offset-4"
+    >
+      {children}
+    </button>
+  )
+
+  // Liten, gjenbrukbar Drawer (ingen ekstra libs)
+  const Drawer = ({
+    open,
+    onClose,
+    title,
+    children,
+  }: {
+    open: boolean
+    onClose: () => void
+    title: string
+    children: React.ReactNode
+  }) => {
+    useEffect(() => {
+      if (!open) return
+
+      const onKeyDown = (e: KeyboardEvent) => {
+        if (e.key === "Escape") onClose()
+      }
+      document.addEventListener("keydown", onKeyDown)
+
+      // Lås bakgrunn-scroll når drawer er åpen
+      const prevOverflow = document.body.style.overflow
+      document.body.style.overflow = "hidden"
+
+      return () => {
+        document.removeEventListener("keydown", onKeyDown)
+        document.body.style.overflow = prevOverflow
+      }
+    }, [open, onClose])
+
+    return (
+      <div
+        className={`fixed inset-0 z-50 ${open ? "" : "pointer-events-none"}`}
+        aria-hidden={!open}
+      >
+        {/* Overlay */}
+        <div
+          onClick={onClose}
+          className={`absolute inset-0 bg-black/50 transition-opacity duration-300 ${
+            open ? "opacity-100" : "opacity-0"
+          }`}
+        />
+
+        {/* Panel */}
+        <aside
+          role="dialog"
+          aria-modal="true"
+          aria-label={title}
+          className={`absolute inset-0 bg-white shadow-xl
+            transform transition-transform duration-300 ${
+              open ? "translate-x-0" : "translate-x-full"
+            }`}
+        >
+          <div className="h-full flex flex-col">
+            <div className="px-5 sm:px-6 py-4 border-b flex items-start justify-between gap-4">
+              <div>
+                <div className="text-xs tracking-[0.16em] uppercase text-black/60 font-['Lora',serif]">
+                  {lang === "no" ? "Biografisk artikkel" : "Biographical article"}
+                </div>
+                <h3 className="mt-1 text-lg tracking-[0.06em] font-['Playfair_Display',serif]">
+                  {title}
+                </h3>
+              </div>
+
+              <button
+                type="button"
+                onClick={onClose}
+                className="shrink-0 rounded-md px-3 py-2 hover:bg-black/5"
+                aria-label={lang === "no" ? "Lukk" : "Close"}
+              >
+                ✕
+              </button>
+            </div>
+
+            {/* Innhold med egen scroll */}
+            <div className="flex-1 overflow-y-auto px-5 sm:px-6 py-5">
+              <div className="text-base leading-7 tracking-[0.04em] font-['Lora',serif] text-black whitespace-pre-wrap">
+                {children}
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    )
+  }
+
   const content = {
-    title: { no: "Biografi", en: "Biography" },
-    paragraphs: {
+    title1: { no: "Biografi", en: "Biography" },
+    paragraphs1: {
       no: [
         <>
           Jan Kjærstad ble født 6. mars 1953 i Oslo og vokste opp på Grorud sammen
@@ -141,6 +247,200 @@ function Biografi() {
         </>,
       ],
     },
+    title2: { no: "Biografiske artikler", en: "Biographical articles" },
+
+    // Intro-tekstene under (lokaliserte, men selve artikkelen forblir engelsk)
+    bioArticlesIntro: {
+      no: {
+        nbl: (
+          <>
+            Norsk biografisk leksikon har en utdypningsartikkel om forfatteren
+            skrevet av Øystein Rottem. Du finner den{" "}
+            <a
+              href="https://nbl.snl.no/Jan_Kj%C3%A6rstad"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-4"
+            >
+              her
+            </a>{" "}
+            (norsk).
+          </>
+        ),
+        tara: (
+          <>
+            Tara F. Chance har også skrevet en
+            biografisk artikkel om Kjærstad. Trykk{" "}
+            <UiLink onClick={() => setIsDrawerOpen(true)}>her</UiLink> for å lese
+            (engelsk).
+          </>
+        ),
+      },
+      en: {
+        nbl: (
+          <>
+            Norsk biografisk leksikon has an in-depth article about the author,
+            written by Øystein Rottem. You can find it{" "}
+            <a
+              href="https://nbl.snl.no/Jan_Kj%C3%A6rstad"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-4"
+            >
+              here
+            </a>{" "}
+            (Norwegian).
+          </>
+        ),
+        tara: (
+          <>
+            Tara F. Chance has also written a
+            biographical article about Kjærstad. Click{" "}
+            <UiLink onClick={() => setIsDrawerOpen(true)}>here</UiLink> to read
+            it (English).
+          </>
+        ),
+      },
+    },
+    title3: { no: "Monografi", en: "Monograph" },
+
+    monograph: {
+      no: {
+        text: (
+          <>
+            Rikke Andersen Kraglund har gitt ut en monografi om Jan Kjærstad, som
+            ganske enkelt heter <em>Kjærstad</em> (2018). Les NRKs omtale,{" "}
+            <a
+              href="https://www.nrk.no/kultur/innsiktsfullt-om-kjaerstads-metode-1.14387108"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-4"
+            >
+              «Innsiktsfullt om Kjærstads metode»
+            </a>
+            .
+          </>
+        ),
+        publisherLabel: "Ill.: Aarhus Universitetsforlag",
+      },
+      en: {
+        text: (
+          <>
+            Rikke Andersen Kraglund has published a monograph on Jan Kjærstad,
+            simply titled <em>Kjærstad</em> (2018). Read NRK's review,{" "}
+            <a
+              href="https://www.nrk.no/"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-4"
+            >
+              “Insightful on Kjærstad's method”
+            </a>
+            .
+          </>
+        ),
+      },
+    },
+    title4: { no: "Priser", en: "Awards" },
+
+    awards: {
+      no: [
+        {
+          year: "2024",
+          title: "Kommandør av St. Olavs Orden",
+          description:
+            "I 2024 ble Jan Kjærstad utnevnt til kommandør av St. Olavs Orden.",
+        },
+        {
+          year: "2016",
+          title: "Admiral Carl Hammerichs minnelegat",
+          description:
+            "Legatet deles ut av Fondet for dansk-norsk samarbeid som en hedersgave til personer som i sitt virke bidrar eller har bidratt til økt forståelse og samarbeid mellom Danmark og Norge på kulturelle eller andre områder.",
+        },
+        {
+          year: "2013",
+          title: "Det Norske Akademis Pris",
+        },
+        {
+          year: "2001",
+          title: "Nordisk Råds Litteraturpris",
+          description:
+            "Jan Kjærstad fikk i 2001 Nordisk Råds Litteraturpris for Oppdageren, den siste romanen i trilogien om Jonas Wergeland.",
+        },
+        {
+          year: "2000",
+          title: "Det svenske litteraturakademiets Dobloug-pris",
+        },
+        {
+          year: "1998",
+          title: "Henrik Steffens-prisen",
+          description:
+            "Denne høythengende tyske prisen er en utmerkelse til skandinaver som på en fremragende måte har beriket europeisk kunst- og åndsliv. I utnevnelsen heter det blant annet at Jan Kjærstad er en av Norges viktigste forfattere og at han allerede har utgitt en rekke betydelige romaner, noveller og essays.",
+        },
+        {
+          year: "1993",
+          title: "Aschehougprisen",
+        },
+        {
+          year: "1984",
+          title: "Norsk Litteraturkritikerlags pris",
+          description:
+            "Mottok i 1984 Norsk Litteraturkritikerlags pris for Homo Falsus eller Det perfekte mord.",
+        },
+        {
+          year: "1984",
+          title: "Mads Wiel Nygaards legat",
+        },
+      ],
+      en: [
+        {
+          year: "2024",
+          title: "Commander of the Order of St. Olav",
+          description:
+            "In 2024, Jan Kjærstad was appointed Commander of the Order of St. Olav.",
+        },
+        {
+          year: "2016",
+          title: "Admiral Carl Hammerich Memorial Grant",
+          description:
+            "The grant is awarded by the Danish-Norwegian Cooperation Fund as an honorary gift to individuals who, through their work, contribute or have contributed to increased understanding and cooperation between Denmark and Norway in cultural or other fields.",
+        },
+        {
+          year: "2013",
+          title: "The Norwegian Academy Prize",
+        },
+        {
+          year: "2001",
+          title: "Nordic Council's Literature Prize",
+          description:
+            "In 2001, Jan Kjærstad received the Nordic Council's Literature Prize for The Discoverer, the final novel in the Jonas Wergeland trilogy.",
+        },
+        {
+          year: "2000",
+          title: "Dobloug Prize (Swedish Academy of Literature)",
+        },
+        {
+          year: "1998",
+          title: "Henrik Steffens Prize",
+          description:
+            "A prestigious German prize awarded to Scandinavians who have made outstanding contributions to European arts and cultural life.",
+        },
+        {
+          year: "1993",
+          title: "Aschehoug Prize",
+        },
+        {
+          year: "1984",
+          title: "Norwegian Critics' Association Prize",
+          description:
+            "Received in 1984 for Homo Falsus, or The Perfect Murder.",
+        },
+        {
+          year: "1984",
+          title: "Mads Wiel Nygaards Grant",
+        },
+      ],
+    },
   } as const
 
   return (
@@ -156,7 +456,7 @@ function Biografi() {
       </div>
 
       <section className="bg-white">
-        <div className="max-w-5xl mx-auto px-4 md:px-8 lg:px-12 py-8">
+        <div className="max-w-5xl mx-auto px-4 md:px-8 lg:px-12 py-8 mb-16">
           {/* Tittel */}
           <h2
             className="
@@ -168,7 +468,7 @@ function Biografi() {
               mb-16
             "
           >
-            {content.title[lang]}
+            {content.title1[lang]}
           </h2>
 
           {/* Tekst */}
@@ -195,13 +495,94 @@ function Biografi() {
                 space-y-6
               "
             >
-              {content.paragraphs[lang].map((p, i) => (
+              {content.paragraphs1[lang].map((p, i) => (
                 <p key={i}>{p}</p>
               ))}
             </div>
 
             {/* Bildeslider */}
             <ImageSlider />
+
+            {/* Biografiske artikler (under slider) */}
+            <h3
+              className="
+                uppercase
+                text-xl
+                tracking-[0.12em]
+                font-['Playfair_Display_SC',serif]
+                mt-16
+                mb-6
+              "
+            >
+              {content.title2[lang]}
+            </h3>
+
+            <div
+              className="
+                text-base
+                leading-6
+                tracking-[0.04em]
+                font-['Lora',serif]
+                text-black
+                space-y-4
+              "
+            >
+              <p>{content.bioArticlesIntro[lang].nbl}</p>
+              <p>{content.bioArticlesIntro[lang].tara}</p>
+            </div>
+            
+            {/* Drawer */}
+            <Drawer
+              open={isDrawerOpen}
+              onClose={() => setIsDrawerOpen(false)}
+              title="Tara F. Chance, University of Washington"
+            >
+              {article}
+            </Drawer>
+
+            {/* Monografi */}
+            <h3
+              className="
+                uppercase
+                text-xl
+                tracking-[0.12em]
+                font-['Playfair_Display_SC',serif]
+                mt-16
+                mb-6
+              "
+            >
+              {content.title3[lang]}
+            </h3>
+
+            {/* Tekst */}
+            <div className="max-w-2xl">
+              <p
+                className="
+                  text-base
+                  leading-7
+                  tracking-[0.04em]
+                  font-['Lora',serif]
+                  text-black
+                "
+              >
+                {content.monograph[lang].text}
+              </p>
+            </div>
+
+            <h3
+            className="
+              uppercase
+              text-xl
+              tracking-[0.12em]
+              font-['Playfair_Display_SC',serif]
+              mt-16
+              mb-6
+            "
+          >
+            {content.title4[lang]}
+          </h3>
+
+          <AwardsTimeline items={content.awards[lang]} />
           </div>
         </div>
       </section>
@@ -210,4 +591,3 @@ function Biografi() {
 }
 
 export default Biografi
-

@@ -2,12 +2,6 @@ import Collage from "../components/Collage"
 import { Link } from "react-router-dom"
 import { useLanguage } from "../context/LanguageContext"
 
-type Book = {
-  title: string
-  meta: string
-  slug: string
-}
-
 const books = {
   en: [
     { title: "Election Days", meta: "Novel (2024)", slug: "valgdager" },
