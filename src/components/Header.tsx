@@ -37,7 +37,7 @@ function Header() {
 
   return (
     <header className="bg-white pt-2 md:pb-8">
-      <div className="flex justify-between p-4 pb-8 md:pb-0">
+      <div className="flex justify-between p-4 pb-5 md:pb-0">
         <div className="flex-1 lg:px-4 md:px-4 py-2">
           <button
             aria-label="Menu"

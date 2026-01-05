@@ -53,7 +53,7 @@ function ImageSlider() {
   }
 
 return (
-  <div className="mt-16 mb-10 max-w-4xl mx-auto">
+  <div className="mt-12 sm:mt-16 mb-10 max-w-4xl mx-auto">
     {/* Wrapper som gir plass til piler utenfor bildet */}
     <div className="relative px-10 sm:px-12 lg:px-14">
       {/* Selve “rammen” for bildet */}
@@ -111,10 +111,11 @@ return (
     {/* Bildetekst */}
     <p
       className="
-        mt-8
+        mt-6
+        sm:mt-8
         text-center
         text-[12px]
-        md:text-sm
+        sm:text-sm
         italic
         tracking-[0.08em]
         font-['Playfair_Display_SC',serif]

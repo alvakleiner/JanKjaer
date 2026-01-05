@@ -355,17 +355,40 @@ function Biografi() {
           year: "2016",
           title: "Admiral Carl Hammerichs minnelegat",
           description:
-            "Legatet deles ut av Fondet for dansk-norsk samarbeid som en hedersgave til personer som i sitt virke bidrar eller har bidratt til økt forståelse og samarbeid mellom Danmark og Norge på kulturelle eller andre områder.",
+            <>
+              Legatet deles ut av{" "}
+              <a
+                href="https://dansk-norsk.no/"
+                target="_blank"
+                rel="noreferrer"
+                className="underline underline-offset-4"
+              >
+                Fondet for dansk-norsk samarbeid 
+              </a>{" "}
+              som en hedersgave til personer som i sitt virke bidrar eller har bidratt til økt forståelse og samarbeid mellom Danmark og Norge på kulturelle eller andre områder.
+            </>
         },
         {
           year: "2013",
-          title: "Det Norske Akademis Pris",
+          title: 
+            <a
+              href="https://www.riksmalsforbundet.no/det-norske-akademis-pris/"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-4"
+            >
+              Det Norske Akademis Pris
+            </a>
         },
         {
           year: "2001",
           title: "Nordisk Råds Litteraturpris",
           description:
-            "Jan Kjærstad fikk i 2001 Nordisk Råds Litteraturpris for Oppdageren, den siste romanen i trilogien om Jonas Wergeland.",
+            <>
+              Jan Kjærstad fikk i 2001 Nordisk Råds Litteraturpris for {" "}
+              <BookLink href="/Bibliografi/oppdageren">Oppdageren</BookLink>
+              , den siste romanen i trilogien om Jonas Wergeland.
+            </>
         },
         {
           year: "2000",
@@ -373,23 +396,51 @@ function Biografi() {
         },
         {
           year: "1998",
-          title: "Henrik Steffens-prisen",
+          title: 
+            <a
+              href="https://no.wikipedia.org/wiki/Henrik_Steffens-prisen"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-4"
+            >
+              Henrik Steffens-prisen
+            </a>,
           description:
             "Denne høythengende tyske prisen er en utmerkelse til skandinaver som på en fremragende måte har beriket europeisk kunst- og åndsliv. I utnevnelsen heter det blant annet at Jan Kjærstad er en av Norges viktigste forfattere og at han allerede har utgitt en rekke betydelige romaner, noveller og essays.",
         },
         {
           year: "1993",
-          title: "Aschehougprisen",
+          title:
+            <a
+              href="https://no.wikipedia.org/wiki/Aschehougprisen"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-4"
+            >
+              Aschehougprisen
+            </a>,
         },
         {
           year: "1984",
           title: "Norsk Litteraturkritikerlags pris",
           description:
-            "Mottok i 1984 Norsk Litteraturkritikerlags pris for Homo Falsus eller Det perfekte mord.",
+            <>
+              Mottok i 1984 Norsk Litteraturkritikerlags pris for {" "}
+              <BookLink href="/bibliografi/homo-falsus-eller-det-perfekte-mord">Homo Falsus eller Det perfekte mord</BookLink>
+              .
+            </>,
         },
         {
           year: "1984",
-          title: "Mads Wiel Nygaards legat",
+          title:
+            <a
+              href="https://no.wikipedia.org/wiki/Mads_Wiel_Nygaards_legat"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-4"
+            >
+              Mads Wiel Nygaards legat
+            </a>,
         },
       ],
       en: [
@@ -402,18 +453,48 @@ function Biografi() {
         {
           year: "2016",
           title: "Admiral Carl Hammerich Memorial Grant",
-          description:
-            "The grant is awarded by the Danish-Norwegian Cooperation Fund as an honorary gift to individuals who, through their work, contribute or have contributed to increased understanding and cooperation between Denmark and Norway in cultural or other fields.",
+          description: (
+            <>
+              The grant is awarded by{" "}
+              <a
+                href="https://dansk-norsk.no/"
+                target="_blank"
+                rel="noreferrer"
+                className="underline underline-offset-4"
+              >
+                the Danish–Norwegian Cooperation Fund
+              </a>{" "}
+              as an honorary gift to individuals who, through their work, contribute
+              or have contributed to increased understanding and cooperation between
+              Denmark and Norway in cultural or other fields.
+            </>
+          ),
         },
         {
           year: "2013",
-          title: "The Norwegian Academy Prize",
+          title: (
+            <a
+              href="https://www.riksmalsforbundet.no/det-norske-akademis-pris/"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-4"
+            >
+              The Norwegian Academy Prize
+            </a>
+          ),
         },
         {
           year: "2001",
-          title: "Nordic Council's Literature Prize",
-          description:
-            "In 2001, Jan Kjærstad received the Nordic Council's Literature Prize for The Discoverer, the final novel in the Jonas Wergeland trilogy.",
+          title: "Nordic Council’s Literature Prize",
+          description: (
+            <>
+              In 2001, Jan Kjærstad received the Nordic Council’s Literature Prize for{" "}
+              <BookLink href="/Bibliografi/oppdageren">
+                The Discoverer
+              </BookLink>
+              , the final novel in the Jonas Wergeland trilogy.
+            </>
+          ),
         },
         {
           year: "2000",
@@ -421,23 +502,57 @@ function Biografi() {
         },
         {
           year: "1998",
-          title: "Henrik Steffens Prize",
+          title: (
+            <a
+              href="https://no.wikipedia.org/wiki/Henrik_Steffens-prisen"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-4"
+            >
+              Henrik Steffens Prize
+            </a>
+          ),
           description:
             "A prestigious German prize awarded to Scandinavians who have made outstanding contributions to European arts and cultural life.",
         },
         {
           year: "1993",
-          title: "Aschehoug Prize",
+          title: (
+            <a
+              href="https://no.wikipedia.org/wiki/Aschehougprisen"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-4"
+            >
+              Aschehoug Prize
+            </a>
+          ),
         },
         {
           year: "1984",
-          title: "Norwegian Critics' Association Prize",
-          description:
-            "Received in 1984 for Homo Falsus, or The Perfect Murder.",
+          title: "Norwegian Critics’ Association Prize",
+          description: (
+            <>
+              Received in 1984 for{" "}
+              <BookLink href="/Bibliografi/homo-falsus-eller-det-perfekte-mord">
+                Homo Falsus, or The Perfect Murder
+              </BookLink>
+              .
+            </>
+          ),
         },
         {
           year: "1984",
-          title: "Mads Wiel Nygaards Grant",
+          title: (
+            <a
+              href="https://no.wikipedia.org/wiki/Mads_Wiel_Nygaards_legat"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-4"
+            >
+              Mads Wiel Nygaards Grant
+            </a>
+          ),
         },
       ],
     },
@@ -510,7 +625,7 @@ function Biografi() {
                 text-xl
                 tracking-[0.12em]
                 font-['Playfair_Display_SC',serif]
-                mt-16
+                mt-18
                 mb-6
               "
             >
@@ -547,7 +662,7 @@ function Biografi() {
                 text-xl
                 tracking-[0.12em]
                 font-['Playfair_Display_SC',serif]
-                mt-16
+                mt-18
                 mb-6
               "
             >
@@ -575,7 +690,7 @@ function Biografi() {
               text-xl
               tracking-[0.12em]
               font-['Playfair_Display_SC',serif]
-              mt-16
+              mt-18
               mb-6
             "
           >
