@@ -3,22 +3,11 @@ import { useLanguage } from "../context/LanguageContext"
 import ImageSlider from "../content/biografi/ImageSlider"
 import article from "../content/biografi/taraChanceArticle"
 import AwardsTimeline from "../components/AwardsTimeline"
+import BookLink from "../components/BookLink"
 
 function Biografi() {
   const { lang } = useLanguage()
   const [isDrawerOpen, setIsDrawerOpen] = useState(false)
-
-  const BookLink = ({
-    href,
-    children,
-  }: {
-    href: string
-    children: React.ReactNode
-  }) => (
-    <a href={href} className="underline underline-offset-4">
-      {children}
-    </a>
-  )
 
   const UiLink = ({
     onClick,

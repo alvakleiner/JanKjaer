@@ -1,10 +1,11 @@
 import { useLanguage } from "../context/LanguageContext"
+import BookLink from "../components/BookLink"
 
 const books = [
-  { title: "Menneskets bølger", year: "2022", src: "/images/menneskets-bolger.jpg" },
-  { title: "En tid for å leve", year: "2021", src: "/images/en-tid-for-a-leve.jpg" },
-  { title: "Mr Woolf", year: "2019", src: "/images/mr-woolf.jpg" },
-  { title: "Berge", year: "2017", src: "/images/berge.jpg" },
+  { title: "Menneskets bølger", year: "2022", src: "/images/menneskets-bolger.jpg", href: "/bibliografi/menneskets-bolger" },
+  { title: "En tid for å leve", year: "2021", src: "/images/en-tid-for-a-leve.jpg", href: "/bibliografi/en-tid-for-a-leve" },
+  { title: "Mr Woolf", year: "2019", src: "/images/mr-woolf.jpg", href: "/bibliografi/mr-woolf" },
+  { title: "Berge", year: "2017", src: "/images/berge.jpg", href: "/bibliografi/berge" },
 ]
 
 function Home() {
@@ -58,26 +59,33 @@ function Home() {
 
                     {/* Bok – rett under tittelen på mobil */}
                     <div className="flex justify-center order-1 md:order-2 md:justify-end">
-                        <img
-                        src="/images/valgdager-3d.png"
-                        alt="Valgdager (2024) - bokcover"
-                        className="w-56 md:w-72 lg:w-64 h-auto object-contain"
-                        />
+                        <BookLink href="/bibliografi/valgdager" className="no-underline">
+                            <img
+                            src="/images/valgdager-3d.png"
+                            alt="Valgdager (2024) - bokcover"
+                            className="w-56 md:w-72 lg:w-64 h-auto object-contain"
+                            />
+                        </BookLink>
                     </div>
 
                     {/* Tekst */}
                     <div className="order-2 md:order-1">
-                        <h3 className="
-                            uppercase
-                            text-xl
-                            tracking-[0.12em]
-                            font-['Playfair_Display_SC',serif]
-                            mb-6
-                        "
+                        <h3
+                            className="
+                                uppercase
+                                text-xl
+                                tracking-[0.12em]
+                                font-['Playfair_Display_SC',serif]
+                                mb-6
+                            "
                         >
-                            {content.bookTitle[lang]}
+                            <BookLink
+                                href="/bibliografi/valgdager"
+                                className="sm:no-underline decoration-[0.7px]"
+                            >
+                                {content.bookTitle[lang]}
+                            </BookLink>
                         </h3>
-
                         <div className="
                             text-base
                             leading-6
@@ -103,36 +111,45 @@ function Home() {
                     <div className="min-[800px]:hidden">
                     <div className="overflow-x-auto pb-4 [-webkit-overflow-scrolling:touch]">
                         <div className="flex w-max min-w-full justify-center gap-6 px-6 snap-x snap-mandatory">
-                        {books.map((b) => (
-                            <div key={b.year} className="flex-none snap-start w-40">
-                            <div className="flex flex-col items-center">
-                                <img src={b.src} alt={b.title} className="w-40 h-auto object-contain" />
-                                <span className="mt-5 text-sm tracking-[0.12em] font-['Playfair_Display_SC',serif]">
-                                {b.year}
-                                </span>
-                            </div>
-                            </div>
-                        ))}
+                            {books.map((b) => (
+                                <div key={b.year} className="flex-none snap-start w-40">
+                                    <div className="flex flex-col items-center">
+                                    <BookLink href={b.href} className="no-underline">
+                                        <img
+                                        src={b.src}
+                                        alt={b.title}
+                                        className="w-40 h-auto object-contain"
+                                        />
+                                    </BookLink>
+
+                                    <span className="mt-5 text-sm tracking-[0.12em] font-['Playfair_Display_SC',serif]">
+                                        {b.year}
+                                    </span>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                     </div>
 
                     {/* ≥ 800px: grid (4 på samme rad) */}
                     <div className="hidden min-[800px]:grid grid-cols-4 justify-items-center gap-4 min-[900px]:gap-6 lg:gap-8">
-                    {books.map((b) => (
-                        <div key={b.year} className="flex flex-col items-center">
-                        <img
-                            src={b.src}
-                            alt={b.title}
-                            className="h-auto object-contain w-[clamp(120px,14vw,176px)]"
-                        />
-                        <span className="mt-6 text-sm tracking-[0.12em] font-['Playfair_Display_SC',serif]">
-                            {b.year}
-                        </span>
-                        </div>
-                    ))}
-                    </div>
+                        {books.map((b) => (
+                            <div key={b.year} className="flex flex-col items-center">
+                                <BookLink href={b.href} className="no-underline">
+                                <img
+                                    src={b.src}
+                                    alt={b.title}
+                                    className="h-auto object-contain w-[clamp(120px,14vw,176px)]"
+                                />
+                                </BookLink>
 
+                                <span className="mt-6 text-sm tracking-[0.12em] font-['Playfair_Display_SC',serif]">
+                                    {b.year}
+                                </span>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </section>
         </>
