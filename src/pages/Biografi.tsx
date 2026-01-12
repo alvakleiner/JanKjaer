@@ -19,7 +19,12 @@ function Biografi() {
     <button
       type="button"
       onClick={onClick}
-      className="underline underline-offset-4"
+      className="
+        underline underline-offset-4
+        cursor-pointer
+        hover:opacity-80
+        focus:outline-none
+      "
     >
       {children}
     </button>
