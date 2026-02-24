@@ -1,7 +1,7 @@
 ﻿import BookPage from "../../components/BookPage"
 import type { BookPageContent } from "../../components/BookPage"
 
-const valgdagerContent: BookPageContent = {
+const mennesketsBolgerContent: BookPageContent = {
   title: { no: "Menneskets bølger", en: "The Human Waves" },
   meta: { no: "Essays (2022)", en: "Essays (2022)" },
   buyLink: {
@@ -45,6 +45,6 @@ paragraphs: {
 },
 }
 
-export default function Valgdager() {
-  return <BookPage content={valgdagerContent} />
+export default function MennesketsBolger() {
+  return <BookPage content={mennesketsBolgerContent} />
 }
