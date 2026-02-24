@@ -111,8 +111,7 @@ In what has become a typical pattern in Kjærstad’s reception, Tegn til kjærl
 
 In terms of the future, Norsk Rikskringkastning (the Norwegian Broadcasting Company) has discussed creating a dramatic television series based on the Jonas Wergeland novels, and Norwegian critics more or less unanimously agree that the books will be the subjects of academic theses and dissertations for years to come. Kjærstad scholarship has been consistently increasing in Denmark, Sweden, Germany, and the United States in recent years as well. As a result of the Nordic Council’s literature prize, requests for translations of Kjærstad’s work have also increased; an English translation of Forføreren (The Seducer) will be released in London in 2003. Jan Kjærstad continues to live and write in Oslo, Norway, and welcomes e-mail (please use the Kontakt link in the footer).
 
-Books
-
+### Books
 Kloden dreier stille rundt: Novellesamling (Oslo: Aschehoug, 1980);
 Speil: leseserie fra det 20. århundre (Oslo: Aschehoug, 1982);
 Homo Falsus, eller, det perfekte mord: Roman (Oslo: Aschehoug, 1984);
@@ -127,38 +126,32 @@ Menneskets felt: Essays (Oslo: Aschehoug, 1997);
 Oppdageren: Roman (Oslo: Aschehoug, 1999);
 Tegn til kjærlighet: Roman (Oslo: Aschehoug, 2002).
 
-Collections
-
+### Collections
 Tekster 1984: en antologi, edited by Tron Jensen and Jan Kjærstad (Oslo: Gyldendal, 1983).
 
-Motion pictures
-
+### Motion pictures
 Det perfekte mord, screenplay by Barth and Isaksen, based on Jan Kjærstad’s novel, the Norwegian Film Institute/Isaksen, 1992.
 
-Other
-
+### Other    
 Tusen og én natt, Bind 1 og 2, selected and adapted by Jan Kjærstad, translated by Waldemar Brøgger (Oslo: Den norske bokklubben, 1988–1989);
 “Kvanteloven” by Jan Kjærstad, in Veien langs linjene, eller, Hvordan vi ble forfattere, edited by Sissel Lie and Liv Nysted (Oslo: Gyldendal, 1993), 64–81;
 “Blues” in Kolon Tekstsamling for VKI og VKII, 2nd edition (Oslo: Samlaget, 1995);
 “Fram for det urene” in “Perioden 1945–2000. Litterære brytninger.” in volume 3 of Norsk tro og tanke (Oslo: Universitetsforlaget, 2001), 572–578.
 
-Selected periodical publications – uncollected
-
+### Selected periodical publications – uncollected
 “Klagesang fra vernet mann,” response to Dag Solstad’s “Om meddelelsens problem” in Aftenposten, 1 July 1997;
 “Fra profet til forteller” in Aftenposten, 19 May, 1999;
 Kosovo debate, in Aftenposten, 14 June, 1999;
 “Biografiens løgn” in Aftenposten, 27 January 2000;
 “Fortellingens sannhet” in Aftenposten, 7 February 2000.
 
-Interviews
-
+### Interviews
 Dialoger II: Åtte forfattersamtaler, by Alf van der Hagen (Oslo: Oktober, 1996) – chapter 5, “En torpedo under Arken” interview with Jan Kjærstad, 138–172;
 Dagbladet: på nettet, Kjærstad answers readers’ questions online, Dagbladet (5/10/99 and 2/23/00);
 Jan Kjærstad with Michael Nielsen on Oppdageren, on Alfabet, DR Radio, (broadcast 10/20/99 and 2/7/01);
 Jan Kjærstad with Huri Heftye on Maraton, Jan Kjærstad, Zentropa, 2000; selected footage.
 
-References
-
+### References
 Per Thomas Andersen, “Repetitionens funksjon i Jan Kjærstads Homo falsus” in Fra Petter Dass til Jan Kjærstad: Studier i diktekunst og komposisjon (Oslo: Landslaget for norskundervisning (LNU) and Cappelen Akademisk Forlag AS, 1997), 310–328;
 Stian Bromark, “Mot et nytt andre standpunkt i litteraturen,” in Vinduet No. 1 (2001);
 Knut Brynhildsvoll, “Die neomanieristische ars combinatoria des Jan Kjærstad. Am Beispiel des Romans Rand.” in Präsentationen. Norwegische Gegenwartsautoren, edited by Knut Brynhildsvoll (Leverkusen 1990), pp. 177–208;
@@ -172,6 +165,7 @@ Gitte Mose, “Ord og menneske. Jan Kjærstads Det store eventyret som fantastis
 Øystein Rottem, Fantasiens tiår: Tekstens illusjoner og desillusjonens tekster. Et utvalg litteraturkritikk 1980–89 (Oslo: Aschehoug, 1990), 150–153; 240–244; 369–373;
 Øystein Rottem, Jan Kjærstad: et forfatterhefte (Oslo: Biblioteksentralen, 2000)
 Rushdie, Salman. “Is Nothing Sacred?” in Imaginary Homelands: Essays & Criticism, 1981–1991. Granta: London.
+
 
 From: Tanya Thresher (ed.), Dictionary of Literary Biography, 20th Century Norwegian, Gale Group (2004)
 
