@@ -1,15 +1,16 @@
-﻿import { useLanguage } from "../../context/LanguageContext"
+import BookPage from "../../components/BookPage"
+import type { BookPageContent } from "../../components/BookPage"
 
-type Quote = {
-  text: string
-  source: string
-  diceImg?: string
-}
-
-const content = {
+const valgdagerContent: BookPageContent = {
   title: { no: "Valgdager", en: "Election Days" },
   meta: { no: "Roman (2024)", en: "Novel (2024)" },
-  buyLink: { no: "Kjøp boken her", en: "Buy the book here" },
+  buyLink: {
+    no: { label: "Kjøp boken her", href: "https://aschehoug.no/valgdager-1" },
+    en: { label: "Buy the book here", href: "https://aschehoug.no/valgdager-1" },
+  },
+  coverImage: {
+    src: "/images/valgdager-3d.png",
+  },
   quotesTitle: { no: "Sitater", en: "Reviews" },
   quotes: [
     {
@@ -37,7 +38,7 @@ const content = {
       text: "«Kjærstads vilje og evne til å framstille verda vi kjenner som framand og rik, er beundringsverdig …»",
       source: "Eivind Myklebust, Klassekampen",
     },
-  ] as Quote[],
+  ],
   paragraphs: {
     no: [
       "En sommerdag på Youngstorget, 1959. En liten gutt får en plomme og en femøring av statsminister Einar Gerhardsen. Mynten kjennes så behagelig i hånden, munnen renner nesten over av plommesaft. Gutten får en åpenbaring: én dag skal han bli en rik mann.",
@@ -56,125 +57,8 @@ const content = {
       "Election Days is a coming-of-age story, a novel about money, politics, and life choices. It's about a country that has undergone tremendous development but now, at the top of the pyramid, seems to be fumbling, no longer knowing what to aim for.",
     ],
   },
-} as const
+}
 
 export default function Valgdager() {
-  const { lang } = useLanguage()
-
-  return (
-    <section className="bg-white">
-      <div className="max-w-4xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
-
-        <h2
-          className="
-            text-center
-            text-2xl
-            font-medium
-            tracking-widest
-            font-['Playfair_Display',serif]
-            mb-2
-          "
-        >
-          {content.title[lang]}
-        </h2>
-
-        <p className="text-center text-sm tracking-[0.08em] text-neutral-500 font-['Lora',serif] mb-10">
-          {content.meta[lang]}
-        </p>
-
-        {/* Bilde */}
-        <div className="flex flex-col items-center md:float-right md:ml-10 md:mb-4 mb-8">
-          <img
-            src="/images/valgdager-3d.png"
-            alt={content.title[lang]}
-            className="w-44 md:w-48 md:mt-4 h-auto object-contain"
-          />
-          
-          <a  href="https://aschehoug.no/valgdager-1" target="_blank"
-            className="
-              mt-3
-              mb-2
-              md:mb-0
-              text-sm
-              tracking-[0.06em]
-              font-['Lora',serif]
-              text-neutral-600
-              underline
-              underline-offset-4
-              decoration-neutral-400
-              hover:text-black
-              hover:decoration-neutral-800
-              transition
-            "
-          >
-            {content.buyLink[lang]}
-          </a>
-        </div>
-
-        {/* Brødtekst */}
-        <div className="
-          text-base
-          leading-7
-          tracking-[0.04em]
-          font-['Lora',serif]
-          text-black
-          space-y-6
-        ">
-          {content.paragraphs[lang].map((p, i) => (
-            <p key={i}>{p}</p>
-          ))}
-          <div className="clear-both" />
-        </div>
-
-        {/* Sitater */}
-        <h3
-          className="
-            uppercase
-            text-xl
-            tracking-[0.12em]
-            font-['Playfair_Display_SC',serif]
-            mt-14
-            mb-6
-          "
-        >
-          {content.quotesTitle[lang]}
-        </h3>
-
-        <div className="space-y-8">
-          {content.quotes.map((q, i) => (
-            <div key={i} className="border-l-2 border-black/10 pl-5">
-              <p className="
-                font-['Lora',serif]
-                text-base
-                leading-7
-                tracking-[0.04em]
-                text-black
-                italic
-              ">
-                {q.text}
-              </p>
-              <div className="flex items-center gap-3 mt-2">
-                {q.diceImg && (
-                  <img
-                    src={q.diceImg}
-                    alt="Terningkast"
-                    className="h-7 w-auto shrink-0"
-                  />
-                )}
-                <p className="
-                  text-sm
-                  tracking-[0.08em]
-                  font-['Lora',serif]
-                  text-neutral-500
-                ">
-                  {q.source}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-      </div>
-    </section>
-  )
+  return <BookPage content={valgdagerContent} />
 }
