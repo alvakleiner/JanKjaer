@@ -1,5 +1,7 @@
-﻿import BookPage from "../../components/BookPage"
+﻿import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
 import type { BookPageContent } from "../../components/BookPage"
+import { useLanguage } from "../../context/LanguageContext"
+
 
 const mennesketsViddeContent: BookPageContent = {
   title: { no: "Menneskets vidde", en: "The Human Width" },
@@ -50,5 +52,59 @@ const mennesketsViddeContent: BookPageContent = {
 }
 
 export default function mennesketsVidde() {
-  return <BookPage content={mennesketsViddeContent} />
+  const { lang } = useLanguage()
+
+  return (
+    <section className="bg-white">
+      <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
+
+      <BookPageBody content={mennesketsViddeContent} />
+
+      {/* Artikkel / Article */}
+      <h3 className="
+        uppercase
+        text-xl
+        tracking-[0.12em]
+        font-['Playfair_Display_SC',serif]
+        mt-14
+        md:mt-8
+        mb-6
+      ">
+      {lang === "no" ? "Artikkel" : "Article"}
+      </h3>
+
+      <div className="border-l-2 border-black/10 pl-5">
+        <p className="
+          font-['Lora',serif]
+          text-base
+          leading-7
+          tracking-[0.04em]
+          text-black
+          italic
+        ">
+          
+          <a  href="https://www.dagbladet.no/kultur/dorapneren/62372815"
+            target="_blank"
+            rel="noreferrer"
+            className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
+          >
+            «Døråpneren»
+          </a>
+        </p>
+        <p className="
+          text-sm
+          tracking-[0.08em]
+          font-['Lora',serif]
+          text-neutral-500
+          mt-2
+        ">
+          Merete Skogrand, Dagbladet
+        </p>
+      </div>
+
+      <BookPageQuotes content={mennesketsViddeContent} />
+
+      </div>
+    </section>
+  )
 }

@@ -1,4 +1,5 @@
-﻿import { useLanguage } from "../../context/LanguageContext"
+﻿import { BookPageQuotes } from "../../components/BookPage"
+import { useLanguage } from "../../context/LanguageContext"
 
 const content = {
   title: { no: "Mr. Woolf", en: "Mr. Woolf" },
@@ -164,18 +165,10 @@ export default function MrWoolf() {
         </div>
 
         {/* Quotes / Reviews */}
-        <h3
-          className="
-            uppercase
-            text-xl
-            tracking-[0.12em]
-            font-['Playfair_Display_SC',serif]
-            mt-14
-            mb-6
-          "
-        >
-          {content.quotesTitle[lang]}
-        </h3>
+        <BookPageQuotes content={{
+          quotesTitle: content.quotesTitle,
+          quotes: content.quotes,
+        }} />
 
         <div className="space-y-8">
           {content.quotes.map((q, i) => (
