@@ -30,7 +30,7 @@ import Rand from "./pages/bibliografi/rand"
 import JaktenPaDeSkjulteVaffelhjertene from "./pages/bibliografi/jakten-paa-de-skjulte-vaffelhjertene"
 import MennesketsMatrise from "./pages/bibliografi/menneskets-matrise"
 import DetStoreEventyret from "./pages/bibliografi/det-store-eventyret"
-import HomoFalsusEllerDetPerfekteMord from "./pages/bibliografi/homo-falsus-eller-det-perfekte-mord"
+import HomoFalsusEllerDetPerfekteMord from "./pages/bibliografi/homo-falsus"
 import Speil from "./pages/bibliografi/speil"
 import KlodenDreierStilleRundt from "./pages/bibliografi/kloden-dreier-stille-rundt"
 
@@ -70,7 +70,7 @@ function App() {
           <Route path="/bibliografi/jakten-paa-de-skjulte-vaffelhjertene" element={<JaktenPaDeSkjulteVaffelhjertene />}/>
           <Route path="/bibliografi/menneskets-matrise" element={<MennesketsMatrise />} />
           <Route path="/bibliografi/det-store-eventyret" element={<DetStoreEventyret />} />
-          <Route path="/bibliografi/homo-falsus-eller-det-perfekte-mord" element={<HomoFalsusEllerDetPerfekteMord />}/>
+          <Route path="/bibliografi/homo-falsus" element={<HomoFalsusEllerDetPerfekteMord />}/>
           <Route path="/bibliografi/speil" element={<Speil />} />
           <Route path="/bibliografi/kloden-dreier-stille-rundt" element={<KlodenDreierStilleRundt />} />
 
