@@ -9,7 +9,7 @@ export type BookQuote = {
 export type BookPageContent = {
   title: { no: string; en: string }
   meta: { no: string; en: string }
-  buyLink: {
+  buyLink?: {
     no: { label: string; href: string }
     en: { label: string; href: string }
   }
@@ -26,7 +26,7 @@ type BookPageProps = {
 export default function BookPage({ content }: BookPageProps) {
   const { lang } = useLanguage()
 
-  const buy = content.buyLink[lang]
+  const buy = content.buyLink?.[lang]
 
   return (
     <section className="bg-white">
@@ -57,28 +57,30 @@ export default function BookPage({ content }: BookPageProps) {
             className="w-44 md:w-48 md:mt-4 h-auto object-contain"
           />
 
-          <a
-            href={buy.href}
-            target="_blank"
-            rel="noreferrer"
-            className="
-              mt-3
-              mb-2
-              md:mb-0
-              text-sm
-              tracking-[0.06em]
-              font-['Lora',serif]
-              text-neutral-600
-              underline
-              underline-offset-4
-              decoration-neutral-400
-              hover:text-black
-              hover:decoration-neutral-800
-              transition
-            "
-          >
-            {buy.label}
-          </a>
+          {buy && (
+            <a
+              href={buy.href}
+              target="_blank"
+              rel="noreferrer"
+              className="
+                mt-3
+                mb-2
+                md:mb-0
+                text-sm
+                tracking-[0.06em]
+                font-['Lora',serif]
+                text-neutral-600
+                underline
+                underline-offset-4
+                decoration-neutral-400
+                hover:text-black
+                hover:decoration-neutral-800
+                transition
+              "
+            >
+              {buy.label}
+            </a>
+          )}
         </div>
 
         {/* Body text */}
