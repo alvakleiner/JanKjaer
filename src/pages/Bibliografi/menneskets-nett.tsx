@@ -4,7 +4,7 @@ import type { BookPageContent } from "../../components/BookPage"
 import { useLanguage } from "../../context/LanguageContext"
 
 const mennesketsNettContent: BookPageContent = {
-  title: { no: "Menneskets nett", en: "The Human Net" },
+  title: { no: "Menneskets nett", en: "The Human Web" },
   meta: { no: "Roman (2005)", en: "Novel (2005)" },
   coverImage: {
     src: "/images/menneskets-nett-3d.png",
