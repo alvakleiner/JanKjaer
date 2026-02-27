@@ -17,6 +17,17 @@ function Header() {
   const [langOpen, setLangOpen] = useState(false)
   const langRef = useRef<HTMLDivElement | null>(null)
 
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  const headerRef = useRef<HTMLElement | null>(null)
+  const [headerHeight, setHeaderHeight] = useState(0)
+
+  useEffect(() => {
+    if (headerRef.current) {
+      setHeaderHeight(headerRef.current.offsetHeight)
+    }
+  }, [])
+
   // Lukk dropdown ved klikk utenfor + Escape
   useEffect(() => {
     function onDocClick(e: MouseEvent) {
@@ -36,14 +47,30 @@ function Header() {
   }, [])
 
   return (
-    <header className="bg-white pt-2 md:pb-8">
+    <header ref={headerRef} className="bg-white pt-2 md:pb-8">
       <div className="flex justify-between p-4 pb-5 md:pb-0">
         <div className="flex-1 lg:px-4 md:px-4 py-2">
           <button
             aria-label="Menu"
-            className="md:hidden p-2 rounded focus-visible:ring-2 focus-visible:ring-black"
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((v) => !v)}
+            className="md:hidden p-2 rounded focus-visible:ring-2 focus-visible:ring-black flex flex-col justify-center gap-1.5 w-8 h-8"
           >
-            <Menu size={22} strokeWidth={1.5} />
+            <span
+              className={`block h-px w-6 bg-black transition-all duration-300 origin-center ${
+                menuOpen ? "rotate-45 translate-y-[5px]" : ""
+              }`}
+            />
+            <span
+              className={`block h-px w-6 bg-black transition-all duration-300 ${
+                menuOpen ? "opacity-0 scale-x-0" : ""
+              }`}
+            />
+            <span
+              className={`block h-px w-6 bg-black transition-all duration-300 origin-center ${
+                menuOpen ? "-rotate-45 -translate-y-[5px]" : ""
+              }`}
+            />
           </button>
         </div>
 
@@ -144,6 +171,35 @@ function Header() {
         </a>
     ))}
     </nav>
+    <div
+      className={`fixed z-50 bg-white md:hidden transform transition-transform duration-300 ease-in-out ${
+        menuOpen ? "translate-x-0" : "-translate-x-full"
+      }`}
+      style={{ top: headerHeight, left: 0, right: 0, bottom: 0 }}
+    >
+      <nav className="flex flex-col px-8 mt-6">
+        {navLinks.map((link) => (
+          
+          <a key={link.key}
+            href={link.href}
+            onClick={() => setMenuOpen(false)}
+            className="
+              py-5
+              text-2xl
+              tracking-[0.12em]
+              uppercase
+              font-['Playfair_Display_SC',serif]
+              text-gray-700
+              hover:text-black
+              border-b
+              border-neutral-100
+            "
+          >
+            {link.label[lang]}
+          </a>
+        ))}
+      </nav>
+    </div>
 
     </header>
   )
