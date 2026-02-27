@@ -1,5 +1,6 @@
-﻿import BookPage from "../../components/BookPage"
+﻿import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
 import type { BookPageContent } from "../../components/BookPage"
+import { useLanguage } from "../../context/LanguageContext"
 
 const klodenDreierStilleRundtContent: BookPageContent = {
   title: { no: "Kloden dreier stille rundt", en: "The Earth Turns Quietly" },
@@ -44,5 +45,36 @@ const klodenDreierStilleRundtContent: BookPageContent = {
 }
 
 export default function KlodenDreierStilleRundt() {
-  return <BookPage content={klodenDreierStilleRundtContent} />
+  const { lang } = useLanguage()
+  
+  return (
+      <section className="bg-white">
+        <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
+  
+        <BookPageBody content={klodenDreierStilleRundtContent} />
+        <div className="flex flex-col items-center mt-12 md:mt-10 mb-4">
+          <img
+            src="/images/kloden-gammelt-omslag.jpg"
+            alt="Originalomslaget til Kloden dreier stille rundt"
+            className="max-w-56 w-full object-contain"
+          />
+          <p className="
+            mt-4
+            text-sm
+            tracking-[0.04em]
+            font-['Lora',serif]
+            text-black/80
+            text-center
+          ">
+            {lang === "no"
+              ? "Originalomslaget til Kloden dreier stille rundt"
+              : "The original cover of The Earth Turns Quietly"}
+          </p>
+        </div>
+
+        <BookPageQuotes content={klodenDreierStilleRundtContent} />
+  
+        </div>
+      </section>
+  )
 }
