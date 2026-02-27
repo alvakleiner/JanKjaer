@@ -1,7 +1,7 @@
 ﻿import BookPage from "../../components/BookPage"
 import type { BookPageContent } from "../../components/BookPage"
 
-const enTidForALeveContent: BookPageContent = {
+const randContent: BookPageContent = {
   title: { no: "Rand", en: "Brink" },
   meta: { no: "Roman (1990)", en: "Novel (1990)" },
   buyLink: {
@@ -37,6 +37,6 @@ const enTidForALeveContent: BookPageContent = {
   },
 }
 
-export default function enTidForALeve() {
-  return <BookPage content={enTidForALeveContent} />
+export default function Rand() {
+  return <BookPage content={randContent} />
 }
