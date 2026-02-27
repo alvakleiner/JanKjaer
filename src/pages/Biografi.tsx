@@ -565,7 +565,7 @@ function Biografi() {
       </div>
 
       <section className="bg-white">
-        <div className="max-w-5xl mx-auto px-4 md:px-8 lg:px-12 py-8 mb-16">
+        <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-8 mb-16">
           {/* Tittel */}
           <h2
             className="
