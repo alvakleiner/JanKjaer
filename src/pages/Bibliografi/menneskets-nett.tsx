@@ -1,5 +1,5 @@
 ﻿import BookLink from "../../components/BookLink"
-import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
+import { BookPageBody } from "../../components/BookPage"
 import type { BookPageContent } from "../../components/BookPage"
 import { useLanguage } from "../../context/LanguageContext"
 
@@ -49,9 +49,6 @@ export default function mennesketsNett() {
           </BookLink>
           .
         </p>
-
-        <BookPageQuotes content={mennesketsNettContent} />
-
       </div>
     </section>
   )
