@@ -69,7 +69,6 @@ function App() {
           <Route path="/bibliografi/forforeren" element={<Forforeren />} />
           <Route path="/bibliografi/rand" element={<Rand />} />
           <Route path="/bibliografi/jakten-paa-de-skjulte-vaffelhjertene" element={<JaktenPaDeSkjulteVaffelhjertene />}/>
-          <Route path="/bibliografi/tusen-og-en-natt-bind-1-og-2" element={<TusenOgEnNattBind1Og2 />} />
           <Route path="/bibliografi/menneskets-matrise" element={<MennesketsMatrise />} />
           <Route path="/bibliografi/det-store-eventyret" element={<DetStoreEventyret />} />
           <Route path="/bibliografi/homo-falsus-eller-det-perfekte-mord" element={<HomoFalsusEllerDetPerfekteMord />}/>

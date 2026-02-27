@@ -26,7 +26,7 @@ const books = {
     { title: "The Seducer", meta: "Novel (1993)", slug: "forforeren" },
     { title: "Brink", meta: "Novel (1990)", slug: "rand" },
     { title: "The Hunt for the Hidden Waffle Hearts", meta: "Picture book (1989/2005)", slug: "jakten-paa-de-skjulte-vaffelhjertene" },
-    { title: "The Arabian Nights (Ed.)", meta: "(1989)", slug: "tusen-og-en-natt" },
+    { title: "The Arabian Nights (Ed.)", meta: "(1989)"},
     { title: "The Matrix of Man", meta: "Essays (1989)", slug: "menneskets-matrise" },
     { title: "The Great Fairy Tale", meta: "Novel (1987)", slug: "det-store-eventyret" },
     { title: "Homo Falsus or The Perfect Murder", meta: "Novel (1984)", slug: "homo-falsus" },
@@ -57,7 +57,7 @@ const books = {
     { title: "Forføreren", meta: "Roman (1993)", slug: "forforeren" },
     { title: "Rand", meta: "Roman (1990)", slug: "rand" },
     { title: "Jakten på de skjulte vaffelhjertene", meta: "Bildebok (1989/2005)", slug: "jakten-paa-de-skjulte-vaffelhjertene" },
-    { title: "Tusen og en natt", meta: "(1989)", slug: "tusen-og-en-natt" },
+    { title: "Tusen og en natt", meta: "(1989)"},
     { title: "Menneskets matrise", meta: "Essays (1989)", slug: "menneskets-matrise" },
     { title: "Det store eventyret", meta: "Roman (1987)", slug: "det-store-eventyret" },
     { title: "Homo Falsus eller Det perfekte mord", meta: "Roman (1984)", slug: "homo-falsus" },
@@ -118,23 +118,29 @@ export default function Bibliografi() {
             leading-8
           "
         >
-          {list.map((book) => (
-            <div key={book.slug} className="py-1">
-              <Link
-                to={`/bibliografi/${book.slug}`}
-                className="
-                  underline
-                  underline-offset-4
-                  decoration-neutral-400
-                  decoration-1
-                  hover:decoration-neutral-800
-                  transition
-                  text-gray-700 
-                  hover:text-black
-                "
-              >
-                {book.title} - {book.meta}
-              </Link>{" "}
+          {list.map((book, i) => (
+            <div key={i} className="py-1">
+              {book.slug ? (
+                <Link
+                  to={`/bibliografi/${book.slug}`}
+                  className="
+                    underline
+                    underline-offset-4
+                    decoration-neutral-400
+                    decoration-1
+                    hover:decoration-neutral-800
+                    transition
+                    text-gray-700
+                    hover:text-black
+                  "
+                >
+                  {book.title} - {book.meta}
+                </Link>
+              ) : (
+                <span className="text-gray-700">
+                  {book.title} - {book.meta}
+                </span>
+              )}
             </div>
           ))}
             <div
