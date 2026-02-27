@@ -36,7 +36,7 @@ function Footer() {
 
                     <li>
                     <a
-                        href="#"
+                        href="https://www.facebook.com/profile.php?id=100049340204345#" target="blank_"
                         className="inline-flex items-center gap-3 hover:text-white transition"
                     >
                         <Facebook size={18} strokeWidth={1.5} />
@@ -46,7 +46,7 @@ function Footer() {
 
                     <li>
                     <a
-                        href="#"
+                        href="/pressemateriale"
                         className="inline-flex items-center gap-3 hover:text-white transition"
                     >
                         <FileText size={18} strokeWidth={1.5} />
