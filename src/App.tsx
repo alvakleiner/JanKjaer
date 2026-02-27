@@ -27,7 +27,7 @@ import Erobreren from "./pages/bibliografi/erobreren"
 import HosSheherasadFantasiensDronning from "./pages/bibliografi/hos-sheherasad-fantasiens-dronning"
 import Forforeren from "./pages/bibliografi/forforeren"
 import Rand from "./pages/bibliografi/rand"
-import JaktenPaDeSkjulteVaffelhjertene from "./pages/bibliografi/jakten-pa-de-skjulte-vaffelhjertene"
+import JaktenPaDeSkjulteVaffelhjertene from "./pages/bibliografi/jakten-paa-de-skjulte-vaffelhjertene"
 import TusenOgEnNattBind1Og2 from "./pages/bibliografi/tusen-og-en-natt-bind-1-og-2"
 import MennesketsMatrise from "./pages/bibliografi/menneskets-matrise"
 import DetStoreEventyret from "./pages/bibliografi/det-store-eventyret"
@@ -68,7 +68,7 @@ function App() {
           <Route path="/bibliografi/hos-sheherasad-fantasiens-dronning"element={<HosSheherasadFantasiensDronning />}/>
           <Route path="/bibliografi/forforeren" element={<Forforeren />} />
           <Route path="/bibliografi/rand" element={<Rand />} />
-          <Route path="/bibliografi/jakten-pa-de-skjulte-vaffelhjertene" element={<JaktenPaDeSkjulteVaffelhjertene />}/>
+          <Route path="/bibliografi/jakten-paa-de-skjulte-vaffelhjertene" element={<JaktenPaDeSkjulteVaffelhjertene />}/>
           <Route path="/bibliografi/tusen-og-en-natt-bind-1-og-2" element={<TusenOgEnNattBind1Og2 />} />
           <Route path="/bibliografi/menneskets-matrise" element={<MennesketsMatrise />} />
           <Route path="/bibliografi/det-store-eventyret" element={<DetStoreEventyret />} />
