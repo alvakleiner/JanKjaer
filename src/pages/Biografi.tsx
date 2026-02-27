@@ -4,6 +4,7 @@ import ImageSlider from "../content/biografi/ImageSlider"
 import article from "../content/biografi/taraChanceArticle"
 import AwardsTimeline from "../components/AwardsTimeline"
 import BookLink from "../components/BookLink"
+import Drawer, { renderArticle } from "../components/Drawer"
 
 function Biografi() {
   const { lang } = useLanguage()
@@ -29,92 +30,6 @@ function Biografi() {
       {children}
     </button>
   )
-
-  // Liten, gjenbrukbar Drawer (ingen ekstra libs)
-  const Drawer = ({
-    open,
-    onClose,
-    title,
-    children,
-  }: {
-    open: boolean
-    onClose: () => void
-    title: string
-    children: React.ReactNode
-  }) => {
-    useEffect(() => {
-      if (!open) return
-
-      const onKeyDown = (e: KeyboardEvent) => {
-        if (e.key === "Escape") onClose()
-      }
-      document.addEventListener("keydown", onKeyDown)
-
-      // Lås bakgrunn-scroll når drawer er åpen
-      const prevOverflow = document.body.style.overflow
-      document.body.style.overflow = "hidden"
-
-      return () => {
-        document.removeEventListener("keydown", onKeyDown)
-        document.body.style.overflow = prevOverflow
-      }
-    }, [open, onClose])
-
-    return (
-      <div
-        className={`fixed inset-0 z-50 ${open ? "" : "pointer-events-none"}`}
-        aria-hidden={!open}
-      >
-        {/* Overlay */}
-        <div
-          onClick={onClose}
-          className={`absolute inset-0 bg-black/50 transition-opacity duration-300 ${
-            open ? "opacity-100" : "opacity-0"
-          }`}
-        />
-
-        {/* Panel */}
-        <aside
-          role="dialog"
-          aria-modal="true"
-          aria-label={title}
-          className={`absolute inset-0 bg-white shadow-xl
-            transform transition-transform duration-300 ${
-              open ? "translate-x-0" : "translate-x-full"
-            }`}
-        >
-          <div className="h-full flex flex-col">
-            <div className="px-5 sm:px-6 py-4 border-b flex items-start justify-between gap-4">
-              <div>
-                <div className="text-xs tracking-[0.16em] uppercase text-black/60 font-['Lora',serif]">
-                  {lang === "no" ? "Biografisk artikkel" : "Biographical article"}
-                </div>
-                <h3 className="mt-1 text-lg tracking-[0.06em] font-['Playfair_Display',serif]">
-                  {title}
-                </h3>
-              </div>
-
-              <button
-                type="button"
-                onClick={onClose}
-                className="shrink-0 rounded-md px-3 py-2 hover:bg-black/5"
-                aria-label={lang === "no" ? "Lukk" : "Close"}
-              >
-                ✕
-              </button>
-            </div>
-
-            {/* Innhold med egen scroll */}
-            <div className="flex-1 overflow-y-auto px-5 sm:px-6 py-5">
-              <div className="text-base leading-7 tracking-[0.04em] font-['Lora',serif] text-black whitespace-pre-wrap">
-                {children}
-              </div>
-            </div>
-          </div>
-        </aside>
-      </div>
-    )
-  }
 
   const content = {
     title1: { no: "Biografi", en: "Biography" },
@@ -641,13 +556,13 @@ function Biografi() {
               <p>{content.bioArticlesIntro[lang].tara}</p>
             </div>
             
-            {/* Drawer */}
             <Drawer
               open={isDrawerOpen}
               onClose={() => setIsDrawerOpen(false)}
               title="Tara F. Chance, University of Washington"
+              subtitle={lang === "no" ? "Biografisk artikkel" : "Biographical article"}
             >
-              {article}
+              {renderArticle(article)}
             </Drawer>
 
             {/* Monografi */}

@@ -1,11 +1,12 @@
 ﻿import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
 import type { BookPageContent } from "../../components/BookPage"
+import TrilogyBooks from "../../components/TrilogyBooks"
 import { useLanguage } from "../../context/LanguageContext"
 
 
 const oppdagerenContent: BookPageContent = {
   title: { no: "Oppdageren", en: "The Discoverer" },
-  meta: { no: "Roman (1999)", en: "Novel (2009)" },
+  meta: { no: "Roman (1999)", en: "Novel (1999)" },
   buyLink: {
     no: { label: "Kjøp boken her", href: "https://aschehoug.no/oppdageren-1" },
     en: { label: "Buy the book here", href: "https://aschehoug.no/oppdageren-1" },
@@ -109,6 +110,8 @@ export default function Oppdageren() {
       <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
 
       <BookPageBody content={oppdagerenContent} />
+
+      <TrilogyBooks />
 
       {/* Pris / Award */}
       <h3 className="
