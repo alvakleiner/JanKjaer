@@ -105,7 +105,7 @@ export default function NormansOmraade() {
 
       <BookPageBody content={normansOmraadeContent} />
 
-      {/* Artikkel / Article */}
+      {/* Introduksjonsvideo / Introduction video */}
       <h3 className="
         uppercase
         text-xl
@@ -125,7 +125,6 @@ export default function NormansOmraade() {
           leading-7
           tracking-[0.04em]
           text-black
-          italic
         ">
           
           <a  href="https://www.youtube.com/watch?v=yevrFgIkt6g"

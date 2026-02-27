@@ -619,7 +619,7 @@ function Biografi() {
                 text-xl
                 tracking-[0.12em]
                 font-['Playfair_Display_SC',serif]
-                mt-18
+                mt-16
                 mb-6
               "
             >
@@ -634,6 +634,7 @@ function Biografi() {
                 font-['Lora',serif]
                 text-black
                 space-y-4
+                
               "
             >
               <p>{content.bioArticlesIntro[lang].nbl}</p>
@@ -656,7 +657,8 @@ function Biografi() {
                 text-xl
                 tracking-[0.12em]
                 font-['Playfair_Display_SC',serif]
-                mt-18
+                mt-14
+                md:mt-12
                 mb-6
               "
             >
@@ -684,7 +686,8 @@ function Biografi() {
               text-xl
               tracking-[0.12em]
               font-['Playfair_Display_SC',serif]
-              mt-18
+              mt-14
+              md:mt-12
               mb-6
             "
           >
