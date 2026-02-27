@@ -3,79 +3,48 @@ import type { BookPageContent } from "../../components/BookPage"
 
 const mennesketsViddeContent: BookPageContent = {
   title: { no: "Menneskets vidde", en: "The Human Width" },
-  meta: { no: "Roman (2021)", en: "Novel (2021)" },
+  meta: { no: "Essays (2013)", en: "Essays (2013)" },
   buyLink: {
-    no: { label: "Kjøp boken her", href: "https://aschehoug.no/en-tid-for-a-leve-3" },
-    en: { label: "Buy the book here", href: "https://aschehoug.no/en-tid-for-a-leve-3" },
+    no: { label: "Kjøp boken her", href: "https://aschehoug.no/menneskets-vidde" },
+    en: { label: "Buy the book here", href: "https://aschehoug.no/menneskets-vidde" },
   },
   coverImage: {
-    src: "/images/en-tid-for-a-leve-3d.png",
+    src: "/images/menneskets-vidde-3d.png",
   },
   quotesTitle: { no: "Sitater", en: "Reviews" },
   quotes: [
     {
-      text: "«Det som skjer i og med En tid for å leve er intet mindre enn stor romankunst. Jan Kjærstad trenger ikke å bekrefte noe som helst lenger, men du verden som han gjør det likevel.»",
-      source: "Tom Hammerø, Nettavisen",
-      diceImg: "/images/terningkast6.png",
+      text: "«Med Menneskets vidde ikke bare utvider Jan Kjærstad forståelsen av egne romaner, men sprenger hele det litterære feltet vidåpent. Jan Kjærstad tilbyr nye, eggende perspektiver, tvinger leseren til å tenke annerledes, og briljerer som litteraturformidler. … Hver essaysamling bør strengt tatt betraktes som en sensasjon i norsk, litterær sammenheng, og den siste er ikke noe unntak. … [Jan Kjærstad har] skrevet om litteratur med en entusiasme som få – om noen – kritikere klarer å matche. Kjærstads artikler om 22. juli er også med god margin det mest innsiktsfulle jeg har lest om terrorhandlingene i Oslo og på Utøya …»",
+      source: "Olav Løkken Reisop, Dagbladet",
     },
     {
-      text: "«Romanen har karakter av en thriller, med mye attåt. Det er litterært snop til glede for lesenerder. Alt innenfor en stram og stilsikker komposisjon.»",
-      source: "Inger Bentzrud, Dagbladet",
-      diceImg: "/images/terningkast5.png",
+      text: "«Trygg, fornuftig og klok. Som leser føler man seg alltid vel ivaretatt hos essayisten Jan Kjærstad. … Jan Kjærstad har også en ganske enestående evne til å la leseren ta del i erkjennelsesarbeidet sitt, godt hjulpet av hans talent for å sortere i poenger og kategorier.»",
+      source: "Sindre Hovdenakk, VG",
     },
     {
-      text: "«Målbevisst, mangesidig og thrilleraktig om liv og død. Det hele er dyktig og medrykkende gjort.»",
+      text: "«Etter sommerens ørkesløse debatt om Richard Dawkins og nyateistene, er det forfriskende å bli kjent med Kjærstads systematiske og seriøse, men også barnlige og fabulerende Darwin som aldri så en bille han ikke fikk lyst til å studere nærmere. Kjærstad har en fin gjennomgang av litteratur han oppfatter som grunnleggende darwinistisk …»",
+      source: "Carl Joakim Gagnon, Morgenbladet",
+    },
+    {
+      text: "«Entusiastiske sonderinger. … Essayisten Jan Kjærstad framstår utvilsomt som en klassisk poeta doctus, langt mer belest og lærd enn de fleste, og som et nyttig korrektiv til sider ved norsk litterær offentlighet. … Kunnskapsbasert og idérikt om litteraturens og menneskets ubrukte muligheter.»",
       source: "Steinar Sivertsen, Stavanger Aftenblad",
-      diceImg: "/images/terningkast5.png",
-    },
-    {
-      text: "«Jan Kjærstad har skrive ein glimrande kjærstadsk roman, rik på detaljar, spenning og saker til ettertanke.»",
-      source: "Marta Norheim, NRK",
-    },
-    {
-      text: "«Lekent om livet. Jan Kjærstads nyeste er et godt valg for godstolen utover høsten.»",
-      source: "Gerd Elin Stava Sandve, Dagsavisen",
-    },
-    {
-      text: "«Leken, kritisk og nyansert. … Jan Kjærstad mestrer sin valgte form. De mange synsvinklene tilfører en tredimensjonal nyanserikdom og lekenhet, uten å fjerne romanens kritiske brodd.»",
-      source: "Leif Bull, Dagens Næringsliv",
-    },
-    {
-      text: "«… en fascinerende roman som kombinerer mer eller mindre raffinert nasjonal selvpisking og selvhevdelse med hyllest til gode ting.»",
-      source: "Terje Eidsvåg, Adresseavisen",
-    },
-    {
-      text: "«Kjærstads mesterlige evne til å komponere fortellinger, legge ut ledetråder, belyse mennesker fra ulike vinkler – noe som også var fremtredende i trilogien om Jonas Wergeland – kommer også fram i denne romanen. Her er dessuten samtidskritikk av kjendisliv, sosiale medier og hysteriet rundt avisenes anmeldelser i et herlig satirisk og lekent språk. … Lesningen av denne boken blir uunngåelig en kommentar til tiden vi nettopp har vært gjennom.»",
-      source: "Valborg Orset Stene, Vårt Land",
-    },
-    {
-      text: "«Òg i årets roman er Kjærstad ute etter å kartlegge kva som særmerkjer vår tid. … Kjærstads forteljing er på si side ikkje keisam. Den er på alle måtar dramatisk med eit episenter lagt til hovudscenen på Nationaltheatret. … Kjærstad leiker seg med dramatikk, sjanger, verkelegheitseffektar, litterære referansar, krysspunkt og puslespelbrikker som knyter menneska i teatersalen saman.»",
-      source: "Margunn Vikingstad, Morgenbladet",
-    },
-    {
-      text: "«… en kløktig studie av det største spørsmålet i hans eget felt: Hvilke krefter befinner seg i litteraturen? Kan også litteratur skape liv. … I Kjærstads laboratorium finner vi både tunge og lette svar om litteraturens mulighet til inngripen i verden …»",
-      source: "Elin Kittelsen, Bokmagasinet Klassekampen",
     },
   ],
   paragraphs: {
     no: [
-      "Vi er i mars 2019, og tolv mennesker kommer fra hver sin kant av byen – noen også med båt, tog og fly – og møtes i Nationaltheatret for å overvære premieren på Hedda Gabler.",
-      "Men dette er ikke en roman om teater. Det er en roman om den umistelige verdien av å møtes, sitte tett sammen i en sal – noe som ble et dypt savn ett år senere, da koronaen tvang oss inn i isolasjon. Vekten ligger på den historien hvert av disse menneskene bringer med seg inn i dette krysspunktet, og på hvordan disse personene påvirker hverandres liv uten at de er klar over det. Det er en roman om det kraftfeltet som oppstår når vi møtes. Om hvordan historiene våre er koblet til hverandre.",
-      "Vi er alle hverandres ukjente faktor. Vi bærer hverandres løsninger.",
-      "En av personene er Eystein Laudal, 29 år, og lærer ved Hadeland videregående. Han er i teateret sammen med klassen sin for å se på det stykket de har gjennomgått på skolen. Problemet er at han ikke klarer å konsentrere seg, han tenker bare på Jenny, en elev han har stått altfor tett inntil ved et flygel da de befant seg alene på et av skolens øverom. I flere døgn har han sett for seg avisoverskriftene: «Lærer antastet elev på Hadeland.» Han frykter at han vil bli rammet av en metoo-skandale og miste jobben. Det eneste han tenker på, er at han må få snakket med Jenny i pausen.",
-      "En annen er Rakel Borg, 23 år, som er i teater sammen med faren, en mann som har lidd et offentlig nederlag og tilbringer dagene sammen med en flaske gin i vinterhagen sin. Hun vil nå støtte ham ved å reise seg midt under forestillingen og rope høyt, som en protest. Også mot en verden som er ferd med å bli kjørt fullstendig i grøfta. Hun har studert stykket og vet nøyaktig etter hvilken replikk hun skal stå opp og rope. Spørsmålet er om hun våger det. Og hvis hun våger det: hva som da vil skje?",
-      "En tredje person er Frans Otteren, 53 år, som holder på å snu i vestibylen i Nationaltheatret, fordi han ikke vet om han orker å se Ibsens stykke. Det er bare noen år siden han fant datteren sin i en nedsnødd hytte ved Tyin i Jotunheimen, hvor hun hadde begått selvmord. Tilsynelatende helt uten grunn. I tiden etterpå har han grublet på hvorfor hun gjorde det. Å se et teaterstykke hvor hovedrolleinnehaversken skyter seg selv i siste akt, er et ledd i det psykologene kaller eksponeringsterapi. Men vil han klare å utholde det?",
-      "Denne romanen, lagt til mars 2019, handler om alt vi ikke vet om hva som vil skje til neste år. Den handler om å ta vare på de avgjørende øyeblikkene i våre liv.",
-      "Romanen handler også om den desperate lengselen etter å få oppmerksomhet som preger mange mennesker i dag.",
-      "Den tolvte personen er Hedda Christine Foss som spiller hovedrollen i Ibsens stykke. Teateret har lagd et slagord for forestillingen: Hedda er Hedda. Hva verken publikum eller de andre personene i romanen vet, er at Hedda står på scenen med en pistol som er ladd med skarpe skudd.",
-      "På tredje rad sitter en forhenværende kjæreste. På fjerde rad sitter en forhatt kritiker. På første rad sitter landets statsminister.",
-      "Jo da, dette er også en spennende roman.",
+      "Det kunne være fristende å betrakte Jan Kjærstads fjerde artikkel- og essaysamling som en fjerde vegg i det rommet han har fylt med tanker om litteratur gjennom drøye tretti år. Men siden et sluttet rom rimer dårlig med Kjærstads litterære ideer, burde samlingen heller kalles en fjerde dør. En fjerde stemme i en kvartett. I beste fall gir disse fire bøkene leseren et glimt av litteraturens ubegripelige fjerde dimensjon.",
+      "I tittelessayet spør Kjærstad om det er mulig å se for seg en darwinistisk litteratur, det vil si en skjønnlitteratur som, ikke minst formmessig, er preget mer av Charles Darwin enn av Sigmund Freud. Det er naturlig at forfattere har villet utforske menneskets dybde, skriver Kjærstad, men utfordringen nå ligger i å utforske menneskets vidde; det horisontale aspekt ved mennesket har for lenge stått i skyggen av det vertikale. Burde vi ikke være mer nysgjerrige på mennesket som et foranderlig vesen? Vi rommer alle flere identiteter – noe særlig de nye medier gir oss muligheten til å vise – og vi rommer alle spor av en utvikling som har vart i millioner av år. Samtidslitteraturen har til fulle vist hvilken rolle barndommen spiller for vår utvikling, men speiler den hvilken rolle tilfeldighetene spiller? Er det mulig å skrive en plotløs roman?",
+      "For å hente ideer til denne lengste teksten i boken reiste Kjærstad til England:",
+      "Jeg befinner meg et par mil sørøst for London. Jeg har tatt toget fra Victoria Station til Bromley South, buss videre til Downe Village. Derfra er det bare en kort spasertur til Down House, stedet Charles Darwin kjøpte i 1842 og som han bodde på livet ut, i 40 år. Her har jeg nå funnet frem til den sirkelformede «sandstien» Darwin anla i utkanten av eiendommen – senere har man kalt den Darwins «tenkesti». Jeg kan ikke forestille meg en mer perfekt location for å baske med den problemstillingen jeg har i hodet.",
+      "Freud og Darwin. Hvorfor vet jeg så mye om Freud og så lite om Darwin? Hvorfor tok det meg så lang tid å komme til Down, til Darwins hus? Jeg var knapt fylt tretti før jeg hadde sett begge Freuds «kontorer», både det i Wien og det i London. Jeg har lest flere av Freuds hovedverker, pluss et knippe av hans kasus-historier, men ingenting – før nå – av Darwin. Hvorfor denne somlingen med Darwin? Representerer Darwin en historie med mindre appell? Er den for komplisert? Er jeg redd for Darwin?",
+      "Som vanlig beveger Kjærstad seg høyt og lavt i tekstene. Han skriver om hva et leksikon aldri kan få med ved å ta for seg oppslaget om popgruppa The Hollies, han spår en videreføring av sci-fi- og idéromanen, han skriver om umuligheten av å kåre en norsk litterær kanon, og han forsøker å vise sammenhengen mellom Hjortefot og glassperlespillmesteren Josef Knecht.",
+      "Også denne samlingen bringer et knippe entusiastiske lesninger. Kjærstad seiler gjennom Herman Melvilles hvalstinne Moby Dick. Han nyter langsomheten i Henry James' Portrett av en dame. Magikeren av John Fowles er for Kjærstad en av etterkrigslitteraturens mest originale kjærlighetshistorier, og Usynlige byer av Italo Calvino foregriper nettet og den virtuelle byen. Hva er genistreken i Midnattsbarn av Salman Rushdie? Og er Haruki Murakami på sporet av en ny kausalitet i 1Q84?",
+      "Jan Kjærstad skriver om kunst (Håkon Gullvåg), om kritikk (av Karl Ove Knausgård og Peter Høeg). I en mer samfunnsorientert avdeling diskuterer han de intellektuelles rolle i dagens Norge, og fire artikler gir synspunkter på den skjellsettende 22. juli-hendelsen.",
+      "Kjærstad har alltid vært opptatt av «litteraturens økologiske system», og i bokens siste del skriver han om oversetternes uvurderlige betydning, om det nødvendige samspillet mellom forfatter, leser og anmelder, om vår avhengighet av svensk litteratur (tross unionsoppløsningen), om forfatterens sjenanse når Nasjonalbiblioteket går til innkjøp av manus, og til slutt om et mysterium som har opptatt norsklærere til alle tider: Hvordan få elever til å lese?",
+      "Kanskje ble jeg en leser fordi jeg så en norsklærer gråte. I en time, under arbeidet med en tekst, ble min norsklærer så grepet at han måtte snu seg bort og tørke bort tårene. Kanskje var det å stå der og grine en mer virkningsfull undervisning enn alt annet han sa og fant på. Iallfall forsto jeg brått hva litteratur kunne gjøre med et menneske, hvor dypt den kunne nå. Litteratur var ikke bare tolkning, litteratur var eksistens.",
     ],
     en: [
-      "Twelve people are heading to the National Theatre in Oslo. Each of them with a ticket to the opening night of a new staging of Henrik Ibsen's Hedda Gabler.",
-      "Amongst them, a teacher who got a little too close to his student and is now dreading a public scandal. A father, who has recently lost his daughter to suicide, unsure of whether he can handle watching someone get shot in the final act. And a young activist planning to get up and shout out her protest in the middle of the play.",
-      "Ready to take the stage is Hedda Christine Foss, playing the part of Ibsen's Hedda. No one knows that the gun she will carry with her on stage is real and loaded.",
-      "Seated in the third row is her former lover. In the fourth, a hated critic. And in the very first, the Norwegian Prime Minister.",
+      "Content in English missing. Please refer to the Norwegian version.",
     ],
   },
 }
