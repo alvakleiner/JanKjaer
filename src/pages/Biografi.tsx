@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import { useLanguage } from "../context/LanguageContext"
 import ImageSlider from "../content/biografi/ImageSlider"
 import article from "../content/biografi/taraChanceArticle"
