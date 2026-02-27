@@ -2,7 +2,7 @@
 import type { BookPageContent } from "../../components/BookPage"
 import { useLanguage } from "../../context/LanguageContext"
 
-const HosSheherasadFantasiensDronningContent: BookPageContent = {
+const JaktenPaDeSkjulteVaffelhjerteneContent: BookPageContent = {
   title: { no: "Jakten på de skjulte vaffelhjertene", en: "The Hunt for the Hidden Waffle Hearts" },
   meta: { no: "Bildebok (1989/2005)", en: "Picture Book (1989/2005)" },
   coverImage: {
@@ -23,13 +23,13 @@ const HosSheherasadFantasiensDronningContent: BookPageContent = {
   },
 }
 
-export default function HosSheherasadFantasiensDronning() {
+export default function JaktenPaDeSkjulteVaffelhjertene() {
     const { lang } = useLanguage()
   
     return (
       <section className="bg-white">
         <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
-          <BookPageBody content={HosSheherasadFantasiensDronningContent} />
+          <BookPageBody content={JaktenPaDeSkjulteVaffelhjerteneContent} />
 
           <p className="
             text-base
