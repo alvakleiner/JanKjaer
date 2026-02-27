@@ -109,12 +109,12 @@ export default function JegErBrodreneWalker() {
           italic
         ">
           
-          <a  href="https://www.dagbladet.no/kultur/forlagskjendis-med-sprekk-i-skallen/63584715"
+          <a  href="https://www.nrk.no/kultur/_jeg-er-brodrene-walker_-1.6236253"
             target="_blank"
             rel="noreferrer"
             className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
           >
-            «Forlagskjendis med sprekk i skallen»
+            «Velopplagt Kjærstad»
           </a>
         </p>
         <p className="
@@ -124,7 +124,7 @@ export default function JegErBrodreneWalker() {
           text-neutral-500
           mt-2
         ">
-          Dagbladet
+          NRK
         </p>
       </div>
 
