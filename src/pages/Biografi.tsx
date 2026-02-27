@@ -480,7 +480,7 @@ function Biografi() {
       </div>
 
       <section className="bg-white">
-        <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-8 mb-16">
+        <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 mt-6 md:mt-4 mb-18">
           {/* Tittel */}
           <h2
             className="
@@ -489,7 +489,7 @@ function Biografi() {
               font-medium
               tracking-widest
               font-['Playfair_Display',serif]
-              mb-16
+              mb-10
             "
           >
             {content.title1[lang]}

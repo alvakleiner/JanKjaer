@@ -38,11 +38,12 @@ function BibliografiHeaderCollage() {
         <div
         className="
             grid
-            grid-cols-6
-            grid-rows-4
-            gap-3
-            md:grid-cols-8
-            md:grid-rows-3
+            grid-cols-8
+            grid-rows-3
+            gap-1
+            md:gap-3
+            md:grid-cols-12
+            md:grid-rows-2
         "
         >
           {covers.slice(0, 24).map((src, i) => (
@@ -52,7 +53,7 @@ function BibliografiHeaderCollage() {
                 aspect-2/3
                 overflow-hidden
                 bg-neutral-100
-                rounded-sm
+                rounded-xs
               "
             >
               <img

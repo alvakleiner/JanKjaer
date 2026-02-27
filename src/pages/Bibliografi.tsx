@@ -92,8 +92,8 @@ export default function Bibliografi() {
 
   return (
     <section className="bg-white">
-        <Collage />
-      <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 mt-4 md:mt-8 mb-18">
+      <Collage />
+      <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 mt-2 md:mt-4 mb-18">
 
         <h2
           className="
