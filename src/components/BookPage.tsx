@@ -1,7 +1,7 @@
 import { useLanguage } from "../context/LanguageContext"
 
 export type BookQuote = {
-  text: string
+  text: string | { no: string; en: string }
   source: string
   diceImg?: string
 }
@@ -136,7 +136,7 @@ export function BookPageQuotes({ content }: BookPageQuotesProps) {
               text-black
               italic
             ">
-              {q.text}
+              {typeof q.text === "string" ? q.text : q.text[lang]}
             </p>
             <div className="flex items-center gap-3 mt-2">
               {q.diceImg && (
