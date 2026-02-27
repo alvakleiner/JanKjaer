@@ -12,4 +12,13 @@
 
 #root > main {
   flex: 1;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  #root > main {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

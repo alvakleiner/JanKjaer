@@ -13,7 +13,7 @@ import Berge from "./pages/bibliografi/berge"
 import SlektersGang from "./pages/bibliografi/slekters-gang"
 import MennesketsVidde from "./pages/bibliografi/menneskets-vidde"
 import SteinBlirKaptein from "./pages/bibliografi/stein-blir-kaptein"
-import NormansOmrade from "./pages/bibliografi/normans-omrade"
+import NormansOmrade from "./pages/bibliografi/normans-omraade"
 import JegErBrodreneWalker from "./pages/bibliografi/jeg-er-brodrene-walker"
 import MirandasSkattkammer from "./pages/bibliografi/mirandas-skattkammer"
 import KjaerstadsMatrise from "./pages/bibliografi/kjaerstads-matrise"
@@ -53,7 +53,7 @@ function App() {
           <Route path="/bibliografi/slekters-gang" element={<SlektersGang />} />
           <Route path="/bibliografi/menneskets-vidde" element={<MennesketsVidde />} />
           <Route path="/bibliografi/stein-blir-kaptein" element={<SteinBlirKaptein />} />
-          <Route path="/bibliografi/normans-omrade" element={<NormansOmrade />} />
+          <Route path="/bibliografi/normans-omraade" element={<NormansOmrade />} />
           <Route path="/bibliografi/jeg-er-brodrene-walker" element={<JegErBrodreneWalker />} />
           <Route path="/bibliografi/mirandas-skattkammer" element={<MirandasSkattkammer />} />
           <Route path="/bibliografi/kjaerstads-matrise" element={<KjaerstadsMatrise />} />
