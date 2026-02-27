@@ -30,7 +30,7 @@ export default function BookPage({ content }: BookPageProps) {
 
   return (
     <section className="bg-white">
-      <div className="max-w-4xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
+      <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
 
         <h2
           className="
