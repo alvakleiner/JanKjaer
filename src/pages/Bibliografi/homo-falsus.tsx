@@ -1,6 +1,5 @@
 ﻿import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
 import type { BookPageContent } from "../../components/BookPage"
-import TrilogyBooks from "../../components/TrilogyBooks"
 import { useLanguage } from "../../context/LanguageContext"
 
 const homoFalsusContent: BookPageContent = {
