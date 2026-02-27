@@ -13,7 +13,7 @@ const normansOmraadeContent: BookPageContent = {
   coverImage: {
     src: "/images/normans-omrade-3d.png",
   },
-  quotesTitle: { no: "Sitater", en: "Reviews" },
+  quotesTitle: { no: "Sitater", en: "Quotes" },
   quotes: [
     {
       text: "«Suveren forteller! Det er fortellerdyktigheten og innsikten Kjærstad formidler, særlig om lesning og litteratur, som gjør boka til et godt sted å være.»",
@@ -146,7 +146,7 @@ export default function NormansOmraade() {
         </p>
       </div>
 
-      {/* Anmeldelse / Article */}
+      {/* Anmeldelse / Review */}
       <h3 className="
         uppercase
         text-xl
@@ -156,7 +156,7 @@ export default function NormansOmraade() {
         md:mt-8
         mb-6
       ">
-      {lang === "no" ? "Anmeldelse" : "Article"}
+      {lang === "no" ? "Anmeldelse" : "Review"}
       </h3>
 
       <div className="border-l-2 border-black/10 pl-5">

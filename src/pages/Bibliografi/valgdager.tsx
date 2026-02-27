@@ -11,7 +11,7 @@ const valgdagerContent: BookPageContent = {
   coverImage: {
     src: "/images/valgdager-3d.png",
   },
-  quotesTitle: { no: "Sitater", en: "Reviews" },
+  quotesTitle: { no: "Sitater", en: "Quotes" },
   quotes: [
     {
       text: "«Jan Kjærstad hører hjemme i det ypperste favorittsjiktet mitt når det gjelder nåtidige forfatterstemmer. Valgdager bekrefter den posisjonen. … Det er egentlig fire helt forskjellige historier som Kjærstad med sitt språklige og fortellermessige mesterskap knytter sammen på et helhetlig, troverdig og elegant vis. … Her er det et persongalleri så mangefasettert, rikt og troverdig som vel mulig og Kjærstad har et driv og naturlig eleganse i språket sitt som alle forfattere og andre som befatter seg med språk gjerne kan misunne han. Jan Kjærstad har nemlig skrevet et mesterstykke av en oppvekst- og samtidsroman (er det noe som heter det? Nå er det i alle fall det!) som mange vil både kjenne seg igjen i, lære av og hygge seg med. Ikke reint lite det, vil jeg mene.»",

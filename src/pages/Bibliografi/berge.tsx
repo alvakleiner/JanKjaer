@@ -11,7 +11,7 @@ const content: BookPageContent = {
   coverImage: {
     src: "/images/berge-3d.png",
   },
-  quotesTitle: { no: "Sitater", en: "Reviews" },
+  quotesTitle: { no: "Sitater", en: "Quotes" },
   quotes: [
     {
       text: "«GLIMRENDE! … Jeg tar sats og utroper med dette Berge til en sikker vinner bokhøsten 2017!»",

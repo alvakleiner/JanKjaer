@@ -11,7 +11,7 @@ const content: BookPageContent = {
   coverImage: {
     src: "/images/slekters-gang-3d.png",
   },
-  quotesTitle: { no: "Sitater", en: "Reviews" },
+  quotesTitle: { no: "Sitater", en: "Quotes" },
   quotes: [
     {
       text: "«Så Jan Kjærstad har igjen skrevet en episk triatlontekst der dikterfantasien gnistrer mot et rikt arsenal av leksikalsk kunnskap knyttet til litteratur, musikk og arkitektur, historie og geografi, religion, billedkunst og film, biologi og geologi. … Den er ettertenksom, klok og sensuell, krass og morsom … Les Jan Kjærstads perspektivskapende legering av romantikk og rasjonalisme, høyt og lavt, alvor og fleip.»",

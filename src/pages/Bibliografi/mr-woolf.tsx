@@ -11,7 +11,7 @@ const content = {
   coverImage: {
     src: "/images/mr-woolf-3d.png",
   },
-  quotesTitle: { no: "Sitater", en: "Reviews" },
+  quotesTitle: { no: "Sitater", en: "Quotes" },
   quotes: [
     {
       text: "«Raus fortellerglede. Jan Kjærstads nye roman er en vakker kjærlighetserklæring til en fars skjulte sider. Boka oser av fortellerglede, det er bare å gi seg hen og la seg føre gjennom Hong Kongs trange markeder, neonbelyste gater, futuristiske kjøpesentre, overjordiske gangveier, grønne åser og skumle kirkegårder.»",

@@ -8,7 +8,7 @@ const steinBlirKapteinContent: BookPageContent = {
   coverImage: {
     src: "/images/stein-blir-kaptein-3d.png",
   },
-  quotesTitle: { no: "Sitat", en: "Review" },
+  quotesTitle: { no: "Sitat", en: "Quote" },
   quotes: [
     {
       text: "«Ei nydelig bok med en tydelig ettersmak av tårer.»",

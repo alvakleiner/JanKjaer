@@ -11,7 +11,7 @@ const tegnTilKjaerlighetContent: BookPageContent = {
   coverImage: {
     src: "/images/tegn-til-kjaerlighet-3d.png",
   },
-  quotesTitle: { no: "Sitater", en: "Reviews" },
+  quotesTitle: { no: "Sitater", en: "Quotes" },
   quotes: [
     {
       text: "«Tecken till kärlek liknar ingenting jeg tidigare läst. Det är en bok med säregen lyskraft, med en känslighet som vore den tryckt direkt på huden, skriven med en prosa så spänstig och sammansatt att varje fras känns obrukad.»",

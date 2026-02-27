@@ -13,7 +13,7 @@ const jegErBrodreneWalkerContent: BookPageContent = {
   coverImage: {
     src: "/images/jeg-er-brodrene-walker-3d.png",
   },
-  quotesTitle: { no: "Sitater", en: "Reviews" },
+  quotesTitle: { no: "Sitater", en: "Quotes" },
   quotes: [
     {
       text: "«En mer framtredende humoristisk tone enn Kjærstad tidligere har lagt seg på kler også romanen, som i tillegg er befolket av et knallsterkt persongalleri som alle bærer på gode historier.»",
@@ -86,7 +86,7 @@ export default function JegErBrodreneWalker() {
         </p>
       </div>
 
-      {/* Anmeldelse / Article */}
+      {/* Anmeldelse / Review */}
       <h3 className="
         uppercase
         text-xl
@@ -96,7 +96,7 @@ export default function JegErBrodreneWalker() {
         md:mt-8
         mb-6
       ">
-      {lang === "no" ? "Anmeldelse" : "Article"}
+      {lang === "no" ? "Anmeldelse" : "Review"}
       </h3>
 
       <div className="border-l-2 border-black/10 pl-5">

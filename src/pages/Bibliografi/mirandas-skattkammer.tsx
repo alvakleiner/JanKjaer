@@ -12,7 +12,7 @@ const mirandasSkattkammerContent: BookPageContent = {
   coverImage: {
     src: "/images/mirandas-skattkammer-3d.png",
   },
-  quotesTitle: { no: "Sitater", en: "Reviews" },
+  quotesTitle: { no: "Sitater", en: "Quotes" },
   quotes: [
     {
       text: "«Nyttig og viktig barnebok i en tid da tempo, aktivitet og flyktighet i så sterk grad preger også små barns hverdag. For dem og foreldrene kan Mirandas skattkammer bli en motvekt som virker samlende, roende og meningsskapende.»",

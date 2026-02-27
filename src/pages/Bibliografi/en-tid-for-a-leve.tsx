@@ -11,7 +11,7 @@ const enTidForALeveContent: BookPageContent = {
   coverImage: {
     src: "/images/en-tid-for-a-leve-3d.png",
   },
-  quotesTitle: { no: "Sitater", en: "Reviews" },
+  quotesTitle: { no: "Sitater", en: "Quotes" },
   quotes: [
     {
       text: "«Det som skjer i og med En tid for å leve er intet mindre enn stor romankunst. Jan Kjærstad trenger ikke å bekrefte noe som helst lenger, men du verden som han gjør det likevel.»",

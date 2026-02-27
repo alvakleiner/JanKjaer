@@ -11,7 +11,7 @@ const mennesketsBolgerContent: BookPageContent = {
   coverImage: {
     src: "/images/menneskets-bolger-3d.png",
   },
-  quotesTitle: { no: "Sitater", en: "Reviews" },
+  quotesTitle: { no: "Sitater", en: "Quotes" },
   quotes: [
     {
       text: "«… et nydelig og klokt essay om å lese. Og om det merkelige kjærlighetsforholdet man kan utvikle til ei enkelt bok.»",

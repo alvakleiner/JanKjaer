@@ -13,7 +13,7 @@ const mennesketsViddeContent: BookPageContent = {
   coverImage: {
     src: "/images/menneskets-vidde-3d.png",
   },
-  quotesTitle: { no: "Sitater", en: "Reviews" },
+  quotesTitle: { no: "Sitater", en: "Quotes" },
   quotes: [
     {
       text: "«Med Menneskets vidde ikke bare utvider Jan Kjærstad forståelsen av egne romaner, men sprenger hele det litterære feltet vidåpent. Jan Kjærstad tilbyr nye, eggende perspektiver, tvinger leseren til å tenke annerledes, og briljerer som litteraturformidler. … Hver essaysamling bør strengt tatt betraktes som en sensasjon i norsk, litterær sammenheng, og den siste er ikke noe unntak. … [Jan Kjærstad har] skrevet om litteratur med en entusiasme som få – om noen – kritikere klarer å matche. Kjærstads artikler om 22. juli er også med god margin det mest innsiktsfulle jeg har lest om terrorhandlingene i Oslo og på Utøya …»",

@@ -11,7 +11,7 @@ const kongenAvEuropaContent: BookPageContent = {
   coverImage: {
     src: "/images/kongen-av-europa-3d.png",
   },
-  quotesTitle: { no: "Sitater", en: "Reviews" },
+  quotesTitle: { no: "Sitater", en: "Quotes" },
   quotes: [
     {
       text: "«En riktig majestetisk roman og en hovedperson med atskillig sjarm, kaos og uorden rundt seg … en roman som faktisk er god lesning.»",

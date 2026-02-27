@@ -13,7 +13,7 @@ const oppdagerenContent: BookPageContent = {
   coverImage: {
     src: "/images/oppdageren-3d.png",
   },
-  quotesTitle: { no: "Sitater", en: "Reviews" },
+  quotesTitle: { no: "Sitater", en: "Quotes" },
   quotes: [
     {
       text: {
@@ -136,7 +136,7 @@ export default function Oppdageren() {
         </p>
       </div>
 
-      {/* Anmeldelse / Article */}
+      {/* Anmeldelse / Review */}
       <h3 className="
         uppercase
         text-xl
@@ -146,7 +146,7 @@ export default function Oppdageren() {
         md:mt-8
         mb-6
       ">
-      {lang === "no" ? "Anmeldelse" : "Article"}
+      {lang === "no" ? "Anmeldelse" : "Review"}
       </h3>
 
       <div className="border-l-2 border-black/10 pl-5">
