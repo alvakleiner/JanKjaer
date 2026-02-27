@@ -14,7 +14,7 @@ const kjærstadsMatriseContent: BookPageContent = {
   coverImage: {
     src: "/images/kjaerstads-matrise-3d.png",
   },
-  quotesTitle: { no: "Sitater", en: "Reviews" },
+  quotesTitle: { no: "Sitat", en: "Review" },
   quotes: [
     {
       text: "«På 950 sider får du den grensesprengende sakprosaen som Norges mest globalorienterte forfatter har produsert de siste 25 årene … Dette er bonusboka for deg som ønsker mer sesam-sesam i tilværelsen.»",
