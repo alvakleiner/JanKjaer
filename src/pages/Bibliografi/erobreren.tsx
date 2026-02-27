@@ -79,6 +79,7 @@ const erobrerenContent: BookPageContent = {
 export default function Erobreren() {
   const { lang } = useLanguage()
   const [excerptOpen, setExcerptOpen] = useState(false)
+  const [reviewOpen, setReviewOpen] = useState(false)
 
   return (
     <section className="bg-white">
@@ -172,7 +173,7 @@ export default function Erobreren() {
                 Trykk{" "}
                 <button
                   type="button"
-                  onClick={() => setExcerptOpen(true)}
+                  onClick={() => setReviewOpen(true)}
                   className="underline underline-offset-4 cursor-pointer hover:opacity-80 focus:outline-none"
                 >
                   her
@@ -184,7 +185,7 @@ export default function Erobreren() {
                 Click{" "}
                 <button
                   type="button"
-                  onClick={() => setExcerptOpen(true)}
+                  onClick={() => setReviewOpen(true)}
                   className="underline underline-offset-4 cursor-pointer hover:opacity-80 focus:outline-none"
                 >
                   here
@@ -196,8 +197,8 @@ export default function Erobreren() {
         </div>
 
         <Drawer
-          open={excerptOpen}
-          onClose={() => setExcerptOpen(false)}
+          open={reviewOpen}
+          onClose={() => setReviewOpen(false)}
           title="Kan man forstå et liv?"
           subtitle={lang === "no" ? "Per Buvik, professor ved Universitetet i Bergen" : "Per Buvik, professor at the University of Bergen"}
         >

@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 import { useLanguage } from "../context/LanguageContext"
 
 type DrawerProps = {
@@ -43,8 +43,14 @@ export function renderArticle(text: string) {
 
 export default function Drawer({ open, onClose, title, subtitle, children }: DrawerProps) {
   const { lang } = useLanguage()
+  const scrollRef = useRef<HTMLDivElement>(null)
+
 
   useEffect(() => {
+    if (open && scrollRef.current) {
+        scrollRef.current.scrollTop = 0
+      }
+
     if (!open) return
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose()
@@ -98,7 +104,7 @@ export default function Drawer({ open, onClose, title, subtitle, children }: Dra
               ✕
             </button>
           </div>
-          <div className="flex-1 overflow-y-auto px-5 sm:px-6 py-5 space-y-2">
+          <div ref={scrollRef} className="flex-1 overflow-y-auto px-5 sm:px-6 py-5 space-y-2">
             {children}
           </div>
         </div>
