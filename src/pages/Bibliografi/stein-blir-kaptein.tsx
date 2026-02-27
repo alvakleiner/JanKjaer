@@ -1,5 +1,6 @@
 ﻿import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
 import type { BookPageContent } from "../../components/BookPage"
+import { useLanguage } from "../../context/LanguageContext"
 
 const steinBlirKapteinContent: BookPageContent = {
   title: { no: "Stein blir kaptein", en: "Stein Becomes a Captain" },
@@ -28,6 +29,8 @@ const steinBlirKapteinContent: BookPageContent = {
 }
 
 export default function SteinBlirKaptein() {
+  const { lang } = useLanguage()
+  
   return (
     <section className="bg-white">
       <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
@@ -44,7 +47,7 @@ export default function SteinBlirKaptein() {
           md:mt-4
           mb-14
         ">
-          Illustratør:{" "}
+          {lang === "no" ? "Illustratør" : "Illustrator"}:{" "}
           
           <a  href="https://no.wikipedia.org/wiki/Hilde_Kramer"
             target="_blank"
