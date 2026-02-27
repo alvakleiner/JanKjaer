@@ -1,7 +1,5 @@
-﻿import BookLink from "../../components/BookLink"
-import { BookPageBody } from "../../components/BookPage"
+﻿import { BookPageBody } from "../../components/BookPage"
 import type { BookPageContent } from "../../components/BookPage"
-import { useLanguage } from "../../context/LanguageContext"
 
 const mennesketsNettContent: BookPageContent = {
   title: { no: "Hos Sheherasad, fantasiens dronning", en: "The World of Scheherazade, Queen of Tales" },
