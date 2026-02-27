@@ -1,7 +1,7 @@
 ﻿import { BookPageBody } from "../../components/BookPage"
 import type { BookPageContent } from "../../components/BookPage"
 
-const mennesketsNettContent: BookPageContent = {
+const HosSheherasadFantasiensDronningContent: BookPageContent = {
   title: { no: "Hos Sheherasad, fantasiens dronning", en: "The World of Scheherazade, Queen of Tales" },
   meta: { no: "Bildebok (1995)", en: "Picture Book (1995)" },
   coverImage: {
@@ -24,11 +24,11 @@ const mennesketsNettContent: BookPageContent = {
   },
 }
 
-export default function mennesketsNett() {
+export default function HosSheherasadFantasiensDronning() {
   return (
     <section className="bg-white">
       <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
-        <BookPageBody content={mennesketsNettContent} />
+        <BookPageBody content={HosSheherasadFantasiensDronningContent} />
       </div>
     </section>
   )
