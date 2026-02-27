@@ -61,7 +61,6 @@ function Header() {
   }, [])
 
   return (
-    <>
     <header ref={headerRef} className="bg-white pt-2 md:pb-8">
       <div className="flex justify-between p-4 pb-5 md:pb-0">
         <div className="flex-1 lg:px-4 md:px-4 py-2">
@@ -175,47 +174,46 @@ function Header() {
         </div>
       </div>
 
-    </header>
-
-      <nav className="hidden md:flex justify-center md:gap-16 lg:gap-22 lg:p-4 md:p-2">
+    <nav className="hidden md:flex justify-center md:gap-16 lg:gap-22 lg:p-4 md:p-2">
+      {navLinks.map((link) => (
+          <a
+          key={link.key}
+          href={link.href}
+          className="lg:text-base md:text-sm tracking-wide pt-2 text-gray-700 hover:text-black"
+          >
+          {link.label[lang]}
+          </a>
+      ))}
+    </nav>
+    <div
+      className={`fixed z-50 bg-white md:hidden transform transition-transform duration-300 ease-in-out ${
+        menuOpen ? "translate-x-0" : "-translate-x-full"
+      }`}
+      style={{ top: headerHeight, left: 0, right: 0, bottom: 0 }}
+    >
+      <nav className="flex flex-col px-8 mt-6">
         {navLinks.map((link) => (
-            <a
-            key={link.key}
+          
+          <a key={link.key}
             href={link.href}
-            className="lg:text-base md:text-sm tracking-wide pt-2 text-gray-700 hover:text-black"
-            >
+            onClick={() => setMenuOpen(false)}
+            className="
+              py-4
+              text-xl
+              tracking-[0.12em]
+              uppercase
+              font-['Playfair_Display_SC',serif]
+              text-gray-700
+              hover:text-black
+            "
+          >
             {link.label[lang]}
-            </a>
+          </a>
         ))}
       </nav>
-      <div
-        className={`fixed z-50 bg-white md:hidden transform transition-transform duration-300 ease-in-out ${
-          menuOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
-        style={{ top: headerHeight, left: 0, right: 0, bottom: 0 }}
-      >
-        <nav className="flex flex-col px-8 mt-6">
-          {navLinks.map((link) => (
-            
-            <a key={link.key}
-              href={link.href}
-              onClick={() => setMenuOpen(false)}
-              className="
-                py-4
-                text-xl
-                tracking-[0.12em]
-                uppercase
-                font-['Playfair_Display_SC',serif]
-                text-gray-700
-                hover:text-black
-              "
-            >
-              {link.label[lang]}
-            </a>
-          ))}
-        </nav>
-      </div>
-    </>
+    </div>
+
+    </header>
   )
 }
 
