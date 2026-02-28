@@ -37,6 +37,7 @@ import KlodenDreierStilleRundt from "./pages/bibliografi/kloden-dreier-stille-ru
 import Biografi from "./pages/Biografi"
 import Galleri from "./pages/Galleri"
 import Intervjuer from "./pages/Intervjuer"
+import Kontakt from "./pages/Kontakt"
 
 function App() {
   return (
@@ -79,6 +80,7 @@ function App() {
           <Route path="/biografi" element={<Biografi />} />
           <Route path="/galleri" element={<Galleri />} />
           <Route path="/intervjuer" element={<Intervjuer />} />
+          <Route path="/kontakt" element={<Kontakt />} />
         </Routes>
       </main>
       <Footer />
