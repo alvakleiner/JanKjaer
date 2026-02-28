@@ -38,7 +38,7 @@ export default function Intervjuer() {
 
         <div className="float-right ml-8 mb-4 mt-2 flex flex-col items-center">
           <img
-            src="/images/jkcl.jpg"
+            src="/images/press/jkcl.jpg"
             alt="Jan Kjærstad"
             className="w-48 md:w-56 h-auto object-cover"
           />

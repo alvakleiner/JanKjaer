@@ -94,7 +94,7 @@ export default function enTidForALeve() {
             className="w-2/3 sm:w-auto sm:h-96 object-contain object-top"
           />
           <img
-            src="/images/jkbrick.jpg"
+            src="/images/press/jkfr1.jpg"
             alt=""
             className="w-2/3 sm:w-auto sm:h-96 object-contain object-top"
           />

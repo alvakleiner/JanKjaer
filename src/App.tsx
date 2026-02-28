@@ -38,6 +38,7 @@ import Biografi from "./pages/Biografi"
 import Galleri from "./pages/Galleri"
 import Intervjuer from "./pages/Intervjuer"
 import Kontakt from "./pages/Kontakt"
+import Pressemateriale from "./pages/Pressemateriale"
 
 function App() {
   return (
@@ -81,6 +82,7 @@ function App() {
           <Route path="/galleri" element={<Galleri />} />
           <Route path="/intervjuer" element={<Intervjuer />} />
           <Route path="/kontakt" element={<Kontakt />} />
+          <Route path="/pressemateriale" element={<Pressemateriale />} />
         </Routes>
       </main>
       <Footer />
