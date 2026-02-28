@@ -123,7 +123,35 @@ export default function Galleri() {
         </div>
         ))}
 
+        <h3
+            className="
+            uppercase
+            text-xl
+            tracking-[0.12em]
+            font-['Playfair_Display_SC',serif]
+            mt-3
+            md:mt-4
+            mb-6
+            "
+        >
+            {lang === "no" ? "Nostalgi" : "Nostalgia"}
+        </h3>
+
+        <div className="grid grid-cols-4 md:grid-cols-8 gap-1 md:gap-2">
+          {Array.from({ length: 44 }, (_, i) => (
+            <div key={i} className="aspect-2/3 overflow-hidden bg-neutral-100 rounded-xs">
+              <img
+                src={`/images/nostalgia/n${i + 1}.jpg`}
+                alt=""
+                className="h-full w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+
       </div>
+
     </section>
   )
 }
