@@ -5,12 +5,12 @@ export default function Galleri() {
 
   const paragraphs = {
     no: [
-      "Jan Kjærstad forteller følgende om fotografiet nedenfor:",
+      "Jan Kjærstad forteller følgende om «Storyteller»:",
       "«Av alle de bilder fotografer har tatt av meg opp gjennom årene, liker jeg dette best. Jeg sitter under den store bøken som vokser like ved Karen Blixens grav på høyden ved Rungstedlund nord for København. Jeg er nesten ikke synlig; man kunne tro jeg var en del av roten. Og sånn er det: Vi mennesker overdriver kanskje vår egen betydning. Sett i perspektiv, sett i forhold til naturen, alt liv, er vi bare en liten brikke. Det var Tom Martinsen som tok bildet. Han kalte det Storyteller. Takk.»",
       "NB! Bildet er copyright-beskyttet og benyttes med tillatelse.",
     ],
     en: [
-      "Jan Kjærstad about the photograph below:",
+      "Jan Kjærstad on \"Storyteller\":",
       "'Of all the photographs taken of me over the years, this is my favourite. I am sitting under the great beech tree that grows close to Karen Blixen's grave on the hill at Rungstedlund, north of Copenhagen. I am barely visible; one might think I was part of the root. And that is how it is: we human beings perhaps overestimate our own importance. Seen in perspective, in relation to nature, all life, we are just a small piece. It was Tom Martinsen who took the photograph. He called it Storyteller. Thank you.'",
       "NB! The photograph is copyright protected and is to be used with permission. Below the photograph can be seen uncropped.",
     ],
