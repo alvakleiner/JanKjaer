@@ -35,6 +35,7 @@ import Speil from "./pages/bibliografi/speil"
 import KlodenDreierStilleRundt from "./pages/bibliografi/kloden-dreier-stille-rundt"
 
 import Biografi from "./pages/Biografi"
+import Galleri from "./pages/Galleri"
 
 function App() {
   return (
@@ -75,6 +76,7 @@ function App() {
           <Route path="/bibliografi/kloden-dreier-stille-rundt" element={<KlodenDreierStilleRundt />} />
 
           <Route path="/biografi" element={<Biografi />} />
+          <Route path="/galleri" element={<Galleri />} />
         </Routes>
       </main>
       <Footer />
