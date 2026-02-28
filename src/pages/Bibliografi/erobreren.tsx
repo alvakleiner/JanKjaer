@@ -190,7 +190,7 @@ export default function Erobreren() {
                 >
                   here
                 </button>
-                {" "}to read literature professor Per Buvik's review of the book (only available in Norwegian).
+                {" "}to read literature professor Per Buvik's review of the book. (Only available in Norwegian)
               </>
             )}
           </p>

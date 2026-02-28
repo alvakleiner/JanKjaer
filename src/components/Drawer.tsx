@@ -21,7 +21,7 @@ export function renderArticle(text: string) {
             text-sm
             tracking-[0.14em]
             font-['Playfair_Display_SC',serif]
-            mt-10
+            mt-7
             mb-3
             text-black/70
           "

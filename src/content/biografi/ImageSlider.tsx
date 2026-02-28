@@ -4,7 +4,7 @@ import { useLanguage } from "../../context/LanguageContext"
 const images = [
   {
     src: "/images/jan-barn.jpg",
-    caption: { no: "Jan Kjærstad som barn. Foto: privat", en: "Jan Kjærstad as a child. Photo: private" },
+    caption: { no: "Jan Kjærstad på 17. mai (1960) utenfor blokken i Hagelundveien der han vokste opp, rett ved «skråningen». Han begynte i 1. klasse samme høst. Foto: privat", en: "Jan Kjærstad on 17th of May (1960) outside the apartment block in Hagelundveien where he grew up, right next to 'the slope'. He started first grade that same autumn. Photo: private" },
   },
   {
     src: "/images/jan-herfol.jpg",
