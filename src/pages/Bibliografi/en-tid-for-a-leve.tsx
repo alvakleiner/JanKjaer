@@ -1,4 +1,4 @@
-﻿import BookPage from "../../components/BookPage"
+﻿import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
 import type { BookPageContent } from "../../components/BookPage"
 
 const enTidForALeveContent: BookPageContent = {
@@ -81,5 +81,25 @@ const enTidForALeveContent: BookPageContent = {
 }
 
 export default function enTidForALeve() {
-  return <BookPage content={enTidForALeveContent} />
+  return (
+    <section className="bg-white">
+      <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
+        <BookPageBody content={enTidForALeveContent} />
+        <BookPageQuotes content={enTidForALeveContent} />
+
+        <div className="flex flex-col items-center sm:flex-row gap-3 sm:gap-4 mt-10 sm:justify-center">
+          <img
+            src="/images/en-tid-for-a-leve-utdrag.jpg"
+            alt=""
+            className="w-2/3 sm:w-auto sm:h-96 object-contain object-top"
+          />
+          <img
+            src="/images/jkbrick.jpg"
+            alt=""
+            className="w-2/3 sm:w-auto sm:h-96 object-contain object-top"
+          />
+        </div>
+      </div>
+    </section>
+  )
 }
