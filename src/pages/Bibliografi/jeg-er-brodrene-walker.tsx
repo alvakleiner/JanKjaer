@@ -53,7 +53,7 @@ export default function JegErBrodreneWalker() {
 
       <BookPageBody content={jegErBrodreneWalkerContent} />
 
-      {/* Brosjyre / Brochure */}
+      {/* Brosjyre / Pamphlet */}
       <h3 className="
         uppercase
         text-xl
@@ -63,7 +63,7 @@ export default function JegErBrodreneWalker() {
         md:mt-8
         mb-6
       ">
-      {lang === "no" ? "Brosjyre" : "Brochure"}
+      {lang === "no" ? "Brosjyre" : "Pamphlet"}
       </h3>
 
       <div className="border-l-2 border-black/10 pl-5">
@@ -74,7 +74,7 @@ export default function JegErBrodreneWalker() {
           tracking-[0.04em]
           text-black
         ">
-          {lang === "no" ? "Aschehoug Agency har gitt ut en 19 siders brosjyre med informasjon om, og utdrag fra boken. Brosjyren er på engelsk og kan lastes ned fra " : "Aschehoug Agency has published a 19-page brochure with information about, and excerpts from, the book. The brochure is in English and can be downloaded from "}
+          {lang === "no" ? "Aschehoug Agency har gitt ut en 19 siders brosjyre med informasjon om, og utdrag fra boken. Brosjyren er på engelsk og kan lastes ned fra " : "Aschehoug Agency has published a 19-page pamphlet with information about, and excerpts from, the book. The pamphlet is in English and can be downloaded from "}
           <a  href="/pressemateriale"
             target="_blank"
             rel="noreferrer"

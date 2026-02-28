@@ -108,7 +108,7 @@ export default function Pressemateriale() {
               <img
                 src={photo.src}
                 alt={`Foto: ${photo.photographer}`}
-                className="w-full h-64 md:h-90 object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-64 sm:h-80 md:h-90 object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="
                 absolute inset-0 bg-black/0 group-hover:bg-black/40
@@ -127,6 +127,63 @@ export default function Pressemateriale() {
             </button>
           ))}
         </div>
+
+        <h3 className="uppercase text-xl tracking-[0.12em] font-['Playfair_Display_SC',serif] mt-12 mb-6">
+          {lang === "no" ? "Brosjyre" : "Pamphlet"}
+        </h3>
+
+        <div className="flex flex-col sm:flex-row sm:gap-8 sm:items-start mb-12">
+
+          {/* Bilde – vises under tekst på xs, til høyre på sm+ */}
+          <div className="order-2 shrink-0 mt-6 sm:mt-0 flex flex-col items-center sm:items-start">
+            <img
+              src="/images/press/brosjyre.png"
+              alt=""
+              className="w-40 h-auto"
+            />
+            {/* Last ned – kun på xs */}
+            <p className="sm:hidden mt-2 text-sm font-['Lora',serif] tracking-[0.04em] text-black/60">
+              <a
+                href="/images/press/Walker-pamphlet.zip"
+                download
+                className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
+              >
+                {lang === "no" ? "Last ned PDF" : "Download PDF"}
+              </a>
+            </p>
+          </div>
+
+          {/* Tekst – vises først på xs, til venstre på sm+ */}
+          <div className="order-1">
+            <p className="text-base leading-7 tracking-[0.04em] font-['Lora',serif] text-black">
+              {lang === "no" ? (
+                <>
+                  Aschehoug Agency har gitt ut en 19 siders brosjyre med informasjon om, og utdrag fra,{" "}
+                  <a href="/bibliografi/jeg-er-brodrene-walker" className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"><em>Jeg er brødrene Walker</em></a>
+                  . Brosjyren er på engelsk.
+                </>
+              ) : (
+                <>
+                  Aschehoug Agency has published a 19-page pamphlet with information about and excerpts from{" "}
+                  <a href="/bibliografi/jeg-er-brodrene-walker" className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"><em>I Am the Brothers Walker</em></a>
+                  . The pamphlet is in English.
+                </>
+              )}
+            </p>
+            {/* Last ned – kun på sm+ */}
+            <p className="hidden sm:block mt-3 text-sm font-['Lora',serif] tracking-[0.04em] text-black/60">
+              <a
+                href="/images/press/Walker-pamphlet.zip"
+                download
+                className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
+              >
+                {lang === "no" ? "Last ned PDF" : "Download PDF"}
+              </a>
+            </p>
+          </div>
+
+        </div>
+
       </div>
 
       {/* Lightbox */}
@@ -191,6 +248,7 @@ export default function Pressemateriale() {
               </a>
             </div>
           </div>
+
         </div>
       )}
     </section>
