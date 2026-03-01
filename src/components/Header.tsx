@@ -79,7 +79,7 @@ function Header() {
           >
             <span
               className={`block h-px w-6 bg-black transition-all duration-300 origin-center ${
-                menuOpen ? "rotate-45 translate-y-[5px]" : ""
+                menuOpen ? "rotate-45 translate-y-1.25" : ""
               }`}
             />
             <span
@@ -89,7 +89,7 @@ function Header() {
             />
             <span
               className={`block h-px w-6 bg-black transition-all duration-300 origin-center ${
-                menuOpen ? "-rotate-45 -translate-y-[5px]" : ""
+                menuOpen ? "-rotate-45 -translate-y-1.25" : ""
               }`}
             />
           </button>
