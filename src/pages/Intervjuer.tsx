@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useLanguage } from "../context/LanguageContext"
+import SEO from "../components/SEO"
 import Drawer, { renderArticle } from "../components/Drawer"
 import mmInterview from "../content/intervju/mmInterview"
 import tegnTilKjaerlighet from "../content/intervju/tegnTilKjaerlighet"
@@ -18,8 +19,17 @@ export default function Intervjuer() {
     ],
   }
 
+  const seo = {
+    title: { no: "Intervjuer – Jan Kjærstad", en: "Interviews – Jan Kjærstad" },
+    description: {
+      no: "Utvalgte intervjuer med Jan Kjærstad om forfatterskap, bøker og litteratur.",
+      en: "Selected interviews with Jan Kjærstad about writing, books and literature.",
+    },
+  } as const
+
   return (
     <section className="bg-white">
+      <SEO title={seo.title[lang]} description={seo.description[lang]} path="/intervjuer" />
       <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 mt-2 md:mt-4 mb-18">
 
         <h2

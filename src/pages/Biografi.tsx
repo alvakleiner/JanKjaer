@@ -5,6 +5,7 @@ import article from "../content/biografi/taraChanceArticle"
 import AwardsTimeline from "../components/AwardsTimeline"
 import BookLink from "../components/BookLink"
 import Drawer, { renderArticle } from "../components/Drawer"
+import SEO from "../components/SEO"
 
 function Biografi() {
   const { lang } = useLanguage()
@@ -467,8 +468,17 @@ function Biografi() {
     },
   } as const
 
+  const seo = {
+    title: { no: "Biografi – Jan Kjærstad", en: "Biography – Jan Kjærstad" },
+    description: {
+      no: "Les om Jan Kjærstads liv, forfatterskap og priser. Norsk forfatter og vinner av Nordisk råds litteraturpris 2001.",
+      en: "Read about Jan Kjærstad's life, works and awards. Norwegian author and winner of the Nordic Council's Literature Prize 2001.",
+    },
+  } as const
+
   return (
     <>
+      <SEO title={seo.title[lang]} description={seo.description[lang]} path="/biografi" />
       {/* Hero / portrett */}
       <div className="md:pb-10 pb-4 flex justify-center">
         <div className="hidden sm:block">

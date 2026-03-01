@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jankjaerstad.no/sitemap.xml

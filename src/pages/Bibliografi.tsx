@@ -1,6 +1,7 @@
 import Collage from "../components/Collage"
 import { Link } from "react-router-dom"
 import { useLanguage } from "../context/LanguageContext"
+import SEO from "../components/SEO"
 
 const books = {
   en: [
@@ -90,8 +91,17 @@ export default function Bibliografi() {
   const isEn = lang === "en"
   const list = isEn ? books.en : books.no
 
+  const seo = {
+    title: { no: "Bibliografi – Jan Kjærstad", en: "Bibliography – Jan Kjærstad" },
+    description: {
+      no: "Utforsk Jan Kjærstads forfatterskap med romaner, noveller og essays fra 1980 til 2024.",
+      en: "Explore Jan Kjærstad's authorship with novels, short stories and essays from 1980 to 2024.",
+    },
+  } as const
+
   return (
     <section className="bg-white">
+      <SEO title={seo.title[lang]} description={seo.description[lang]} path="/bibliografi" />
       <Collage />
       <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 mt-2 md:mt-4 mb-18">
 

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Top-level pages -->
+  <url><loc>https://jankjaerstad.no/</loc><priority>1.0</priority></url>
+  <url><loc>https://jankjaerstad.no/bibliografi</loc><priority>0.9</priority></url>
+  <url><loc>https://jankjaerstad.no/biografi</loc><priority>0.9</priority></url>
+  <url><loc>https://jankjaerstad.no/intervjuer</loc><priority>0.7</priority></url>
+  <url><loc>https://jankjaerstad.no/galleri</loc><priority>0.6</priority></url>
+  <url><loc>https://jankjaerstad.no/pressemateriale</loc><priority>0.6</priority></url>
+  <url><loc>https://jankjaerstad.no/kontakt</loc><priority>0.5</priority></url>
+
+  <!-- Book pages -->
+  <url><loc>https://jankjaerstad.no/bibliografi/valgdager</loc><priority>0.8</priority></url>
+  <url><loc>https://jankjaerstad.no/bibliografi/menneskets-bolger</loc><priority>0.8</priority></url>
+  <url><loc>https://jankjaerstad.no/bibliografi/en-tid-for-a-leve</loc><priority>0.8</priority></url>
+  <url><loc>https://jankjaerstad.no/bibliografi/mr-woolf</loc><priority>0.8</priority></url>
+  <url><loc>https://jankjaerstad.no/bibliografi/berge</loc><priority>0.8</priority></url>
+  <url><loc>https://jankjaerstad.no/bibliografi/slekters-gang</loc><priority>0.8</priority></url>
+  <url><loc>https://jankjaerstad.no/bibliografi/menneskets-vidde</loc><priority>0.8</priority></url>
+  <url><loc>https://jankjaerstad.no/bibliografi/stein-blir-kaptein</loc><priority>0.8</priority></url>
+  <url><loc>https://jankjaerstad.no/bibliografi/normans-omraade</loc><priority>0.8</priority></url>
+  <url><loc>https://jankjaerstad.no/bibliografi/jeg-er-brodrene-walker</loc><priority>0.8</priority></url>
+  <url><loc>https://jankjaerstad.no/bibliografi/mirandas-skattkammer</loc><priority>0.8</priority></url>
+  <url><loc>https://jankjaerstad.no/bibliografi/kjaerstads-matrise</loc><priority>0.8</priority></url>
+  <url><loc>https://jankjaerstad.no/bibliografi/kongen-av-europa</loc><priority>0.8</priority></url>
+  <url><loc>https://jankjaerstad.no/bibliografi/menneskets-nett</loc><priority>0.8</priority></url>
+  <url><loc>https://jankjaerstad.no/bibliografi/tegn-til-kjaerlighet</loc><priority>0.8</priority></url>
+  <url><loc>https://jankjaerstad.no/bibliografi/oppdageren</loc><priority>0.8</priority></url>
+  <url><loc>https://jankjaerstad.no/bibliografi/menneskets-felt</loc><priority>0.8</priority></url>
+  <url><loc>https://jankjaerstad.no/bibliografi/erobreren</loc><priority>0.8</priority></url>
+  <url><loc>https://jankjaerstad.no/bibliografi/hos-sheherasad-fantasiens-dronning</loc><priority>0.8</priority></url>
+  <url><loc>https://jankjaerstad.no/bibliografi/forforeren</loc><priority>0.8</priority></url>
+  <url><loc>https://jankjaerstad.no/bibliografi/rand</loc><priority>0.8</priority></url>
+  <url><loc>https://jankjaerstad.no/bibliografi/jakten-paa-de-skjulte-vaffelhjertene</loc><priority>0.8</priority></url>
+  <url><loc>https://jankjaerstad.no/bibliografi/menneskets-matrise</loc><priority>0.8</priority></url>
+  <url><loc>https://jankjaerstad.no/bibliografi/det-store-eventyret</loc><priority>0.8</priority></url>
+  <url><loc>https://jankjaerstad.no/bibliografi/homo-falsus</loc><priority>0.8</priority></url>
+  <url><loc>https://jankjaerstad.no/bibliografi/speil</loc><priority>0.8</priority></url>
+  <url><loc>https://jankjaerstad.no/bibliografi/kloden-dreier-stille-rundt</loc><priority>0.8</priority></url>
+
+</urlset>

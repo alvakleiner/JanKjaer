@@ -1,5 +1,6 @@
 import { useLanguage } from "../context/LanguageContext"
 import BookLink from "../components/BookLink"
+import SEO from "../components/SEO"
 
 const books = [
   { title: "Menneskets bølger", year: "2022", src: "/images/menneskets-bolger.jpg", href: "/bibliografi/menneskets-bolger" },
@@ -28,8 +29,45 @@ function Home() {
         },
     } as const
 
+    const seo = {
+        title: {
+            no: "Jan Kjærstad – Storyteller",
+            en: "Jan Kjærstad – Storyteller",
+        },
+        description: {
+            no: "Jan Kjærstad er en av Norges fremste romanforfattere, kjent for Jonas Wergeland-trilogien og Nordisk råds litteraturpris 2001.",
+            en: "Jan Kjærstad is one of Norway's foremost novelists, known for the Jonas Wergeland trilogy and the Nordic Council's Literature Prize 2001.",
+        },
+    } as const
+
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: "Jan Kjærstad",
+        url: "https://jankjaerstad.no",
+        birthDate: "1953-03-06",
+        birthPlace: { "@type": "Place", name: "Oslo, Norway" },
+        nationality: "Norwegian",
+        jobTitle: "Novelist",
+        award: [
+            "Nordisk råds litteraturpris (2001)",
+            "Det Norske Akademis Pris (2013)",
+            "Kommandør av St. Olavs Orden (2024)",
+        ],
+        sameAs: ["https://nbl.snl.no/Jan_Kj%C3%A6rstad"],
+    }
+
     return (
         <>
+            <SEO
+                title={seo.title[lang]}
+                description={seo.description[lang]}
+                path="/"
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* Hero / portrett */}
             <div className="md:pb-10 pb-4 flex justify-center">
                 <div className="hidden sm:block">

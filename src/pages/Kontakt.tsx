@@ -1,10 +1,20 @@
 import { useLanguage } from "../context/LanguageContext"
+import SEO from "../components/SEO"
 
 export default function Kontakt() {
   const { lang } = useLanguage()
 
+  const seo = {
+    title: { no: "Kontakt – Jan Kjærstad", en: "Contact – Jan Kjærstad" },
+    description: {
+      no: "Kontaktinformasjon for Jan Kjærstad.",
+      en: "Contact information for Jan Kjærstad.",
+    },
+  } as const
+
   return (
     <section className="bg-white">
+      <SEO title={seo.title[lang]} description={seo.description[lang]} path="/kontakt" />
       <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 mt-2 md:mt-4 mb-18">
 
         {/* h2 kun på mobil */}

@@ -1,6 +1,7 @@
 import { useLanguage } from "../context/LanguageContext"
 import { Download, X } from "lucide-react"
 import { useState } from "react"
+import SEO from "../components/SEO"
 
 const photos = [
   {
@@ -59,8 +60,17 @@ export default function Pressemateriale() {
   const { lang } = useLanguage()
   const [selected, setSelected] = useState<Photo | null>(null)
 
+  const seo = {
+    title: { no: "Pressemateriale – Jan Kjærstad", en: "Press Material – Jan Kjærstad" },
+    description: {
+      no: "Pressemateriale og pressebilder for journalister og medier om Jan Kjærstad.",
+      en: "Press material and press photos for journalists and media about Jan Kjærstad.",
+    },
+  } as const
+
   return (
     <section className="bg-white">
+      <SEO title={seo.title[lang]} description={seo.description[lang]} path="/pressemateriale" />
       <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 mt-2 md:mt-4 mb-18">
 
         <h2 className="

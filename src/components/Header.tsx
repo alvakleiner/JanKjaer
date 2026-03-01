@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from "react"
-import { Search, Globe, Menu, Check } from "lucide-react"
+import { Search, Globe, Check, X } from "lucide-react"
 import { useLanguage } from "../context/LanguageContext" // <- juster sti ved behov
+import SearchOverlay from "./SearchOverlay"
+import { search } from "../data/searchIndex"
 
 const navLinks = [
   { key: "bio", href: "/biografi", label: { no: "Biografi", en: "Biography" } },
@@ -14,7 +16,10 @@ const navLinks = [
 function Header() {
   const { lang, setLang } = useLanguage() // <- fra context
 
+  const [searchOpen, setSearchOpen] = useState(false)
   const [langOpen, setLangOpen] = useState(false)
+  const [mobileQuery, setMobileQuery] = useState("")
+  const mobileResults = search(mobileQuery, lang)
   const langRef = useRef<HTMLDivElement | null>(null)
 
   const [menuOpen, setMenuOpen] = useState(false)
@@ -36,6 +41,7 @@ function Header() {
       document.body.style.overflow = "hidden"
     } else {
       document.body.style.overflow = ""
+      setMobileQuery("")
     }
     return () => {
       document.body.style.overflow = ""
@@ -61,6 +67,7 @@ function Header() {
   }, [])
 
   return (
+    <>
     <header ref={headerRef} className="bg-white pt-2 md:pb-8">
       <div className="flex justify-between p-4 pb-5 md:pb-0">
         <div className="flex-1 lg:px-4 md:px-4 py-2">
@@ -68,7 +75,7 @@ function Header() {
             aria-label="Menu"
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((v) => !v)}
-            className="md:hidden p-2 rounded focus-visible:ring-2 focus-visible:ring-black flex flex-col justify-center gap-1.5 w-8 h-8"
+            className="md:hidden p-2 rounded focus-visible:ring-2 focus-visible:ring-black flex flex-col justify-center gap-1.5 w-8 h-8 cursor-pointer"
           >
             <span
               className={`block h-px w-6 bg-black transition-all duration-300 origin-center ${
@@ -106,7 +113,8 @@ function Header() {
         <div className="flex flex-1 justify-end items-start lg:px-4 md:px-4 py-2">
           <button
             aria-label="Search"
-            className="p-2 rounded focus-visible:ring-2 focus-visible:ring-black hidden sm:block"
+            onClick={() => setSearchOpen(true)}
+            className="p-2 rounded focus-visible:ring-2 focus-visible:ring-black hidden md:block cursor-pointer"
           >
             <Search size={22} strokeWidth={1.5} />
           </button>
@@ -192,28 +200,77 @@ function Header() {
       style={{ top: headerHeight, left: 0, right: 0, bottom: 0 }}
     >
       <nav className="flex flex-col px-8 mt-6">
-        {navLinks.map((link) => (
-          
-          <a key={link.key}
-            href={link.href}
-            onClick={() => setMenuOpen(false)}
-            className="
-              py-4
-              text-xl
-              tracking-[0.12em]
-              uppercase
-              font-['Playfair_Display_SC',serif]
-              text-gray-700
-              hover:text-black
-            "
-          >
-            {link.label[lang]}
-          </a>
-        ))}
+        {/* Inline search input */}
+        <div className="flex items-center gap-3 border-b border-neutral-200 pb-4 mb-2">
+          <Search size={18} className="text-neutral-400 shrink-0" strokeWidth={1.5} />
+          <input
+            value={mobileQuery}
+            onChange={(e) => setMobileQuery(e.target.value)}
+            placeholder={lang === "no" ? "Søk…" : "Search…"}
+            className="flex-1 text-base outline-none font-['Lora',serif] tracking-[0.02em] bg-transparent"
+          />
+          {mobileQuery && (
+            <button onClick={() => setMobileQuery("")} className="text-neutral-400 cursor-pointer">
+              <X size={16} strokeWidth={1.5} />
+            </button>
+          )}
+        </div>
+
+        {/* Results when typing, nav links otherwise */}
+        {mobileQuery ? (
+          mobileResults.length === 0 ? (
+            <p className="py-4 text-sm text-neutral-400 font-['Lora',serif] italic">
+              {lang === "no" ? "Ingen resultater" : "No results"}
+            </p>
+          ) : (
+            mobileResults.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={() => { setMenuOpen(false); setMobileQuery("") }}
+                className="flex items-center gap-4 py-3 text-gray-700 hover:text-black"
+              >
+                {item.image && (
+                  <img src={item.image} alt="" className="h-10 w-auto object-contain shrink-0" />
+                )}
+                <div>
+                  <p className="text-base tracking-[0.04em] font-['Playfair_Display',serif]">
+                    {item.title[lang]}
+                  </p>
+                  {item.subtitle && (
+                    <p className="text-xs text-neutral-400 font-['Lora',serif] mt-0.5">
+                      {item.subtitle[lang]}
+                    </p>
+                  )}
+                </div>
+              </a>
+            ))
+          )
+        ) : (
+          navLinks.map((link) => (
+            <a key={link.key}
+              href={link.href}
+              onClick={() => setMenuOpen(false)}
+              className="
+                py-4
+                text-xl
+                tracking-[0.12em]
+                uppercase
+                font-['Playfair_Display_SC',serif]
+                text-gray-700
+                hover:text-black
+              "
+            >
+              {link.label[lang]}
+            </a>
+          ))
+        )}
       </nav>
     </div>
 
     </header>
+    <SearchOverlay open={searchOpen} onClose={() => setSearchOpen(false)} />
+    </>
   )
 }
 
