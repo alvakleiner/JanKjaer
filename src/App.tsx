@@ -3,9 +3,9 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 import ScrollToTop from "./components/ScrollToTop"
 
-import Home from "./pages/Home"
+import Home from "./pages/home"
 
-import Bibliografi from "./pages/Bibliografi"
+import Bibliografi from "./pages/bibliografi"
 import Valgdager from "./pages/bibliografi/valgdager"
 import MennesketsBolger from "./pages/bibliografi/menneskets-bolger"
 import EnTidForALeve from "./pages/bibliografi/en-tid-for-a-leve"
@@ -34,11 +34,11 @@ import HomoFalsusEllerDetPerfekteMord from "./pages/bibliografi/homo-falsus"
 import Speil from "./pages/bibliografi/speil"
 import KlodenDreierStilleRundt from "./pages/bibliografi/kloden-dreier-stille-rundt"
 
-import Biografi from "./pages/Biografi"
-import Galleri from "./pages/Galleri"
-import Intervjuer from "./pages/Intervjuer"
-import Kontakt from "./pages/Kontakt"
-import Pressemateriale from "./pages/Pressemateriale"
+import Biografi from "./pages/biografi"
+import Galleri from "./pages/galleri"
+import Intervjuer from "./pages/intervjuer"
+import Kontakt from "./pages/kontakt"
+import Pressemateriale from "./pages/pressemateriale"
 
 function App() {
   return (

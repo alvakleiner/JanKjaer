@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls src/pages/*.tsx)",
+      "Bash(npx tsc --noEmit)"
+    ]
+  }
+}

@@ -304,12 +304,12 @@ export default function Intervjuer() {
 
         <div className="mt-12">
           <img
-            src="/images/jk-pc.jpg"
+            src="/images/jkeh.jpg"
             alt=""
             className="w-full h-auto"
           />
           <p className="text-sm tracking-[0.04em] font-['Lora',serif] text-black/70 mt-4">
-            Foto: Rolf Øhman
+            Foto: Elin Høyland
           </p>
         </div>
 
