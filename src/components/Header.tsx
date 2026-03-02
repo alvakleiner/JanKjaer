@@ -247,9 +247,9 @@ function Header() {
             ))
           )
         ) : (
-          navLinks.map((link) => (
-            <a key={link.key}
-              href={link.href}
+          <>
+            <a
+              href="/"
               onClick={() => setMenuOpen(false)}
               className="
                 py-4
@@ -261,9 +261,26 @@ function Header() {
                 hover:text-black
               "
             >
-              {link.label[lang]}
+              {lang === "no" ? "Hjem" : "Home"}
             </a>
-          ))
+            {navLinks.map((link) => (
+              <a key={link.key}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className="
+                  py-4
+                  text-xl
+                  tracking-[0.12em]
+                  uppercase
+                  font-['Playfair_Display_SC',serif]
+                  text-gray-700
+                  hover:text-black
+                "
+              >
+                {link.label[lang]}
+              </a>
+            ))}
+          </>
         )}
       </nav>
     </div>
