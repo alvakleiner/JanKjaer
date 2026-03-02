@@ -120,7 +120,7 @@ function Header() {
           </button>
 
           {/* Language dropdown */}
-          <div className="relative" ref={langRef}>
+          <div className="relative z-[60]" ref={langRef}>
             <button
               aria-label="Change language"
               aria-haspopup="menu"
