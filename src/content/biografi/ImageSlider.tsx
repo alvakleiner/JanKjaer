@@ -11,18 +11,6 @@ const images = [
     caption: { no: "Jan Kjærstad på Herføl, stedet hvor moren vokste opp. Barndomshjemmet til moren brukes i dag som sommerhus, og har vært et viktig arbeidssted for forfatteren. Foto: Frode Hansen / VG", en: "Jan Kjærstad on Herføl, where his mother grew up. The house is now used as a summer house and has been an important place of work for the author. Photo: Frode Hansen / VG" },
   },
   {
-    src: "/images/jan-ved-kontordor.jpg",
-    caption: {no: "Jan Kjærstad i dørinngangen til kontoret hans i familiens tidligere hjem på Frogner i Oslo. Bildet ble tatt i forbindelse med utgivelsen av \"Jeg er brødrene Walker\" i 2008. Foto: Erlend Aas / NTB", en: "Jan Kjærstad in the doorway of his office in the family's former home in Frogner, Oslo. The photograph was taken in connection with the publication of \"I Am the Walker Brothers\" in 2008. Photo: Erlend Aas / NTB"},
-  },
-  {
-    src: "/images/jan-terese.jpg",
-    caption: { no: "Jan Kjærstad og samboer Terese Moe Leiner. Foto: tara.no / NTB", en: "Jan Kjærstad and his partner, Terese Moe Leiner. Photo: NTB" },
-  },
-  {
-    src: "/images/jan-vinduet.jpg",
-    caption: { no: "Jan Kjærstad som fersk redaktør av Vinduet. Foto: Rolf Chr. Ulrichsen / Aftenposten / NTB", en: "Jan Kjærstad in his early days as editor of Vinduet. Photo: Rolf Chr. Ulrichsen / Aftenposten / NTB" },
-  },
-  {
     src: "/images/jan-m-camus.jpg",
     caption: { no: "Jan Kjærstad hjemme på Holtet i Oslo sammen med hunden Camus, oppkalt etter den franske forfatteren Albert Camus. Foto: Klassekampen", en: "Jan Kjærstad pictured at home with his dog Camus, named after the French writer Albert Camus. Photo: Klassekampen" },
   },
