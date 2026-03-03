@@ -21,7 +21,7 @@ const content = {
       diceImg: "/images/terningkast5.png",
     },
     {
-      text: "«Mr. Woolf er en rik røverroman som glir sømløst mellom fortid og nåtid … Romanen innehar en dæsj Murakami-mystikk, er spennende som en detektivhistorie; den er både menneskevarm og underlig. Sier du yes til fortellingen er hans nye bok en skattkiste.»",
+      text: <>«<em>Mr. Woolf</em> er en rik røverroman som glir sømløst mellom fortid og nåtid … Romanen innehar en dæsj Murakami-mystikk, er spennende som en detektivhistorie; den er både menneskevarm og underlig. Sier du yes til fortellingen er hans nye bok en skattkiste.»</>,
       source: "Ellen Sofie Lauritzen, Dagens Næringsliv",
     },
     {

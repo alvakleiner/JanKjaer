@@ -72,16 +72,16 @@ const publisherNote = {
     <>
       Alle Jan Kjærstads bøker er utgitt av H. Aschehoug & Co (W. Nygaard), med unntak av:
       <div className="h-2"/>
-      Stein blir kaptein (Gyldendal), Mirandas skattkammer (Magikon), Hos Sheherasad,
-      fantasiens dronning (N.W. Damm & Søn), og Tusen og en natt 1-2 (De norske bokklubbene).
+      <em>Stein blir kaptein</em> (Gyldendal), <em>Mirandas skattkammer</em> (Magikon), <em>Hos Sheherasad,
+      fantasiens dronning</em> (N.W. Damm & Søn), og <em>Tusen og en natt</em> 1-2 (De norske bokklubbene).
     </>
   ),
   en: (
     <>
       All books by Jan Kjærstad are published by H. Aschehoug & Co (W. Nygaard), with the exception of:
       <div className="h-2"/>
-      Stein blir kaptein (Gyldendal), Mirandas skattkammer (Magikon), Hos Sheherasad,
-      fantasiens dronning (N.W. Damm & Søn), and Tusen og en natt 1-2 (De norske bokklubbene).
+      <em>Stein blir kaptein</em> (Gyldendal), <em>Mirandas skattkammer</em> (Magikon), <em>Hos Sheherasad,
+      fantasiens dronning</em> (N.W. Damm & Søn), and <em>Tusen og en natt</em> 1-2 (De norske bokklubbene).
     </>
   ),
 }
@@ -144,11 +144,11 @@ export default function Bibliografi() {
                     hover:text-black
                   "
                 >
-                  {book.title} - {book.meta}
+                  <em>{book.title}</em> - {book.meta}
                 </Link>
               ) : (
                 <span className="text-gray-700">
-                  {book.title} - {book.meta}
+                  <em>{book.title}</em> - {book.meta}
                 </span>
               )}
             </div>

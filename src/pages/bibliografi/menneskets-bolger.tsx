@@ -19,7 +19,7 @@ const mennesketsBolgerContent: BookPageContent = {
       diceImg: "/images/terningkast5.png",
     },
     {
-      text: "«Jan Kjærstad kaster et interessant lys på dagens tidsånd. I sin nye essaysamling Menneskets bølger skriver Jan Kjærstad om litterære forbilder, skjulte perler, norsk kulturpolitikk, egen skriveprosess og mye annet. Men uansett hvilket tema han belyser, så kommer hans kjærlighet til det skrevne ord klart fram.»",
+      text: <>«Jan Kjærstad kaster et interessant lys på dagens tidsånd. I sin nye essaysamling <em>Menneskets bølger</em> skriver Jan Kjærstad om litterære forbilder, skjulte perler, norsk kulturpolitikk, egen skriveprosess og mye annet. Men uansett hvilket tema han belyser, så kommer hans kjærlighet til det skrevne ord klart fram.»</>,
       source: "Leif Gjerstad, Bok365",
       diceImg: "/images/terningkast5.png",
     },

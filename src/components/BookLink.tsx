@@ -16,7 +16,7 @@ export default function BookLink({
       href={href}
       className={`underline underline-offset-4 ${className}`}
     >
-      {children}
+      <em>{children}</em>
     </a>
   )
 }

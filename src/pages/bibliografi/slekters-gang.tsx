@@ -19,7 +19,7 @@ const content: BookPageContent = {
       diceImg: "/images/terningkast6.png",
     },
     {
-      text: "«Slekters gang – et av høstens viktigste romanverk.»",
+      text: <>«<em>Slekters gang</em> – et av høstens viktigste romanverk.»</>,
       source: "Finn Stenstad, Tønsberg Blad",
       diceImg: "/images/terningkast5.png",
     },

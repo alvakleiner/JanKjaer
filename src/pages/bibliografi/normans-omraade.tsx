@@ -20,7 +20,7 @@ const normansOmraadeContent: BookPageContent = {
       source: "Maya Troberg Djuve, Dagbladet",
     },
     {
-      text: "«Det glitrer av Jan Kjærstads skrivekunst også i Normans område. … Normans område var ventet å bli en av høstens store, og kommer også til å bli det.»",
+      text: <>«Det glitrer av Jan Kjærstads skrivekunst også i <em>Normans område</em>. … <em>Normans område</em> var ventet å bli en av høstens store, og kommer også til å bli det.»</>,
       source: "Geir Vestad, Hamar Arbeiderblad",
     },
     {
@@ -40,7 +40,7 @@ const normansOmraadeContent: BookPageContent = {
       source: "Bernhard Ellefsen, Morgenbladet",
     },
     {
-      text: "«Kjærstad har et poetisk språk og nydelig setningsoppbygging. Han er en mester i å antyde og fører oss fram og tilbake i tid. … Hvis du er Kjærstad-fan fra før av er Normans område en vinner. Hvis du ikke kjenner forfatteren, er dette en fin anledning til å begynne.»",
+      text: <>«Kjærstad har et poetisk språk og nydelig setningsoppbygging. Han er en mester i å antyde og fører oss fram og tilbake i tid. … Hvis du er Kjærstad-fan fra før av er <em>Normans område</em> en vinner. Hvis du ikke kjenner forfatteren, er dette en fin anledning til å begynne.»</>,
       source: "Elise Weseth, Oppland Arbeiderblad",
     },
     {
@@ -56,7 +56,7 @@ const normansOmraadeContent: BookPageContent = {
       source: "Nina Kjeøy, Trønder-Avisa",
     },
     {
-      text: "«Normans område løftar opp spørsmål som burde interessere ein kvar lesande nordmann.»",
+      text: <>«<em>Normans område</em> løftar opp spørsmål som burde interessere ein kvar lesande nordmann.»</>,
       source: "Marta Norheim, NRK",
     },
     {

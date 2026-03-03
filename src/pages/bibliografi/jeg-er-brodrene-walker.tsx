@@ -20,7 +20,7 @@ const jegErBrodreneWalkerContent: BookPageContent = {
       source: "Annette Orre, Dagsavisen",
     },
     {
-      text: "«Jan Kjærstads tiende roman byr på mye av det som har gjort ham til en av de dyktigste og mest sentrale norske forfatterne de siste 25 åra. Jeg er brødrene Walker er en smart metaroman, spekket med referanser til populærkultur, høykultur, historie og den samfunnsmessige utviklingen i Norge fra tidlig på 80-tallet og fram til i dag.»",
+      text: <>«Jan Kjærstads tiende roman byr på mye av det som har gjort ham til en av de dyktigste og mest sentrale norske forfatterne de siste 25 åra. <em>Jeg er brødrene Walker</em> er en smart metaroman, spekket med referanser til populærkultur, høykultur, historie og den samfunnsmessige utviklingen i Norge fra tidlig på 80-tallet og fram til i dag.»</>,
       source: "Terje Eidsvåg, Adresseavisen",
     },
   ],

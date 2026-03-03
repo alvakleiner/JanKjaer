@@ -1,9 +1,11 @@
+import type { ReactNode } from "react"
 import { useLocation } from "react-router-dom"
 import { useLanguage } from "../context/LanguageContext"
+import { searchItems } from "../data/searchIndex"
 import SEO, { SITE_URL } from "./SEO"
 
 export type BookQuote = {
-  text: string | { no: string; en: string }
+  text: ReactNode | { no: ReactNode; en: ReactNode }
   source: string
   diceImg?: string
 }
@@ -19,6 +21,45 @@ export type BookPageContent = {
   quotesTitle: { no: string; en: string }
   quotes: BookQuote[]
   paragraphs: { no: string[]; en: string[] }
+}
+
+// ─── Auto-italicize book titles in plain text ────────────────────────────────
+
+const bookTitles = searchItems
+  .filter(item => item.subtitle)
+  .flatMap(item => [item.title.no, item.title.en])
+  .filter((t, i, arr) => arr.indexOf(t) === i)
+  .sort((a, b) => b.length - a.length)
+
+function italicizeTitles(text: string): ReactNode {
+  type Chunk = string | { em: string }
+  let chunks: Chunk[] = [text]
+
+  for (const title of bookTitles) {
+    const escaped = title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    const regex = new RegExp(`(?<![a-zA-ZæøåÆØÅ])${escaped}(?![a-zA-ZæøåÆØÅ])`, "g")
+
+    const next: Chunk[] = []
+    for (const chunk of chunks) {
+      if (typeof chunk !== "string") { next.push(chunk); continue }
+      let last = 0
+      let m: RegExpExecArray | null
+      regex.lastIndex = 0
+      while ((m = regex.exec(chunk)) !== null) {
+        if (m.index > last) next.push(chunk.slice(last, m.index))
+        next.push({ em: m[0] })
+        last = regex.lastIndex
+      }
+      if (last < chunk.length) next.push(chunk.slice(last))
+    }
+    chunks = next
+  }
+
+  if (!chunks.length) return text
+  const nodes = chunks.map((c, i) =>
+    typeof c === "string" ? c : <em key={i}>{c.em}</em>
+  )
+  return nodes.length === 1 ? nodes[0] : <>{nodes}</>
 }
 
 // ─── Body (title, cover image, paragraphs) ───────────────────────────────────
@@ -94,7 +135,7 @@ export function BookPageBody({ content }: BookPageBodyProps) {
         space-y-6
       ">
         {content.paragraphs[lang].map((p, i) => (
-          <p key={i}>{p}</p>
+          <p key={i}>{italicizeTitles(p)}</p>
         ))}
         <div className="clear-both" />
       </div>
@@ -136,9 +177,10 @@ export function BookPageQuotes({ content }: BookPageQuotesProps) {
               leading-7
               tracking-[0.04em]
               text-black
-              italic
             ">
-              {typeof q.text === "string" ? q.text : q.text[lang]}
+              {q.text !== null && typeof q.text === "object" && "no" in (q.text as object)
+                ? (q.text as { no: ReactNode; en: ReactNode })[lang]
+                : q.text as ReactNode}
             </p>
             <div className="flex items-center gap-3 mt-2">
               {q.diceImg && (

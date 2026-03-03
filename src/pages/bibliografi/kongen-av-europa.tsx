@@ -19,7 +19,7 @@ const kongenAvEuropaContent: BookPageContent = {
       diceImg: "/images/terningkast5.png",
     },
     {
-      text: "«En roman som Kongen av Europa kan ikke, når man akkurat har lest den, ytes rettferdighet gjennom en anmeldelse … Det er en roman som må leses langsomt, og gjenleses.»",
+      text: <>«En roman som <em>Kongen av Europa</em> kan ikke, når man akkurat har lest den, ytes rettferdighet gjennom en anmeldelse … Det er en roman som må leses langsomt, og gjenleses.»</>,
       source: "Hans H. Skei, Aftenposten",
     },
     {

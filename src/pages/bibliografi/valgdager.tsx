@@ -14,16 +14,16 @@ const valgdagerContent: BookPageContent = {
   quotesTitle: { no: "Sitater", en: "Quotes" },
   quotes: [
     {
-      text: "«Jan Kjærstad hører hjemme i det ypperste favorittsjiktet mitt når det gjelder nåtidige forfatterstemmer. Valgdager bekrefter den posisjonen. … Det er egentlig fire helt forskjellige historier som Kjærstad med sitt språklige og fortellermessige mesterskap knytter sammen på et helhetlig, troverdig og elegant vis. … Her er det et persongalleri så mangefasettert, rikt og troverdig som vel mulig og Kjærstad har et driv og naturlig eleganse i språket sitt som alle forfattere og andre som befatter seg med språk gjerne kan misunne han. Jan Kjærstad har nemlig skrevet et mesterstykke av en oppvekst- og samtidsroman (er det noe som heter det? Nå er det i alle fall det!) som mange vil både kjenne seg igjen i, lære av og hygge seg med. Ikke reint lite det, vil jeg mene.»",
+      text: <>«Jan Kjærstad hører hjemme i det ypperste favorittsjiktet mitt når det gjelder nåtidige forfatterstemmer. <em>Valgdager</em> bekrefter den posisjonen. … Det er egentlig fire helt forskjellige historier som Kjærstad med sitt språklige og fortellermessige mesterskap knytter sammen på et helhetlig, troverdig og elegant vis. … Her er det et persongalleri så mangefasettert, rikt og troverdig som vel mulig og Kjærstad har et driv og naturlig eleganse i språket sitt som alle forfattere og andre som befatter seg med språk gjerne kan misunne han. Jan Kjærstad har nemlig skrevet et mesterstykke av en oppvekst- og samtidsroman (er det noe som heter det? Nå er det i alle fall det!) som mange vil både kjenne seg igjen i, lære av og hygge seg med. Ikke reint lite det, vil jeg mene.»</>,
       source: "Tor Hammerø, Nettavisen",
       diceImg: "/images/terningkast6.png",
     },
     {
-      text: "«Valgdager spinn seg inn i nokre av dei mest ikoniske augneblinkane i norsk historie, akkurat slik Kjærstad har gjort fleire gonger før. Her kan årets roman frå Kjærstad minne ein del om storverket hans frå 2015, Slekters gang, sjølv om dei to bøkene tar for seg historiefortellinga på så ulikt vis at det bør vere god plass til begge i bokhylla. Det er fordi Jan Kjærstad har skrive haustens beste bok om Arbeidarpartiet og vår tid.»",
+      text: <>«<em>Valgdager</em> spinn seg inn i nokre av dei mest ikoniske augneblinkane i norsk historie, akkurat slik Kjærstad har gjort fleire gonger før. Her kan årets roman frå Kjærstad minne ein del om storverket hans frå 2015, <em>Slekters gang</em>, sjølv om dei to bøkene tar for seg historiefortellinga på så ulikt vis at det bør vere god plass til begge i bokhylla. Det er fordi Jan Kjærstad har skrive haustens beste bok om Arbeidarpartiet og vår tid.»</>,
       source: "Emil André Erstad, Vårt Land",
     },
     {
-      text: "«Valgdager er Jan Kjærstad på sitt mest kjærstadske. Fortellinger om kjendiser og luksus, om begjær og talismaner, veves sammen med trangen til å skape noe stort med tankens kraft. Det er ambisiøst, og det virker.»",
+      text: <>«<em>Valgdager</em> er Jan Kjærstad på sitt mest kjærstadske. Fortellinger om kjendiser og luksus, om begjær og talismaner, veves sammen med trangen til å skape noe stort med tankens kraft. Det er ambisiøst, og det virker.»</>,
       source: "Anne Cathrine Straume, NRK",
     },
     {
