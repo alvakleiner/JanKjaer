@@ -146,7 +146,7 @@ function Home() {
                 <div className="max-w-5xl mx-auto px-4 md:px-8 lg:px-8 xl:px-10">
 
                     {/* < 800px: scroller */}
-                    <div className="min-[800px]:hidden">
+                    <div className="min-[800px]:hidden -mt-8">
                     <div className="overflow-x-auto pb-4 [-webkit-overflow-scrolling:touch]">
                         <div className="flex w-max min-w-full justify-center gap-6 px-6 snap-x snap-mandatory">
                             {books.map((b) => (

@@ -2,7 +2,14 @@
   "permissions": {
     "allow": [
       "Bash(ls src/pages/*.tsx)",
-      "Bash(npx tsc --noEmit)"
+      "Bash(npx tsc --noEmit)",
+      "Bash(git rm -r --cached \"src/pages/Bibliografi\")",
+      "Bash(git add \"src/pages/bibliografi/\")",
+      "Bash(git rm --cached \"src/pages/Pressemateriale.tsx\")",
+      "Bash(git add \"src/pages/pressemateriale.tsx\")",
+      "Bash(git commit:*)",
+      "Bash(git push)",
+      "Bash(git add vercel.json)"
     ]
   }
 }
