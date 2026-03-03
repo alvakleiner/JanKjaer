@@ -119,7 +119,7 @@ function Home() {
                         >
                             <BookLink
                                 href="/bibliografi/valgdager"
-                                className="sm:no-underline decoration-[0.7px]"
+                                className="sm:no-underline decoration-[0.7px] [&_em]:not-italic"
                             >
                                 {content.bookTitle[lang]}
                             </BookLink>
