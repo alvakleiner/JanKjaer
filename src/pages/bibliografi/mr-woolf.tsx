@@ -1,5 +1,7 @@
-﻿import { BookPageQuotes } from "../../components/BookPage"
+import { useLocation } from "react-router-dom"
 import { useLanguage } from "../../context/LanguageContext"
+import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
+import SEO, { SITE_URL } from "../../components/SEO"
 
 const content = {
   title: { no: "Mr. Woolf", en: "Mr. Woolf" },
@@ -62,168 +64,65 @@ const content = {
       "Bli med på et lite eksperiment: Lukk øynene og tenk på din yndlingsleke i barndommen. Eller se for deg at du er på loftet og finner en av lekene dine. Tenk så på de universene som stiger opp i deg når du tar den i hånden. Du vil nå ha en idé om hva Mr. Woolf handler om.",
       "Vennlig hilsen Jan Kjærstad",
     ],
-    en: [ /* TO BE TRANSLATED */],
+    en: [],
   },
 }
 
-
 export default function MrWoolf() {
   const { lang } = useLanguage()
+  const { pathname } = useLocation()
 
-  const buy = content.buyLink[lang]
+  const rawDesc = content.paragraphsBeforeImage[lang][0]
+  const description = rawDesc.length > 155 ? rawDesc.slice(0, 152) + "…" : rawDesc
 
   return (
-    <section className="bg-white">
-      <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
+    <>
+      <SEO
+        title={`${content.title[lang]} – Jan Kjærstad`}
+        description={description}
+        path={pathname}
+        image={`${SITE_URL}${content.coverImage.src}`}
+      />
+      <section className="bg-white">
+        <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
 
-        <h2
-          className="
-            text-center
-            text-2xl
-            font-medium
-            tracking-widest
-            font-['Playfair_Display',serif]
-            mb-2
-          "
-        >
-          {content.title[lang]}
-        </h2>
+          <BookPageBody content={{ ...content, paragraphs: content.paragraphsBeforeImage }} />
 
-        <p className="text-center text-sm tracking-[0.08em] text-neutral-500 font-['Lora',serif] mb-10">
-          {content.meta[lang]}
-        </p>
+          {/* Inline image */}
+          <div className="flex justify-center my-10 md:my-4">
+            <img
+              src="/images/jan-og-leif.jpg"
+              alt="Jan & Leif"
+              className="w-full max-w-lg h-auto object-contain"
+            />
+          </div>
 
-        {/* Cover image */}
-        <div className="flex flex-col items-center md:float-right md:ml-10 md:mb-4 mb-8">
-          <img
-            src={content.coverImage.src}
-            alt={content.title[lang]}
-            className="w-44 md:w-48 md:mt-4 h-auto object-contain"
-          />
-
-          <a
-            href={buy.href}
-            target="_blank"
-            rel="noreferrer"
-            className="
-              mt-3
-              mb-2
-              md:mb-0
-              text-sm
-              tracking-[0.06em]
-              font-['Lora',serif]
-              text-neutral-600
-              underline
-              underline-offset-4
-              decoration-neutral-400
-              hover:text-black
-              hover:decoration-neutral-800
-              transition
-            "
-          >
-            {buy.label}
-          </a>
-        </div>
-
-        {/* Body text — before inline image */}
-        <div className="
-          text-base
-          leading-7
-          tracking-[0.04em]
-          font-['Lora',serif]
-          text-black
-          space-y-6
-        ">
-          {content.paragraphsBeforeImage[lang].map((p, i) => (
-            <p key={i}>{p}</p>
-          ))}
-          <div className="clear-both" />
-        </div>
-
-        {/* Inline image */}
-        <div className="flex justify-center my-10 md:my-4">
-          <img
-            src="/images/jan-og-leif.jpg"
-            alt="Jan & Leif"
-            className="w-full max-w-lg h-auto object-contain"
-          />
-        </div>
-
-        {/* Body text — after inline image */}
-        <div className="
-          text-base
-          leading-7
-          tracking-[0.04em]
-          font-['Lora',serif]
-          text-black
-          space-y-6
-        ">
-          <div className="clear-both my-10" />
-          {content.paragraphsAfterImage[lang].map((p, i) => (
-            <p key={i}>{p}</p>
-          ))}
-        </div>
-
-        {/* Quotes / Reviews */}
-        <BookPageQuotes content={{
-          quotesTitle: content.quotesTitle,
-          quotes: content.quotes,
-        }} />
-
-        <div className="space-y-8">
-          {content.quotes.map((q, i) => (
-            <div key={i} className="border-l-2 border-black/10 pl-5">
-              <p className="
-                font-['Lora',serif]
-                text-base
-                leading-7
-                tracking-[0.04em]
-                text-black
-                italic
-              ">
-                {q.text}
-              </p>
-              <div className="flex items-center gap-3 mt-2">
-                {q.diceImg && (
-                  <img
-                    src={q.diceImg}
-                    alt="Terningkast"
-                    className="h-7 w-auto shrink-0"
-                  />
-                )}
-                <p className="
-                  text-sm
-                  tracking-[0.08em]
-                  font-['Lora',serif]
-                  text-neutral-500
-                ">
-                  {q.source}
-                </p>
-              </div>
+          {/* Body text — after inline image */}
+          {content.paragraphsAfterImage[lang].length > 0 && (
+            <div className="text-base leading-7 tracking-[0.04em] font-['Lora',serif] text-black space-y-6">
+              <div className="clear-both my-10" />
+              {content.paragraphsAfterImage[lang].map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
             </div>
-          ))}
-        </div>
+          )}
 
-        {/* Cover art credit */}
-        <div className="flex flex-col items-center mt-14">
-          <img
-            src="/images/omslag-mr-woolf.jpg"
-            alt="Bokomslag Mr. Woolf"
-            className="w-full h-auto object-contain"
-          />
-          <p className="
-            self-start
-            text-sm
-            tracking-[0.08em]
-            font-['Lora',serif]
-            text-neutral-500
-            mt-4
-          ">
-            Omslag: Terese Moe Leiner
-          </p>
-        </div>
+          <BookPageQuotes content={content} />
 
-      </div>
-    </section>
+          {/* Cover art */}
+          <div className="flex flex-col items-center mt-14">
+            <img
+              src="/images/omslag-mr-woolf.jpg"
+              alt="Bokomslag Mr. Woolf"
+              className="w-full h-auto object-contain"
+            />
+            <p className="self-start text-sm tracking-[0.08em] font-['Lora',serif] text-neutral-500 mt-4">
+              Omslag: Terese Moe Leiner
+            </p>
+          </div>
+
+        </div>
+      </section>
+    </>
   )
 }
