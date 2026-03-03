@@ -51,7 +51,7 @@ const content = {
       "One day William Abelson meets his father for lunch. William holds a doctorate degree in physics but has hit the wall and is now working as a barista in a trendy café in Oslo. His father runs Stjerneplassen Toys, a beloved but struggling independent toy store downtown. William expects nothing more than yet another of their regular conversations, where his father shares his financial troubles over a cheap meal. But this time, his father has bigger worries: Elizabeth, William's sister, has disappeared. The father thinks she may be in grave danger and asks William to travel to Hong Kong, where she might be located.",
       "How hard can that be? William thinks. All I need to do is to find my sister and bring her home.",
       "As soon as he arrives at the airport in Hong Kong, however, things start to take unexpected turns. William is picked up by a Rolls Royce and taken to The Peninsula, one of the most luxurious hotels in the city. Over the next few days, he will find himself in situations and strange encounters that will turn everything he thought he knew upside down and give him a taste of ground-breaking, new knowledge.",
-      "Mr Woolf is an intriguing, playful and thought-provoking story of a family who doesn't apply to any standard model.",
+      "Mr. Woolf is a tribute to all ordinary fathers, who perhaps are not as ordinary as one might think.",
     ],
   },
   paragraphsAfterImage: {
@@ -64,7 +64,15 @@ const content = {
       "Bli med på et lite eksperiment: Lukk øynene og tenk på din yndlingsleke i barndommen. Eller se for deg at du er på loftet og finner en av lekene dine. Tenk så på de universene som stiger opp i deg når du tar den i hånden. Du vil nå ha en idé om hva Mr. Woolf handler om.",
       "Vennlig hilsen Jan Kjærstad",
     ],
-    en: [],
+    en: [
+      "Dear Reader,",
+      "This novel has a special background. Midway through the writing, while everything was still chaos and I was searching for a through-line for the story, my father died. He had reached the age of 99. So it was something one could live with. And yet. In the weeks that followed — most people will recognise the situation — I found myself sitting and wondering: Who was he?",
+      "This is a book for my father. This is a book about my father.",
+      "Even if not many will see it, Mr. Woolf is also an autobiographical novel.",
+      "When I was clearing out my father's house, I found a small suitcase containing my old toys. I picked up a Matchbox car — a moving van — and abracadabra. I was a boy again, sitting in the living room moving furniture from one rug to another; or rather, they weren't rugs, they were neighbourhoods in Oslo.",
+      "Join me in a small experiment: close your eyes and think of your favourite toy from childhood. Or imagine you are up in the attic and find one of your old toys. Then think of the universes that rise up inside you when you hold it in your hand. You will now have an idea of what Mr. Woolf is about.",
+      "Yours sincerely, Jan Kjærstad",
+    ],
   },
 }
 
