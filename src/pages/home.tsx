@@ -35,8 +35,8 @@ function Home() {
             en: "Jan Kjærstad – Storyteller",
         },
         description: {
-            no: "Jan Kjærstad er en av Norges fremste romanforfattere, kjent for Jonas Wergeland-trilogien og Nordisk råds litteraturpris 2001.",
-            en: "Jan Kjærstad is one of Norway's foremost novelists, known for the Jonas Wergeland trilogy and the Nordic Council's Literature Prize 2001.",
+            no: "Den offisielle nettsiden til Jan Kjærstad – prisvinnende norsk forfatter.",
+            en: "The official website of Jan Kjærstad – award-winning Norwegian author.",
         },
     } as const
 
