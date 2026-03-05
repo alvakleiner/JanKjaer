@@ -67,7 +67,7 @@ export default function KlodenDreierStilleRundt() {
             mt-4
             text-sm
             tracking-[0.04em]
-            font-['Lora',serif]
+            font-lora
             text-black/80
             text-center
           "

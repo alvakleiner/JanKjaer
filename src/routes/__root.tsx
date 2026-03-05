@@ -1,10 +1,15 @@
-import { createRootRoute, Outlet } from "@tanstack/react-router";
+/// <reference types="vite/client" />
+import { createRootRoute, Outlet, HeadContent, Scripts } from "@tanstack/react-router";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
 import { SeoInfo } from "../lib/seo";
 import { TanStackDevtools } from "@tanstack/react-devtools";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
+import "@/index.css";
+
+import type { ReactNode } from "react";
+import {} from "@tanstack/react-router";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -25,13 +30,15 @@ export const Route = createRootRoute({
       { name: "twitter:image", content: SeoInfo.bannerImage },
     ],
   }),
-  component: () => (
-    <>
+  component: RootComponent,
+});
+
+function RootComponent() {
+  return (
+    <RootDocument>
       <ScrollToTop />
       <Header />
-      <main>
-        <Outlet />
-      </main>
+      <Outlet />
       <TanStackDevtools
         plugins={[
           {
@@ -41,6 +48,20 @@ export const Route = createRootRoute({
         ]}
       />
       <Footer />
-    </>
-  ),
-});
+    </RootDocument>
+  );
+}
+
+function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
+  return (
+    <html>
+      <head>
+        <HeadContent />
+      </head>
+      <body>
+        {children}
+        <Scripts />
+      </body>
+    </html>
+  );
+}

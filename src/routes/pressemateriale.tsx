@@ -81,13 +81,13 @@ export default function Pressemateriale() {
         <h2
           className="
           text-center text-[20px] sm:text-2xl font-medium tracking-widest
-          font-['Playfair_Display',serif] mb-8 md:mb-10
+          font-playfair mb-8 md:mb-10
         "
         >
           {lang === "no" ? "Pressemateriale" : "Press material"}
         </h2>
 
-        <p className="text-base leading-7 tracking-[0.04em] font-['Lora',serif] text-black mb-12">
+        <p className="text-base leading-7 tracking-[0.04em] font-lora text-black mb-12">
           {lang === "no" ? (
             <>
               Tekst og bilder som lastes ned fra denne siden, kan benyttes fritt i forbindelse med
@@ -139,11 +139,11 @@ export default function Pressemateriale() {
           )}
         </p>
 
-        <h3 className="uppercase text-xl tracking-[0.12em] font-['Playfair_Display_SC',serif] mb-6">
+        <h3 className="uppercase text-xl tracking-[0.12em] font-playfair-sc mb-6">
           {lang === "no" ? "Pressefoto" : "Press photos"}
         </h3>
 
-        <p className="text-sm font-['Lora',serif] tracking-[0.04em] text-black/60 mb-6">
+        <p className="text-sm font-lora tracking-[0.04em] text-black/60 mb-6">
           {lang === "no"
             ? "Trykk på bildene for å se dem ubeskåret og få mer informasjon. Fotografene må krediteres."
             : "Click the photos to view them in full size and get more information. Photographers must be credited."}
@@ -169,21 +169,21 @@ export default function Pressemateriale() {
               >
                 <span
                   className="
-                  text-white text-sm font-['Lora',serif] tracking-[0.06em]
+                  text-white text-sm font-lora tracking-[0.06em]
                   opacity-0 group-hover:opacity-100 transition-opacity duration-300
                 "
                 >
                   {lang === "no" ? "Se info" : "View info"}
                 </span>
               </div>
-              <p className="mt-2 text-sm font-['Lora',serif] tracking-[0.04em] text-black/50">
+              <p className="mt-2 text-sm font-lora tracking-[0.04em] text-black/50">
                 © {photo.photographer}
               </p>
             </button>
           ))}
         </div>
 
-        <h3 className="uppercase text-xl tracking-[0.12em] font-['Playfair_Display_SC',serif] mt-12 mb-6">
+        <h3 className="uppercase text-xl tracking-[0.12em] font-playfair-sc mt-12 mb-6">
           {lang === "no" ? "Brosjyre" : "Pamphlet"}
         </h3>
 
@@ -192,7 +192,7 @@ export default function Pressemateriale() {
           <div className="order-2 shrink-0 mt-6 sm:mt-0 flex flex-col items-center sm:items-start">
             <img src="/images/press/brosjyre.png" alt="" className="w-40 h-auto" />
             {/* Last ned – kun på xs */}
-            <p className="sm:hidden mt-2 text-sm font-['Lora',serif] tracking-[0.04em] text-black/60">
+            <p className="sm:hidden mt-2 text-sm font-lora tracking-[0.04em] text-black/60">
               <a
                 href="/images/press/Walker-pamphlet.zip"
                 download
@@ -205,7 +205,7 @@ export default function Pressemateriale() {
 
           {/* Tekst – vises først på xs, til venstre på sm+ */}
           <div className="order-1">
-            <p className="text-base leading-7 tracking-[0.04em] font-['Lora',serif] text-black">
+            <p className="text-base leading-7 tracking-[0.04em] font-lora text-black">
               {lang === "no" ? (
                 <>
                   Aschehoug Agency har gitt ut en 19 siders brosjyre med informasjon om, og utdrag
@@ -233,7 +233,7 @@ export default function Pressemateriale() {
               )}
             </p>
             {/* Last ned – kun på sm+ */}
-            <p className="hidden sm:block mt-3 text-sm font-['Lora',serif] tracking-[0.04em] text-black/60">
+            <p className="hidden sm:block mt-3 text-sm font-lora tracking-[0.04em] text-black/60">
               <a
                 href="/images/press/Walker-pamphlet.zip"
                 download
@@ -270,7 +270,7 @@ export default function Pressemateriale() {
             </div>
 
             <div className="p-6 space-y-3">
-              <p className="font-['Playfair_Display',serif] text-lg">
+              <p className="font-playfair text-lg">
                 ©{" "}
                 {selected.photographerLink ? (
                   <a
@@ -285,19 +285,15 @@ export default function Pressemateriale() {
                   selected.photographer
                 )}
               </p>
-              <p className="text-sm font-['Lora',serif] tracking-[0.04em] text-black/60">
-                {selected.size}
-              </p>
-              <p className="text-sm font-['Lora',serif] tracking-[0.04em] text-black/60">
-                {selected.ppi}
-              </p>
+              <p className="text-sm font-lora tracking-[0.04em] text-black/60">{selected.size}</p>
+              <p className="text-sm font-lora tracking-[0.04em] text-black/60">{selected.ppi}</p>
 
               <a
                 href={selected.downloadHref}
                 download
                 className="
                   inline-flex items-center gap-2 mt-2
-                  text-sm font-['Lora',serif] tracking-[0.04em]
+                  text-sm font-lora tracking-[0.04em]
                   underline underline-offset-4 hover:opacity-70
                 "
               >

@@ -105,7 +105,7 @@ function Home() {
                         text-2xl
                         font-medium
                         tracking-widest
-                        font-['Playfair_Display',serif]
+                        font-playfair
                         mb-16
                     "
           >
@@ -132,7 +132,7 @@ function Home() {
                                 uppercase
                                 text-xl
                                 tracking-[0.12em]
-                                font-['Playfair_Display_SC',serif]
+                                font-playfair-sc
                                 mb-6
                             "
               >
@@ -148,7 +148,7 @@ function Home() {
                             text-base
                             leading-6
                             tracking-[0.04em]
-                            font-['Lora',serif]
+                            font-lora
                             text-black
                             space-y-6
                         "
@@ -174,7 +174,7 @@ function Home() {
                         <img src={b.src} alt={b.title} className="w-40 h-auto object-contain" />
                       </BookLink>
 
-                      <span className="mt-5 text-sm tracking-[0.12em] font-['Playfair_Display_SC',serif]">
+                      <span className="mt-5 text-sm tracking-[0.12em] font-playfair-sc">
                         {b.year}
                       </span>
                     </div>
@@ -196,9 +196,7 @@ function Home() {
                   />
                 </BookLink>
 
-                <span className="mt-6 text-sm tracking-[0.12em] font-['Playfair_Display_SC',serif]">
-                  {b.year}
-                </span>
+                <span className="mt-6 text-sm tracking-[0.12em] font-playfair-sc">{b.year}</span>
               </div>
             ))}
           </div>

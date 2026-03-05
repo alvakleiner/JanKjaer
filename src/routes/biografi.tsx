@@ -486,7 +486,7 @@ function Biografi() {
               text-2xl
               font-medium
               tracking-widest
-              font-['Playfair_Display',serif]
+              font-playfair
               mb-10
             "
           >
@@ -500,7 +500,7 @@ function Biografi() {
                 uppercase
                 text-xl
                 tracking-[0.12em]
-                font-['Playfair_Display_SC',serif]
+                font-playfair-sc
                 mb-6
               "
             >
@@ -512,7 +512,7 @@ function Biografi() {
                 text-base
                 leading-6
                 tracking-[0.04em]
-                font-['Lora',serif]
+                font-lora
                 text-black
                 space-y-6
               "
@@ -531,7 +531,7 @@ function Biografi() {
                 uppercase
                 text-xl
                 tracking-[0.12em]
-                font-['Playfair_Display_SC',serif]
+                font-playfair-sc
                 mt-16
                 mb-6
               "
@@ -544,7 +544,7 @@ function Biografi() {
                 text-base
                 leading-6
                 tracking-[0.04em]
-                font-['Lora',serif]
+                font-lora
                 text-black
                 space-y-4
                 
@@ -569,7 +569,7 @@ function Biografi() {
                 uppercase
                 text-xl
                 tracking-[0.12em]
-                font-['Playfair_Display_SC',serif]
+                font-playfair-sc
                 mt-14
                 md:mt-12
                 mb-6
@@ -585,7 +585,7 @@ function Biografi() {
                   text-base
                   leading-7
                   tracking-[0.04em]
-                  font-['Lora',serif]
+                  font-lora
                   text-black
                 "
               >
@@ -598,7 +598,7 @@ function Biografi() {
               uppercase
               text-xl
               tracking-[0.12em]
-              font-['Playfair_Display_SC',serif]
+              font-playfair-sc
               mt-14
               md:mt-12
               mb-6

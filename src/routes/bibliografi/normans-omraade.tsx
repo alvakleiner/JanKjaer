@@ -130,7 +130,7 @@ export default function NormansOmraade() {
         uppercase
         text-xl
         tracking-[0.12em]
-        font-['Playfair_Display_SC',serif]
+        font-playfair-sc
         mt-14
         md:mt-8
         mb-6
@@ -142,7 +142,7 @@ export default function NormansOmraade() {
         <div className="border-l-2 border-black/10 pl-5">
           <p
             className="
-          font-['Lora',serif]
+          font-lora
           text-base
           leading-7
           tracking-[0.04em]
@@ -162,7 +162,7 @@ export default function NormansOmraade() {
             className="
           text-sm
           tracking-[0.08em]
-          font-['Lora',serif]
+          font-lora
           text-neutral-500
           mt-2
         "
@@ -177,7 +177,7 @@ export default function NormansOmraade() {
         uppercase
         text-xl
         tracking-[0.12em]
-        font-['Playfair_Display_SC',serif]
+        font-playfair-sc
         mt-14
         md:mt-8
         mb-6
@@ -189,7 +189,7 @@ export default function NormansOmraade() {
         <div className="border-l-2 border-black/10 pl-5">
           <p
             className="
-          font-['Lora',serif]
+          font-lora
           text-base
           leading-7
           tracking-[0.04em]
@@ -210,7 +210,7 @@ export default function NormansOmraade() {
             className="
           text-sm
           tracking-[0.08em]
-          font-['Lora',serif]
+          font-lora
           text-neutral-500
           mt-2
         "

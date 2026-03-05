@@ -112,7 +112,7 @@ function ImageSlider() {
         sm:text-sm
         italic
         tracking-[0.08em]
-        font-['Playfair_Display_SC',serif]
+        font-playfair-sc
       "
       >
         {images[index].caption[lang]}

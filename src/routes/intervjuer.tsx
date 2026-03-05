@@ -39,7 +39,7 @@ export default function Intervjuer() {
             sm:text-2xl
             font-medium
             tracking-widest
-            font-['Playfair_Display',serif]
+            font-playfair
             mb-8 md:mb-10
           "
         >
@@ -52,7 +52,7 @@ export default function Intervjuer() {
             alt="Jan Kjærstad"
             className="w-48 md:w-56 h-auto object-cover"
           />
-          <p className="text-sm tracking-[0.04em] font-['Lora',serif] text-black/70 mt-2 self-start">
+          <p className="text-sm tracking-[0.04em] font-lora text-black/70 mt-2 self-start">
             <Link
               to="/pressemateriale"
               className="underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-700 transition"
@@ -67,7 +67,7 @@ export default function Intervjuer() {
           text-base
           leading-7
           tracking-[0.04em]
-          font-['Lora',serif]
+          font-lora
           text-black
           space-y-6
         "
@@ -82,7 +82,7 @@ export default function Intervjuer() {
             uppercase
             text-lg
             tracking-[0.12em]
-            font-['Playfair_Display_SC',serif]
+            font-playfair-sc
             mt-10
             mb-4
           "
@@ -91,7 +91,7 @@ export default function Intervjuer() {
         </h3>
 
         <div className="border-l-2 border-black/10 pl-5">
-          <p className="font-['Lora',serif] text-base leading-7 tracking-[0.04em] text-black">
+          <p className="font-lora text-base leading-7 tracking-[0.04em] text-black">
             <a
               href="https://channel.louisiana.dk/video/jan-kjaerstad-books-as-sharp-as-knives"
               target="_blank"
@@ -111,7 +111,7 @@ export default function Intervjuer() {
             uppercase
             text-lg
             tracking-[0.12em]
-            font-['Playfair_Display_SC',serif]
+            font-playfair-sc
             mt-10
             mb-4
           "
@@ -120,7 +120,7 @@ export default function Intervjuer() {
         </h3>
 
         <div className="border-l-2 border-black/10 pl-5">
-          <p className="font-['Lora',serif] text-base leading-7 tracking-[0.04em] text-black">
+          <p className="font-lora text-base leading-7 tracking-[0.04em] text-black">
             {lang === "no" ? (
               <>
                 Trykk{" "}
@@ -156,7 +156,7 @@ export default function Intervjuer() {
             uppercase
             text-lg
             tracking-[0.12em]
-            font-['Playfair_Display_SC',serif]
+            font-playfair-sc
             mt-10
             mb-4
           "
@@ -167,7 +167,7 @@ export default function Intervjuer() {
         </h3>
 
         <div className="border-l-2 border-black/10 pl-5">
-          <p className="font-['Lora',serif] text-base leading-7 tracking-[0.04em] text-black">
+          <p className="font-lora text-base leading-7 tracking-[0.04em] text-black">
             <a
               href="https://www.youtube.com/watch?v=1FSrH-AGgrs"
               target="_blank"
@@ -197,7 +197,7 @@ export default function Intervjuer() {
             uppercase
             text-lg
             tracking-[0.12em]
-            font-['Playfair_Display_SC',serif]
+            font-playfair-sc
             mt-10
             mb-4
           "
@@ -206,7 +206,7 @@ export default function Intervjuer() {
         </h3>
 
         <div className="border-l-2 border-black/10 pl-5">
-          <p className="font-['Lora',serif] text-base leading-7 tracking-[0.04em] text-black">
+          <p className="font-lora text-base leading-7 tracking-[0.04em] text-black">
             {lang === "no" ? (
               <>
                 Klikk{" "}
@@ -242,7 +242,7 @@ export default function Intervjuer() {
             uppercase
             text-lg
             tracking-[0.12em]
-            font-['Playfair_Display_SC',serif]
+            font-playfair-sc
             mt-10
             mb-4
           "
@@ -251,7 +251,7 @@ export default function Intervjuer() {
         </h3>
 
         <div className="border-l-2 border-black/10 pl-5">
-          <p className="font-['Lora',serif] text-base leading-7 tracking-[0.04em] text-black">
+          <p className="font-lora text-base leading-7 tracking-[0.04em] text-black">
             {lang === "no" ? (
               <>
                 Dagbladet inviterte i 1999 Kjærstad til sin nettutgave for å svare på spørsmål fra
@@ -323,7 +323,7 @@ export default function Intervjuer() {
 
         <div className="mt-12">
           <img src="/images/jkeh.jpg" alt="" className="w-full h-auto" />
-          <p className="text-sm tracking-[0.04em] font-['Lora',serif] text-black/70 mt-4">
+          <p className="text-sm tracking-[0.04em] font-lora text-black/70 mt-4">
             Foto: Elin Høyland
           </p>
         </div>

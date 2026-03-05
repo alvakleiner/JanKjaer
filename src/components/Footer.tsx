@@ -78,7 +78,7 @@ function Footer() {
         >
           <span
             className="
-                            font-['Playfair_Display',serif]
+                            font-playfair
                             text-neutral-800
                             leading-none
                             tracking-[-0.02em]
@@ -108,7 +108,7 @@ function Footer() {
         >
           <span
             className="
-                        font-['Playfair_Display',serif]
+                        font-playfair
                         text-neutral-800
                         leading-none
                         tracking-[-0.02em]

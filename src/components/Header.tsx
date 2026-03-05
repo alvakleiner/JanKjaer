@@ -221,7 +221,7 @@ function Header() {
                 value={mobileQuery}
                 onChange={(e) => setMobileQuery(e.target.value)}
                 placeholder={lang === "no" ? "Søk…" : "Search…"}
-                className="flex-1 text-base outline-none font-['Lora',serif] tracking-[0.02em] bg-transparent"
+                className="flex-1 text-base outline-none font-lora tracking-[0.02em] bg-transparent"
               />
               {mobileQuery && (
                 <button
@@ -236,7 +236,7 @@ function Header() {
             {/* Results when typing, nav links otherwise */}
             {mobileQuery ? (
               mobileResults.length === 0 ? (
-                <p className="py-4 text-sm text-neutral-400 font-['Lora',serif] italic">
+                <p className="py-4 text-sm text-neutral-400 font-lora italic">
                   {lang === "no" ? "Ingen resultater" : "No results"}
                 </p>
               ) : (
@@ -258,11 +258,11 @@ function Header() {
                       />
                     )}
                     <div>
-                      <p className="text-base tracking-[0.04em] font-['Playfair_Display',serif]">
+                      <p className="text-base tracking-[0.04em] font-playfair">
                         {item.subtitle ? <em>{item.title[lang]}</em> : item.title[lang]}
                       </p>
                       {item.subtitle && (
-                        <p className="text-xs text-neutral-400 font-['Lora',serif] mt-0.5">
+                        <p className="text-xs text-neutral-400 font-lora mt-0.5">
                           {item.subtitle[lang]}
                         </p>
                       )}
@@ -280,7 +280,7 @@ function Header() {
                 text-xl
                 tracking-[0.12em]
                 uppercase
-                font-['Playfair_Display_SC',serif]
+                font-playfair-sc
                 text-gray-700
                 hover:text-black
               "
@@ -292,7 +292,7 @@ function Header() {
                     {...link.link}
                     key={link.key}
                     onClick={() => setMenuOpen(false)}
-                    className="py-4 text-xl tracking-[0.12em] uppercase font-['Playfair_Display_SC',serif] text-gray-700 hover:text-black"
+                    className="py-4 text-xl tracking-[0.12em] uppercase font-playfair-sc text-gray-700 hover:text-black"
                   >
                     {link.label[lang]}
                   </Link>

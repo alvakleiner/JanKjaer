@@ -20,7 +20,7 @@ export function renderArticle(text: string) {
             uppercase
             text-sm
             tracking-[0.14em]
-            font-['Playfair_Display_SC',serif]
+            font-playfair-sc
             mt-7
             mb-3
             text-black/70
@@ -34,7 +34,7 @@ export function renderArticle(text: string) {
       return <div key={i} className="h-3" />;
     }
     return (
-      <p key={i} className="text-base leading-7 tracking-[0.04em] font-['Lora',serif] text-black">
+      <p key={i} className="text-base leading-7 tracking-[0.04em] font-lora text-black">
         {line}
       </p>
     );
@@ -83,13 +83,11 @@ export default function Drawer({ open, onClose, title, subtitle, children }: Dra
           <div className="px-5 sm:px-6 py-4 border-b flex items-start justify-between gap-4">
             <div>
               {subtitle && (
-                <div className="text-xs tracking-[0.16em] uppercase text-black/60 font-['Lora',serif]">
+                <div className="text-xs tracking-[0.16em] uppercase text-black/60 font-lora">
                   {subtitle}
                 </div>
               )}
-              <h3 className="mt-1 text-lg tracking-[0.06em] font-['Playfair_Display',serif]">
-                {title}
-              </h3>
+              <h3 className="mt-1 text-lg tracking-[0.06em] font-playfair">{title}</h3>
             </div>
             <button
               type="button"

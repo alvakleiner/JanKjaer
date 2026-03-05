@@ -12,7 +12,7 @@ export default function TrilogyBooks() {
             uppercase
             text-xl
             tracking-[0.12em]
-            font-['Playfair_Display_SC',serif]
+            font-playfair-sc
             mt-14
             md:mt-8
             mb-6
@@ -25,35 +25,29 @@ export default function TrilogyBooks() {
         <div>
           <BookLink
             link={{ to: "/bibliografi/forforeren" }}
-            className="font-['Lora',serif] text-base leading-7 tracking-[0.04em] text-black italic decoration-neutral-400 hover:decoration-neutral-800 transition"
+            className="font-lora text-base leading-7 tracking-[0.04em] text-black italic decoration-neutral-400 hover:decoration-neutral-800 transition"
           >
             {lang === "no" ? "Forføreren" : "The Seducer"}
           </BookLink>
-          <p className="text-sm tracking-[0.08em] font-['Lora',serif] text-neutral-500 mt-1">
-            Roman (1993)
-          </p>
+          <p className="text-sm tracking-[0.08em] font-lora text-neutral-500 mt-1">Roman (1993)</p>
         </div>
         <div>
           <BookLink
             link={{ to: "/bibliografi/erobreren" }}
-            className="font-['Lora',serif] text-base leading-7 tracking-[0.04em] text-black italic decoration-neutral-400 hover:decoration-neutral-800 transition"
+            className="font-lora text-base leading-7 tracking-[0.04em] text-black italic decoration-neutral-400 hover:decoration-neutral-800 transition"
           >
             {lang === "no" ? "Erobreren" : "The Conqueror"}
           </BookLink>
-          <p className="text-sm tracking-[0.08em] font-['Lora',serif] text-neutral-500 mt-1">
-            Roman (1996)
-          </p>
+          <p className="text-sm tracking-[0.08em] font-lora text-neutral-500 mt-1">Roman (1996)</p>
         </div>
         <div>
           <BookLink
             link={{ to: "/bibliografi/oppdageren" }}
-            className="font-['Lora',serif] text-base leading-7 tracking-[0.04em] text-black italic decoration-neutral-400 hover:decoration-neutral-800 transition"
+            className="font-lora text-base leading-7 tracking-[0.04em] text-black italic decoration-neutral-400 hover:decoration-neutral-800 transition"
           >
             {lang === "no" ? "Oppdageren" : "The Discoverer"}
           </BookLink>
-          <p className="text-sm tracking-[0.08em] font-['Lora',serif] text-neutral-500 mt-1">
-            Roman (1999)
-          </p>
+          <p className="text-sm tracking-[0.08em] font-lora text-neutral-500 mt-1">Roman (1999)</p>
         </div>
       </div>
     </>

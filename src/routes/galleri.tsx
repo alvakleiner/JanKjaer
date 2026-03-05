@@ -74,7 +74,7 @@ export default function Galleri() {
             sm:text-2xl
             font-medium
             tracking-widest
-            font-['Playfair_Display',serif]
+            font-playfair
             mb-8 md:mb-10
           "
         >
@@ -86,7 +86,7 @@ export default function Galleri() {
                 uppercase
                 text-xl
                 tracking-[0.12em]
-                font-['Playfair_Display_SC',serif]
+                font-playfair-sc
                 mb-6
               "
         >
@@ -98,7 +98,7 @@ export default function Galleri() {
           text-base
           leading-7
           tracking-[0.04em]
-          font-['Lora',serif]
+          font-lora
           text-black
           space-y-6
         "
@@ -121,7 +121,7 @@ export default function Galleri() {
             uppercase
             text-xl
             tracking-[0.12em]
-            font-['Playfair_Display_SC',serif]
+            font-playfair-sc
             mt-12
             mb-6
             "
@@ -138,7 +138,7 @@ export default function Galleri() {
                 className="w-full h-auto object-contain"
               />
             </div>
-            <p className="text-sm tracking-[0.04em] font-['Lora',serif] text-black/80 mt-1 mb-7 md:mb-8">
+            <p className="text-sm tracking-[0.04em] font-lora text-black/80 mt-1 mb-7 md:mb-8">
               {item.caption[lang]}
             </p>
           </div>
@@ -149,7 +149,7 @@ export default function Galleri() {
             uppercase
             text-xl
             tracking-[0.12em]
-            font-['Playfair_Display_SC',serif]
+            font-playfair-sc
             mt-3
             md:mt-4
             mb-6

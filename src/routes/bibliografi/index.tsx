@@ -302,7 +302,7 @@ export default function Bibliografi() {
             sm:text-2xl
             font-medium
             tracking-widest
-            font-['Playfair_Display',serif]
+            font-playfair
             mb-8 md:mb-10
           "
         >
@@ -312,7 +312,7 @@ export default function Bibliografi() {
         <div
           className="
             text-center
-            font-['Playfair_Display',serif]
+            font-playfair
             text-[14px]
             sm:text-[16px]
             leading-8
@@ -347,7 +347,7 @@ export default function Bibliografi() {
             className="
                     mt-14
                     text-center
-                    font-['Playfair_Display',serif]
+                    font-playfair
                     text-[14px]
                     sm:text-[16px]
                     leading-7

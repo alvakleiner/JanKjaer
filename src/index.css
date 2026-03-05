@@ -4,6 +4,12 @@
 /* Tailwind directives - these MUST come after your custom styles */
 @tailwind utilities;
 
+@theme {
+  --font-playfair: "Playfair Display", serif;
+  --font-lora: "Lora", serif;
+  --font-playfair-sc: "Playfair_Display_SC", serif;
+}
+
 #root {
   display: flex;
   flex-direction: column;

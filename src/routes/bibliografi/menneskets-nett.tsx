@@ -39,7 +39,7 @@ export default function mennesketsNett() {
           text-base
           leading-7
           tracking-[0.04em]
-          font-['Lora',serif]
+          font-lora
           text-black
           mt-8
           mb-14
@@ -50,7 +50,7 @@ export default function mennesketsNett() {
             : "The Human Net is no longer available as a standalone book, but can be found in the essay collection "}{" "}
           <BookLink
             link={{ to: "/bibliografi/kjaerstads-matrise" }}
-            className="font-['Lora',serif] text-base leading-7 tracking-[0.04em] text-black italic decoration-neutral-400 hover:decoration-neutral-800 transition"
+            className="font-lora text-base leading-7 tracking-[0.04em] text-black italic decoration-neutral-400 hover:decoration-neutral-800 transition"
           >
             {lang === "no" ? "Kjærstads matrise" : "The Matrix of Kjærstad"}
           </BookLink>

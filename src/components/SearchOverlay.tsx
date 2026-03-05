@@ -78,7 +78,7 @@ export default function SearchOverlay({ open, onClose }: Props) {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder={lang === "no" ? "Søk etter titler, sider…" : "Search titles, pages…"}
-              className="flex-1 text-base outline-none font-['Lora',serif] tracking-[0.02em] bg-transparent"
+              className="flex-1 text-base outline-none font-lora tracking-[0.02em] bg-transparent"
             />
             <button
               onClick={onClose}
@@ -93,7 +93,7 @@ export default function SearchOverlay({ open, onClose }: Props) {
           {query && (
             <div className="max-h-112 overflow-y-auto">
               {results.length === 0 ? (
-                <p className="px-5 py-6 text-sm text-neutral-400 font-['Lora',serif] italic">
+                <p className="px-5 py-6 text-sm text-neutral-400 font-lora italic">
                   {lang === "no" ? "Ingen resultater" : "No results"}
                 </p>
               ) : (
@@ -117,11 +117,11 @@ export default function SearchOverlay({ open, onClose }: Props) {
                         </div>
 
                         <div>
-                          <p className="text-sm tracking-[0.04em] font-['Playfair_Display',serif]">
+                          <p className="text-sm tracking-[0.04em] font-playfair">
                             {item.subtitle ? <em>{item.title[lang]}</em> : item.title[lang]}
                           </p>
                           {item.subtitle && (
-                            <p className="text-xs text-neutral-400 tracking-[0.04em] font-['Lora',serif] mt-0.5">
+                            <p className="text-xs text-neutral-400 tracking-[0.04em] font-lora mt-0.5">
                               {item.subtitle[lang]}
                             </p>
                           )}

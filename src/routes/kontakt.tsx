@@ -25,7 +25,7 @@ export default function Kontakt() {
             text-[20px]
             font-medium
             tracking-widest
-            font-['Playfair_Display',serif]
+            font-playfair
             mb-8
           "
         >
@@ -40,7 +40,7 @@ export default function Kontakt() {
               alt=""
               className="w-2/3 md:w-auto md:h-80 h-auto mx-auto md:mx-0 block"
             />
-            <p className="text-sm tracking-[0.04em] font-['Lora',serif] text-black/70 mt-3">
+            <p className="text-sm tracking-[0.04em] font-lora text-black/70 mt-3">
               Foto: Line Møller / VG
             </p>
           </div>
@@ -52,7 +52,7 @@ export default function Kontakt() {
                 uppercase
                 text-lg
                 tracking-[0.12em]
-                font-['Playfair_Display_SC',serif]
+                font-playfair-sc
                 mb-4
                 mt-4
                 md:mt-0
@@ -61,7 +61,7 @@ export default function Kontakt() {
               {lang === "no" ? "Hva er et menneske?" : "What is a human being?"}
             </h3>
 
-            <p className="font-['Lora',serif] text-base leading-7 tracking-[0.04em] text-black">
+            <p className="font-lora text-base leading-7 tracking-[0.04em] text-black">
               <a
                 href="mailto:jankjaer@online.no"
                 className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"

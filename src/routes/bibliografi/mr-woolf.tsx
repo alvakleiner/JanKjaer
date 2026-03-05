@@ -102,7 +102,7 @@ export default function MrWoolf() {
 
           {/* Body text — after inline image */}
           {content.paragraphsAfterImage[lang].length > 0 && (
-            <div className="text-base leading-7 tracking-[0.04em] font-['Lora',serif] text-black space-y-6">
+            <div className="text-base leading-7 tracking-[0.04em] font-lora text-black space-y-6">
               <div className="clear-both my-10" />
               {content.paragraphsAfterImage[lang].map((p, i) => (
                 <p key={i}>{p}</p>
@@ -119,7 +119,7 @@ export default function MrWoolf() {
               alt="Bokomslag Mr. Woolf"
               className="w-full h-auto object-contain"
             />
-            <p className="self-start text-sm tracking-[0.08em] font-['Lora',serif] text-neutral-500 mt-4">
+            <p className="self-start text-sm tracking-[0.08em] font-lora text-neutral-500 mt-4">
               Omslag: Terese Moe Leiner
             </p>
           </div>

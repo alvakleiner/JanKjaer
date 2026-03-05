@@ -49,7 +49,7 @@ export default function kjærstadsMatrise() {
         uppercase
         text-xl
         tracking-[0.12em]
-        font-['Playfair_Display_SC',serif]
+        font-playfair-sc
         mt-14
         md:mt-8
         mb-6
@@ -62,33 +62,33 @@ export default function kjærstadsMatrise() {
           <div>
             <BookLink
               link={{ to: "/bibliografi/menneskets-matrise" }}
-              className="font-['Lora',serif] text-base leading-7 tracking-[0.04em] text-black italic decoration-neutral-400 hover:decoration-neutral-800 transition"
+              className="font-lora text-base leading-7 tracking-[0.04em] text-black italic decoration-neutral-400 hover:decoration-neutral-800 transition"
             >
               {lang === "no" ? "Menneskets matrise" : "The Matrix of Man"}
             </BookLink>
-            <p className="text-sm tracking-[0.08em] font-['Lora',serif] text-neutral-500 mt-1">
+            <p className="text-sm tracking-[0.08em] font-lora text-neutral-500 mt-1">
               Essays (1989)
             </p>
           </div>
           <div>
             <BookLink
               link={{ to: "/bibliografi/menneskets-felt" }}
-              className="font-['Lora',serif] text-base leading-7 tracking-[0.04em] text-black italic decoration-neutral-400 hover:decoration-neutral-800 transition"
+              className="font-lora text-base leading-7 tracking-[0.04em] text-black italic decoration-neutral-400 hover:decoration-neutral-800 transition"
             >
               {lang === "no" ? "Menneskets felt" : "The Human Sphere"}
             </BookLink>
-            <p className="text-sm tracking-[0.08em] font-['Lora',serif] text-neutral-500 mt-1">
+            <p className="text-sm tracking-[0.08em] font-lora text-neutral-500 mt-1">
               Essays (1997)
             </p>
           </div>
           <div>
             <BookLink
               link={{ to: "/bibliografi/menneskets-nett" }}
-              className="font-['Lora',serif] text-base leading-7 tracking-[0.04em] text-black italic decoration-neutral-400 hover:decoration-neutral-800 transition"
+              className="font-lora text-base leading-7 tracking-[0.04em] text-black italic decoration-neutral-400 hover:decoration-neutral-800 transition"
             >
               {lang === "no" ? "Menneskets nett" : "The Human Web"}
             </BookLink>
-            <p className="text-sm tracking-[0.08em] font-['Lora',serif] text-neutral-500 mt-1">
+            <p className="text-sm tracking-[0.08em] font-lora text-neutral-500 mt-1">
               Essays (2004)
             </p>
           </div>
@@ -100,7 +100,7 @@ export default function kjærstadsMatrise() {
         uppercase
         text-xl
         tracking-[0.12em]
-        font-['Playfair_Display_SC',serif]
+        font-playfair-sc
         mt-14
         md:mt-8
         mb-6
@@ -112,7 +112,7 @@ export default function kjærstadsMatrise() {
         <div className="border-l-2 border-black/10 pl-5">
           <p
             className="
-          font-['Lora',serif]
+          font-lora
           text-base
           leading-7
           tracking-[0.04em]
@@ -136,7 +136,7 @@ export default function kjærstadsMatrise() {
             className="
           text-sm
           tracking-[0.08em]
-          font-['Lora',serif]
+          font-lora
           text-neutral-500
           mt-2
         "

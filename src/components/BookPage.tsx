@@ -79,14 +79,14 @@ export function BookPageBody({ content }: BookPageBodyProps) {
           text-2xl
           font-medium
           tracking-widest
-          font-['Playfair_Display',serif]
+          font-playfair
           mb-2
         "
       >
         {content.title[lang]}
       </h2>
 
-      <p className="text-center text-sm tracking-[0.08em] text-neutral-500 font-['Lora',serif] mb-10">
+      <p className="text-center text-sm tracking-[0.08em] text-neutral-500 font-lora mb-10">
         {content.meta[lang]}
       </p>
 
@@ -109,7 +109,7 @@ export function BookPageBody({ content }: BookPageBodyProps) {
               md:mb-0
               text-sm
               tracking-[0.06em]
-              font-['Lora',serif]
+              font-lora
               text-neutral-600
               underline
               underline-offset-4
@@ -130,7 +130,7 @@ export function BookPageBody({ content }: BookPageBodyProps) {
         text-base
         leading-7
         tracking-[0.04em]
-        font-['Lora',serif]
+        font-lora
         text-black
         space-y-6
       "
@@ -160,7 +160,7 @@ export function BookPageQuotes({ content }: BookPageQuotesProps) {
           uppercase
           text-xl
           tracking-[0.12em]
-          font-['Playfair_Display_SC',serif]
+          font-playfair-sc
           mt-14
           md:mt-10
           mb-6
@@ -174,7 +174,7 @@ export function BookPageQuotes({ content }: BookPageQuotesProps) {
           <div key={i} className="border-l-2 border-black/10 pl-5">
             <p
               className="
-              font-['Lora',serif]
+              font-lora
               text-base
               leading-7
               tracking-[0.04em]
@@ -193,7 +193,7 @@ export function BookPageQuotes({ content }: BookPageQuotesProps) {
                 className="
                 text-sm
                 tracking-[0.08em]
-                font-['Lora',serif]
+                font-lora
                 text-neutral-500
               "
               >

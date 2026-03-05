@@ -10,10 +10,11 @@ type LanguageContextType = {
 const LanguageContext = createContext<LanguageContextType | null>(null);
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [lang, setLang] = useState<Lang>(() => {
-    const saved = localStorage.getItem("lang");
-    return saved === "en" || saved === "no" ? saved : "no";
-  });
+  const [lang, setLang] = useState<Lang>("no");
+
+  useEffect(() => {
+    setLang(localStorage.getItem("lang") === "en" ? "en" : "no");
+  }, []);
 
   useEffect(() => {
     localStorage.setItem("lang", lang);

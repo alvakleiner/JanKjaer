@@ -54,7 +54,7 @@ export default function HomoFalsus() {
         uppercase
         text-xl
         tracking-[0.12em]
-        font-['Playfair_Display_SC',serif]
+        font-playfair-sc
         mt-14
         md:mt-8
         mb-6
@@ -66,7 +66,7 @@ export default function HomoFalsus() {
         <div className="border-l-2 border-black/10 pl-5">
           <p
             className="
-          font-['Lora',serif]
+          font-lora
           text-base
           leading-7
           tracking-[0.04em]

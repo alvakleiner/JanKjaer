@@ -120,7 +120,7 @@ export default function SlektersGang() {
             self-start
             text-sm
             tracking-[0.08em]
-            font-['Lora',serif]
+            font-lora
             text-neutral-500
             mt-4
           "

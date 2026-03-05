@@ -44,7 +44,7 @@ export default function SteinBlirKaptein() {
           text-base
           leading-7
           tracking-[0.04em]
-          font-['Lora',serif]
+          font-lora
           text-black
           mt-12
           md:mt-4
