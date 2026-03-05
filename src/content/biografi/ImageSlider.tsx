@@ -17,7 +17,7 @@ const images = [
     },
   },
   {
-    src: "/images/jkeh",
+    src: "/images/jkeh.jpg",
     caption: {
       no: "Jan Kjærstad på kontoret hans i familiens tidligere hjem på Frogner i Oslo. Foto: Elin Høyland",
       en: "Jan Kjærstad pictured in his office at the family's previous home in Frogner, Oslo. Photo: Elin Høyland",
