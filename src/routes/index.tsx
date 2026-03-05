@@ -1,10 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router"
-
-export const Route = createFileRoute("/")({ component: Home })
-
 import { useLanguage } from "../context/LanguageContext"
 import BookLink from "../components/BookLink"
-import SEO from "../components/SEO"
+
+export const Route = createFileRoute("/")({
+    component: Home
+})
+
 
 const books = [
   { title: "Menneskets bølger", year: "2022", src: "/images/menneskets-bolger.jpg", href: "/bibliografi/menneskets-bolger" },
@@ -63,11 +64,6 @@ function Home() {
 
     return (
         <>
-            <SEO
-                title={seo.title[lang]}
-                description={seo.description[lang]}
-                path="/"
-            />
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

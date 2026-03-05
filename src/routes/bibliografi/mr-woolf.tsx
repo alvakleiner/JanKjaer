@@ -3,7 +3,6 @@ import { createFileRoute, useLocation } from "@tanstack/react-router"
 export const Route = createFileRoute("/bibliografi/mr-woolf")({ component: MrWoolf })
 import { useLanguage } from "../../context/LanguageContext"
 import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
-import SEO, { SITE_URL } from "../../components/SEO"
 
 const content = {
   title: { no: "Mr. Woolf", en: "Mr. Woolf" },
@@ -80,19 +79,8 @@ const content = {
 
 export default function MrWoolf() {
   const { lang } = useLanguage()
-  const { pathname } = useLocation()
-
-  const rawDesc = content.paragraphsBeforeImage[lang][0]
-  const description = rawDesc.length > 155 ? rawDesc.slice(0, 152) + "…" : rawDesc
-
   return (
     <>
-      <SEO
-        title={`${content.title[lang]} – Jan Kjærstad`}
-        description={description}
-        path={pathname}
-        image={`${SITE_URL}${content.coverImage.src}`}
-      />
       <section className="bg-white">
         <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
 

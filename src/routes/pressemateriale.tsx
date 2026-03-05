@@ -1,11 +1,11 @@
-import { useLanguage } from "../context/LanguageContext"
-import { Download, X } from "lucide-react"
-import { useState } from "react"
-import SEO from "../components/SEO"
-import { createFileRoute } from "@tanstack/react-router"
+import { useLanguage } from "../context/LanguageContext";
+import { Download, X } from "lucide-react";
+import { useState } from "react";
+import { createFileRoute } from "@tanstack/react-router";
 
-
-export const Route = createFileRoute("/pressemateriale")({ component: Pressemateriale })
+export const Route = createFileRoute("/pressemateriale")({
+  component: Pressemateriale,
+});
 
 const photos = [
   {
@@ -27,7 +27,8 @@ const photos = [
   {
     src: "/images/press/jkcl.jpg",
     photographer: "Cato Lein",
-    photographerLink: "https://www.facebook.com/profile.php?id=100028312313728#",
+    photographerLink:
+      "https://www.facebook.com/profile.php?id=100028312313728#",
     downloadHref: "/images/press/Jan-Kjaerstad-3.zip",
     size: "3328 × 4383 px",
     ppi: "250 ppi – RGB",
@@ -56,49 +57,85 @@ const photos = [
     size: "800 × 534 px",
     ppi: "72 ppi – RGB",
   },
-]
+];
 
-type Photo = typeof photos[number]
+type Photo = (typeof photos)[number];
 
 export default function Pressemateriale() {
-  const { lang } = useLanguage()
-  const [selected, setSelected] = useState<Photo | null>(null)
+  const { lang } = useLanguage();
+  const [selected, setSelected] = useState<Photo | null>(null);
 
   const seo = {
-    title: { no: "Pressemateriale – Jan Kjærstad", en: "Press Material – Jan Kjærstad" },
+    title: {
+      no: "Pressemateriale – Jan Kjærstad",
+      en: "Press Material – Jan Kjærstad",
+    },
     description: {
       no: "Pressemateriale og pressebilder for journalister og medier om Jan Kjærstad.",
       en: "Press material and press photos for journalists and media about Jan Kjærstad.",
     },
-  } as const
+  } as const;
 
   return (
     <section className="bg-white">
-      <SEO title={seo.title[lang]} description={seo.description[lang]} path="/pressemateriale" />
       <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 mt-2 md:mt-4 mb-18">
-
-        <h2 className="
+        <h2
+          className="
           text-center text-[20px] sm:text-2xl font-medium tracking-widest
           font-['Playfair_Display',serif] mb-8 md:mb-10
-        ">
+        "
+        >
           {lang === "no" ? "Pressemateriale" : "Press material"}
         </h2>
 
         <p className="text-base leading-7 tracking-[0.04em] font-['Lora',serif] text-black mb-12">
           {lang === "no" ? (
             <>
-              Tekst og bilder som lastes ned fra denne siden, kan benyttes fritt i forbindelse med artikler, intervjuer, anmeldelser og annen informasjon relatert til forfatteren. Materialet er stilt til rådighet av{" "}
-              <a href="https://aschehoug.no/" target="_blank" rel="noreferrer" className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition">H. Aschehoug & Co</a>
-              {" "}og Aschehoug Agency (nå{" "}
-              <a href="https://osloliteraryagency.no/" target="_blank" rel="noreferrer" className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition">Oslo Literary Agency</a>
+              Tekst og bilder som lastes ned fra denne siden, kan benyttes fritt
+              i forbindelse med artikler, intervjuer, anmeldelser og annen
+              informasjon relatert til forfatteren. Materialet er stilt til
+              rådighet av{" "}
+              <a
+                href="https://aschehoug.no/"
+                target="_blank"
+                rel="noreferrer"
+                className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
+              >
+                H. Aschehoug & Co
+              </a>{" "}
+              og Aschehoug Agency (nå{" "}
+              <a
+                href="https://osloliteraryagency.no/"
+                target="_blank"
+                rel="noreferrer"
+                className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
+              >
+                Oslo Literary Agency
+              </a>
               ).
             </>
           ) : (
             <>
-              Text and images downloaded from this page may be used freely in connection with articles, interviews, reviews and other information related to the author. The material is provided by{" "}
-              <a href="https://aschehoug.no/" target="_blank" rel="noreferrer" className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition">H. Aschehoug & Co</a>
-              {" "}and Aschehoug Agency (now{" "}
-              <a href="https://osloliteraryagency.no/" target="_blank" rel="noreferrer" className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition">Oslo Literary Agency</a>
+              Text and images downloaded from this page may be used freely in
+              connection with articles, interviews, reviews and other
+              information related to the author. The material is provided by{" "}
+              <a
+                href="https://aschehoug.no/"
+                target="_blank"
+                rel="noreferrer"
+                className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
+              >
+                H. Aschehoug & Co
+              </a>{" "}
+              and Aschehoug Agency (now{" "}
+              <a
+                href="https://osloliteraryagency.no/"
+                target="_blank"
+                rel="noreferrer"
+                className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
+              >
+                Oslo Literary Agency
+              </a>
               ).
             </>
           )}
@@ -109,7 +146,9 @@ export default function Pressemateriale() {
         </h3>
 
         <p className="text-sm font-['Lora',serif] tracking-[0.04em] text-black/60 mb-6">
-          {lang === "no" ? "Trykk på bildene for å se dem ubeskåret og få mer informasjon. Fotografene må krediteres." : "Click the photos to view them in full size and get more information. Photographers must be credited."}
+          {lang === "no"
+            ? "Trykk på bildene for å se dem ubeskåret og få mer informasjon. Fotografene må krediteres."
+            : "Click the photos to view them in full size and get more information. Photographers must be credited."}
         </p>
 
         <div className="grid grid-cols-2 gap-4">
@@ -124,14 +163,18 @@ export default function Pressemateriale() {
                 alt={`Foto: ${photo.photographer}`}
                 className="w-full h-64 sm:h-80 md:h-90 object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="
+              <div
+                className="
                 absolute inset-0 bg-black/0 group-hover:bg-black/40
                 transition-all duration-300 flex items-center justify-center
-              ">
-                <span className="
+              "
+              >
+                <span
+                  className="
                   text-white text-sm font-['Lora',serif] tracking-[0.06em]
                   opacity-0 group-hover:opacity-100 transition-opacity duration-300
-                ">
+                "
+                >
                   {lang === "no" ? "Se info" : "View info"}
                 </span>
               </div>
@@ -147,7 +190,6 @@ export default function Pressemateriale() {
         </h3>
 
         <div className="flex flex-col sm:flex-row sm:gap-8 sm:items-start mb-12">
-
           {/* Bilde – vises under tekst på xs, til høyre på sm+ */}
           <div className="order-2 shrink-0 mt-6 sm:mt-0 flex flex-col items-center sm:items-start">
             <img
@@ -172,14 +214,26 @@ export default function Pressemateriale() {
             <p className="text-base leading-7 tracking-[0.04em] font-['Lora',serif] text-black">
               {lang === "no" ? (
                 <>
-                  Aschehoug Agency har gitt ut en 19 siders brosjyre med informasjon om, og utdrag fra,{" "}
-                  <a href="/bibliografi/jeg-er-brodrene-walker" className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"><em>Jeg er brødrene Walker</em></a>
+                  Aschehoug Agency har gitt ut en 19 siders brosjyre med
+                  informasjon om, og utdrag fra,{" "}
+                  <a
+                    href="/bibliografi/jeg-er-brodrene-walker"
+                    className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
+                  >
+                    <em>Jeg er brødrene Walker</em>
+                  </a>
                   . Brosjyren er på engelsk.
                 </>
               ) : (
                 <>
-                  Aschehoug Agency has published a 19-page pamphlet with information about and excerpts from{" "}
-                  <a href="/bibliografi/jeg-er-brodrene-walker" className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"><em>I Am the Brothers Walker</em></a>
+                  Aschehoug Agency has published a 19-page pamphlet with
+                  information about and excerpts from{" "}
+                  <a
+                    href="/bibliografi/jeg-er-brodrene-walker"
+                    className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
+                  >
+                    <em>I Am the Brothers Walker</em>
+                  </a>
                   . The pamphlet is in English.
                 </>
               )}
@@ -195,9 +249,7 @@ export default function Pressemateriale() {
               </a>
             </p>
           </div>
-
         </div>
-
       </div>
 
       {/* Lightbox */}
@@ -248,8 +300,9 @@ export default function Pressemateriale() {
               <p className="text-sm font-['Lora',serif] tracking-[0.04em] text-black/60">
                 {selected.ppi}
               </p>
-              
-                <a href={selected.downloadHref}
+
+              <a
+                href={selected.downloadHref}
                 download
                 className="
                   inline-flex items-center gap-2 mt-2
@@ -262,9 +315,8 @@ export default function Pressemateriale() {
               </a>
             </div>
           </div>
-
         </div>
       )}
     </section>
-  )
+  );
 }

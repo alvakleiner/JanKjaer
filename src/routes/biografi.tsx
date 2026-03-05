@@ -6,7 +6,6 @@ import article from "../content/biografi/taraChanceArticle"
 import AwardsTimeline from "../components/AwardsTimeline"
 import BookLink from "../components/BookLink"
 import Drawer, { renderArticle } from "../components/Drawer"
-import SEO from "../components/SEO"
 
 export const Route = createFileRoute("/biografi")({ component: Biografi })
 
@@ -481,7 +480,6 @@ function Biografi() {
 
   return (
     <>
-      <SEO title={seo.title[lang]} description={seo.description[lang]} path="/biografi" />
       {/* Hero / portrett */}
       <div className="md:pb-10 pb-4 flex justify-center">
         <div className="hidden sm:block">

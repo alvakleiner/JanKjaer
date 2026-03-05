@@ -1,8 +1,6 @@
 import type { ReactNode } from "react"
-import { useLocation } from "@tanstack/react-router"
 import { useLanguage } from "../context/LanguageContext"
 import { searchItems } from "../data/searchIndex"
-import SEO, { SITE_URL } from "./SEO"
 
 export type BookQuote = {
   text: ReactNode | { no: ReactNode; en: ReactNode }
@@ -213,17 +211,8 @@ type BookPageProps = {
 }
 
 export default function BookPage({ content }: BookPageProps) {
-  const { lang } = useLanguage()
-  const { pathname } = useLocation()
-
-  const title = `${content.title[lang]} – Jan Kjærstad`
-  const rawDesc = content.paragraphs[lang][0]
-  const description = rawDesc.length > 155 ? rawDesc.slice(0, 152) + "…" : rawDesc
-  const image = `${SITE_URL}${content.coverImage.src}`
-
   return (
     <>
-      <SEO title={title} description={description} path={pathname} image={image} />
       <section className="bg-white">
         <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
           <BookPageBody content={content} />
