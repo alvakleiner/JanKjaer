@@ -1,9 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router"
-import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
-import type { BookPageContent } from "../../components/BookPage"
+import { createFileRoute } from "@tanstack/react-router";
+import { BookPageBody, BookPageQuotes } from "../../components/BookPage";
+import type { BookPageContent } from "../../components/BookPage";
 
-export const Route = createFileRoute("/bibliografi/slekters-gang")({ component: SlektersGang })
-
+export const Route = createFileRoute("/bibliografi/slekters-gang")({ component: SlektersGang });
 
 const content: BookPageContent = {
   title: { no: "Slekters gang", en: "The Path of Kins" },
@@ -23,7 +22,11 @@ const content: BookPageContent = {
       diceImg: "/images/terningkast6.png",
     },
     {
-      text: <>«<em>Slekters gang</em> – et av høstens viktigste romanverk.»</>,
+      text: (
+        <>
+          «<em>Slekters gang</em> – et av høstens viktigste romanverk.»
+        </>
+      ),
       source: "Finn Stenstad, Tønsberg Blad",
       diceImg: "/images/terningkast5.png",
     },
@@ -82,10 +85,10 @@ const content: BookPageContent = {
     ],
     en: [
       "The Path of Kins is a novel with a large cast of characters. Among them we meet Albert Bohre who on a kayaking trip in his childhood is frightened almost to death by a humpback whale and who as an adult becomes one of the world's greatest and most bloodthirsty whaling magnates. In 1956 he attends the Olympics in Melbourne and sees Egil Danielsen win the gold medal for Norway. Something about the world-record throw, the sight of the javelin soaring through the air, causes him to re-evaluate everything.",
-      "Maud Evensen lives in Krokskogen, in Maud's Land. After the Second World War she travels around the world in search of a boyfriend, but does not find him until she comes home again, at the \"Lost Luggage\" window at the Fornebu airport. Nonetheless, she does not know then that she will become a radio presenter more popular than Rolf Kirkvåg, thanks to her agreeable voice.",
+      'Maud Evensen lives in Krokskogen, in Maud\'s Land. After the Second World War she travels around the world in search of a boyfriend, but does not find him until she comes home again, at the "Lost Luggage" window at the Fornebu airport. Nonetheless, she does not know then that she will become a radio presenter more popular than Rolf Kirkvåg, thanks to her agreeable voice.',
       "Or take, for example, Konrad Steen who comes from a working class background and is a vicar at the Tøyen Church. On Christmas Eve in 1938 he loses his faith, right in the middle of his sermon.",
       "But the novel opens as follows:",
-      "Norway was a country on the outskirts of the part of the world called Europe. For somebody who has flown over the large peninsula, in northwest Slavia, it is undoubtedly incomprehensible that this wilderness was once inhabited, that there were cities here and an efficiently functioning infrastructure. At the time of its zenith as a nation, in the 2000s, Norway is to have been inhabited by a population of around seven million. We don't know exactly how many \"Norwegians\" or descendants of Norwegians are living in this landscape today, but it can hardly be more than a few thousand. They are called \"the Norwegian tribe\" and in part are mercenary barbarians who roam about in the border zone of the enormous wasteland we know as Forum Europeum, and in part groups who forage in the dirt by day and drink potato spirits by night.",
+      'Norway was a country on the outskirts of the part of the world called Europe. For somebody who has flown over the large peninsula, in northwest Slavia, it is undoubtedly incomprehensible that this wilderness was once inhabited, that there were cities here and an efficiently functioning infrastructure. At the time of its zenith as a nation, in the 2000s, Norway is to have been inhabited by a population of around seven million. We don\'t know exactly how many "Norwegians" or descendants of Norwegians are living in this landscape today, but it can hardly be more than a few thousand. They are called "the Norwegian tribe" and in part are mercenary barbarians who roam about in the border zone of the enormous wasteland we know as Forum Europeum, and in part groups who forage in the dirt by day and drink potato spirits by night.',
       "Approximately 2000 years have passed in relation to the present day, and we find ourselves in the Chinese Federation. All stored data and information were lost during an enormous catastrophe a thousand years before, but because individuals from the Long dynasty hold many key positions, and because the Long dynasty considers Norway to be its original homeland, a group led by three women has been assigned the task of telling the story of the Long dynasty's Norwegian ancestry, in other words the Bohre family, during the century before the first members emigrate to China. This implies that 20th century Norway must be reconstructed and this is done using a method called \"fictionalized history\" – which means that fiction is now considered the genre that can provide the greatest insight on the past. In other words, the invaluable function of storytelling in people's lives has been rediscovered.",
       "For this reason we read about a villa in Lysaker that is quite special, and a family conceived within it. For this reason a story is told about the pacifist Harald Bohre, who reverses his stance when the Germans invade Norway and lies behind a Colt machine gun near the Fossum Bridge ready to defend his country.",
       "For this reason the story of Laila Bohre is told, who in her childhood is bullied because her mother is in the Gaustad Psychiatric Hospital, but who later finds herself on the verge of entering into a romantic relationship with Crown Prince Harald. Instead, she boards the MS Bergensfjord as a cabin stewardess, and goes on to become a film star and ends up on the bow of the SS Norway, as the ship sails into the Geiranger Fjord.",
@@ -93,17 +96,15 @@ const content: BookPageContent = {
       "But first and foremost we meet Rita Bohre, as we follow her conversations with Fridtjof Nansen in the early 20th century, through a number of love affairs and a career as a palaeontologist with primitive fish of Svalbard as her area of expertise, until she dies beneath the oak tree in her garden, reminiscing about the evening she stood behind the podium in the University Aula and staged a dramatic showdown with her life-long nemesis Max Qviller.",
       "The Path of Kins is perhaps above all a story about robust women, about a century during which women improved their living conditions and grasped opportunities in a radically new fashion. Rita Bohre's life's work is called Femina erecta and is about how women must stand tall. At the same time, it is a taking to task of the male reptilian mindset.",
       "The novel is structured in three concentric circles. The first part addresses events during the Second World War. The next part moves forward to the 1970s and backwards to the 1920s. The third part continues the stories up to 2012, while simultaneously going all the way back to the 19th century.",
-      "Through its composition the novel seeks alternative causal connections. The Path of Kins shows how destinies can be intertwined in unexpected ways. The Chinese story-tellers search for emblematic stories, stories that have been told so many times, constitute such powerful \"narrative ballast\" that they have made a lasting impression on the descendants, in other words also on themselves.",
+      'Through its composition the novel seeks alternative causal connections. The Path of Kins shows how destinies can be intertwined in unexpected ways. The Chinese story-tellers search for emblematic stories, stories that have been told so many times, constitute such powerful "narrative ballast" that they have made a lasting impression on the descendants, in other words also on themselves.',
     ],
   },
-}
-
+};
 
 export default function SlektersGang() {
   return (
     <section className="bg-white">
       <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
-
         <BookPageBody content={content} />
         <BookPageQuotes content={content} />
 
@@ -114,19 +115,20 @@ export default function SlektersGang() {
             alt="Bokomslag Slekters gang"
             className="w-full h-auto object-contain"
           />
-          <p className="
+          <p
+            className="
             self-start
             text-sm
             tracking-[0.08em]
             font-['Lora',serif]
             text-neutral-500
             mt-4
-          ">
+          "
+          >
             Omslag: Terese Moe Leiner
           </p>
         </div>
-
       </div>
     </section>
-  )
+  );
 }

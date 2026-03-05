@@ -1,8 +1,10 @@
-﻿import { createFileRoute } from "@tanstack/react-router"
-import BookPage from "../../components/BookPage"
-import type { BookPageContent } from "../../components/BookPage"
+﻿import { createFileRoute } from "@tanstack/react-router";
+import BookPage from "../../components/BookPage";
+import type { BookPageContent } from "../../components/BookPage";
 
-export const Route = createFileRoute("/bibliografi/det-store-eventyret")({ component: DetStoreEventyret })
+export const Route = createFileRoute("/bibliografi/det-store-eventyret")({
+  component: DetStoreEventyret,
+});
 
 const detStoreEventyretContent: BookPageContent = {
   title: { no: "Det store eventyret", en: "The Great Fairy Tale" },
@@ -39,8 +41,8 @@ const detStoreEventyretContent: BookPageContent = {
       "In The Great Fairy Tale love's greatest tool is the Written Word. With the Written Word one can achieve anything, even jolt humdrum reality out of time and place, so that Norway suddenly manifests itself as a land of volcanic mountains, palm beaches and minarets lining Oslo's main shopping street.",
     ],
   },
-}
+};
 
 export default function DetStoreEventyret() {
-  return <BookPage content={detStoreEventyretContent} />
+  return <BookPage content={detStoreEventyretContent} />;
 }

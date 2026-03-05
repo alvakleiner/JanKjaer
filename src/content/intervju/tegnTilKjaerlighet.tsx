@@ -1,5 +1,4 @@
-const tegnTilKjaerlighet =
-`### Det skal ikke bli lett for Jan Kjærstad å overgå seg selv etter suksessen med Jonas Wergeland, men «det finnes bare én verdig oppgave i livet: å forsøke å gjøre det umulige», som det heter i hans nye roman, Tegn til kjærlighet. Og kanskje det er nettopp det han har klart med denne romanen.
+const tegnTilKjaerlighet = `### Det skal ikke bli lett for Jan Kjærstad å overgå seg selv etter suksessen med Jonas Wergeland, men «det finnes bare én verdig oppgave i livet: å forsøke å gjøre det umulige», som det heter i hans nye roman, Tegn til kjærlighet. Og kanskje det er nettopp det han har klart med denne romanen.
 ### Denne gangen er det en kvinne som fører ordet – en skriftdesigner som lever for skjønnheten i skrift og typografi. Til hennes livsskjebne knyttes en vakker kjærlighetshistorie, ledsaget av små eventyraktige innskudd som illustrerer skriftens magi.
 ### Jo, det er blitt en suverent skrevet roman, en overskuddsbok, men også en bok som vitner om ydmykhet og ettertanke.
 
@@ -25,6 +24,6 @@ JK: Mye av stoffet i romanen er selvbiografisk. Ved at jeg velger en kvinnelig h
 
 TL: Har du en idealleser?
 
-JK: Min drøm av en leser åpner romanen med nysgjerrighet. Jeg kunne nesten si: som et barn. Hvis jeg har et talent, måtte det være fantasikraft. Derfor er jeg avhengig av en åpen leser. En person som assosierer videre på de ordene jeg skriver. Dersom en leser sier romanen min er god, er det mye leserens egen fortjeneste.`
+JK: Min drøm av en leser åpner romanen med nysgjerrighet. Jeg kunne nesten si: som et barn. Hvis jeg har et talent, måtte det være fantasikraft. Derfor er jeg avhengig av en åpen leser. En person som assosierer videre på de ordene jeg skriver. Dersom en leser sier romanen min er god, er det mye leserens egen fortjeneste.`;
 
-export default tegnTilKjaerlighet
+export default tegnTilKjaerlighet;

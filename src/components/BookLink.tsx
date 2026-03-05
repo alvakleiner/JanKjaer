@@ -1,22 +1,15 @@
-import React from "react"
+import React from "react";
 
 type BookLinkProps = {
-  href: string
-  children: React.ReactNode
-  className?: string
-}
+  href: string;
+  children: React.ReactNode;
+  className?: string;
+};
 
-export default function BookLink({
-  href,
-  children,
-  className = "",
-}: BookLinkProps) {
+export default function BookLink({ href, children, className = "" }: BookLinkProps) {
   return (
-    <a
-      href={href}
-      className={`underline underline-offset-4 ${className}`}
-    >
+    <a href={href} className={`underline underline-offset-4 ${className}`}>
       <em>{children}</em>
     </a>
-  )
+  );
 }

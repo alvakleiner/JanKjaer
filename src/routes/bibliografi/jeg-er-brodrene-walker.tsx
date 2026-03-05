@@ -1,10 +1,11 @@
-﻿import { createFileRoute } from "@tanstack/react-router"
-import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
-import type { BookPageContent } from "../../components/BookPage"
-import { useLanguage } from "../../context/LanguageContext"
+﻿import { createFileRoute } from "@tanstack/react-router";
+import { BookPageBody, BookPageQuotes } from "../../components/BookPage";
+import type { BookPageContent } from "../../components/BookPage";
+import { useLanguage } from "../../context/LanguageContext";
 
-export const Route = createFileRoute("/bibliografi/jeg-er-brodrene-walker")({ component: JegErBrodreneWalker })
-
+export const Route = createFileRoute("/bibliografi/jeg-er-brodrene-walker")({
+  component: JegErBrodreneWalker,
+});
 
 const jegErBrodreneWalkerContent: BookPageContent = {
   title: { no: "Jeg er brødrene Walker", en: "I am the Walker Brothers" },
@@ -23,7 +24,14 @@ const jegErBrodreneWalkerContent: BookPageContent = {
       source: "Annette Orre, Dagsavisen",
     },
     {
-      text: <>«Jan Kjærstads tiende roman byr på mye av det som har gjort ham til en av de dyktigste og mest sentrale norske forfatterne de siste 25 åra. <em>Jeg er brødrene Walker</em> er en smart metaroman, spekket med referanser til populærkultur, høykultur, historie og den samfunnsmessige utviklingen i Norge fra tidlig på 80-tallet og fram til i dag.»</>,
+      text: (
+        <>
+          «Jan Kjærstads tiende roman byr på mye av det som har gjort ham til en av de dyktigste og
+          mest sentrale norske forfatterne de siste 25 åra. <em>Jeg er brødrene Walker</em> er en
+          smart metaroman, spekket med referanser til populærkultur, høykultur, historie og den
+          samfunnsmessige utviklingen i Norge fra tidlig på 80-tallet og fram til i dag.»
+        </>
+      ),
       source: "Terje Eidsvåg, Adresseavisen",
     },
   ],
@@ -45,19 +53,19 @@ const jegErBrodreneWalkerContent: BookPageContent = {
       "I am the Walker Brothers deals with a young person's body, but even more so with his imagination, his mental resources and the undreamed of powers he seems to possess. An unconventional coming-of-age tale seen through the observant eyes of a teenager, I am the Walker Brothers is a vibrant, humorous, wonderfully written book that introduces a new, more playful and casual side to Kjærstad's work.",
     ],
   },
-}
+};
 
 export default function JegErBrodreneWalker() {
-  const { lang } = useLanguage()
+  const { lang } = useLanguage();
 
   return (
     <section className="bg-white">
       <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
+        <BookPageBody content={jegErBrodreneWalkerContent} />
 
-      <BookPageBody content={jegErBrodreneWalkerContent} />
-
-      {/* Brosjyre / Pamphlet */}
-      <h3 className="
+        {/* Brosjyre / Pamphlet */}
+        <h3
+          className="
         uppercase
         text-xl
         tracking-[0.12em]
@@ -65,32 +73,39 @@ export default function JegErBrodreneWalker() {
         mt-14
         md:mt-8
         mb-6
-      ">
-      {lang === "no" ? "Brosjyre" : "Pamphlet"}
-      </h3>
+      "
+        >
+          {lang === "no" ? "Brosjyre" : "Pamphlet"}
+        </h3>
 
-      <div className="border-l-2 border-black/10 pl-5">
-        <p className="
+        <div className="border-l-2 border-black/10 pl-5">
+          <p
+            className="
           font-['Lora',serif]
           text-base
           leading-7
           tracking-[0.04em]
           text-black
-        ">
-          {lang === "no" ? "Aschehoug Agency har gitt ut en 19 siders brosjyre med informasjon om, og utdrag fra boken. Brosjyren er på engelsk og kan lastes ned fra " : "Aschehoug Agency has published a 19-page pamphlet with information about, and excerpts from, the book. The pamphlet is in English and can be downloaded from "}
-          <a  href="/pressemateriale"
-            target="_blank"
-            rel="noreferrer"
-            className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
+        "
           >
-            {lang === "no" ? "Pressemateriale" : "Press material"}
-          </a>
-          .
-        </p>
-      </div>
+            {lang === "no"
+              ? "Aschehoug Agency har gitt ut en 19 siders brosjyre med informasjon om, og utdrag fra boken. Brosjyren er på engelsk og kan lastes ned fra "
+              : "Aschehoug Agency has published a 19-page pamphlet with information about, and excerpts from, the book. The pamphlet is in English and can be downloaded from "}
+            <a
+              href="/pressemateriale"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
+            >
+              {lang === "no" ? "Pressemateriale" : "Press material"}
+            </a>
+            .
+          </p>
+        </div>
 
-      {/* Anmeldelse / Review */}
-      <h3 className="
+        {/* Anmeldelse / Review */}
+        <h3
+          className="
         uppercase
         text-xl
         tracking-[0.12em]
@@ -98,42 +113,46 @@ export default function JegErBrodreneWalker() {
         mt-14
         md:mt-8
         mb-6
-      ">
-      {lang === "no" ? "Anmeldelse" : "Review"}
-      </h3>
+      "
+        >
+          {lang === "no" ? "Anmeldelse" : "Review"}
+        </h3>
 
-      <div className="border-l-2 border-black/10 pl-5">
-        <p className="
+        <div className="border-l-2 border-black/10 pl-5">
+          <p
+            className="
           font-['Lora',serif]
           text-base
           leading-7
           tracking-[0.04em]
           text-black
           italic
-        ">
-          
-          <a  href="https://www.nrk.no/kultur/_jeg-er-brodrene-walker_-1.6236253"
-            target="_blank"
-            rel="noreferrer"
-            className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
+        "
           >
-            «Velopplagt Kjærstad»
-          </a>
-        </p>
-        <p className="
+            <a
+              href="https://www.nrk.no/kultur/_jeg-er-brodrene-walker_-1.6236253"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
+            >
+              «Velopplagt Kjærstad»
+            </a>
+          </p>
+          <p
+            className="
           text-sm
           tracking-[0.08em]
           font-['Lora',serif]
           text-neutral-500
           mt-2
-        ">
-          NRK
-        </p>
-      </div>
+        "
+          >
+            NRK
+          </p>
+        </div>
 
-      <BookPageQuotes content={jegErBrodreneWalkerContent} />
-
+        <BookPageQuotes content={jegErBrodreneWalkerContent} />
       </div>
     </section>
-  )
+  );
 }

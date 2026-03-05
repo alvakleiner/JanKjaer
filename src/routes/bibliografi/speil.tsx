@@ -1,9 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router"
-import BookPage from "../../components/BookPage"
-import type { BookPageContent } from "../../components/BookPage"
+import { createFileRoute } from "@tanstack/react-router";
+import BookPage from "../../components/BookPage";
+import type { BookPageContent } from "../../components/BookPage";
 
-export const Route = createFileRoute("/bibliografi/speil")({ component: Speil })
-
+export const Route = createFileRoute("/bibliografi/speil")({ component: Speil });
 
 const speilContent: BookPageContent = {
   title: { no: "Speil", en: "Mirror" },
@@ -36,8 +35,8 @@ const speilContent: BookPageContent = {
       "Mirrors; a novel about David Dal's odyssey through the 20th century. We share in key episodes in the main character's life and decisive events in Western history. Eventually they all end up as pieces in a three-dimensional jigsaw that the reader must help to solve.",
     ],
   },
-}
+};
 
 export default function Speil() {
-  return <BookPage content={speilContent} />
+  return <BookPage content={speilContent} />;
 }

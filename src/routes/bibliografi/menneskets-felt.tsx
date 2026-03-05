@@ -1,8 +1,8 @@
-﻿import { createFileRoute } from "@tanstack/react-router"
-import BookPage from "../../components/BookPage"
-import type { BookPageContent } from "../../components/BookPage"
+﻿import { createFileRoute } from "@tanstack/react-router";
+import BookPage from "../../components/BookPage";
+import type { BookPageContent } from "../../components/BookPage";
 
-export const Route = createFileRoute("/bibliografi/menneskets-felt")({ component: mennesketsFelt })
+export const Route = createFileRoute("/bibliografi/menneskets-felt")({ component: mennesketsFelt });
 
 const mennesketsFeltContent: BookPageContent = {
   title: { no: "Menneskets felt", en: "The Human Sphere" },
@@ -46,9 +46,8 @@ const mennesketsFeltContent: BookPageContent = {
       "This is an inspirational and thought-provoking collection from an author who clearly demonstrates his love of words, of literature, and of knowledge from many fields.",
     ],
   },
-}
+};
 
 export default function mennesketsFelt() {
-  return <BookPage content={mennesketsFeltContent} />
+  return <BookPage content={mennesketsFeltContent} />;
 }
-

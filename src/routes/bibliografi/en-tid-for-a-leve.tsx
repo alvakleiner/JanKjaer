@@ -1,8 +1,10 @@
-﻿import { createFileRoute } from "@tanstack/react-router"
-import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
-import type { BookPageContent } from "../../components/BookPage"
+﻿import { createFileRoute } from "@tanstack/react-router";
+import { BookPageBody, BookPageQuotes } from "../../components/BookPage";
+import type { BookPageContent } from "../../components/BookPage";
 
-export const Route = createFileRoute("/bibliografi/en-tid-for-a-leve")({ component: enTidForALeve })
+export const Route = createFileRoute("/bibliografi/en-tid-for-a-leve")({
+  component: enTidForALeve,
+});
 
 const enTidForALeveContent: BookPageContent = {
   title: { no: "En tid for å leve", en: "A Time to Live" },
@@ -81,7 +83,7 @@ const enTidForALeveContent: BookPageContent = {
       "Seated in the third row is her former lover. In the fourth, a hated critic. And in the very first, the Norwegian Prime Minister.",
     ],
   },
-}
+};
 
 export default function enTidForALeve() {
   return (
@@ -104,5 +106,5 @@ export default function enTidForALeve() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,8 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router"
-import Collage from "../components/Collage"
-import { useLanguage } from "../context/LanguageContext"
+import { createFileRoute } from "@tanstack/react-router";
+import Collage from "../components/Collage";
+import { useLanguage } from "../context/LanguageContext";
 
-export const Route = createFileRoute("/bibliografi")({ component: Bibliografi })
+export const Route = createFileRoute("/bibliografi")({ component: Bibliografi });
 
 const books = {
   en: [
@@ -17,23 +17,39 @@ const books = {
     { title: "Norman's Area", meta: "Novel (2011)", slug: "normans-omraade" },
     { title: "I Am The Walker Brothers", meta: "Novel (2008)", slug: "jeg-er-brodrene-walker" },
     { title: "Miranda's Treasury", meta: "Picture book (2008)", slug: "mirandas-skattkammer" },
-    { title: "The Matrix of Kjærstad", meta: "Essay collection (2007)", slug: "kjaerstads-matrise" },
+    {
+      title: "The Matrix of Kjærstad",
+      meta: "Essay collection (2007)",
+      slug: "kjaerstads-matrise",
+    },
     { title: "The King of Europe", meta: "Novel (2005)", slug: "kongen-av-europa" },
     { title: "The Human Web", meta: "Essays (2004)", slug: "menneskets-nett" },
     { title: "Signs of Love", meta: "Novel (2002)", slug: "tegn-til-kjaerlighet" },
     { title: "The Discoverer", meta: "Novel (1999)", slug: "oppdageren" },
     { title: "The Human Sphere", meta: "Essays (1997)", slug: "menneskets-felt" },
     { title: "The Conqueror", meta: "Novel (1996)", slug: "erobreren" },
-    { title: "The World of Scheherazade, Queen of Tales", meta: "Picture book (1995)", slug: "hos-sheherasad-fantasiens-dronning" },
+    {
+      title: "The World of Scheherazade, Queen of Tales",
+      meta: "Picture book (1995)",
+      slug: "hos-sheherasad-fantasiens-dronning",
+    },
     { title: "The Seducer", meta: "Novel (1993)", slug: "forforeren" },
     { title: "Brink", meta: "Novel (1990)", slug: "rand" },
-    { title: "The Hunt for the Hidden Waffle Hearts", meta: "Picture book (1989/2005)", slug: "jakten-paa-de-skjulte-vaffelhjertene" },
-    { title: "The Arabian Nights (Ed.)", meta: "(1989)"},
+    {
+      title: "The Hunt for the Hidden Waffle Hearts",
+      meta: "Picture book (1989/2005)",
+      slug: "jakten-paa-de-skjulte-vaffelhjertene",
+    },
+    { title: "The Arabian Nights (Ed.)", meta: "(1989)" },
     { title: "The Matrix of Man", meta: "Essays (1989)", slug: "menneskets-matrise" },
     { title: "The Great Fairy Tale", meta: "Novel (1987)", slug: "det-store-eventyret" },
     { title: "Homo Falsus or The Perfect Murder", meta: "Novel (1984)", slug: "homo-falsus" },
     { title: "Mirrors", meta: "Novel (1982)", slug: "speil" },
-    { title: "The Earth Turns Quietly", meta: "Short stories (1980)", slug: "kloden-dreier-stille-rundt" },
+    {
+      title: "The Earth Turns Quietly",
+      meta: "Short stories (1980)",
+      slug: "kloden-dreier-stille-rundt",
+    },
   ],
 
   no: [
@@ -48,49 +64,68 @@ const books = {
     { title: "Normans område", meta: "Roman (2011)", slug: "normans-omraade" },
     { title: "Jeg er brødrene Walker", meta: "Roman (2008)", slug: "jeg-er-brodrene-walker" },
     { title: "Mirandas skattkammer", meta: "Bildebok (2008)", slug: "mirandas-skattkammer" },
-    { title: "Kjærstads matrise", meta: "Samlede essays med bonusspor (2007)", slug: "kjaerstads-matrise" },
+    {
+      title: "Kjærstads matrise",
+      meta: "Samlede essays med bonusspor (2007)",
+      slug: "kjaerstads-matrise",
+    },
     { title: "Kongen av Europa", meta: "Roman (2005)", slug: "kongen-av-europa" },
     { title: "Menneskets nett", meta: "Essays (2004)", slug: "menneskets-nett" },
     { title: "Tegn til kjærlighet", meta: "Roman (2002)", slug: "tegn-til-kjaerlighet" },
     { title: "Oppdageren", meta: "Roman (1999)", slug: "oppdageren" },
     { title: "Menneskets felt", meta: "Essays (1997)", slug: "menneskets-felt" },
     { title: "Erobreren", meta: "Roman (1996)", slug: "erobreren" },
-    { title: "Hos Sheherasad, fantasiens dronning", meta: "Bildebok (1995)", slug: "hos-sheherasad-fantasiens-dronning" },
+    {
+      title: "Hos Sheherasad, fantasiens dronning",
+      meta: "Bildebok (1995)",
+      slug: "hos-sheherasad-fantasiens-dronning",
+    },
     { title: "Forføreren", meta: "Roman (1993)", slug: "forforeren" },
     { title: "Rand", meta: "Roman (1990)", slug: "rand" },
-    { title: "Jakten på de skjulte vaffelhjertene", meta: "Bildebok (1989/2005)", slug: "jakten-paa-de-skjulte-vaffelhjertene" },
-    { title: "Tusen og en natt", meta: "(1989)"},
+    {
+      title: "Jakten på de skjulte vaffelhjertene",
+      meta: "Bildebok (1989/2005)",
+      slug: "jakten-paa-de-skjulte-vaffelhjertene",
+    },
+    { title: "Tusen og en natt", meta: "(1989)" },
     { title: "Menneskets matrise", meta: "Essays (1989)", slug: "menneskets-matrise" },
     { title: "Det store eventyret", meta: "Roman (1987)", slug: "det-store-eventyret" },
     { title: "Homo Falsus eller Det perfekte mord", meta: "Roman (1984)", slug: "homo-falsus" },
     { title: "Speil", meta: "Roman (1982)", slug: "speil" },
-    { title: "Kloden dreier stille rundt", meta: "Noveller (1980)", slug: "kloden-dreier-stille-rundt" },
+    {
+      title: "Kloden dreier stille rundt",
+      meta: "Noveller (1980)",
+      slug: "kloden-dreier-stille-rundt",
+    },
   ],
-}
+};
 
 const publisherNote = {
   no: (
     <>
       Alle Jan Kjærstads bøker er utgitt av H. Aschehoug & Co (W. Nygaard), med unntak av:
-      <div className="h-2"/>
-      <em>Stein blir kaptein</em> (Gyldendal), <em>Mirandas skattkammer</em> (Magikon), <em>Hos Sheherasad,
-      fantasiens dronning</em> (N.W. Damm & Søn), og <em>Tusen og en natt</em> 1-2 (De norske bokklubbene).
+      <div className="h-2" />
+      <em>Stein blir kaptein</em> (Gyldendal), <em>Mirandas skattkammer</em> (Magikon),{" "}
+      <em>Hos Sheherasad, fantasiens dronning</em> (N.W. Damm & Søn), og <em>Tusen og en natt</em>{" "}
+      1-2 (De norske bokklubbene).
     </>
   ),
   en: (
     <>
-      All books by Jan Kjærstad are published by H. Aschehoug & Co (W. Nygaard), with the exception of:
-      <div className="h-2"/>
-      <em>Stein blir kaptein</em> (Gyldendal), <em>Mirandas skattkammer</em> (Magikon), <em>Hos Sheherasad,
-      fantasiens dronning</em> (N.W. Damm & Søn), and <em>Tusen og en natt</em> 1-2 (De norske bokklubbene).
+      All books by Jan Kjærstad are published by H. Aschehoug & Co (W. Nygaard), with the exception
+      of:
+      <div className="h-2" />
+      <em>Stein blir kaptein</em> (Gyldendal), <em>Mirandas skattkammer</em> (Magikon),{" "}
+      <em>Hos Sheherasad, fantasiens dronning</em> (N.W. Damm & Søn), and <em>Tusen og en natt</em>{" "}
+      1-2 (De norske bokklubbene).
     </>
   ),
-}
+};
 
 export default function Bibliografi() {
-  const { lang } = useLanguage()
-  const isEn = lang === "en"
-  const list = isEn ? books.en : books.no
+  const { lang } = useLanguage();
+  const isEn = lang === "en";
+  const list = isEn ? books.en : books.no;
 
   const seo = {
     title: { no: "Bibliografi – Jan Kjærstad", en: "Bibliography – Jan Kjærstad" },
@@ -98,13 +133,12 @@ export default function Bibliografi() {
       no: "Utforsk Jan Kjærstads forfatterskap med romaner, noveller og essays fra 1980 til 2024.",
       en: "Explore Jan Kjærstad's authorship with novels, short stories and essays from 1980 to 2024.",
     },
-  } as const
+  } as const;
 
   return (
     <section className="bg-white">
       <Collage />
       <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 mt-2 md:mt-4 mb-18">
-
         <h2
           className="
             text-center
@@ -153,8 +187,8 @@ export default function Bibliografi() {
               )}
             </div>
           ))}
-            <div
-                className="
+          <div
+            className="
                     mt-14
                     text-center
                     font-['Playfair_Display',serif]
@@ -163,11 +197,11 @@ export default function Bibliografi() {
                     leading-7
                     text-neutral-600
                 "
-                >
-                {lang === "en" ? publisherNote.en : publisherNote.no}
-            </div>
+          >
+            {lang === "en" ? publisherNote.en : publisherNote.no}
+          </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,10 +1,9 @@
-﻿import { createFileRoute } from "@tanstack/react-router"
-import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
-import type { BookPageContent } from "../../components/BookPage"
-import TrilogyBooks from "../../components/TrilogyBooks"
+﻿import { createFileRoute } from "@tanstack/react-router";
+import { BookPageBody, BookPageQuotes } from "../../components/BookPage";
+import type { BookPageContent } from "../../components/BookPage";
+import TrilogyBooks from "../../components/TrilogyBooks";
 
-export const Route = createFileRoute("/bibliografi/forforeren")({ component: Forforeren })
-
+export const Route = createFileRoute("/bibliografi/forforeren")({ component: Forforeren });
 
 const forforerenContent: BookPageContent = {
   title: { no: "Forføreren", en: "The Seducer" },
@@ -71,26 +70,23 @@ const forforerenContent: BookPageContent = {
       "I Forføreren står mennesket fram som forteller. Det hevdes at fortellingen gir en innsikt som ikke kan gis på noen annen måte. Selv når vi ikke forstår, kan vi fortelle en historie om det vi ikke forstår.",
     ],
     en: [
-      "In The Seducer we are introduced to the charismatic Jonas Wergeland who has achieved stardom with his television series \"Thinking Big\". He returns home from a trip abroad to find his wife dead. Taking this as a starting point, the hero's sensational life history is revealed by a stream of dramatic narratives.",
+      'In The Seducer we are introduced to the charismatic Jonas Wergeland who has achieved stardom with his television series "Thinking Big". He returns home from a trip abroad to find his wife dead. Taking this as a starting point, the hero\'s sensational life history is revealed by a stream of dramatic narratives.',
       "Jan Kjærstad is an author who knows how to use effect – the reader is swept along from Grorud and Oslo to locations such as Timbuktu and Shanghai, from a boy's first encounter with the Kama Sutra to his use of that knowledge in front of the cameras in Oslo's main television studios.",
       "The Seducer is an easily read, thrilling and erotic book – one huge collection of narratives.",
     ],
   },
-}
+};
 
 export default function Forforeren() {
-
   return (
     <section className="bg-white">
       <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
+        <BookPageBody content={forforerenContent} />
 
-      <BookPageBody content={forforerenContent} />
+        <TrilogyBooks />
 
-      <TrilogyBooks />
-
-      <BookPageQuotes content={forforerenContent} />
-
+        <BookPageQuotes content={forforerenContent} />
       </div>
     </section>
-  )
+  );
 }

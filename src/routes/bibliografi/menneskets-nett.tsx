@@ -1,10 +1,10 @@
-﻿import { createFileRoute } from "@tanstack/react-router"
-import BookLink from "../../components/BookLink"
-import { BookPageBody } from "../../components/BookPage"
-import type { BookPageContent } from "../../components/BookPage"
-import { useLanguage } from "../../context/LanguageContext"
+﻿import { createFileRoute } from "@tanstack/react-router";
+import BookLink from "../../components/BookLink";
+import { BookPageBody } from "../../components/BookPage";
+import type { BookPageContent } from "../../components/BookPage";
+import { useLanguage } from "../../context/LanguageContext";
 
-export const Route = createFileRoute("/bibliografi/menneskets-nett")({ component: mennesketsNett })
+export const Route = createFileRoute("/bibliografi/menneskets-nett")({ component: mennesketsNett });
 
 const mennesketsNettContent: BookPageContent = {
   title: { no: "Menneskets nett", en: "The Human Web" },
@@ -22,22 +22,20 @@ const mennesketsNettContent: BookPageContent = {
       "I forordet skriver Kjærstad tre ganger om nysgjerrighet og sier at ordet også er et av dem han liker best – å være «nysgjerrig», som betyr at man er ivrig etter å få vite ting, få høre nytt. Menneskets nett er tilegnet den nysgjerrige leser.",
       "I boken kan man blant annet lese om konfektesker, om tilværelsens uutholdelige tetthet, om Agnar Mykle, om forfatteren som nasjonalpark, om romanens lys, om stream of information, om karakterer uten egenskaper, om biografiens løgn, om Marilyn Monroe, om et skip til å ha i lommen, om profeter og fortellere, om redselen for Marguerite Duras, om Herodot som notisbok, om en perfekt historie, om det jødiske museet i Berlin, om å være amatør, om kritikerens påfuglhale, om «Make it new»-problematikken, om litteraturens himmel og helvete, om tvillingtanker, om de 36 rettferdige, om Internett som torg og labyrint, om forfattere på pengesedlene.",
     ],
-    en: [
-      "Content in English missing. Please refer to the Norwegian version.",
-    ],
+    en: ["Content in English missing. Please refer to the Norwegian version."],
   },
-}
+};
 
 export default function mennesketsNett() {
-  const { lang } = useLanguage()
+  const { lang } = useLanguage();
 
   return (
     <section className="bg-white">
       <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
-
         <BookPageBody content={mennesketsNettContent} />
 
-        <p className="
+        <p
+          className="
           text-base
           leading-7
           tracking-[0.04em]
@@ -45,14 +43,20 @@ export default function mennesketsNett() {
           text-black
           mt-8
           mb-14
-        ">
-          {lang === "no" ? "Menneskets nett er ikke lenger i salg som egen bok, men tilgjengelig i essaysamlingen " : "The Human Net is no longer available as a standalone book, but can be found in the essay collection "}{" "}
-          <BookLink href="/bibliografi/kjaerstads-matrise" className="font-['Lora',serif] text-base leading-7 tracking-[0.04em] text-black italic decoration-neutral-400 hover:decoration-neutral-800 transition">
+        "
+        >
+          {lang === "no"
+            ? "Menneskets nett er ikke lenger i salg som egen bok, men tilgjengelig i essaysamlingen "
+            : "The Human Net is no longer available as a standalone book, but can be found in the essay collection "}{" "}
+          <BookLink
+            href="/bibliografi/kjaerstads-matrise"
+            className="font-['Lora',serif] text-base leading-7 tracking-[0.04em] text-black italic decoration-neutral-400 hover:decoration-neutral-800 transition"
+          >
             {lang === "no" ? "Kjærstads matrise" : "The Matrix of Kjærstad"}
           </BookLink>
           .
         </p>
       </div>
     </section>
-  )
+  );
 }

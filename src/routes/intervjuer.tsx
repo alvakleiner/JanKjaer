@@ -1,16 +1,16 @@
-import { createFileRoute } from "@tanstack/react-router"
-import { useState } from "react"
-import { useLanguage } from "../context/LanguageContext"
-import Drawer, { renderArticle } from "../components/Drawer"
-import mmInterview from "../content/intervju/mmInterview"
-import tegnTilKjaerlighet from "../content/intervju/tegnTilKjaerlighet"
+import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
+import { useLanguage } from "../context/LanguageContext";
+import Drawer, { renderArticle } from "../components/Drawer";
+import mmInterview from "../content/intervju/mmInterview";
+import tegnTilKjaerlighet from "../content/intervju/tegnTilKjaerlighet";
 
-export const Route = createFileRoute("/intervjuer")({ component: Intervjuer })
+export const Route = createFileRoute("/intervjuer")({ component: Intervjuer });
 
 export default function Intervjuer() {
-  const { lang } = useLanguage()
-  const [bokvennenOpen, setBokvennenOpen] = useState(false)
-  const [lundbergOpen, setLundbergOpen] = useState(false)
+  const { lang } = useLanguage();
+  const [bokvennenOpen, setBokvennenOpen] = useState(false);
+  const [lundbergOpen, setLundbergOpen] = useState(false);
 
   const paragraphs = {
     no: [
@@ -19,7 +19,7 @@ export default function Intervjuer() {
     en: [
       "A newspaper yellows and bears witness to the ravages of time; a digital document always looks equally fresh. On this page you will find interviews as well as links to external websites featuring Kjærstad interviews. Some of them are a few years old, but take the journey, read or listen to the interviews, learn from them or dismiss them, see them as eternal truths or as historical documents.",
     ],
-  }
+  };
 
   const seo = {
     title: { no: "Intervjuer – Jan Kjærstad", en: "Interviews – Jan Kjærstad" },
@@ -27,12 +27,11 @@ export default function Intervjuer() {
       no: "Utvalgte intervjuer med Jan Kjærstad om forfatterskap, bøker og litteratur.",
       en: "Selected interviews with Jan Kjærstad about writing, books and literature.",
     },
-  } as const
+  } as const;
 
   return (
     <section className="bg-white">
       <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 mt-2 md:mt-4 mb-18">
-
         <h2
           className="
             text-center
@@ -63,14 +62,16 @@ export default function Intervjuer() {
           </p>
         </div>
 
-        <div className="
+        <div
+          className="
           text-base
           leading-7
           tracking-[0.04em]
           font-['Lora',serif]
           text-black
           space-y-6
-        ">
+        "
+        >
           {paragraphs[lang].map((p, i) => (
             <p key={i}>{p}</p>
           ))}
@@ -129,8 +130,9 @@ export default function Intervjuer() {
                   className="underline underline-offset-4 cursor-pointer hover:opacity-80 focus:outline-none"
                 >
                   her
-                </button>
-                {" "}for å vise intervju av Marius Fossøy Mohaugen og Kristian Meisingset i Bokvennen, 2014.
+                </button>{" "}
+                for å vise intervju av Marius Fossøy Mohaugen og Kristian Meisingset i Bokvennen,
+                2014.
               </>
             ) : (
               <>
@@ -141,8 +143,9 @@ export default function Intervjuer() {
                   className="underline underline-offset-4 cursor-pointer hover:opacity-80 focus:outline-none"
                 >
                   here
-                </button>
-                {" "}to read the interview by Marius Fossøy Mohaugen and Kristian Meisingset in Bokvennen, 2014. (Only available in Norwegian)
+                </button>{" "}
+                to read the interview by Marius Fossøy Mohaugen and Kristian Meisingset in
+                Bokvennen, 2014. (Only available in Norwegian)
               </>
             )}
           </p>
@@ -158,7 +161,9 @@ export default function Intervjuer() {
             mb-4
           "
         >
-          {lang === "no" ? "Samtale med Isabella Miehe-Renard" : "Conversation with Isabella Miehe-Renard"}
+          {lang === "no"
+            ? "Samtale med Isabella Miehe-Renard"
+            : "Conversation with Isabella Miehe-Renard"}
         </h3>
 
         <div className="border-l-2 border-black/10 pl-5">
@@ -172,9 +177,17 @@ export default function Intervjuer() {
               {lang === "no" ? "Video-intervju" : "Video interview"}
             </a>
             {lang === "no" ? (
-              <> om boken <em>Jeg er brødrene Walker</em> på International Forfatterscene, Den Sorte Diamant, Det Kongelige Bibliotek i Danmark, 2009.</>
+              <>
+                {" "}
+                om boken <em>Jeg er brødrene Walker</em> på International Forfatterscene, Den Sorte
+                Diamant, Det Kongelige Bibliotek i Danmark, 2009.
+              </>
             ) : (
-              <> about the book <em>I am the Walker Brothers</em> at the International Author Stage, The Black Diamond, The Royal Library of Denmark, 2009.</>
+              <>
+                {" "}
+                about the book <em>I am the Walker Brothers</em> at the International Author Stage,
+                The Black Diamond, The Royal Library of Denmark, 2009.
+              </>
             )}
           </p>
         </div>
@@ -203,8 +216,9 @@ export default function Intervjuer() {
                   className="underline underline-offset-4 cursor-pointer hover:opacity-80 focus:outline-none"
                 >
                   her
-                </button>
-                {" "}for å vise intervju med Trond Lundberg. Første gang publisert i Aschehoug informerer, 2002.
+                </button>{" "}
+                for å vise intervju med Trond Lundberg. Første gang publisert i Aschehoug
+                informerer, 2002.
               </>
             ) : (
               <>
@@ -215,8 +229,9 @@ export default function Intervjuer() {
                   className="underline underline-offset-4 cursor-pointer hover:opacity-80 focus:outline-none"
                 >
                   here
-                </button>
-                {" "}to read the interview with Trond Lundberg. First published in Aschehoug informerer, 2002. (Only available in Norwegian)
+                </button>{" "}
+                to read the interview with Trond Lundberg. First published in Aschehoug informerer,
+                2002. (Only available in Norwegian)
               </>
             )}
           </p>
@@ -239,7 +254,8 @@ export default function Intervjuer() {
           <p className="font-['Lora',serif] text-base leading-7 tracking-[0.04em] text-black">
             {lang === "no" ? (
               <>
-                Dagbladet inviterte i 1999 Kjærstad til sin nettutgave for å svare på spørsmål fra leserne.{" "}
+                Dagbladet inviterte i 1999 Kjærstad til sin nettutgave for å svare på spørsmål fra
+                leserne.{" "}
                 <a
                   href="https://www.dagbladet.no/kultur/kjaerstad-pa-nettet/65521172"
                   target="_blank"
@@ -247,8 +263,8 @@ export default function Intervjuer() {
                   className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
                 >
                   Det første møtet
-                </a>
-                {" "}var så vellykket at det ble arrangert{" "}
+                </a>{" "}
+                var så vellykket at det ble arrangert{" "}
                 <a
                   href="https://www.dagbladet.no/kultur/jan-kjaerstad-motte-leserne-pa-nettet/65579913"
                   target="_blank"
@@ -261,7 +277,8 @@ export default function Intervjuer() {
               </>
             ) : (
               <>
-                In 1999, Dagbladet invited Kjærstad to their online edition to answer questions from readers.{" "}
+                In 1999, Dagbladet invited Kjærstad to their online edition to answer questions from
+                readers.{" "}
                 <a
                   href="https://www.dagbladet.no/kultur/kjaerstad-pa-nettet/65521172"
                   target="_blank"
@@ -269,8 +286,8 @@ export default function Intervjuer() {
                   className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
                 >
                   The first meeting
-                </a>
-                {" "}was so successful that{" "}
+                </a>{" "}
+                was so successful that{" "}
                 <a
                   href="https://www.dagbladet.no/kultur/jan-kjaerstad-motte-leserne-pa-nettet/65579913"
                   target="_blank"
@@ -278,8 +295,9 @@ export default function Intervjuer() {
                   className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
                 >
                   a new meeting
-                </a>
-                {" "}was arranged. Four hours with over forty questions and answers was the result the second time.
+                </a>{" "}
+                was arranged. Four hours with over forty questions and answers was the result the
+                second time.
               </>
             )}
           </p>
@@ -304,17 +322,12 @@ export default function Intervjuer() {
         </Drawer>
 
         <div className="mt-12">
-          <img
-            src="/images/jkeh.jpg"
-            alt=""
-            className="w-full h-auto"
-          />
+          <img src="/images/jkeh.jpg" alt="" className="w-full h-auto" />
           <p className="text-sm tracking-[0.04em] font-['Lora',serif] text-black/70 mt-4">
             Foto: Elin Høyland
           </p>
         </div>
-
       </div>
     </section>
-  )
+  );
 }

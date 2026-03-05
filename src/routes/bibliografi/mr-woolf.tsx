@@ -1,8 +1,8 @@
-import { createFileRoute, useLocation } from "@tanstack/react-router"
+import { createFileRoute, useLocation } from "@tanstack/react-router";
 
-export const Route = createFileRoute("/bibliografi/mr-woolf")({ component: MrWoolf })
-import { useLanguage } from "../../context/LanguageContext"
-import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
+export const Route = createFileRoute("/bibliografi/mr-woolf")({ component: MrWoolf });
+import { useLanguage } from "../../context/LanguageContext";
+import { BookPageBody, BookPageQuotes } from "../../components/BookPage";
 
 const content = {
   title: { no: "Mr. Woolf", en: "Mr. Woolf" },
@@ -22,7 +22,13 @@ const content = {
       diceImg: "/images/terningkast5.png",
     },
     {
-      text: <>«<em>Mr. Woolf</em> er en rik røverroman som glir sømløst mellom fortid og nåtid … Romanen innehar en dæsj Murakami-mystikk, er spennende som en detektivhistorie; den er både menneskevarm og underlig. Sier du yes til fortellingen er hans nye bok en skattkiste.»</>,
+      text: (
+        <>
+          «<em>Mr. Woolf</em> er en rik røverroman som glir sømløst mellom fortid og nåtid … Romanen
+          innehar en dæsj Murakami-mystikk, er spennende som en detektivhistorie; den er både
+          menneskevarm og underlig. Sier du yes til fortellingen er hans nye bok en skattkiste.»
+        </>
+      ),
       source: "Ellen Sofie Lauritzen, Dagens Næringsliv",
     },
     {
@@ -75,15 +81,14 @@ const content = {
       "Yours sincerely, Jan Kjærstad",
     ],
   },
-}
+};
 
 export default function MrWoolf() {
-  const { lang } = useLanguage()
+  const { lang } = useLanguage();
   return (
     <>
       <section className="bg-white">
         <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
-
           <BookPageBody content={{ ...content, paragraphs: content.paragraphsBeforeImage }} />
 
           {/* Inline image */}
@@ -118,9 +123,8 @@ export default function MrWoolf() {
               Omslag: Terese Moe Leiner
             </p>
           </div>
-
         </div>
       </section>
     </>
-  )
+  );
 }

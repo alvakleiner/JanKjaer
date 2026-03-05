@@ -1,15 +1,14 @@
-﻿import { createFileRoute } from "@tanstack/react-router"
-import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
-import type { BookPageContent } from "../../components/BookPage"
-import { useLanguage } from "../../context/LanguageContext"
-import TrilogyBooks from "../../components/TrilogyBooks"
+﻿import { createFileRoute } from "@tanstack/react-router";
+import { BookPageBody, BookPageQuotes } from "../../components/BookPage";
+import type { BookPageContent } from "../../components/BookPage";
+import { useLanguage } from "../../context/LanguageContext";
+import TrilogyBooks from "../../components/TrilogyBooks";
 
-export const Route = createFileRoute("/bibliografi/erobreren")({ component: Erobreren })
-import { transformatorNo, transformatorEn } from "../../content/bibliografi/erobreren/excerpts"
-import Drawer, { renderArticle } from "../../components/Drawer"
-import { useState } from "react"
-import perBuvikReview from "../../content/bibliografi/erobreren/perBuvikReview"
-
+export const Route = createFileRoute("/bibliografi/erobreren")({ component: Erobreren });
+import { transformatorNo, transformatorEn } from "../../content/bibliografi/erobreren/excerpts";
+import Drawer, { renderArticle } from "../../components/Drawer";
+import { useState } from "react";
+import perBuvikReview from "../../content/bibliografi/erobreren/perBuvikReview";
 
 const erobrerenContent: BookPageContent = {
   title: { no: "Eroberen", en: "The Conqueror" },
@@ -71,29 +70,29 @@ const erobrerenContent: BookPageContent = {
       "Jonas Wergeland strever gjennom hele romanen med å strekke seg utover sin «alminnelighet»; han prøver å bli noe mer enn han kanskje er. I likhet med karbon, som i én form kan være grafitt og i en annen form kan være diamant, tror Jonas at også mennesket har muligheten i seg til å anta ulike former. For Jonas Wergeland er det viktig å bevare troen på at et hvilket som helst «alminnelig» menneske i en viss sammenheng kan bli et «geni».",
     ],
     en: [
-      "We haven't heard the last of Jonas Wergeland, the TV wizard who gave a whole nation new self-confidence. A biographer is given the job of writing \"the definitive Wergeland biography\". While working on it he comes across a woman who has previously undisclosed stories to tell. Gaps are plugged, new relationships revealed. How does one become a conqueror?",
+      'We haven\'t heard the last of Jonas Wergeland, the TV wizard who gave a whole nation new self-confidence. A biographer is given the job of writing "the definitive Wergeland biography". While working on it he comes across a woman who has previously undisclosed stories to tell. Gaps are plugged, new relationships revealed. How does one become a conqueror?',
       "We follow Jonas from the time he swallows a button of dragon's horn as a child, to when he takes cities like Istanbul and Tokyo by storm as a grown-up. And as regards women, it isn't satisfaction Jonas Wergeland is searching for, but edification.",
       "While his story is being told, the main character languishes in prison, sentenced for a serious offence.",
       "The Conqueror is an independent parallel to The Seducer.",
     ],
   },
-}
+};
 
 export default function Erobreren() {
-  const { lang } = useLanguage()
-  const [excerptOpen, setExcerptOpen] = useState(false)
-  const [reviewOpen, setReviewOpen] = useState(false)
+  const { lang } = useLanguage();
+  const [excerptOpen, setExcerptOpen] = useState(false);
+  const [reviewOpen, setReviewOpen] = useState(false);
 
   return (
     <section className="bg-white">
       <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
-
         <BookPageBody content={erobrerenContent} />
 
         <TrilogyBooks />
 
         {/* Utdrag / Excerpt */}
-        <h3 className="
+        <h3
+          className="
           uppercase
           text-xl
           tracking-[0.12em]
@@ -101,18 +100,21 @@ export default function Erobreren() {
           mt-14
           md:mt-8
           mb-6
-        ">
+        "
+        >
           {lang === "no" ? "Utdrag" : "Excerpt"}
         </h3>
 
         <div className="border-l-2 border-black/10 pl-5">
-          <p className="
+          <p
+            className="
             font-['Lora',serif]
             text-base
             leading-7
             tracking-[0.04em]
             text-black
-          ">
+          "
+          >
             {lang === "no" ? (
               <>
                 Trykk{" "}
@@ -122,8 +124,8 @@ export default function Erobreren() {
                   className="underline underline-offset-4 cursor-pointer hover:opacity-80 focus:outline-none"
                 >
                   her
-                </button>
-                {" "}for å lese et utdrag fra boken.
+                </button>{" "}
+                for å lese et utdrag fra boken.
               </>
             ) : (
               <>
@@ -134,8 +136,8 @@ export default function Erobreren() {
                   className="underline underline-offset-4 cursor-pointer hover:opacity-80 focus:outline-none"
                 >
                   here
-                </button>
-                {" "}to read an excerpt from the book.
+                </button>{" "}
+                to read an excerpt from the book.
               </>
             )}
           </p>
@@ -151,7 +153,8 @@ export default function Erobreren() {
         </Drawer>
 
         {/* Anmeldelse / Review */}
-        <h3 className="
+        <h3
+          className="
           uppercase
           text-xl
           tracking-[0.12em]
@@ -159,18 +162,21 @@ export default function Erobreren() {
           mt-14
           md:mt-8
           mb-6
-        ">
+        "
+        >
           {lang === "no" ? "Anmeldelse" : "Review"}
         </h3>
 
         <div className="border-l-2 border-black/10 pl-5">
-          <p className="
+          <p
+            className="
             font-['Lora',serif]
             text-base
             leading-7
             tracking-[0.04em]
             text-black
-          ">
+          "
+          >
             {lang === "no" ? (
               <>
                 Trykk{" "}
@@ -180,8 +186,8 @@ export default function Erobreren() {
                   className="underline underline-offset-4 cursor-pointer hover:opacity-80 focus:outline-none"
                 >
                   her
-                </button>
-                {" "}litteraturprofessor Per Buviks anmeldelse av boken.
+                </button>{" "}
+                litteraturprofessor Per Buviks anmeldelse av boken.
               </>
             ) : (
               <>
@@ -192,8 +198,9 @@ export default function Erobreren() {
                   className="underline underline-offset-4 cursor-pointer hover:opacity-80 focus:outline-none"
                 >
                   here
-                </button>
-                {" "}to read literature professor Per Buvik's review of the book. (Only available in Norwegian)
+                </button>{" "}
+                to read literature professor Per Buvik's review of the book. (Only available in
+                Norwegian)
               </>
             )}
           </p>
@@ -203,14 +210,17 @@ export default function Erobreren() {
           open={reviewOpen}
           onClose={() => setReviewOpen(false)}
           title="Kan man forstå et liv?"
-          subtitle={lang === "no" ? "Per Buvik, professor ved Universitetet i Bergen" : "Per Buvik, professor at the University of Bergen"}
+          subtitle={
+            lang === "no"
+              ? "Per Buvik, professor ved Universitetet i Bergen"
+              : "Per Buvik, professor at the University of Bergen"
+          }
         >
           {renderArticle(perBuvikReview)}
         </Drawer>
 
         <BookPageQuotes content={erobrerenContent} />
-
       </div>
     </section>
-  )
+  );
 }

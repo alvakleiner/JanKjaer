@@ -1,74 +1,75 @@
-import type { ReactNode } from "react"
-import { useLanguage } from "../context/LanguageContext"
-import { searchItems } from "../data/searchIndex"
+import type { ReactNode } from "react";
+import { useLanguage } from "../context/LanguageContext";
+import { searchItems } from "../data/searchIndex";
 
 export type BookQuote = {
-  text: ReactNode | { no: ReactNode; en: ReactNode }
-  source: string
-  diceImg?: string
-}
+  text: ReactNode | { no: ReactNode; en: ReactNode };
+  source: string;
+  diceImg?: string;
+};
 
 export type BookPageContent = {
-  title: { no: string; en: string }
-  meta: { no: string; en: string }
+  title: { no: string; en: string };
+  meta: { no: string; en: string };
   buyLink?: {
-    no: { label: string; href: string }
-    en: { label: string; href: string }
-  }
-  coverImage: { src: string; alt?: { no: string; en: string } }
-  quotesTitle: { no: string; en: string }
-  quotes: BookQuote[]
-  paragraphs: { no: string[]; en: string[] }
-}
+    no: { label: string; href: string };
+    en: { label: string; href: string };
+  };
+  coverImage: { src: string; alt?: { no: string; en: string } };
+  quotesTitle: { no: string; en: string };
+  quotes: BookQuote[];
+  paragraphs: { no: string[]; en: string[] };
+};
 
 // ─── Auto-italicize book titles in plain text ────────────────────────────────
 
 const bookTitles = searchItems
-  .filter(item => item.subtitle)
-  .flatMap(item => [item.title.no, item.title.en])
+  .filter((item) => item.subtitle)
+  .flatMap((item) => [item.title.no, item.title.en])
   .filter((t, i, arr) => arr.indexOf(t) === i)
-  .sort((a, b) => b.length - a.length)
+  .sort((a, b) => b.length - a.length);
 
 function italicizeTitles(text: string): ReactNode {
-  type Chunk = string | { em: string }
-  let chunks: Chunk[] = [text]
+  type Chunk = string | { em: string };
+  let chunks: Chunk[] = [text];
 
   for (const title of bookTitles) {
-    const escaped = title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
-    const regex = new RegExp(`(?<![a-zA-ZæøåÆØÅ])${escaped}(?![a-zA-ZæøåÆØÅ])`, "g")
+    const escaped = title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const regex = new RegExp(`(?<![a-zA-ZæøåÆØÅ])${escaped}(?![a-zA-ZæøåÆØÅ])`, "g");
 
-    const next: Chunk[] = []
+    const next: Chunk[] = [];
     for (const chunk of chunks) {
-      if (typeof chunk !== "string") { next.push(chunk); continue }
-      let last = 0
-      let m: RegExpExecArray | null
-      regex.lastIndex = 0
-      while ((m = regex.exec(chunk)) !== null) {
-        if (m.index > last) next.push(chunk.slice(last, m.index))
-        next.push({ em: m[0] })
-        last = regex.lastIndex
+      if (typeof chunk !== "string") {
+        next.push(chunk);
+        continue;
       }
-      if (last < chunk.length) next.push(chunk.slice(last))
+      let last = 0;
+      let m: RegExpExecArray | null;
+      regex.lastIndex = 0;
+      while ((m = regex.exec(chunk)) !== null) {
+        if (m.index > last) next.push(chunk.slice(last, m.index));
+        next.push({ em: m[0] });
+        last = regex.lastIndex;
+      }
+      if (last < chunk.length) next.push(chunk.slice(last));
     }
-    chunks = next
+    chunks = next;
   }
 
-  if (!chunks.length) return text
-  const nodes = chunks.map((c, i) =>
-    typeof c === "string" ? c : <em key={i}>{c.em}</em>
-  )
-  return nodes.length === 1 ? nodes[0] : <>{nodes}</>
+  if (!chunks.length) return text;
+  const nodes = chunks.map((c, i) => (typeof c === "string" ? c : <em key={i}>{c.em}</em>));
+  return nodes.length === 1 ? nodes[0] : <>{nodes}</>;
 }
 
 // ─── Body (title, cover image, paragraphs) ───────────────────────────────────
 
 type BookPageBodyProps = {
-  content: Pick<BookPageContent, "title" | "meta" | "buyLink" | "coverImage" | "paragraphs">
-}
+  content: Pick<BookPageContent, "title" | "meta" | "buyLink" | "coverImage" | "paragraphs">;
+};
 
 export function BookPageBody({ content }: BookPageBodyProps) {
-  const { lang } = useLanguage()
-  const buy = content.buyLink?.[lang]
+  const { lang } = useLanguage();
+  const buy = content.buyLink?.[lang];
 
   return (
     <>
@@ -124,31 +125,33 @@ export function BookPageBody({ content }: BookPageBodyProps) {
       </div>
 
       {/* Body text */}
-      <div className="
+      <div
+        className="
         text-base
         leading-7
         tracking-[0.04em]
         font-['Lora',serif]
         text-black
         space-y-6
-      ">
+      "
+      >
         {content.paragraphs[lang].map((p, i) => (
           <p key={i}>{italicizeTitles(p)}</p>
         ))}
         <div className="clear-both" />
       </div>
     </>
-  )
+  );
 }
 
 // ─── Quotes ──────────────────────────────────────────────────────────────────
 
 type BookPageQuotesProps = {
-  content: Pick<BookPageContent, "quotesTitle" | "quotes">
-}
+  content: Pick<BookPageContent, "quotesTitle" | "quotes">;
+};
 
 export function BookPageQuotes({ content }: BookPageQuotesProps) {
-  const { lang } = useLanguage()
+  const { lang } = useLanguage();
 
   return (
     <>
@@ -169,31 +172,31 @@ export function BookPageQuotes({ content }: BookPageQuotesProps) {
       <div className="space-y-8">
         {content.quotes.map((q, i) => (
           <div key={i} className="border-l-2 border-black/10 pl-5">
-            <p className="
+            <p
+              className="
               font-['Lora',serif]
               text-base
               leading-7
               tracking-[0.04em]
               text-black
-            ">
+            "
+            >
               {q.text !== null && typeof q.text === "object" && "no" in (q.text as object)
                 ? (q.text as { no: ReactNode; en: ReactNode })[lang]
-                : q.text as ReactNode}
+                : (q.text as ReactNode)}
             </p>
             <div className="flex items-center gap-3 mt-2">
               {q.diceImg && (
-                <img
-                  src={q.diceImg}
-                  alt="Terningkast"
-                  className="h-7 w-auto shrink-0"
-                />
+                <img src={q.diceImg} alt="Terningkast" className="h-7 w-auto shrink-0" />
               )}
-              <p className="
+              <p
+                className="
                 text-sm
                 tracking-[0.08em]
                 font-['Lora',serif]
                 text-neutral-500
-              ">
+              "
+              >
                 {q.source}
               </p>
             </div>
@@ -201,14 +204,14 @@ export function BookPageQuotes({ content }: BookPageQuotesProps) {
         ))}
       </div>
     </>
-  )
+  );
 }
 
 // ─── Default export (brukes når du ikke trenger noe i mellom) ─────────────────
 
 type BookPageProps = {
-  content: BookPageContent
-}
+  content: BookPageContent;
+};
 
 export default function BookPage({ content }: BookPageProps) {
   return (
@@ -220,5 +223,5 @@ export default function BookPage({ content }: BookPageProps) {
         </div>
       </section>
     </>
-  )
+  );
 }

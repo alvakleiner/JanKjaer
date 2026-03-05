@@ -1,9 +1,9 @@
-﻿import { createFileRoute } from "@tanstack/react-router"
-import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
-import type { BookPageContent } from "../../components/BookPage"
-import { useLanguage } from "../../context/LanguageContext"
+﻿import { createFileRoute } from "@tanstack/react-router";
+import { BookPageBody, BookPageQuotes } from "../../components/BookPage";
+import type { BookPageContent } from "../../components/BookPage";
+import { useLanguage } from "../../context/LanguageContext";
 
-export const Route = createFileRoute("/bibliografi/homo-falsus")({ component: HomoFalsus })
+export const Route = createFileRoute("/bibliografi/homo-falsus")({ component: HomoFalsus });
 
 const homoFalsusContent: BookPageContent = {
   title: { no: "Homo falsus eller det perfekte mord", en: "Homo Falsus or The Perfect Murder" },
@@ -38,20 +38,19 @@ const homoFalsusContent: BookPageContent = {
       "In Homo Falsus or The Perfect Murder Kjærstad puts his finger on the pulse of the Eighties. The main burden of the book is seduction and deceit. Language as a channel of power is a key theme.",
     ],
   },
-}
+};
 
 export default function HomoFalsus() {
-  const { lang } = useLanguage()
+  const { lang } = useLanguage();
 
   return (
     <section className="bg-white">
       <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
+        <BookPageBody content={homoFalsusContent} />
 
-      <BookPageBody content={homoFalsusContent} />
-
-
-      {/* Pris / Award */}
-      <h3 className="
+        {/* Pris / Award */}
+        <h3
+          className="
         uppercase
         text-xl
         tracking-[0.12em]
@@ -59,25 +58,29 @@ export default function HomoFalsus() {
         mt-14
         md:mt-8
         mb-6
-      ">
-      {lang === "no" ? "Pris" : "Award"}
-      </h3>
+      "
+        >
+          {lang === "no" ? "Pris" : "Award"}
+        </h3>
 
-      <div className="border-l-2 border-black/10 pl-5">
-        <p className="
+        <div className="border-l-2 border-black/10 pl-5">
+          <p
+            className="
           font-['Lora',serif]
           text-base
           leading-7
           tracking-[0.04em]
           text-black
-        ">
-          {lang === "no" ? "For romanen mottok Jan Kjærstad i 1984 Norsk Litteraturkritikerlags pris." : "This novel won Jan Kjærstad The Norwegian Literary Critics Association’s Prize in 1984."}
-        </p>
-      </div>
+        "
+          >
+            {lang === "no"
+              ? "For romanen mottok Jan Kjærstad i 1984 Norsk Litteraturkritikerlags pris."
+              : "This novel won Jan Kjærstad The Norwegian Literary Critics Association’s Prize in 1984."}
+          </p>
+        </div>
 
-      <BookPageQuotes content={homoFalsusContent} />
-
+        <BookPageQuotes content={homoFalsusContent} />
       </div>
     </section>
-  )
+  );
 }

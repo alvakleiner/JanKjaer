@@ -1,10 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router"
-import { useLanguage } from "../context/LanguageContext"
+import { createFileRoute } from "@tanstack/react-router";
+import { useLanguage } from "../context/LanguageContext";
 
-export const Route = createFileRoute("/kontakt")({ component: Kontakt })
+export const Route = createFileRoute("/kontakt")({ component: Kontakt });
 
 export default function Kontakt() {
-  const { lang } = useLanguage()
+  const { lang } = useLanguage();
 
   const seo = {
     title: { no: "Kontakt – Jan Kjærstad", en: "Contact – Jan Kjærstad" },
@@ -12,12 +12,11 @@ export default function Kontakt() {
       no: "Kontaktinformasjon for Jan Kjærstad.",
       en: "Contact information for Jan Kjærstad.",
     },
-  } as const
+  } as const;
 
   return (
     <section className="bg-white">
       <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 mt-2 md:mt-4 mb-18">
-
         {/* h2 kun på mobil */}
         <h2
           className="
@@ -34,7 +33,6 @@ export default function Kontakt() {
         </h2>
 
         <div className="flex flex-col items-center text-center md:flex-row md:items-center md:text-left md:gap-10">
-
           {/* Bilde */}
           <div className="shrink-0 mb-6 md:mb-0">
             <img
@@ -49,8 +47,6 @@ export default function Kontakt() {
 
           {/* Tekst */}
           <div>
-
-
             <h3
               className="
                 uppercase
@@ -74,10 +70,8 @@ export default function Kontakt() {
               </a>
             </p>
           </div>
-
         </div>
-
       </div>
     </section>
-  )
+  );
 }

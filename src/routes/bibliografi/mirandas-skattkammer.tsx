@@ -1,16 +1,24 @@
-﻿import { createFileRoute } from "@tanstack/react-router"
-import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
-import type { BookPageContent } from "../../components/BookPage"
-import { useLanguage } from "../../context/LanguageContext"
+﻿import { createFileRoute } from "@tanstack/react-router";
+import { BookPageBody, BookPageQuotes } from "../../components/BookPage";
+import type { BookPageContent } from "../../components/BookPage";
+import { useLanguage } from "../../context/LanguageContext";
 
-export const Route = createFileRoute("/bibliografi/mirandas-skattkammer")({ component: MirandaSkattkammer })
+export const Route = createFileRoute("/bibliografi/mirandas-skattkammer")({
+  component: MirandaSkattkammer,
+});
 
 const mirandasSkattkammerContent: BookPageContent = {
   title: { no: "Mirandas skattekammer", en: "Miranda's Treasury" },
   meta: { no: "Bildebok (2008)", en: "Picture book (2008)" },
   buyLink: {
-    no: { label: "Kjøp boken her", href: "https://magikon.no/products/mirandas-skattkammer-jan-kjaerstad-og-kristin-roskifte?_pos=1&_sid=6805d1185&_ss=r" },
-    en: { label: "Buy the book here", href: "https://magikon.no/products/mirandas-skattkammer-jan-kjaerstad-og-kristin-roskifte?_pos=1&_sid=6805d1185&_ss=r" },
+    no: {
+      label: "Kjøp boken her",
+      href: "https://magikon.no/products/mirandas-skattkammer-jan-kjaerstad-og-kristin-roskifte?_pos=1&_sid=6805d1185&_ss=r",
+    },
+    en: {
+      label: "Buy the book here",
+      href: "https://magikon.no/products/mirandas-skattkammer-jan-kjaerstad-og-kristin-roskifte?_pos=1&_sid=6805d1185&_ss=r",
+    },
   },
   coverImage: {
     src: "/images/mirandas-skattkammer-3d.png",
@@ -18,7 +26,13 @@ const mirandasSkattkammerContent: BookPageContent = {
   quotesTitle: { no: "Sitater", en: "Quotes" },
   quotes: [
     {
-      text: <>«Nyttig og viktig barnebok i en tid da tempo, aktivitet og flyktighet i så sterk grad preger også små barns hverdag. For dem og foreldrene kan <em>Mirandas skattkammer</em> bli en motvekt som virker samlende, roende og meningsskapende.»</>,
+      text: (
+        <>
+          «Nyttig og viktig barnebok i en tid da tempo, aktivitet og flyktighet i så sterk grad
+          preger også små barns hverdag. For dem og foreldrene kan <em>Mirandas skattkammer</em> bli
+          en motvekt som virker samlende, roende og meningsskapende.»
+        </>
+      ),
       source: "Finn Stenstad, Tønsbergs blad",
     },
     {
@@ -43,22 +57,20 @@ const mirandasSkattkammerContent: BookPageContent = {
       "\u00A0",
       "Illustratør: Kristin Roskifte",
     ],
-    en: [
-      "Content in English missing. Please refer to the Norwegian version.",
-    ],
+    en: ["Content in English missing. Please refer to the Norwegian version."],
   },
-}
+};
 
 export default function MirandaSkattkammer() {
-  const { lang } = useLanguage()
-  
+  const { lang } = useLanguage();
+
   return (
     <section className="bg-white">
       <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
-
         <BookPageBody content={mirandasSkattkammerContent} />
 
-        <p className="
+        <p
+          className="
           text-base
           leading-7
           tracking-[0.04em]
@@ -67,10 +79,11 @@ export default function MirandaSkattkammer() {
           mt-12
           md:mt-4
           mb-14
-        ">
+        "
+        >
           {lang === "no" ? "Illustratør" : "Illustrator"}:{" "}
-          
-          <a  href="https://www.kristinroskifte.no/"
+          <a
+            href="https://www.kristinroskifte.no/"
             target="_blank"
             rel="noreferrer"
             className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
@@ -80,8 +93,7 @@ export default function MirandaSkattkammer() {
         </p>
 
         <BookPageQuotes content={mirandasSkattkammerContent} />
-
       </div>
     </section>
-  )
+  );
 }

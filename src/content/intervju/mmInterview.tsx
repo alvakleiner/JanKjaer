@@ -1,5 +1,4 @@
-const mmInterview = 
-`### Jan Kjærstad er redd for å dø. Han frykter at bare noen få setninger av ham vil overleve de neste tre-fire generasjonene, før han er glemt. Likevel mener han ikke at kunsten, men kjærligheten er det viktigste i livet: «Sånn vil det alltid være, også for kunstnere og forfattere. Basecamp er å holde rundt et menneske man elsker.»
+const mmInterview = `### Jan Kjærstad er redd for å dø. Han frykter at bare noen få setninger av ham vil overleve de neste tre-fire generasjonene, før han er glemt. Likevel mener han ikke at kunsten, men kjærligheten er det viktigste i livet: «Sånn vil det alltid være, også for kunstnere og forfattere. Basecamp er å holde rundt et menneske man elsker.»
 
 JK: En av svakhetene mine er at jeg alltid drømmer om at bøkene mine skal leses sju ganger. De er skrevet for å tåle det. Man skal se stadig nye lag av sammenhenger. Men jeg vet smertelig godt at bøkene mine bare blir lest én gang. Faktisk er det et mirakel at noen i det hele tatt leser dem. Før tok jeg det som en selvfølge. Jeg regnet med at 1 av 10 jeg passerte på Karl Johans gate hadde lest dem. Nå er det rørende hver gang jeg treffer en leser. I et intervju i Dagbladet på 1990-tallet sa jeg at den minst leste romanen min er Det store eventyret (1987). Den er krevende, og jeg blir så lykkelig når jeg treffer noen som har lest den at jeg går ned i knestående og kysser skotuppene deres. Uken etter traff jeg 20 stykker som smilte og pekte ned på skoene sine. Det var forbausende.
 
@@ -263,6 +262,6 @@ M&M: Hvilken bok ville du tatt med deg til en øde øy?
 
 JK: Margrete heter Margrete Boeck, som bok eller bøk. Kan jeg ta med henne? Nei, da tar jeg med min MacBook. Men hvis jeg skal svare ordentlig, ville jeg tatt med en bok jeg kunne laget en redningsflåte av. Den største boken i bokhylla er Mahabharata. 12 bind trykket i Calcutta. Bøkene vil vokse i kontakt med vann. Mahabharata er verdenslitteraturens lengste epos, mye lengre enn Odysseen og Illiaden til sammen. Det er lite lest i vår kulturkrets, men det finnes ikke dets like som kildeskrift til gode fortellinger.
 
-Gjengitt med tillatelse.`
+Gjengitt med tillatelse.`;
 
-export default mmInterview
+export default mmInterview;

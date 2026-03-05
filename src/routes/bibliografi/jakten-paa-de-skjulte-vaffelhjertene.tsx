@@ -1,9 +1,11 @@
-﻿import { createFileRoute } from "@tanstack/react-router"
-import { BookPageBody } from "../../components/BookPage"
-import type { BookPageContent } from "../../components/BookPage"
-import { useLanguage } from "../../context/LanguageContext"
+﻿import { createFileRoute } from "@tanstack/react-router";
+import { BookPageBody } from "../../components/BookPage";
+import type { BookPageContent } from "../../components/BookPage";
+import { useLanguage } from "../../context/LanguageContext";
 
-export const Route = createFileRoute("/bibliografi/jakten-paa-de-skjulte-vaffelhjertene")({ component: JaktenPaDeSkjulteVaffelhjertene })
+export const Route = createFileRoute("/bibliografi/jakten-paa-de-skjulte-vaffelhjertene")({
+  component: JaktenPaDeSkjulteVaffelhjertene,
+});
 
 const JaktenPaDeSkjulteVaffelhjerteneContent: BookPageContent = {
   title: { no: "Jakten på de skjulte vaffelhjertene", en: "The Hunt for the Hidden Waffle Hearts" },
@@ -20,21 +22,20 @@ const JaktenPaDeSkjulteVaffelhjerteneContent: BookPageContent = {
       "Til slutt er det duket for et stort vaffelkalas hos de nyinnflyttede. Alle naboene blir invitert. Og alle har med gaver, ting, som Marit og Jon-Jon kjenner igjen fra leilighetene de har besøkt.",
       "Når de tar seg en tur ut om kvelden, synes Marit og Jon-Jon at blokken plutselig fortoner seg helt annerledes. De blir enige om å ha et vaffelkalas så ofte som mulig.",
     ],
-    en: [
-      "Content in English missing. Please refer to the Norwegian version.",
-    ],
+    en: ["Content in English missing. Please refer to the Norwegian version."],
   },
-}
+};
 
 export default function JaktenPaDeSkjulteVaffelhjertene() {
-    const { lang } = useLanguage()
-  
-    return (
-      <section className="bg-white">
-        <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
-          <BookPageBody content={JaktenPaDeSkjulteVaffelhjerteneContent} />
+  const { lang } = useLanguage();
 
-          <p className="
+  return (
+    <section className="bg-white">
+      <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
+        <BookPageBody content={JaktenPaDeSkjulteVaffelhjerteneContent} />
+
+        <p
+          className="
             text-base
             leading-7
             tracking-[0.04em]
@@ -43,27 +44,33 @@ export default function JaktenPaDeSkjulteVaffelhjertene() {
             mt-12
             md:mt-4
             mb-14
-          ">
-            {lang === "no" ? "Jakten på de skjulte vaffelhjertene er en bildebok for barn hvor Jan Kjærstad har skrevet teksten. Illustrasjonene i 1989-utgaven var laget av" : "The Hunt for the Hidden Waffle Hearts is a children's picture book with text by Jan Kjærstad. The illustrations in the 1989 edition were made by"}{" "}
-            
-            <a  href="https://no.wikipedia.org/wiki/Vivian_Zahl_Olsen"
-              target="_blank"
-              rel="noreferrer"
-              className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
-            >
-              Vivian Zahl Olsen
-            </a>
-            {" "}{lang === "no" ? "mens 2005-utgaven er illustrert av" : "while the 2005 edition is illustrated by"}{" "}
-            <a  href="https://jillmoursund.blogspot.com/"
-              target="_blank"
-              rel="noreferrer"
-              className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
-            >
-              Jill Moursund
-            </a>
-            .
-          </p>
-        </div>
-      </section>
-    )
+          "
+        >
+          {lang === "no"
+            ? "Jakten på de skjulte vaffelhjertene er en bildebok for barn hvor Jan Kjærstad har skrevet teksten. Illustrasjonene i 1989-utgaven var laget av"
+            : "The Hunt for the Hidden Waffle Hearts is a children's picture book with text by Jan Kjærstad. The illustrations in the 1989 edition were made by"}{" "}
+          <a
+            href="https://no.wikipedia.org/wiki/Vivian_Zahl_Olsen"
+            target="_blank"
+            rel="noreferrer"
+            className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
+          >
+            Vivian Zahl Olsen
+          </a>{" "}
+          {lang === "no"
+            ? "mens 2005-utgaven er illustrert av"
+            : "while the 2005 edition is illustrated by"}{" "}
+          <a
+            href="https://jillmoursund.blogspot.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
+          >
+            Jill Moursund
+          </a>
+          .
+        </p>
+      </div>
+    </section>
+  );
 }

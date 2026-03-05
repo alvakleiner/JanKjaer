@@ -1,8 +1,8 @@
-﻿import { createFileRoute } from "@tanstack/react-router"
-import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
-import type { BookPageContent } from "../../components/BookPage"
+﻿import { createFileRoute } from "@tanstack/react-router";
+import { BookPageBody, BookPageQuotes } from "../../components/BookPage";
+import type { BookPageContent } from "../../components/BookPage";
 
-export const Route = createFileRoute("/bibliografi/berge")({ component: Berge })
+export const Route = createFileRoute("/bibliografi/berge")({ component: Berge });
 
 const content: BookPageContent = {
   title: { no: "Berge", en: "Berge" },
@@ -17,26 +17,59 @@ const content: BookPageContent = {
   quotesTitle: { no: "Sitater", en: "Quotes" },
   quotes: [
     {
-      text: <>«GLIMRENDE! … Jeg tar sats og utroper med dette <em>Berge</em> til en sikker vinner bokhøsten 2017!»</>,
+      text: (
+        <>
+          «GLIMRENDE! … Jeg tar sats og utroper med dette <em>Berge</em> til en sikker vinner
+          bokhøsten 2017!»
+        </>
+      ),
       source: "Sindre Hovdenakk, VG",
       diceImg: "/images/terningkast6.png",
     },
     {
-      text: <>«<em>Berge</em> er både særdeles tankevekkende og en klassisk pageturner … Den som ikke blir grepet og rystet av denne beretningen, er enten fullstendig uinteressert i slik litteratur, eller på en eller annen måte emosjonelt avstumpet. Det er både ønskelig og fullt mulig at Kjærstad når sitt gamle tallrike publikum med denne utgivelsen.»</>,
+      text: (
+        <>
+          «<em>Berge</em> er både særdeles tankevekkende og en klassisk pageturner … Den som ikke
+          blir grepet og rystet av denne beretningen, er enten fullstendig uinteressert i slik
+          litteratur, eller på en eller annen måte emosjonelt avstumpet. Det er både ønskelig og
+          fullt mulig at Kjærstad når sitt gamle tallrike publikum med denne utgivelsen.»
+        </>
+      ),
       source: "Espen Grønlie, Dagbladet",
       diceImg: "/images/terningkast5.png",
     },
     {
-      text: <>«Åpner opp 22. juli i spenstig roman. … Kjærstad gjør sinnrike forskyvninger i sted og tid for å skaffe seg kunstnerisk frihet til å skrive satirisk, kritisk og underholdende om et ladet tema. … Ja, forfatterens beste kvaliteter kommer helt til sin rett i høstens utgivelse: Kjærstad har et viktig anliggende som han utmynter innenfor rammene av en utpreget litterær konstruksjon. … Språklig er <em>Berge</em> et smart flettverk av stemmer og stilarter.»</>,
+      text: (
+        <>
+          «Åpner opp 22. juli i spenstig roman. … Kjærstad gjør sinnrike forskyvninger i sted og tid
+          for å skaffe seg kunstnerisk frihet til å skrive satirisk, kritisk og underholdende om et
+          ladet tema. … Ja, forfatterens beste kvaliteter kommer helt til sin rett i høstens
+          utgivelse: Kjærstad har et viktig anliggende som han utmynter innenfor rammene av en
+          utpreget litterær konstruksjon. … Språklig er <em>Berge</em> et smart flettverk av stemmer
+          og stilarter.»
+        </>
+      ),
       source: "Ingunn Økland, Aftenposten",
     },
     {
-      text: <>«Kjærstad på topp … Alt tyder på at Jan Kjærstad har skrevet årets vesentligste norske roman. <em>Berge</em> er også en av hans beste noensinne.»</>,
+      text: (
+        <>
+          «Kjærstad på topp … Alt tyder på at Jan Kjærstad har skrevet årets vesentligste norske
+          roman. <em>Berge</em> er også en av hans beste noensinne.»
+        </>
+      ),
       source: "Geir Vestad, Hamar Arbeiderblad",
       diceImg: "/images/terningkast6.png",
     },
     {
-      text: <>«Presis samtidskritikk … forfattar Kjærstad løyser oppgåva på ein utmerka måte. … <em>Berge</em> er ein spennande og insisterande roman om tvil, håp og kjærleik under neokapitalismen. Eg er sanneleg ikkje sikker på kven som er størst av dei tre. Men eg er sikker på at Kjærstad har skrive ein av sine viktigaste romanar.»</>,
+      text: (
+        <>
+          «Presis samtidskritikk … forfattar Kjærstad løyser oppgåva på ein utmerka måte. …{" "}
+          <em>Berge</em> er ein spennande og insisterande roman om tvil, håp og kjærleik under
+          neokapitalismen. Eg er sanneleg ikkje sikker på kven som er størst av dei tre. Men eg er
+          sikker på at Kjærstad har skrive ein av sine viktigaste romanar.»
+        </>
+      ),
       source: "Marta Norheim, NRK P2",
     },
     {
@@ -52,7 +85,12 @@ const content: BookPageContent = {
       source: "Sinziana Ravini, Aftonbladet",
     },
     {
-      text: <>«Det som gjør <em>Berge</em> til en så rik opplevelse, er den dype dramaturgiske bevisstheten hos en forfatter som kan bringer leseren akkurat dit han vil.»</>,
+      text: (
+        <>
+          «Det som gjør <em>Berge</em> til en så rik opplevelse, er den dype dramaturgiske
+          bevisstheten hos en forfatter som kan bringer leseren akkurat dit han vil.»
+        </>
+      ),
       source: "Kristina Lindquist, Dagens Nyheter",
     },
     {
@@ -95,13 +133,12 @@ const content: BookPageContent = {
       "The most unlikely things happen in this world, again and again. Yet, we are never prepared for them. Berge is a story of horrible events, told from three different points of view. A journalist, a judge and an ex-boyfriend. Without touching upon the July 22nd attack in Norway, Berge is a novel that would not have been written without it.",
     ],
   },
-}
+};
 
 export default function Berge() {
   return (
     <section className="bg-white">
       <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
-
         <BookPageBody content={content} />
         <BookPageQuotes content={content} />
 
@@ -112,19 +149,20 @@ export default function Berge() {
             alt="Bokomslag Berge"
             className="w-full h-auto object-contain"
           />
-          <p className="
+          <p
+            className="
             self-start
             text-sm
             tracking-[0.08em]
             font-['Lora',serif]
             text-neutral-500
             mt-4
-          ">
+          "
+          >
             Omslag: Terese Moe Leiner
           </p>
         </div>
-
       </div>
     </section>
-  )
+  );
 }

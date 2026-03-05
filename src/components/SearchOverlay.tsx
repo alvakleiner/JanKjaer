@@ -1,55 +1,55 @@
-import { useEffect, useRef, useState } from "react"
-import { Search, X } from "lucide-react"
-import { useLanguage } from "../context/LanguageContext"
-import { search } from "../data/searchIndex"
+import { useEffect, useRef, useState } from "react";
+import { Search, X } from "lucide-react";
+import { useLanguage } from "../context/LanguageContext";
+import { search } from "../data/searchIndex";
 
 type Props = {
-  open: boolean
-  onClose: () => void
-}
+  open: boolean;
+  onClose: () => void;
+};
 
 export default function SearchOverlay({ open, onClose }: Props) {
-  const { lang } = useLanguage()
-  const [query, setQuery] = useState("")
-  const [activeIndex, setActiveIndex] = useState(0)
-  const inputRef = useRef<HTMLInputElement>(null)
+  const { lang } = useLanguage();
+  const [query, setQuery] = useState("");
+  const [activeIndex, setActiveIndex] = useState(0);
+  const inputRef = useRef<HTMLInputElement>(null);
 
-  const results = search(query, lang)
+  const results = search(query, lang);
 
   // Reset and focus when opening
   useEffect(() => {
     if (open) {
-      setQuery("")
-      setActiveIndex(0)
-      const id = setTimeout(() => inputRef.current?.focus(), 30)
-      return () => clearTimeout(id)
+      setQuery("");
+      setActiveIndex(0);
+      const id = setTimeout(() => inputRef.current?.focus(), 30);
+      return () => clearTimeout(id);
     }
-  }, [open])
+  }, [open]);
 
   useEffect(() => {
-    setActiveIndex(0)
-  }, [query])
+    setActiveIndex(0);
+  }, [query]);
 
   // Keyboard navigation
   useEffect(() => {
-    if (!open) return
+    if (!open) return;
     function onKey(e: KeyboardEvent) {
       if (e.key === "Escape") {
-        onClose()
+        onClose();
       } else if (e.key === "ArrowDown") {
-        e.preventDefault()
-        setActiveIndex((i) => Math.min(i + 1, results.length - 1))
+        e.preventDefault();
+        setActiveIndex((i) => Math.min(i + 1, results.length - 1));
       } else if (e.key === "ArrowUp") {
-        e.preventDefault()
-        setActiveIndex((i) => Math.max(i - 1, 0))
+        e.preventDefault();
+        setActiveIndex((i) => Math.max(i - 1, 0));
       } else if (e.key === "Enter" && results[activeIndex]) {
-        window.location.href = results[activeIndex].href
-        onClose()
+        window.location.href = results[activeIndex].href;
+        onClose();
       }
     }
-    document.addEventListener("keydown", onKey)
-    return () => document.removeEventListener("keydown", onKey)
-  }, [open, results, activeIndex, onClose])
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [open, results, activeIndex, onClose]);
 
   return (
     // Outer: fade backdrop in/out; pointer-events-none when closed so nothing is blocked
@@ -109,11 +109,7 @@ export default function SearchOverlay({ open, onClose }: Props) {
                       >
                         <div className="w-9 shrink-0 flex items-center justify-center">
                           {item.image ? (
-                            <img
-                              src={item.image}
-                              alt=""
-                              className="h-12 w-auto object-contain"
-                            />
+                            <img src={item.image} alt="" className="h-12 w-auto object-contain" />
                           ) : (
                             <div className="h-12" />
                           )}
@@ -139,5 +135,5 @@ export default function SearchOverlay({ open, onClose }: Props) {
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -1,8 +1,10 @@
-﻿import { createFileRoute } from "@tanstack/react-router"
-import BookPage from "../../components/BookPage"
-import type { BookPageContent } from "../../components/BookPage"
+﻿import { createFileRoute } from "@tanstack/react-router";
+import BookPage from "../../components/BookPage";
+import type { BookPageContent } from "../../components/BookPage";
 
-export const Route = createFileRoute("/bibliografi/kongen-av-europa")({ component: kongenAvEuropa })
+export const Route = createFileRoute("/bibliografi/kongen-av-europa")({
+  component: kongenAvEuropa,
+});
 
 const kongenAvEuropaContent: BookPageContent = {
   title: { no: "Kongen av Europa", en: "The King of Europe" },
@@ -22,7 +24,13 @@ const kongenAvEuropaContent: BookPageContent = {
       diceImg: "/images/terningkast5.png",
     },
     {
-      text: <>«En roman som <em>Kongen av Europa</em> kan ikke, når man akkurat har lest den, ytes rettferdighet gjennom en anmeldelse … Det er en roman som må leses langsomt, og gjenleses.»</>,
+      text: (
+        <>
+          «En roman som <em>Kongen av Europa</em> kan ikke, når man akkurat har lest den, ytes
+          rettferdighet gjennom en anmeldelse … Det er en roman som må leses langsomt, og
+          gjenleses.»
+        </>
+      ),
       source: "Hans H. Skei, Aftenposten",
     },
     {
@@ -46,8 +54,8 @@ const kongenAvEuropaContent: BookPageContent = {
       "Alf I. Veber is an individual who suffers from serious shortcomings. As a child, he loses his spleen after an accident, and shortly after, his best friend commits suicide. Alf's existence is marked by a feeling of loss that manifests itself in various ways, and by a hunger for enlightenment which drives him to launch into a series of breakneck projects. The novel opens on New Year's Eve 1999, which Alf spends alone in a snow cave in the mountains. Shortly after, he goes to London, where the remainder of the novel is set, to find the woman he thinks he loves. Drawn between the rational and the romantic, and constantly having to confront stories from his past, Alf is light years away from being a king. But perhaps it is possible to be a winner even if you are, on the surface of things, a loser?",
     ],
   },
-}
+};
 
 export default function kongenAvEuropa() {
-  return <BookPage content={kongenAvEuropaContent} />
+  return <BookPage content={kongenAvEuropaContent} />;
 }

@@ -1,10 +1,12 @@
-﻿import { createFileRoute } from "@tanstack/react-router"
-import BookLink from "../../components/BookLink"
-import { BookPageBody } from "../../components/BookPage"
-import type { BookPageContent } from "../../components/BookPage"
-import { useLanguage } from "../../context/LanguageContext"
+﻿import { createFileRoute } from "@tanstack/react-router";
+import BookLink from "../../components/BookLink";
+import { BookPageBody } from "../../components/BookPage";
+import type { BookPageContent } from "../../components/BookPage";
+import { useLanguage } from "../../context/LanguageContext";
 
-export const Route = createFileRoute("/bibliografi/menneskets-matrise")({ component: mennesketsMatrise })
+export const Route = createFileRoute("/bibliografi/menneskets-matrise")({
+  component: mennesketsMatrise,
+});
 
 const mennesketsMatriseContent: BookPageContent = {
   title: { no: "Menneskets matrise", en: "The Matrix of Man" },
@@ -30,18 +32,18 @@ const mennesketsMatriseContent: BookPageContent = {
       "The discussions, articles and essays in this collection are written by a man who is in transit, they are theses in a learning process and are not meant as definitive opinions. The introductions and notes form their own small history of the literary Eighties as they appeared to an author who made his debut in 1980.",
     ],
   },
-}
+};
 
 export default function mennesketsMatrise() {
-  const { lang } = useLanguage()
+  const { lang } = useLanguage();
 
   return (
     <section className="bg-white">
       <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
-
         <BookPageBody content={mennesketsMatriseContent} />
 
-        <p className="
+        <p
+          className="
           text-base
           leading-7
           tracking-[0.04em]
@@ -49,14 +51,20 @@ export default function mennesketsMatrise() {
           text-black
           mt-8
           mb-14
-        ">
-          {lang === "no" ? "Menneskets matrise er ikke lenger i salg som egen bok, men tilgjengelig i essaysamlingen " : "The Matrix of Man is no longer available as a standalone book, but can be found in the essay collection "}{" "}
-          <BookLink href="/bibliografi/kjaerstads-matrise" className="font-['Lora',serif] text-base leading-7 tracking-[0.04em] text-black italic decoration-neutral-400 hover:decoration-neutral-800 transition">
+        "
+        >
+          {lang === "no"
+            ? "Menneskets matrise er ikke lenger i salg som egen bok, men tilgjengelig i essaysamlingen "
+            : "The Matrix of Man is no longer available as a standalone book, but can be found in the essay collection "}{" "}
+          <BookLink
+            href="/bibliografi/kjaerstads-matrise"
+            className="font-['Lora',serif] text-base leading-7 tracking-[0.04em] text-black italic decoration-neutral-400 hover:decoration-neutral-800 transition"
+          >
             {lang === "no" ? "Kjærstads matrise" : "The Matrix of Kjærstad"}
           </BookLink>
           .
         </p>
       </div>
     </section>
-  )
+  );
 }

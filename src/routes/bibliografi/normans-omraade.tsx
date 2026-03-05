@@ -1,9 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router"
-import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
-import type { BookPageContent } from "../../components/BookPage"
-import { useLanguage } from "../../context/LanguageContext"
+import { createFileRoute } from "@tanstack/react-router";
+import { BookPageBody, BookPageQuotes } from "../../components/BookPage";
+import type { BookPageContent } from "../../components/BookPage";
+import { useLanguage } from "../../context/LanguageContext";
 
-export const Route = createFileRoute("/bibliografi/normans-omraade")({ component: NormansOmraade })
+export const Route = createFileRoute("/bibliografi/normans-omraade")({ component: NormansOmraade });
 
 const normansOmraadeContent: BookPageContent = {
   title: { no: "Normans område", en: "Norman's Area" },
@@ -22,7 +22,13 @@ const normansOmraadeContent: BookPageContent = {
       source: "Maya Troberg Djuve, Dagbladet",
     },
     {
-      text: <>«Det glitrer av Jan Kjærstads skrivekunst også i <em>Normans område</em>. … <em>Normans område</em> var ventet å bli en av høstens store, og kommer også til å bli det.»</>,
+      text: (
+        <>
+          «Det glitrer av Jan Kjærstads skrivekunst også i <em>Normans område</em>. …{" "}
+          <em>Normans område</em> var ventet å bli en av høstens store, og kommer også til å bli
+          det.»
+        </>
+      ),
       source: "Geir Vestad, Hamar Arbeiderblad",
     },
     {
@@ -42,7 +48,14 @@ const normansOmraadeContent: BookPageContent = {
       source: "Bernhard Ellefsen, Morgenbladet",
     },
     {
-      text: <>«Kjærstad har et poetisk språk og nydelig setningsoppbygging. Han er en mester i å antyde og fører oss fram og tilbake i tid. … Hvis du er Kjærstad-fan fra før av er <em>Normans område</em> en vinner. Hvis du ikke kjenner forfatteren, er dette en fin anledning til å begynne.»</>,
+      text: (
+        <>
+          «Kjærstad har et poetisk språk og nydelig setningsoppbygging. Han er en mester i å antyde
+          og fører oss fram og tilbake i tid. … Hvis du er Kjærstad-fan fra før av er{" "}
+          <em>Normans område</em> en vinner. Hvis du ikke kjenner forfatteren, er dette en fin
+          anledning til å begynne.»
+        </>
+      ),
       source: "Elise Weseth, Oppland Arbeiderblad",
     },
     {
@@ -58,7 +71,12 @@ const normansOmraadeContent: BookPageContent = {
       source: "Nina Kjeøy, Trønder-Avisa",
     },
     {
-      text: <>«<em>Normans område</em> løftar opp spørsmål som burde interessere ein kvar lesande nordmann.»</>,
+      text: (
+        <>
+          «<em>Normans område</em> løftar opp spørsmål som burde interessere ein kvar lesande
+          nordmann.»
+        </>
+      ),
       source: "Marta Norheim, NRK",
     },
     {
@@ -85,30 +103,30 @@ const normansOmraadeContent: BookPageContent = {
       "Seen through the eyes of the protagonist, Norman's Area deals with the two most important things in life: love and books. To start with the latter, the story of John Richard Norman's life confronts an aspect seen in novels such as Madame Bovary and Don Quijote; a notion that reading novels is an escape into something detached from reality and deserving of criticism, something that can drive one to commit suicide or tilt at windmills.",
       "In Norman's Area, another view is advocated, namely that to read and to live are the same thing. Books are not a separate world, they are a part of the world. Books are more world; to read is to augment reality.",
       "The word \"area\" in the title is ambiguous. It may play on finding one's specialisation in life, that which often becomes one's profession. John Richard Norman grows up on Oslo's nicest street, Seilduksgata in Grünerløkka, with the Freia chocolate factory at one end and the Christiania Seildug factory at the other, a factory which once had supplied the sails for the polar vessel Fram. On this stretch, between sweets and exploration, John Richard Norman is created. His becoming a distinguished publishing editor is due to a gift: he always knows when a book is a sail and when it is chocolate.",
-      "John Richard Norman has not only a strong relationship with books, he has an extraordinary relationship with them. (It is neither a coincidence that Norman's Area is \"dedicated to all readers\"; simply put, the novel is a proclamation of love to literature.) Throughout all his reading days, John Richard has kept a reading log. He calls it A Memento of Life. In his eyes, these records are the equivalent to a biography. When he browses the content, and sees titles such as Aimez-vous Brahms? by Françoise Sagan and Lady Oracle by Margaret Atwood, it opens up in him a three-dimensional space. It is not just the book titles: it is the smell, taste, touch; it is the people he has met; it is the landscape in which he has lived.",
+      'John Richard Norman has not only a strong relationship with books, he has an extraordinary relationship with them. (It is neither a coincidence that Norman\'s Area is "dedicated to all readers"; simply put, the novel is a proclamation of love to literature.) Throughout all his reading days, John Richard has kept a reading log. He calls it A Memento of Life. In his eyes, these records are the equivalent to a biography. When he browses the content, and sees titles such as Aimez-vous Brahms? by Françoise Sagan and Lady Oracle by Margaret Atwood, it opens up in him a three-dimensional space. It is not just the book titles: it is the smell, taste, touch; it is the people he has met; it is the landscape in which he has lived.',
       "In his later days, John Richard Norman creates a website for curious readers. He names it as if it were a rescue boat: RS Plus Terrae. More of the earth.",
       "Norman's Area offers, in addition, seven novel references to incite the imagination. They are woven into the story and seem, at first, to be able to shed light on the events in the protagonist's life. Gradually, however, the reader is given another explanation as to why these synopses are part of the representation.",
-      "The title's \"area\" may also, of course, allude to a place. In this novel, that would be an archipelago, specifically one of the outermost islands in Hvaler municipality. After an inexplicable bout of nausea from reading manuscripts – indeed, even throwing up – John Richard Norman retreats to a house on a finger of land by the sea to try to understand what has happened to him. Particularly at first, he experiences a relief from being close to the sea, not least by strolling along paths which lead through tall, fragrant juniper thickets and small, buckled pines before opening out into moorlands and rolling rock formations. It is as if the soft bends of bare rock stimulate his thoughts in an unusual way.",
-      "The word \"area\" can further refer to the few square inches of skin found on the back of one's lover. On the archipelago, John Richard Norman meets a woman – one with many unknown sides to her – and discovers that love can completely turn things upside down.",
+      'The title\'s "area" may also, of course, allude to a place. In this novel, that would be an archipelago, specifically one of the outermost islands in Hvaler municipality. After an inexplicable bout of nausea from reading manuscripts – indeed, even throwing up – John Richard Norman retreats to a house on a finger of land by the sea to try to understand what has happened to him. Particularly at first, he experiences a relief from being close to the sea, not least by strolling along paths which lead through tall, fragrant juniper thickets and small, buckled pines before opening out into moorlands and rolling rock formations. It is as if the soft bends of bare rock stimulate his thoughts in an unusual way.',
+      'The word "area" can further refer to the few square inches of skin found on the back of one\'s lover. On the archipelago, John Richard Norman meets a woman – one with many unknown sides to her – and discovers that love can completely turn things upside down.',
       "In simplified terms, one could claim that Norman's Area is a novel about the power of fiction. And measured against or paralleled to this, the one power many rank as the strongest is Love.",
       "Finally \"area\" can pertain to a section of the brain, a region of the frontal lobe yet to be mapped, a potential we do not use. In the novel, this possibility is proposed by Dr Lumholtz, who takes care of John Richard Norman following a serious accident and later writes a sensationalist article about Norman's case in the prestigious scientific journal Humanity & Science. Some claim that Dr Lumholtz fills the same role as his fellow countrymen Fridtjof Nansen and Roald Amundsen – in other words, he broadens our knowledge of unknown territories. In this instance, it is not about the North Pole or the South Pole, but rather about an unexplored region found in the human itself: Norman's area.",
       "Darwinism, which states that existence involves resources and status, and the ability to procreate, encounters a problem in explaining two things in particular: romantic love and why we create art/literature. This is what Norman's area boils down to. It deals with the revolutionary power of love and the revolutionary power of literature. Both can give people (also as a species) an advantage, a distinct capacity for life. To love and to read opens up the world. And when the world opens up, so do humans.",
       "At the same time, this idea points to the story's underlying conflict: when love becomes a cliché, or novels become clichés – repetitions of exhausted stories – then we have a problem. Just as John Richard Norman experiences.",
     ],
   },
-}
+};
 
 export default function NormansOmraade() {
-  const { lang } = useLanguage()
+  const { lang } = useLanguage();
 
   return (
     <section className="bg-white">
       <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
+        <BookPageBody content={normansOmraadeContent} />
 
-      <BookPageBody content={normansOmraadeContent} />
-
-      {/* Introduksjonsvideo / Introduction video */}
-      <h3 className="
+        {/* Introduksjonsvideo / Introduction video */}
+        <h3
+          className="
         uppercase
         text-xl
         tracking-[0.12em]
@@ -116,40 +134,46 @@ export default function NormansOmraade() {
         mt-14
         md:mt-8
         mb-6
-      ">
-      {lang === "no" ? "Introduksjonsvideo" : "Introduction video"}
-      </h3>
+      "
+        >
+          {lang === "no" ? "Introduksjonsvideo" : "Introduction video"}
+        </h3>
 
-      <div className="border-l-2 border-black/10 pl-5">
-        <p className="
+        <div className="border-l-2 border-black/10 pl-5">
+          <p
+            className="
           font-['Lora',serif]
           text-base
           leading-7
           tracking-[0.04em]
           text-black
-        ">
-          
-          <a  href="https://www.youtube.com/watch?v=yevrFgIkt6g"
-            target="_blank"
-            rel="noreferrer"
-            className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
+        "
           >
-            Jan Kjærstad - Normans område
-          </a>
-        </p>
-        <p className="
+            <a
+              href="https://www.youtube.com/watch?v=yevrFgIkt6g"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
+            >
+              Jan Kjærstad - Normans område
+            </a>
+          </p>
+          <p
+            className="
           text-sm
           tracking-[0.08em]
           font-['Lora',serif]
           text-neutral-500
           mt-2
-        ">
-          (YouTube)
-        </p>
-      </div>
+        "
+          >
+            (YouTube)
+          </p>
+        </div>
 
-      {/* Anmeldelse / Review */}
-      <h3 className="
+        {/* Anmeldelse / Review */}
+        <h3
+          className="
         uppercase
         text-xl
         tracking-[0.12em]
@@ -157,42 +181,46 @@ export default function NormansOmraade() {
         mt-14
         md:mt-8
         mb-6
-      ">
-      {lang === "no" ? "Anmeldelse" : "Review"}
-      </h3>
+      "
+        >
+          {lang === "no" ? "Anmeldelse" : "Review"}
+        </h3>
 
-      <div className="border-l-2 border-black/10 pl-5">
-        <p className="
+        <div className="border-l-2 border-black/10 pl-5">
+          <p
+            className="
           font-['Lora',serif]
           text-base
           leading-7
           tracking-[0.04em]
           text-black
           italic
-        ">
-          
-          <a  href="https://www.dagbladet.no/kultur/forlagskjendis-med-sprekk-i-skallen/63584715"
-            target="_blank"
-            rel="noreferrer"
-            className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
+        "
           >
-            «Forlagskjendis med sprekk i skallen»
-          </a>
-        </p>
-        <p className="
+            <a
+              href="https://www.dagbladet.no/kultur/forlagskjendis-med-sprekk-i-skallen/63584715"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
+            >
+              «Forlagskjendis med sprekk i skallen»
+            </a>
+          </p>
+          <p
+            className="
           text-sm
           tracking-[0.08em]
           font-['Lora',serif]
           text-neutral-500
           mt-2
-        ">
-          Dagbladet
-        </p>
-      </div>
+        "
+          >
+            Dagbladet
+          </p>
+        </div>
 
-      <BookPageQuotes content={normansOmraadeContent} />
-
+        <BookPageQuotes content={normansOmraadeContent} />
       </div>
     </section>
-  )
+  );
 }

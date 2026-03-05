@@ -1,10 +1,11 @@
-﻿import { createFileRoute } from "@tanstack/react-router"
-import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
-import type { BookPageContent } from "../../components/BookPage"
-import { useLanguage } from "../../context/LanguageContext"
+﻿import { createFileRoute } from "@tanstack/react-router";
+import { BookPageBody, BookPageQuotes } from "../../components/BookPage";
+import type { BookPageContent } from "../../components/BookPage";
+import { useLanguage } from "../../context/LanguageContext";
 
-export const Route = createFileRoute("/bibliografi/menneskets-vidde")({ component: mennesketsVidde })
-
+export const Route = createFileRoute("/bibliografi/menneskets-vidde")({
+  component: mennesketsVidde,
+});
 
 const mennesketsViddeContent: BookPageContent = {
   title: { no: "Menneskets vidde", en: "The Human Width" },
@@ -19,7 +20,18 @@ const mennesketsViddeContent: BookPageContent = {
   quotesTitle: { no: "Sitater", en: "Quotes" },
   quotes: [
     {
-      text: <>«Med <em>Menneskets vidde</em> ikke bare utvider Jan Kjærstad forståelsen av egne romaner, men sprenger hele det litterære feltet vidåpent. Jan Kjærstad tilbyr nye, eggende perspektiver, tvinger leseren til å tenke annerledes, og briljerer som litteraturformidler. … Hver essaysamling bør strengt tatt betraktes som en sensasjon i norsk, litterær sammenheng, og den siste er ikke noe unntak. … [Jan Kjærstad har] skrevet om litteratur med en entusiasme som få – om noen – kritikere klarer å matche. Kjærstads artikler om 22. juli er også med god margin det mest innsiktsfulle jeg har lest om terrorhandlingene i Oslo og på Utøya …»</>,
+      text: (
+        <>
+          «Med <em>Menneskets vidde</em> ikke bare utvider Jan Kjærstad forståelsen av egne romaner,
+          men sprenger hele det litterære feltet vidåpent. Jan Kjærstad tilbyr nye, eggende
+          perspektiver, tvinger leseren til å tenke annerledes, og briljerer som
+          litteraturformidler. … Hver essaysamling bør strengt tatt betraktes som en sensasjon i
+          norsk, litterær sammenheng, og den siste er ikke noe unntak. … [Jan Kjærstad har] skrevet
+          om litteratur med en entusiasme som få – om noen – kritikere klarer å matche. Kjærstads
+          artikler om 22. juli er også med god margin det mest innsiktsfulle jeg har lest om
+          terrorhandlingene i Oslo og på Utøya …»
+        </>
+      ),
       source: "Olav Løkken Reisop, Dagbladet",
     },
     {
@@ -48,23 +60,21 @@ const mennesketsViddeContent: BookPageContent = {
       "Kjærstad har alltid vært opptatt av «litteraturens økologiske system», og i bokens siste del skriver han om oversetternes uvurderlige betydning, om det nødvendige samspillet mellom forfatter, leser og anmelder, om vår avhengighet av svensk litteratur (tross unionsoppløsningen), om forfatterens sjenanse når Nasjonalbiblioteket går til innkjøp av manus, og til slutt om et mysterium som har opptatt norsklærere til alle tider: Hvordan få elever til å lese?",
       "Kanskje ble jeg en leser fordi jeg så en norsklærer gråte. I en time, under arbeidet med en tekst, ble min norsklærer så grepet at han måtte snu seg bort og tørke bort tårene. Kanskje var det å stå der og grine en mer virkningsfull undervisning enn alt annet han sa og fant på. Iallfall forsto jeg brått hva litteratur kunne gjøre med et menneske, hvor dypt den kunne nå. Litteratur var ikke bare tolkning, litteratur var eksistens.",
     ],
-    en: [
-      "Content in English missing. Please refer to the Norwegian version.",
-    ],
+    en: ["Content in English missing. Please refer to the Norwegian version."],
   },
-}
+};
 
 export default function mennesketsVidde() {
-  const { lang } = useLanguage()
+  const { lang } = useLanguage();
 
   return (
     <section className="bg-white">
       <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
+        <BookPageBody content={mennesketsViddeContent} />
 
-      <BookPageBody content={mennesketsViddeContent} />
-
-      {/* Artikkel / Article */}
-      <h3 className="
+        {/* Artikkel / Article */}
+        <h3
+          className="
         uppercase
         text-xl
         tracking-[0.12em]
@@ -72,42 +82,46 @@ export default function mennesketsVidde() {
         mt-14
         md:mt-8
         mb-6
-      ">
-      {lang === "no" ? "Artikkel" : "Article"}
-      </h3>
+      "
+        >
+          {lang === "no" ? "Artikkel" : "Article"}
+        </h3>
 
-      <div className="border-l-2 border-black/10 pl-5">
-        <p className="
+        <div className="border-l-2 border-black/10 pl-5">
+          <p
+            className="
           font-['Lora',serif]
           text-base
           leading-7
           tracking-[0.04em]
           text-black
           italic
-        ">
-          
-          <a  href="https://www.dagbladet.no/kultur/dorapneren/62372815"
-            target="_blank"
-            rel="noreferrer"
-            className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
+        "
           >
-            «Døråpneren»
-          </a>
-        </p>
-        <p className="
+            <a
+              href="https://www.dagbladet.no/kultur/dorapneren/62372815"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
+            >
+              «Døråpneren»
+            </a>
+          </p>
+          <p
+            className="
           text-sm
           tracking-[0.08em]
           font-['Lora',serif]
           text-neutral-500
           mt-2
-        ">
-          Merete Skogrand, Dagbladet
-        </p>
-      </div>
+        "
+          >
+            Merete Skogrand, Dagbladet
+          </p>
+        </div>
 
-      <BookPageQuotes content={mennesketsViddeContent} />
-
+        <BookPageQuotes content={mennesketsViddeContent} />
       </div>
     </section>
-  )
+  );
 }

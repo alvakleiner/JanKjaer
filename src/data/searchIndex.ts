@@ -1,11 +1,11 @@
-import type { Lang } from "../context/LanguageContext"
+import type { Lang } from "../context/LanguageContext";
 
 export type SearchItem = {
-  title: { no: string; en: string }
-  subtitle?: { no: string; en: string }
-  href: string
-  image?: string
-}
+  title: { no: string; en: string };
+  subtitle?: { no: string; en: string };
+  href: string;
+  image?: string;
+};
 
 export const searchItems: SearchItem[] = [
   // ── Pages ────────────────────────────────────────────────────────────────
@@ -144,7 +144,10 @@ export const searchItems: SearchItem[] = [
     image: "/images/rand-3d.png",
   },
   {
-    title: { no: "Jakten på de skjulte vaffelhjertene", en: "The Hunt for the Hidden Waffle Hearts" },
+    title: {
+      no: "Jakten på de skjulte vaffelhjertene",
+      en: "The Hunt for the Hidden Waffle Hearts",
+    },
     subtitle: { no: "Bildebok (1989/2005)", en: "Picture book (1989/2005)" },
     href: "/bibliografi/jakten-paa-de-skjulte-vaffelhjertene",
     image: "/images/vaffelhjertene-3d.png",
@@ -179,15 +182,16 @@ export const searchItems: SearchItem[] = [
     href: "/bibliografi/kloden-dreier-stille-rundt",
     image: "/images/kloden-dreier-stille-rundt-3d.png",
   },
-]
+];
 
 export function search(query: string, lang: Lang): SearchItem[] {
-  const q = query.toLowerCase().trim()
-  if (!q) return []
-  const other: Lang = lang === "no" ? "en" : "no"
-  return searchItems.filter((item) =>
-    item.title[lang].toLowerCase().includes(q) ||
-    item.title[other].toLowerCase().includes(q) ||
-    (item.subtitle?.[lang].toLowerCase().includes(q) ?? false)
-  )
+  const q = query.toLowerCase().trim();
+  if (!q) return [];
+  const other: Lang = lang === "no" ? "en" : "no";
+  return searchItems.filter(
+    (item) =>
+      item.title[lang].toLowerCase().includes(q) ||
+      item.title[other].toLowerCase().includes(q) ||
+      (item.subtitle?.[lang].toLowerCase().includes(q) ?? false),
+  );
 }

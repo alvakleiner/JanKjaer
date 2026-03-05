@@ -1,8 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router"
-import BookPage from "../../components/BookPage"
-import type { BookPageContent } from "../../components/BookPage"
+import { createFileRoute } from "@tanstack/react-router";
+import BookPage from "../../components/BookPage";
+import type { BookPageContent } from "../../components/BookPage";
 
-export const Route = createFileRoute("/bibliografi/rand")({ component: Rand })
+export const Route = createFileRoute("/bibliografi/rand")({ component: Rand });
 
 const randContent: BookPageContent = {
   title: { no: "Rand", en: "Brink" },
@@ -34,12 +34,12 @@ const randContent: BookPageContent = {
       "Selv om Rand handler om en person som dreper andre mennesker – altså på sett og vis er en ond historie – kan erkjennelsen fremkalt av fortellingen være verdifull. Romanen handler om en morder og dermed også om moral; den handler om moral fordi den handler om menneskets grenseløse innbilningskraft og kreativitet. Og moral og innbilningskraft henger sammen. Til sjuende og sist er Rand en bok som søker et svar på det grunnleggende spørsmålet: Hva er et menneske?",
     ],
     en: [
-      "A newspaper article under a comparatively small headline says that a man has been found dead \"in the street\" behind the Deichmanske Library in Oslo. This is the first of a number of inexplicable deaths in the city. There are strong indications that these people, each with surprising qualities and interests, have been murdered by one and the same person. Who is this unscrupulous and impulsive killer who is stalking Oslo's post-modern clique? The case soon becomes fraught with extra difficulties, not least when the murderer is given the responsibility for co-ordinating the police computer files. Gradually, as he is introduced to more and more facts about his victims, he begins to realise that, as a group, they hold the key to the riddle of modern civilisation.",
+      'A newspaper article under a comparatively small headline says that a man has been found dead "in the street" behind the Deichmanske Library in Oslo. This is the first of a number of inexplicable deaths in the city. There are strong indications that these people, each with surprising qualities and interests, have been murdered by one and the same person. Who is this unscrupulous and impulsive killer who is stalking Oslo\'s post-modern clique? The case soon becomes fraught with extra difficulties, not least when the murderer is given the responsibility for co-ordinating the police computer files. Gradually, as he is introduced to more and more facts about his victims, he begins to realise that, as a group, they hold the key to the riddle of modern civilisation.',
       "Earnestly and ironically the reader is taken on an intellectual murder hunt, a journey on the floodtide towards the heart of darkness and a foray into our contemporary Western culture.",
     ],
   },
-}
+};
 
 export default function Rand() {
-  return <BookPage content={randContent} />
+  return <BookPage content={randContent} />;
 }

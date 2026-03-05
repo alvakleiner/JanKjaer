@@ -1,11 +1,16 @@
-﻿import { createFileRoute } from "@tanstack/react-router"
-import { BookPageBody } from "../../components/BookPage"
-import type { BookPageContent } from "../../components/BookPage"
+﻿import { createFileRoute } from "@tanstack/react-router";
+import { BookPageBody } from "../../components/BookPage";
+import type { BookPageContent } from "../../components/BookPage";
 
-export const Route = createFileRoute("/bibliografi/hos-sheherasad-fantasiens-dronning")({ component: HosSheherasadFantasiensDronning })
+export const Route = createFileRoute("/bibliografi/hos-sheherasad-fantasiens-dronning")({
+  component: HosSheherasadFantasiensDronning,
+});
 
 const HosSheherasadFantasiensDronningContent: BookPageContent = {
-  title: { no: "Hos Sheherasad, fantasiens dronning", en: "The World of Scheherazade, Queen of Tales" },
+  title: {
+    no: "Hos Sheherasad, fantasiens dronning",
+    en: "The World of Scheherazade, Queen of Tales",
+  },
   meta: { no: "Bildebok (1995)", en: "Picture Book (1995)" },
   coverImage: {
     src: "/images/sheherasad-3d.png",
@@ -21,11 +26,9 @@ const HosSheherasadFantasiensDronningContent: BookPageContent = {
       "Sheherasad foreslår for gutten at også han kan fortelle en historie for å komme seg ut av knipen. Hun tilbyr seg sågar å lære ham noen fortellerknep. De besøker basarene sammen, og hun viser ham den imponerende boksamlingen sin.",
       "Etter å ha hørt på hvordan prinsessen forteller til kongen om kvelden, sovner gutten og kommer til seg selv i hytta oppe i treet. De store guttene går med på å ikke gi ham bank hvis han bare forteller en historie som er spennende nok. Og rundt et bål hvor de steker poteter i sølvpapir, forteller så jeg-personen en historie, en historie som minner mistenkelig om noen av Thor Heyerdahls ekspedisjoner, men som uansett redder ham ut av knipen. Etter dette bestemmer jeg-personen seg for å begynne å samle på gode historier.",
     ],
-    en: [
-      "Content in English missing. Please refer to the Norwegian version.",
-    ],
+    en: ["Content in English missing. Please refer to the Norwegian version."],
   },
-}
+};
 
 export default function HosSheherasadFantasiensDronning() {
   return (
@@ -34,5 +37,5 @@ export default function HosSheherasadFantasiensDronning() {
         <BookPageBody content={HosSheherasadFantasiensDronningContent} />
       </div>
     </section>
-  )
+  );
 }

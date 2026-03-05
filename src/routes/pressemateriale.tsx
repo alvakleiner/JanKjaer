@@ -27,8 +27,7 @@ const photos = [
   {
     src: "/images/press/jkcl.jpg",
     photographer: "Cato Lein",
-    photographerLink:
-      "https://www.facebook.com/profile.php?id=100028312313728#",
+    photographerLink: "https://www.facebook.com/profile.php?id=100028312313728#",
     downloadHref: "/images/press/Jan-Kjaerstad-3.zip",
     size: "3328 × 4383 px",
     ppi: "250 ppi – RGB",
@@ -91,10 +90,9 @@ export default function Pressemateriale() {
         <p className="text-base leading-7 tracking-[0.04em] font-['Lora',serif] text-black mb-12">
           {lang === "no" ? (
             <>
-              Tekst og bilder som lastes ned fra denne siden, kan benyttes fritt
-              i forbindelse med artikler, intervjuer, anmeldelser og annen
-              informasjon relatert til forfatteren. Materialet er stilt til
-              rådighet av{" "}
+              Tekst og bilder som lastes ned fra denne siden, kan benyttes fritt i forbindelse med
+              artikler, intervjuer, anmeldelser og annen informasjon relatert til forfatteren.
+              Materialet er stilt til rådighet av{" "}
               <a
                 href="https://aschehoug.no/"
                 target="_blank"
@@ -116,9 +114,9 @@ export default function Pressemateriale() {
             </>
           ) : (
             <>
-              Text and images downloaded from this page may be used freely in
-              connection with articles, interviews, reviews and other
-              information related to the author. The material is provided by{" "}
+              Text and images downloaded from this page may be used freely in connection with
+              articles, interviews, reviews and other information related to the author. The
+              material is provided by{" "}
               <a
                 href="https://aschehoug.no/"
                 target="_blank"
@@ -192,11 +190,7 @@ export default function Pressemateriale() {
         <div className="flex flex-col sm:flex-row sm:gap-8 sm:items-start mb-12">
           {/* Bilde – vises under tekst på xs, til høyre på sm+ */}
           <div className="order-2 shrink-0 mt-6 sm:mt-0 flex flex-col items-center sm:items-start">
-            <img
-              src="/images/press/brosjyre.png"
-              alt=""
-              className="w-40 h-auto"
-            />
+            <img src="/images/press/brosjyre.png" alt="" className="w-40 h-auto" />
             {/* Last ned – kun på xs */}
             <p className="sm:hidden mt-2 text-sm font-['Lora',serif] tracking-[0.04em] text-black/60">
               <a
@@ -214,8 +208,8 @@ export default function Pressemateriale() {
             <p className="text-base leading-7 tracking-[0.04em] font-['Lora',serif] text-black">
               {lang === "no" ? (
                 <>
-                  Aschehoug Agency har gitt ut en 19 siders brosjyre med
-                  informasjon om, og utdrag fra,{" "}
+                  Aschehoug Agency har gitt ut en 19 siders brosjyre med informasjon om, og utdrag
+                  fra,{" "}
                   <a
                     href="/bibliografi/jeg-er-brodrene-walker"
                     className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
@@ -226,8 +220,8 @@ export default function Pressemateriale() {
                 </>
               ) : (
                 <>
-                  Aschehoug Agency has published a 19-page pamphlet with
-                  information about and excerpts from{" "}
+                  Aschehoug Agency has published a 19-page pamphlet with information about and
+                  excerpts from{" "}
                   <a
                     href="/bibliografi/jeg-er-brodrene-walker"
                     className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
@@ -258,10 +252,7 @@ export default function Pressemateriale() {
           className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center p-4"
           onClick={() => setSelected(null)}
         >
-          <div
-            className="bg-white shadow-2xl w-auto"
-            onClick={(e) => e.stopPropagation()}
-          >
+          <div className="bg-white shadow-2xl w-auto" onClick={(e) => e.stopPropagation()}>
             <div className="relative">
               <img
                 src={selected.src}

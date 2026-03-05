@@ -1,11 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router"
-import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
-import type { BookPageContent } from "../../components/BookPage"
-import TrilogyBooks from "../../components/TrilogyBooks"
-import { useLanguage } from "../../context/LanguageContext"
+import { createFileRoute } from "@tanstack/react-router";
+import { BookPageBody, BookPageQuotes } from "../../components/BookPage";
+import type { BookPageContent } from "../../components/BookPage";
+import TrilogyBooks from "../../components/TrilogyBooks";
+import { useLanguage } from "../../context/LanguageContext";
 
-export const Route = createFileRoute("/bibliografi/oppdageren")({ component: Oppdageren })
-
+export const Route = createFileRoute("/bibliografi/oppdageren")({ component: Oppdageren });
 
 const oppdagerenContent: BookPageContent = {
   title: { no: "Oppdageren", en: "The Discoverer" },
@@ -97,27 +96,27 @@ const oppdagerenContent: BookPageContent = {
       "Hovedmetaforen i Oppdageren er fjorden, eller et tre lagt horisontalt. Kjærstad søker å vise en ny type dybde i mennesket ved å legge den horisontalt. I Kjærstads trilogi om Jonas Wergeland er mennesket et vesen med en hittil uant vidde. De tre bøkene hviler på en idé om at vi til nå bare har skrapt i overflaten av hva et menneske er. Selv Darwin, selv Nietzsche, selv Freud har bare skrapt i overflaten av hva et menneske er. Til tross for fire tusen år med sivilisasjon vet vi så godt som ingenting om menneskets vesen. Bare at mennesket er større, videre, enn vår innbilningskraft rekker. Det ligger mange liv pakket inn i ett liv. Alle mennesker forgrener seg like rikt og vakkert og nifst og trolsk som en norsk Sognefjord.",
     ],
     en: [
-      "The Colin Archer boat \"Voyager\", named after the space probe that's travelling out of our solar system, sails along Sognefjorden, from deep in Luster to the sea at its mouth. Aboard is a group of young people engaged on a big project: to map the fjord, its communities, its natural history, its people and their culture and history. One member of the group is twenty-year-old Kristin, daughter of the television celebrity Jonas Wergeland, who is also on board, recently released after serving several years imprisonment for the murder of his wife Margrete. Half way along, various characters crop up: his sister and one of his brothers, as well as Kamala Varma, the Indian author of the first book about Jonas.",
+      'The Colin Archer boat "Voyager", named after the space probe that\'s travelling out of our solar system, sails along Sognefjorden, from deep in Luster to the sea at its mouth. Aboard is a group of young people engaged on a big project: to map the fjord, its communities, its natural history, its people and their culture and history. One member of the group is twenty-year-old Kristin, daughter of the television celebrity Jonas Wergeland, who is also on board, recently released after serving several years imprisonment for the murder of his wife Margrete. Half way along, various characters crop up: his sister and one of his brothers, as well as Kamala Varma, the Indian author of the first book about Jonas.',
       "This is merely the frame story. The history of Jonas' life is followed up in many ways, focussing on other periods of his upbringing, and here, too, a number of erotically charged situations with female figures emerge which, in an almost unseen way, link up with the television programmes we have heard about in the first two books. We also discover the truth about the events surrounding Margrete's death and eventually meet Jonas the writer and co-author – the latter as an element in the narrative, which is written by his daughter.",
       "On a higher plane, the novel draws links between natural growth, the landscape, the human mind and love itself, taking its perspective all the way into near space, where the outer planets and their moons affirm that everything is interrelated, if somewhat mysteriously. The three novels The Seducer, The Conqueror and The Discoverer are also connected in as much that many scraps of evidence in this year's book relate to its forerunners. But here there are also openings for a life for Jonas – and for us – beyond the limitations we thought we were bound by.",
       "The Discoverer concludes the trilogy about Jonas Wergeland.",
     ],
   },
-}
+};
 
 export default function Oppdageren() {
-  const { lang } = useLanguage()
+  const { lang } = useLanguage();
 
   return (
     <section className="bg-white">
       <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
+        <BookPageBody content={oppdagerenContent} />
 
-      <BookPageBody content={oppdagerenContent} />
+        <TrilogyBooks />
 
-      <TrilogyBooks />
-
-      {/* Pris / Award */}
-      <h3 className="
+        {/* Pris / Award */}
+        <h3
+          className="
         uppercase
         text-xl
         tracking-[0.12em]
@@ -125,25 +124,31 @@ export default function Oppdageren() {
         mt-14
         md:mt-8
         mb-6
-      ">
-      {lang === "no" ? "Pris" : "Award"}
-      </h3>
+      "
+        >
+          {lang === "no" ? "Pris" : "Award"}
+        </h3>
 
-      <div className="border-l-2 border-black/10 pl-5">
-        <p className="
+        <div className="border-l-2 border-black/10 pl-5">
+          <p
+            className="
           font-['Lora',serif]
           text-base
           leading-7
           tracking-[0.04em]
           text-black
-        ">
-          {lang === "no" ? "Jan Kjærstad fikk i 2001 Nordisk Råds Litteraturpris for " : "In 2001, Jan Kjærstad received the Nordic Council Literature Prize for "}
-          <span className="italic">Oppdageren</span>.
-        </p>
-      </div>
+        "
+          >
+            {lang === "no"
+              ? "Jan Kjærstad fikk i 2001 Nordisk Råds Litteraturpris for "
+              : "In 2001, Jan Kjærstad received the Nordic Council Literature Prize for "}
+            <span className="italic">Oppdageren</span>.
+          </p>
+        </div>
 
-      {/* Anmeldelse / Review */}
-      <h3 className="
+        {/* Anmeldelse / Review */}
+        <h3
+          className="
         uppercase
         text-xl
         tracking-[0.12em]
@@ -151,42 +156,46 @@ export default function Oppdageren() {
         mt-14
         md:mt-8
         mb-6
-      ">
-      {lang === "no" ? "Anmeldelse" : "Review"}
-      </h3>
+      "
+        >
+          {lang === "no" ? "Anmeldelse" : "Review"}
+        </h3>
 
-      <div className="border-l-2 border-black/10 pl-5">
-        <p className="
+        <div className="border-l-2 border-black/10 pl-5">
+          <p
+            className="
           font-['Lora',serif]
           text-base
           leading-7
           tracking-[0.04em]
           text-black
           italic
-        ">
-          
-          <a  href="https://www.dagbladet.no/kultur/forlagskjendis-med-sprekk-i-skallen/63584715"
-            target="_blank"
-            rel="noreferrer"
-            className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
+        "
           >
-            «Storslagen trilogi»
-          </a>
-        </p>
-        <p className="
+            <a
+              href="https://www.dagbladet.no/kultur/forlagskjendis-med-sprekk-i-skallen/63584715"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
+            >
+              «Storslagen trilogi»
+            </a>
+          </p>
+          <p
+            className="
           text-sm
           tracking-[0.08em]
           font-['Lora',serif]
           text-neutral-500
           mt-2
-        ">
-          Øystein Rottem, Dagbladet
-        </p>
-      </div>
+        "
+          >
+            Øystein Rottem, Dagbladet
+          </p>
+        </div>
 
-      <BookPageQuotes content={oppdagerenContent} />
-
+        <BookPageQuotes content={oppdagerenContent} />
       </div>
     </section>
-  )
+  );
 }

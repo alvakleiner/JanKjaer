@@ -1,8 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router"
-import BookPage from "../../components/BookPage"
-import type { BookPageContent } from "../../components/BookPage"
+import { createFileRoute } from "@tanstack/react-router";
+import BookPage from "../../components/BookPage";
+import type { BookPageContent } from "../../components/BookPage";
 
-export const Route = createFileRoute("/bibliografi/tegn-til-kjaerlighet")({ component: TegnTilKjaerlighet })
+export const Route = createFileRoute("/bibliografi/tegn-til-kjaerlighet")({
+  component: TegnTilKjaerlighet,
+});
 
 const tegnTilKjaerlighetContent: BookPageContent = {
   title: { no: "Tegn til kjærlighet", en: "Signs of Love" },
@@ -47,11 +49,8 @@ const tegnTilKjaerlighetContent: BookPageContent = {
       "Signs of Love is a superbly wrought novel, a book packed with powerful and evocative ideas. The many references to, for example, Egyptian myths seem at times to illuminate the text from within. Though undeniably scintillatingly written, this is also a thought-provoking book and testimony to the author's reverence for his subject.",
     ],
   },
-}
+};
 
 export default function TegnTilKjaerlighet() {
-  return <BookPage content={tegnTilKjaerlighetContent
-
-  } />
+  return <BookPage content={tegnTilKjaerlighetContent} />;
 }
-

@@ -1,9 +1,11 @@
-﻿import { createFileRoute } from "@tanstack/react-router"
-import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
-import type { BookPageContent } from "../../components/BookPage"
-import { useLanguage } from "../../context/LanguageContext"
+﻿import { createFileRoute } from "@tanstack/react-router";
+import { BookPageBody, BookPageQuotes } from "../../components/BookPage";
+import type { BookPageContent } from "../../components/BookPage";
+import { useLanguage } from "../../context/LanguageContext";
 
-export const Route = createFileRoute("/bibliografi/kloden-dreier-stille-rundt")({ component: KlodenDreierStilleRundt })
+export const Route = createFileRoute("/bibliografi/kloden-dreier-stille-rundt")({
+  component: KlodenDreierStilleRundt,
+});
 
 const klodenDreierStilleRundtContent: BookPageContent = {
   title: { no: "Kloden dreier stille rundt", en: "The Earth Turns Quietly" },
@@ -45,15 +47,14 @@ const klodenDreierStilleRundtContent: BookPageContent = {
       "The Earth Turns Quietly contains fourteen short stories with extremely varied subject matter and form. The author examines his generation and time, picking up themes like the arms race, pollution and environmental destruction, drugs, the hypnotic power of the mass media and racism. The stories utter a protest about the use of power, aggression and violence. Paradoxically, this protest often comes in wordless, contorted and disenfranchised forms. The communications problem is the nub here, and the stories often reveal misinterpretations and wasted opportunities for understanding. With its sensitive consciousness of the contemporary world the book articulates incidents and experiences that are valid for an entire generation.",
     ],
   },
-}
+};
 
 export default function KlodenDreierStilleRundt() {
-  const { lang } = useLanguage()
-  
+  const { lang } = useLanguage();
+
   return (
-      <section className="bg-white">
-        <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
-  
+    <section className="bg-white">
+      <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 py-4 mb-16">
         <BookPageBody content={klodenDreierStilleRundtContent} />
         <div className="flex flex-col items-center mt-12 md:mt-10 mb-4">
           <img
@@ -61,14 +62,16 @@ export default function KlodenDreierStilleRundt() {
             alt="Originalomslaget til Kloden dreier stille rundt"
             className="max-w-56 w-full object-contain"
           />
-          <p className="
+          <p
+            className="
             mt-4
             text-sm
             tracking-[0.04em]
             font-['Lora',serif]
             text-black/80
             text-center
-          ">
+          "
+          >
             {lang === "no"
               ? "Originalomslaget til Kloden dreier stille rundt"
               : "The original cover of The Earth Turns Quietly"}
@@ -76,8 +79,7 @@ export default function KlodenDreierStilleRundt() {
         </div>
 
         <BookPageQuotes content={klodenDreierStilleRundtContent} />
-  
-        </div>
-      </section>
-  )
+      </div>
+    </section>
+  );
 }

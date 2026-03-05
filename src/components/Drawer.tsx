@@ -1,13 +1,13 @@
-import { useEffect, useRef } from "react"
-import { useLanguage } from "../context/LanguageContext"
+import { useEffect, useRef } from "react";
+import { useLanguage } from "../context/LanguageContext";
 
 type DrawerProps = {
-  open: boolean
-  onClose: () => void
-  title: string
-  subtitle?: string
-  children: React.ReactNode
-}
+  open: boolean;
+  onClose: () => void;
+  title: string;
+  subtitle?: string;
+  children: React.ReactNode;
+};
 
 // Renderer som håndterer ### overskrifter i string-innhold
 export function renderArticle(text: string) {
@@ -28,47 +28,43 @@ export function renderArticle(text: string) {
         >
           {line.replace("### ", "")}
         </h4>
-      )
+      );
     }
     if (line.trim() === "") {
-      return <div key={i} className="h-3" />
+      return <div key={i} className="h-3" />;
     }
     return (
       <p key={i} className="text-base leading-7 tracking-[0.04em] font-['Lora',serif] text-black">
         {line}
       </p>
-    )
-  })
+    );
+  });
 }
 
 export default function Drawer({ open, onClose, title, subtitle, children }: DrawerProps) {
-  const { lang } = useLanguage()
-  const scrollRef = useRef<HTMLDivElement>(null)
-
+  const { lang } = useLanguage();
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (open && scrollRef.current) {
-        scrollRef.current.scrollTop = 0
-      }
+      scrollRef.current.scrollTop = 0;
+    }
 
-    if (!open) return
+    if (!open) return;
     const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose()
-    }
-    document.addEventListener("keydown", onKeyDown)
-    const prevOverflow = document.body.style.overflow
-    document.body.style.overflow = "hidden"
+      if (e.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", onKeyDown);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
     return () => {
-      document.removeEventListener("keydown", onKeyDown)
-      document.body.style.overflow = prevOverflow
-    }
-  }, [open, onClose])
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [open, onClose]);
 
   return (
-    <div
-      className={`fixed inset-0 z-50 ${open ? "" : "pointer-events-none"}`}
-      aria-hidden={!open}
-    >
+    <div className={`fixed inset-0 z-50 ${open ? "" : "pointer-events-none"}`} aria-hidden={!open}>
       <div
         onClick={onClose}
         className={`absolute inset-0 bg-black/50 transition-opacity duration-300 ${
@@ -110,5 +106,5 @@ export default function Drawer({ open, onClose, title, subtitle, children }: Dra
         </div>
       </aside>
     </div>
-  )
+  );
 }
