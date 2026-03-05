@@ -41,7 +41,9 @@ function RootComponent() {
     <RootDocument>
       <ScrollToTop />
       <Header />
-      <Outlet />
+      <main>
+        <Outlet />
+      </main>
       <TanStackDevtools
         plugins={[
           {

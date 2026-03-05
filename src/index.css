@@ -9,20 +9,20 @@
   --font-playfair-sc: "Playfair_Display_SC", serif;
 }
 
-#root {
+body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-#root > main {
+body > main {
   flex: 1;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
 @media (min-width: 768px) {
-  #root > main {
+  body > main {
     padding-left: 0;
     padding-right: 0;
   }
