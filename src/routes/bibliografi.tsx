@@ -1,6 +1,9 @@
+import { createFileRoute } from "@tanstack/react-router"
 import Collage from "../components/Collage"
 import { useLanguage } from "../context/LanguageContext"
 import SEO from "../components/SEO"
+
+export const Route = createFileRoute("/bibliografi")({ component: Bibliografi })
 
 const books = {
   en: [

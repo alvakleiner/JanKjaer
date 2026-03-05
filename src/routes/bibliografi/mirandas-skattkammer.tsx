@@ -1,6 +1,9 @@
-﻿import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
+﻿import { createFileRoute } from "@tanstack/react-router"
+import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
 import type { BookPageContent } from "../../components/BookPage"
 import { useLanguage } from "../../context/LanguageContext"
+
+export const Route = createFileRoute("/bibliografi/mirandas-skattkammer")({ component: MirandaSkattkammer })
 
 const mirandasSkattkammerContent: BookPageContent = {
   title: { no: "Mirandas skattekammer", en: "Miranda's Treasury" },

@@ -1,5 +1,8 @@
+import { createFileRoute } from "@tanstack/react-router"
 import { useLanguage } from "../context/LanguageContext"
 import SEO from "../components/SEO"
+
+export const Route = createFileRoute("/kontakt")({ component: Kontakt })
 
 export default function Kontakt() {
   const { lang } = useLanguage()

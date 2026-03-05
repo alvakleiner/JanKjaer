@@ -1,5 +1,9 @@
-﻿import BookPage from "../../components/BookPage"
+import { createFileRoute } from "@tanstack/react-router"
+import BookPage from "../../components/BookPage"
 import type { BookPageContent } from "../../components/BookPage"
+
+export const Route = createFileRoute("/bibliografi/speil")({ component: Speil })
+
 
 const speilContent: BookPageContent = {
   title: { no: "Speil", en: "Mirror" },

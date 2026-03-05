@@ -9,38 +9,503 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as PressematerialeRouteImport } from './routes/pressemateriale'
+import { Route as KontaktRouteImport } from './routes/kontakt'
+import { Route as IntervjuerRouteImport } from './routes/intervjuer'
+import { Route as GalleriRouteImport } from './routes/galleri'
+import { Route as BiografiRouteImport } from './routes/biografi'
+import { Route as BibliografiRouteImport } from './routes/bibliografi'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BibliografiValgdagerRouteImport } from './routes/bibliografi/valgdager'
+import { Route as BibliografiTegnTilKjaerlighetRouteImport } from './routes/bibliografi/tegn-til-kjaerlighet'
+import { Route as BibliografiSteinBlirKapteinRouteImport } from './routes/bibliografi/stein-blir-kaptein'
+import { Route as BibliografiSpeilRouteImport } from './routes/bibliografi/speil'
+import { Route as BibliografiSlektersGangRouteImport } from './routes/bibliografi/slekters-gang'
+import { Route as BibliografiRandRouteImport } from './routes/bibliografi/rand'
+import { Route as BibliografiOppdagerenRouteImport } from './routes/bibliografi/oppdageren'
+import { Route as BibliografiNormansOmraadeRouteImport } from './routes/bibliografi/normans-omraade'
+import { Route as BibliografiMrWoolfRouteImport } from './routes/bibliografi/mr-woolf'
+import { Route as BibliografiMirandasSkattkammerRouteImport } from './routes/bibliografi/mirandas-skattkammer'
+import { Route as BibliografiMennesketsViddeRouteImport } from './routes/bibliografi/menneskets-vidde'
+import { Route as BibliografiMennesketsNettRouteImport } from './routes/bibliografi/menneskets-nett'
+import { Route as BibliografiMennesketsMatriseRouteImport } from './routes/bibliografi/menneskets-matrise'
+import { Route as BibliografiMennesketsFeltRouteImport } from './routes/bibliografi/menneskets-felt'
+import { Route as BibliografiMennesketsBolgerRouteImport } from './routes/bibliografi/menneskets-bolger'
+import { Route as BibliografiKongenAvEuropaRouteImport } from './routes/bibliografi/kongen-av-europa'
+import { Route as BibliografiKlodenDreierStilleRundtRouteImport } from './routes/bibliografi/kloden-dreier-stille-rundt'
+import { Route as BibliografiKjaerstadsMatriseRouteImport } from './routes/bibliografi/kjaerstads-matrise'
+import { Route as BibliografiJegErBrodreneWalkerRouteImport } from './routes/bibliografi/jeg-er-brodrene-walker'
+import { Route as BibliografiJaktenPaaDeSkjulteVaffelhjerteneRouteImport } from './routes/bibliografi/jakten-paa-de-skjulte-vaffelhjertene'
+import { Route as BibliografiHosSheherasadFantasiensDronningRouteImport } from './routes/bibliografi/hos-sheherasad-fantasiens-dronning'
+import { Route as BibliografiHomoFalsusRouteImport } from './routes/bibliografi/homo-falsus'
+import { Route as BibliografiForforerenRouteImport } from './routes/bibliografi/forforeren'
+import { Route as BibliografiErobrerenRouteImport } from './routes/bibliografi/erobreren'
+import { Route as BibliografiEnTidForALeveRouteImport } from './routes/bibliografi/en-tid-for-a-leve'
+import { Route as BibliografiDetStoreEventyretRouteImport } from './routes/bibliografi/det-store-eventyret'
+import { Route as BibliografiBergeRouteImport } from './routes/bibliografi/berge'
 
+const PressematerialeRoute = PressematerialeRouteImport.update({
+  id: '/pressemateriale',
+  path: '/pressemateriale',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KontaktRoute = KontaktRouteImport.update({
+  id: '/kontakt',
+  path: '/kontakt',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IntervjuerRoute = IntervjuerRouteImport.update({
+  id: '/intervjuer',
+  path: '/intervjuer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleriRoute = GalleriRouteImport.update({
+  id: '/galleri',
+  path: '/galleri',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BiografiRoute = BiografiRouteImport.update({
+  id: '/biografi',
+  path: '/biografi',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BibliografiRoute = BibliografiRouteImport.update({
+  id: '/bibliografi',
+  path: '/bibliografi',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BibliografiValgdagerRoute = BibliografiValgdagerRouteImport.update({
+  id: '/valgdager',
+  path: '/valgdager',
+  getParentRoute: () => BibliografiRoute,
+} as any)
+const BibliografiTegnTilKjaerlighetRoute =
+  BibliografiTegnTilKjaerlighetRouteImport.update({
+    id: '/tegn-til-kjaerlighet',
+    path: '/tegn-til-kjaerlighet',
+    getParentRoute: () => BibliografiRoute,
+  } as any)
+const BibliografiSteinBlirKapteinRoute =
+  BibliografiSteinBlirKapteinRouteImport.update({
+    id: '/stein-blir-kaptein',
+    path: '/stein-blir-kaptein',
+    getParentRoute: () => BibliografiRoute,
+  } as any)
+const BibliografiSpeilRoute = BibliografiSpeilRouteImport.update({
+  id: '/speil',
+  path: '/speil',
+  getParentRoute: () => BibliografiRoute,
+} as any)
+const BibliografiSlektersGangRoute = BibliografiSlektersGangRouteImport.update({
+  id: '/slekters-gang',
+  path: '/slekters-gang',
+  getParentRoute: () => BibliografiRoute,
+} as any)
+const BibliografiRandRoute = BibliografiRandRouteImport.update({
+  id: '/rand',
+  path: '/rand',
+  getParentRoute: () => BibliografiRoute,
+} as any)
+const BibliografiOppdagerenRoute = BibliografiOppdagerenRouteImport.update({
+  id: '/oppdageren',
+  path: '/oppdageren',
+  getParentRoute: () => BibliografiRoute,
+} as any)
+const BibliografiNormansOmraadeRoute =
+  BibliografiNormansOmraadeRouteImport.update({
+    id: '/normans-omraade',
+    path: '/normans-omraade',
+    getParentRoute: () => BibliografiRoute,
+  } as any)
+const BibliografiMrWoolfRoute = BibliografiMrWoolfRouteImport.update({
+  id: '/mr-woolf',
+  path: '/mr-woolf',
+  getParentRoute: () => BibliografiRoute,
+} as any)
+const BibliografiMirandasSkattkammerRoute =
+  BibliografiMirandasSkattkammerRouteImport.update({
+    id: '/mirandas-skattkammer',
+    path: '/mirandas-skattkammer',
+    getParentRoute: () => BibliografiRoute,
+  } as any)
+const BibliografiMennesketsViddeRoute =
+  BibliografiMennesketsViddeRouteImport.update({
+    id: '/menneskets-vidde',
+    path: '/menneskets-vidde',
+    getParentRoute: () => BibliografiRoute,
+  } as any)
+const BibliografiMennesketsNettRoute =
+  BibliografiMennesketsNettRouteImport.update({
+    id: '/menneskets-nett',
+    path: '/menneskets-nett',
+    getParentRoute: () => BibliografiRoute,
+  } as any)
+const BibliografiMennesketsMatriseRoute =
+  BibliografiMennesketsMatriseRouteImport.update({
+    id: '/menneskets-matrise',
+    path: '/menneskets-matrise',
+    getParentRoute: () => BibliografiRoute,
+  } as any)
+const BibliografiMennesketsFeltRoute =
+  BibliografiMennesketsFeltRouteImport.update({
+    id: '/menneskets-felt',
+    path: '/menneskets-felt',
+    getParentRoute: () => BibliografiRoute,
+  } as any)
+const BibliografiMennesketsBolgerRoute =
+  BibliografiMennesketsBolgerRouteImport.update({
+    id: '/menneskets-bolger',
+    path: '/menneskets-bolger',
+    getParentRoute: () => BibliografiRoute,
+  } as any)
+const BibliografiKongenAvEuropaRoute =
+  BibliografiKongenAvEuropaRouteImport.update({
+    id: '/kongen-av-europa',
+    path: '/kongen-av-europa',
+    getParentRoute: () => BibliografiRoute,
+  } as any)
+const BibliografiKlodenDreierStilleRundtRoute =
+  BibliografiKlodenDreierStilleRundtRouteImport.update({
+    id: '/kloden-dreier-stille-rundt',
+    path: '/kloden-dreier-stille-rundt',
+    getParentRoute: () => BibliografiRoute,
+  } as any)
+const BibliografiKjaerstadsMatriseRoute =
+  BibliografiKjaerstadsMatriseRouteImport.update({
+    id: '/kjaerstads-matrise',
+    path: '/kjaerstads-matrise',
+    getParentRoute: () => BibliografiRoute,
+  } as any)
+const BibliografiJegErBrodreneWalkerRoute =
+  BibliografiJegErBrodreneWalkerRouteImport.update({
+    id: '/jeg-er-brodrene-walker',
+    path: '/jeg-er-brodrene-walker',
+    getParentRoute: () => BibliografiRoute,
+  } as any)
+const BibliografiJaktenPaaDeSkjulteVaffelhjerteneRoute =
+  BibliografiJaktenPaaDeSkjulteVaffelhjerteneRouteImport.update({
+    id: '/jakten-paa-de-skjulte-vaffelhjertene',
+    path: '/jakten-paa-de-skjulte-vaffelhjertene',
+    getParentRoute: () => BibliografiRoute,
+  } as any)
+const BibliografiHosSheherasadFantasiensDronningRoute =
+  BibliografiHosSheherasadFantasiensDronningRouteImport.update({
+    id: '/hos-sheherasad-fantasiens-dronning',
+    path: '/hos-sheherasad-fantasiens-dronning',
+    getParentRoute: () => BibliografiRoute,
+  } as any)
+const BibliografiHomoFalsusRoute = BibliografiHomoFalsusRouteImport.update({
+  id: '/homo-falsus',
+  path: '/homo-falsus',
+  getParentRoute: () => BibliografiRoute,
+} as any)
+const BibliografiForforerenRoute = BibliografiForforerenRouteImport.update({
+  id: '/forforeren',
+  path: '/forforeren',
+  getParentRoute: () => BibliografiRoute,
+} as any)
+const BibliografiErobrerenRoute = BibliografiErobrerenRouteImport.update({
+  id: '/erobreren',
+  path: '/erobreren',
+  getParentRoute: () => BibliografiRoute,
+} as any)
+const BibliografiEnTidForALeveRoute =
+  BibliografiEnTidForALeveRouteImport.update({
+    id: '/en-tid-for-a-leve',
+    path: '/en-tid-for-a-leve',
+    getParentRoute: () => BibliografiRoute,
+  } as any)
+const BibliografiDetStoreEventyretRoute =
+  BibliografiDetStoreEventyretRouteImport.update({
+    id: '/det-store-eventyret',
+    path: '/det-store-eventyret',
+    getParentRoute: () => BibliografiRoute,
+  } as any)
+const BibliografiBergeRoute = BibliografiBergeRouteImport.update({
+  id: '/berge',
+  path: '/berge',
+  getParentRoute: () => BibliografiRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/bibliografi': typeof BibliografiRouteWithChildren
+  '/biografi': typeof BiografiRoute
+  '/galleri': typeof GalleriRoute
+  '/intervjuer': typeof IntervjuerRoute
+  '/kontakt': typeof KontaktRoute
+  '/pressemateriale': typeof PressematerialeRoute
+  '/bibliografi/berge': typeof BibliografiBergeRoute
+  '/bibliografi/det-store-eventyret': typeof BibliografiDetStoreEventyretRoute
+  '/bibliografi/en-tid-for-a-leve': typeof BibliografiEnTidForALeveRoute
+  '/bibliografi/erobreren': typeof BibliografiErobrerenRoute
+  '/bibliografi/forforeren': typeof BibliografiForforerenRoute
+  '/bibliografi/homo-falsus': typeof BibliografiHomoFalsusRoute
+  '/bibliografi/hos-sheherasad-fantasiens-dronning': typeof BibliografiHosSheherasadFantasiensDronningRoute
+  '/bibliografi/jakten-paa-de-skjulte-vaffelhjertene': typeof BibliografiJaktenPaaDeSkjulteVaffelhjerteneRoute
+  '/bibliografi/jeg-er-brodrene-walker': typeof BibliografiJegErBrodreneWalkerRoute
+  '/bibliografi/kjaerstads-matrise': typeof BibliografiKjaerstadsMatriseRoute
+  '/bibliografi/kloden-dreier-stille-rundt': typeof BibliografiKlodenDreierStilleRundtRoute
+  '/bibliografi/kongen-av-europa': typeof BibliografiKongenAvEuropaRoute
+  '/bibliografi/menneskets-bolger': typeof BibliografiMennesketsBolgerRoute
+  '/bibliografi/menneskets-felt': typeof BibliografiMennesketsFeltRoute
+  '/bibliografi/menneskets-matrise': typeof BibliografiMennesketsMatriseRoute
+  '/bibliografi/menneskets-nett': typeof BibliografiMennesketsNettRoute
+  '/bibliografi/menneskets-vidde': typeof BibliografiMennesketsViddeRoute
+  '/bibliografi/mirandas-skattkammer': typeof BibliografiMirandasSkattkammerRoute
+  '/bibliografi/mr-woolf': typeof BibliografiMrWoolfRoute
+  '/bibliografi/normans-omraade': typeof BibliografiNormansOmraadeRoute
+  '/bibliografi/oppdageren': typeof BibliografiOppdagerenRoute
+  '/bibliografi/rand': typeof BibliografiRandRoute
+  '/bibliografi/slekters-gang': typeof BibliografiSlektersGangRoute
+  '/bibliografi/speil': typeof BibliografiSpeilRoute
+  '/bibliografi/stein-blir-kaptein': typeof BibliografiSteinBlirKapteinRoute
+  '/bibliografi/tegn-til-kjaerlighet': typeof BibliografiTegnTilKjaerlighetRoute
+  '/bibliografi/valgdager': typeof BibliografiValgdagerRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/bibliografi': typeof BibliografiRouteWithChildren
+  '/biografi': typeof BiografiRoute
+  '/galleri': typeof GalleriRoute
+  '/intervjuer': typeof IntervjuerRoute
+  '/kontakt': typeof KontaktRoute
+  '/pressemateriale': typeof PressematerialeRoute
+  '/bibliografi/berge': typeof BibliografiBergeRoute
+  '/bibliografi/det-store-eventyret': typeof BibliografiDetStoreEventyretRoute
+  '/bibliografi/en-tid-for-a-leve': typeof BibliografiEnTidForALeveRoute
+  '/bibliografi/erobreren': typeof BibliografiErobrerenRoute
+  '/bibliografi/forforeren': typeof BibliografiForforerenRoute
+  '/bibliografi/homo-falsus': typeof BibliografiHomoFalsusRoute
+  '/bibliografi/hos-sheherasad-fantasiens-dronning': typeof BibliografiHosSheherasadFantasiensDronningRoute
+  '/bibliografi/jakten-paa-de-skjulte-vaffelhjertene': typeof BibliografiJaktenPaaDeSkjulteVaffelhjerteneRoute
+  '/bibliografi/jeg-er-brodrene-walker': typeof BibliografiJegErBrodreneWalkerRoute
+  '/bibliografi/kjaerstads-matrise': typeof BibliografiKjaerstadsMatriseRoute
+  '/bibliografi/kloden-dreier-stille-rundt': typeof BibliografiKlodenDreierStilleRundtRoute
+  '/bibliografi/kongen-av-europa': typeof BibliografiKongenAvEuropaRoute
+  '/bibliografi/menneskets-bolger': typeof BibliografiMennesketsBolgerRoute
+  '/bibliografi/menneskets-felt': typeof BibliografiMennesketsFeltRoute
+  '/bibliografi/menneskets-matrise': typeof BibliografiMennesketsMatriseRoute
+  '/bibliografi/menneskets-nett': typeof BibliografiMennesketsNettRoute
+  '/bibliografi/menneskets-vidde': typeof BibliografiMennesketsViddeRoute
+  '/bibliografi/mirandas-skattkammer': typeof BibliografiMirandasSkattkammerRoute
+  '/bibliografi/mr-woolf': typeof BibliografiMrWoolfRoute
+  '/bibliografi/normans-omraade': typeof BibliografiNormansOmraadeRoute
+  '/bibliografi/oppdageren': typeof BibliografiOppdagerenRoute
+  '/bibliografi/rand': typeof BibliografiRandRoute
+  '/bibliografi/slekters-gang': typeof BibliografiSlektersGangRoute
+  '/bibliografi/speil': typeof BibliografiSpeilRoute
+  '/bibliografi/stein-blir-kaptein': typeof BibliografiSteinBlirKapteinRoute
+  '/bibliografi/tegn-til-kjaerlighet': typeof BibliografiTegnTilKjaerlighetRoute
+  '/bibliografi/valgdager': typeof BibliografiValgdagerRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/bibliografi': typeof BibliografiRouteWithChildren
+  '/biografi': typeof BiografiRoute
+  '/galleri': typeof GalleriRoute
+  '/intervjuer': typeof IntervjuerRoute
+  '/kontakt': typeof KontaktRoute
+  '/pressemateriale': typeof PressematerialeRoute
+  '/bibliografi/berge': typeof BibliografiBergeRoute
+  '/bibliografi/det-store-eventyret': typeof BibliografiDetStoreEventyretRoute
+  '/bibliografi/en-tid-for-a-leve': typeof BibliografiEnTidForALeveRoute
+  '/bibliografi/erobreren': typeof BibliografiErobrerenRoute
+  '/bibliografi/forforeren': typeof BibliografiForforerenRoute
+  '/bibliografi/homo-falsus': typeof BibliografiHomoFalsusRoute
+  '/bibliografi/hos-sheherasad-fantasiens-dronning': typeof BibliografiHosSheherasadFantasiensDronningRoute
+  '/bibliografi/jakten-paa-de-skjulte-vaffelhjertene': typeof BibliografiJaktenPaaDeSkjulteVaffelhjerteneRoute
+  '/bibliografi/jeg-er-brodrene-walker': typeof BibliografiJegErBrodreneWalkerRoute
+  '/bibliografi/kjaerstads-matrise': typeof BibliografiKjaerstadsMatriseRoute
+  '/bibliografi/kloden-dreier-stille-rundt': typeof BibliografiKlodenDreierStilleRundtRoute
+  '/bibliografi/kongen-av-europa': typeof BibliografiKongenAvEuropaRoute
+  '/bibliografi/menneskets-bolger': typeof BibliografiMennesketsBolgerRoute
+  '/bibliografi/menneskets-felt': typeof BibliografiMennesketsFeltRoute
+  '/bibliografi/menneskets-matrise': typeof BibliografiMennesketsMatriseRoute
+  '/bibliografi/menneskets-nett': typeof BibliografiMennesketsNettRoute
+  '/bibliografi/menneskets-vidde': typeof BibliografiMennesketsViddeRoute
+  '/bibliografi/mirandas-skattkammer': typeof BibliografiMirandasSkattkammerRoute
+  '/bibliografi/mr-woolf': typeof BibliografiMrWoolfRoute
+  '/bibliografi/normans-omraade': typeof BibliografiNormansOmraadeRoute
+  '/bibliografi/oppdageren': typeof BibliografiOppdagerenRoute
+  '/bibliografi/rand': typeof BibliografiRandRoute
+  '/bibliografi/slekters-gang': typeof BibliografiSlektersGangRoute
+  '/bibliografi/speil': typeof BibliografiSpeilRoute
+  '/bibliografi/stein-blir-kaptein': typeof BibliografiSteinBlirKapteinRoute
+  '/bibliografi/tegn-til-kjaerlighet': typeof BibliografiTegnTilKjaerlighetRoute
+  '/bibliografi/valgdager': typeof BibliografiValgdagerRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/bibliografi'
+    | '/biografi'
+    | '/galleri'
+    | '/intervjuer'
+    | '/kontakt'
+    | '/pressemateriale'
+    | '/bibliografi/berge'
+    | '/bibliografi/det-store-eventyret'
+    | '/bibliografi/en-tid-for-a-leve'
+    | '/bibliografi/erobreren'
+    | '/bibliografi/forforeren'
+    | '/bibliografi/homo-falsus'
+    | '/bibliografi/hos-sheherasad-fantasiens-dronning'
+    | '/bibliografi/jakten-paa-de-skjulte-vaffelhjertene'
+    | '/bibliografi/jeg-er-brodrene-walker'
+    | '/bibliografi/kjaerstads-matrise'
+    | '/bibliografi/kloden-dreier-stille-rundt'
+    | '/bibliografi/kongen-av-europa'
+    | '/bibliografi/menneskets-bolger'
+    | '/bibliografi/menneskets-felt'
+    | '/bibliografi/menneskets-matrise'
+    | '/bibliografi/menneskets-nett'
+    | '/bibliografi/menneskets-vidde'
+    | '/bibliografi/mirandas-skattkammer'
+    | '/bibliografi/mr-woolf'
+    | '/bibliografi/normans-omraade'
+    | '/bibliografi/oppdageren'
+    | '/bibliografi/rand'
+    | '/bibliografi/slekters-gang'
+    | '/bibliografi/speil'
+    | '/bibliografi/stein-blir-kaptein'
+    | '/bibliografi/tegn-til-kjaerlighet'
+    | '/bibliografi/valgdager'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/bibliografi'
+    | '/biografi'
+    | '/galleri'
+    | '/intervjuer'
+    | '/kontakt'
+    | '/pressemateriale'
+    | '/bibliografi/berge'
+    | '/bibliografi/det-store-eventyret'
+    | '/bibliografi/en-tid-for-a-leve'
+    | '/bibliografi/erobreren'
+    | '/bibliografi/forforeren'
+    | '/bibliografi/homo-falsus'
+    | '/bibliografi/hos-sheherasad-fantasiens-dronning'
+    | '/bibliografi/jakten-paa-de-skjulte-vaffelhjertene'
+    | '/bibliografi/jeg-er-brodrene-walker'
+    | '/bibliografi/kjaerstads-matrise'
+    | '/bibliografi/kloden-dreier-stille-rundt'
+    | '/bibliografi/kongen-av-europa'
+    | '/bibliografi/menneskets-bolger'
+    | '/bibliografi/menneskets-felt'
+    | '/bibliografi/menneskets-matrise'
+    | '/bibliografi/menneskets-nett'
+    | '/bibliografi/menneskets-vidde'
+    | '/bibliografi/mirandas-skattkammer'
+    | '/bibliografi/mr-woolf'
+    | '/bibliografi/normans-omraade'
+    | '/bibliografi/oppdageren'
+    | '/bibliografi/rand'
+    | '/bibliografi/slekters-gang'
+    | '/bibliografi/speil'
+    | '/bibliografi/stein-blir-kaptein'
+    | '/bibliografi/tegn-til-kjaerlighet'
+    | '/bibliografi/valgdager'
+  id:
+    | '__root__'
+    | '/'
+    | '/bibliografi'
+    | '/biografi'
+    | '/galleri'
+    | '/intervjuer'
+    | '/kontakt'
+    | '/pressemateriale'
+    | '/bibliografi/berge'
+    | '/bibliografi/det-store-eventyret'
+    | '/bibliografi/en-tid-for-a-leve'
+    | '/bibliografi/erobreren'
+    | '/bibliografi/forforeren'
+    | '/bibliografi/homo-falsus'
+    | '/bibliografi/hos-sheherasad-fantasiens-dronning'
+    | '/bibliografi/jakten-paa-de-skjulte-vaffelhjertene'
+    | '/bibliografi/jeg-er-brodrene-walker'
+    | '/bibliografi/kjaerstads-matrise'
+    | '/bibliografi/kloden-dreier-stille-rundt'
+    | '/bibliografi/kongen-av-europa'
+    | '/bibliografi/menneskets-bolger'
+    | '/bibliografi/menneskets-felt'
+    | '/bibliografi/menneskets-matrise'
+    | '/bibliografi/menneskets-nett'
+    | '/bibliografi/menneskets-vidde'
+    | '/bibliografi/mirandas-skattkammer'
+    | '/bibliografi/mr-woolf'
+    | '/bibliografi/normans-omraade'
+    | '/bibliografi/oppdageren'
+    | '/bibliografi/rand'
+    | '/bibliografi/slekters-gang'
+    | '/bibliografi/speil'
+    | '/bibliografi/stein-blir-kaptein'
+    | '/bibliografi/tegn-til-kjaerlighet'
+    | '/bibliografi/valgdager'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BibliografiRoute: typeof BibliografiRouteWithChildren
+  BiografiRoute: typeof BiografiRoute
+  GalleriRoute: typeof GalleriRoute
+  IntervjuerRoute: typeof IntervjuerRoute
+  KontaktRoute: typeof KontaktRoute
+  PressematerialeRoute: typeof PressematerialeRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/pressemateriale': {
+      id: '/pressemateriale'
+      path: '/pressemateriale'
+      fullPath: '/pressemateriale'
+      preLoaderRoute: typeof PressematerialeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kontakt': {
+      id: '/kontakt'
+      path: '/kontakt'
+      fullPath: '/kontakt'
+      preLoaderRoute: typeof KontaktRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/intervjuer': {
+      id: '/intervjuer'
+      path: '/intervjuer'
+      fullPath: '/intervjuer'
+      preLoaderRoute: typeof IntervjuerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/galleri': {
+      id: '/galleri'
+      path: '/galleri'
+      fullPath: '/galleri'
+      preLoaderRoute: typeof GalleriRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/biografi': {
+      id: '/biografi'
+      path: '/biografi'
+      fullPath: '/biografi'
+      preLoaderRoute: typeof BiografiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/bibliografi': {
+      id: '/bibliografi'
+      path: '/bibliografi'
+      fullPath: '/bibliografi'
+      preLoaderRoute: typeof BibliografiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +513,273 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/bibliografi/valgdager': {
+      id: '/bibliografi/valgdager'
+      path: '/valgdager'
+      fullPath: '/bibliografi/valgdager'
+      preLoaderRoute: typeof BibliografiValgdagerRouteImport
+      parentRoute: typeof BibliografiRoute
+    }
+    '/bibliografi/tegn-til-kjaerlighet': {
+      id: '/bibliografi/tegn-til-kjaerlighet'
+      path: '/tegn-til-kjaerlighet'
+      fullPath: '/bibliografi/tegn-til-kjaerlighet'
+      preLoaderRoute: typeof BibliografiTegnTilKjaerlighetRouteImport
+      parentRoute: typeof BibliografiRoute
+    }
+    '/bibliografi/stein-blir-kaptein': {
+      id: '/bibliografi/stein-blir-kaptein'
+      path: '/stein-blir-kaptein'
+      fullPath: '/bibliografi/stein-blir-kaptein'
+      preLoaderRoute: typeof BibliografiSteinBlirKapteinRouteImport
+      parentRoute: typeof BibliografiRoute
+    }
+    '/bibliografi/speil': {
+      id: '/bibliografi/speil'
+      path: '/speil'
+      fullPath: '/bibliografi/speil'
+      preLoaderRoute: typeof BibliografiSpeilRouteImport
+      parentRoute: typeof BibliografiRoute
+    }
+    '/bibliografi/slekters-gang': {
+      id: '/bibliografi/slekters-gang'
+      path: '/slekters-gang'
+      fullPath: '/bibliografi/slekters-gang'
+      preLoaderRoute: typeof BibliografiSlektersGangRouteImport
+      parentRoute: typeof BibliografiRoute
+    }
+    '/bibliografi/rand': {
+      id: '/bibliografi/rand'
+      path: '/rand'
+      fullPath: '/bibliografi/rand'
+      preLoaderRoute: typeof BibliografiRandRouteImport
+      parentRoute: typeof BibliografiRoute
+    }
+    '/bibliografi/oppdageren': {
+      id: '/bibliografi/oppdageren'
+      path: '/oppdageren'
+      fullPath: '/bibliografi/oppdageren'
+      preLoaderRoute: typeof BibliografiOppdagerenRouteImport
+      parentRoute: typeof BibliografiRoute
+    }
+    '/bibliografi/normans-omraade': {
+      id: '/bibliografi/normans-omraade'
+      path: '/normans-omraade'
+      fullPath: '/bibliografi/normans-omraade'
+      preLoaderRoute: typeof BibliografiNormansOmraadeRouteImport
+      parentRoute: typeof BibliografiRoute
+    }
+    '/bibliografi/mr-woolf': {
+      id: '/bibliografi/mr-woolf'
+      path: '/mr-woolf'
+      fullPath: '/bibliografi/mr-woolf'
+      preLoaderRoute: typeof BibliografiMrWoolfRouteImport
+      parentRoute: typeof BibliografiRoute
+    }
+    '/bibliografi/mirandas-skattkammer': {
+      id: '/bibliografi/mirandas-skattkammer'
+      path: '/mirandas-skattkammer'
+      fullPath: '/bibliografi/mirandas-skattkammer'
+      preLoaderRoute: typeof BibliografiMirandasSkattkammerRouteImport
+      parentRoute: typeof BibliografiRoute
+    }
+    '/bibliografi/menneskets-vidde': {
+      id: '/bibliografi/menneskets-vidde'
+      path: '/menneskets-vidde'
+      fullPath: '/bibliografi/menneskets-vidde'
+      preLoaderRoute: typeof BibliografiMennesketsViddeRouteImport
+      parentRoute: typeof BibliografiRoute
+    }
+    '/bibliografi/menneskets-nett': {
+      id: '/bibliografi/menneskets-nett'
+      path: '/menneskets-nett'
+      fullPath: '/bibliografi/menneskets-nett'
+      preLoaderRoute: typeof BibliografiMennesketsNettRouteImport
+      parentRoute: typeof BibliografiRoute
+    }
+    '/bibliografi/menneskets-matrise': {
+      id: '/bibliografi/menneskets-matrise'
+      path: '/menneskets-matrise'
+      fullPath: '/bibliografi/menneskets-matrise'
+      preLoaderRoute: typeof BibliografiMennesketsMatriseRouteImport
+      parentRoute: typeof BibliografiRoute
+    }
+    '/bibliografi/menneskets-felt': {
+      id: '/bibliografi/menneskets-felt'
+      path: '/menneskets-felt'
+      fullPath: '/bibliografi/menneskets-felt'
+      preLoaderRoute: typeof BibliografiMennesketsFeltRouteImport
+      parentRoute: typeof BibliografiRoute
+    }
+    '/bibliografi/menneskets-bolger': {
+      id: '/bibliografi/menneskets-bolger'
+      path: '/menneskets-bolger'
+      fullPath: '/bibliografi/menneskets-bolger'
+      preLoaderRoute: typeof BibliografiMennesketsBolgerRouteImport
+      parentRoute: typeof BibliografiRoute
+    }
+    '/bibliografi/kongen-av-europa': {
+      id: '/bibliografi/kongen-av-europa'
+      path: '/kongen-av-europa'
+      fullPath: '/bibliografi/kongen-av-europa'
+      preLoaderRoute: typeof BibliografiKongenAvEuropaRouteImport
+      parentRoute: typeof BibliografiRoute
+    }
+    '/bibliografi/kloden-dreier-stille-rundt': {
+      id: '/bibliografi/kloden-dreier-stille-rundt'
+      path: '/kloden-dreier-stille-rundt'
+      fullPath: '/bibliografi/kloden-dreier-stille-rundt'
+      preLoaderRoute: typeof BibliografiKlodenDreierStilleRundtRouteImport
+      parentRoute: typeof BibliografiRoute
+    }
+    '/bibliografi/kjaerstads-matrise': {
+      id: '/bibliografi/kjaerstads-matrise'
+      path: '/kjaerstads-matrise'
+      fullPath: '/bibliografi/kjaerstads-matrise'
+      preLoaderRoute: typeof BibliografiKjaerstadsMatriseRouteImport
+      parentRoute: typeof BibliografiRoute
+    }
+    '/bibliografi/jeg-er-brodrene-walker': {
+      id: '/bibliografi/jeg-er-brodrene-walker'
+      path: '/jeg-er-brodrene-walker'
+      fullPath: '/bibliografi/jeg-er-brodrene-walker'
+      preLoaderRoute: typeof BibliografiJegErBrodreneWalkerRouteImport
+      parentRoute: typeof BibliografiRoute
+    }
+    '/bibliografi/jakten-paa-de-skjulte-vaffelhjertene': {
+      id: '/bibliografi/jakten-paa-de-skjulte-vaffelhjertene'
+      path: '/jakten-paa-de-skjulte-vaffelhjertene'
+      fullPath: '/bibliografi/jakten-paa-de-skjulte-vaffelhjertene'
+      preLoaderRoute: typeof BibliografiJaktenPaaDeSkjulteVaffelhjerteneRouteImport
+      parentRoute: typeof BibliografiRoute
+    }
+    '/bibliografi/hos-sheherasad-fantasiens-dronning': {
+      id: '/bibliografi/hos-sheherasad-fantasiens-dronning'
+      path: '/hos-sheherasad-fantasiens-dronning'
+      fullPath: '/bibliografi/hos-sheherasad-fantasiens-dronning'
+      preLoaderRoute: typeof BibliografiHosSheherasadFantasiensDronningRouteImport
+      parentRoute: typeof BibliografiRoute
+    }
+    '/bibliografi/homo-falsus': {
+      id: '/bibliografi/homo-falsus'
+      path: '/homo-falsus'
+      fullPath: '/bibliografi/homo-falsus'
+      preLoaderRoute: typeof BibliografiHomoFalsusRouteImport
+      parentRoute: typeof BibliografiRoute
+    }
+    '/bibliografi/forforeren': {
+      id: '/bibliografi/forforeren'
+      path: '/forforeren'
+      fullPath: '/bibliografi/forforeren'
+      preLoaderRoute: typeof BibliografiForforerenRouteImport
+      parentRoute: typeof BibliografiRoute
+    }
+    '/bibliografi/erobreren': {
+      id: '/bibliografi/erobreren'
+      path: '/erobreren'
+      fullPath: '/bibliografi/erobreren'
+      preLoaderRoute: typeof BibliografiErobrerenRouteImport
+      parentRoute: typeof BibliografiRoute
+    }
+    '/bibliografi/en-tid-for-a-leve': {
+      id: '/bibliografi/en-tid-for-a-leve'
+      path: '/en-tid-for-a-leve'
+      fullPath: '/bibliografi/en-tid-for-a-leve'
+      preLoaderRoute: typeof BibliografiEnTidForALeveRouteImport
+      parentRoute: typeof BibliografiRoute
+    }
+    '/bibliografi/det-store-eventyret': {
+      id: '/bibliografi/det-store-eventyret'
+      path: '/det-store-eventyret'
+      fullPath: '/bibliografi/det-store-eventyret'
+      preLoaderRoute: typeof BibliografiDetStoreEventyretRouteImport
+      parentRoute: typeof BibliografiRoute
+    }
+    '/bibliografi/berge': {
+      id: '/bibliografi/berge'
+      path: '/berge'
+      fullPath: '/bibliografi/berge'
+      preLoaderRoute: typeof BibliografiBergeRouteImport
+      parentRoute: typeof BibliografiRoute
+    }
   }
 }
 
+interface BibliografiRouteChildren {
+  BibliografiBergeRoute: typeof BibliografiBergeRoute
+  BibliografiDetStoreEventyretRoute: typeof BibliografiDetStoreEventyretRoute
+  BibliografiEnTidForALeveRoute: typeof BibliografiEnTidForALeveRoute
+  BibliografiErobrerenRoute: typeof BibliografiErobrerenRoute
+  BibliografiForforerenRoute: typeof BibliografiForforerenRoute
+  BibliografiHomoFalsusRoute: typeof BibliografiHomoFalsusRoute
+  BibliografiHosSheherasadFantasiensDronningRoute: typeof BibliografiHosSheherasadFantasiensDronningRoute
+  BibliografiJaktenPaaDeSkjulteVaffelhjerteneRoute: typeof BibliografiJaktenPaaDeSkjulteVaffelhjerteneRoute
+  BibliografiJegErBrodreneWalkerRoute: typeof BibliografiJegErBrodreneWalkerRoute
+  BibliografiKjaerstadsMatriseRoute: typeof BibliografiKjaerstadsMatriseRoute
+  BibliografiKlodenDreierStilleRundtRoute: typeof BibliografiKlodenDreierStilleRundtRoute
+  BibliografiKongenAvEuropaRoute: typeof BibliografiKongenAvEuropaRoute
+  BibliografiMennesketsBolgerRoute: typeof BibliografiMennesketsBolgerRoute
+  BibliografiMennesketsFeltRoute: typeof BibliografiMennesketsFeltRoute
+  BibliografiMennesketsMatriseRoute: typeof BibliografiMennesketsMatriseRoute
+  BibliografiMennesketsNettRoute: typeof BibliografiMennesketsNettRoute
+  BibliografiMennesketsViddeRoute: typeof BibliografiMennesketsViddeRoute
+  BibliografiMirandasSkattkammerRoute: typeof BibliografiMirandasSkattkammerRoute
+  BibliografiMrWoolfRoute: typeof BibliografiMrWoolfRoute
+  BibliografiNormansOmraadeRoute: typeof BibliografiNormansOmraadeRoute
+  BibliografiOppdagerenRoute: typeof BibliografiOppdagerenRoute
+  BibliografiRandRoute: typeof BibliografiRandRoute
+  BibliografiSlektersGangRoute: typeof BibliografiSlektersGangRoute
+  BibliografiSpeilRoute: typeof BibliografiSpeilRoute
+  BibliografiSteinBlirKapteinRoute: typeof BibliografiSteinBlirKapteinRoute
+  BibliografiTegnTilKjaerlighetRoute: typeof BibliografiTegnTilKjaerlighetRoute
+  BibliografiValgdagerRoute: typeof BibliografiValgdagerRoute
+}
+
+const BibliografiRouteChildren: BibliografiRouteChildren = {
+  BibliografiBergeRoute: BibliografiBergeRoute,
+  BibliografiDetStoreEventyretRoute: BibliografiDetStoreEventyretRoute,
+  BibliografiEnTidForALeveRoute: BibliografiEnTidForALeveRoute,
+  BibliografiErobrerenRoute: BibliografiErobrerenRoute,
+  BibliografiForforerenRoute: BibliografiForforerenRoute,
+  BibliografiHomoFalsusRoute: BibliografiHomoFalsusRoute,
+  BibliografiHosSheherasadFantasiensDronningRoute:
+    BibliografiHosSheherasadFantasiensDronningRoute,
+  BibliografiJaktenPaaDeSkjulteVaffelhjerteneRoute:
+    BibliografiJaktenPaaDeSkjulteVaffelhjerteneRoute,
+  BibliografiJegErBrodreneWalkerRoute: BibliografiJegErBrodreneWalkerRoute,
+  BibliografiKjaerstadsMatriseRoute: BibliografiKjaerstadsMatriseRoute,
+  BibliografiKlodenDreierStilleRundtRoute:
+    BibliografiKlodenDreierStilleRundtRoute,
+  BibliografiKongenAvEuropaRoute: BibliografiKongenAvEuropaRoute,
+  BibliografiMennesketsBolgerRoute: BibliografiMennesketsBolgerRoute,
+  BibliografiMennesketsFeltRoute: BibliografiMennesketsFeltRoute,
+  BibliografiMennesketsMatriseRoute: BibliografiMennesketsMatriseRoute,
+  BibliografiMennesketsNettRoute: BibliografiMennesketsNettRoute,
+  BibliografiMennesketsViddeRoute: BibliografiMennesketsViddeRoute,
+  BibliografiMirandasSkattkammerRoute: BibliografiMirandasSkattkammerRoute,
+  BibliografiMrWoolfRoute: BibliografiMrWoolfRoute,
+  BibliografiNormansOmraadeRoute: BibliografiNormansOmraadeRoute,
+  BibliografiOppdagerenRoute: BibliografiOppdagerenRoute,
+  BibliografiRandRoute: BibliografiRandRoute,
+  BibliografiSlektersGangRoute: BibliografiSlektersGangRoute,
+  BibliografiSpeilRoute: BibliografiSpeilRoute,
+  BibliografiSteinBlirKapteinRoute: BibliografiSteinBlirKapteinRoute,
+  BibliografiTegnTilKjaerlighetRoute: BibliografiTegnTilKjaerlighetRoute,
+  BibliografiValgdagerRoute: BibliografiValgdagerRoute,
+}
+
+const BibliografiRouteWithChildren = BibliografiRoute._addFileChildren(
+  BibliografiRouteChildren,
+)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BibliografiRoute: BibliografiRouteWithChildren,
+  BiografiRoute: BiografiRoute,
+  GalleriRoute: GalleriRoute,
+  IntervjuerRoute: IntervjuerRoute,
+  KontaktRoute: KontaktRoute,
+  PressematerialeRoute: PressematerialeRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

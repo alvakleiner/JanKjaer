@@ -1,5 +1,8 @@
-﻿import BookPage from "../../components/BookPage"
+import { createFileRoute } from "@tanstack/react-router"
+import BookPage from "../../components/BookPage"
 import type { BookPageContent } from "../../components/BookPage"
+
+export const Route = createFileRoute("/bibliografi/tegn-til-kjaerlighet")({ component: TegnTilKjaerlighet })
 
 const tegnTilKjaerlighetContent: BookPageContent = {
   title: { no: "Tegn til kjærlighet", en: "Signs of Love" },
@@ -46,7 +49,7 @@ const tegnTilKjaerlighetContent: BookPageContent = {
   },
 }
 
-export default function tegnTilKjaerlighet() {
+export default function TegnTilKjaerlighet() {
   return <BookPage content={tegnTilKjaerlighetContent
 
   } />

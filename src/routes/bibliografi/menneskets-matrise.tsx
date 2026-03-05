@@ -1,7 +1,10 @@
-﻿import BookLink from "../../components/BookLink"
+﻿import { createFileRoute } from "@tanstack/react-router"
+import BookLink from "../../components/BookLink"
 import { BookPageBody } from "../../components/BookPage"
 import type { BookPageContent } from "../../components/BookPage"
 import { useLanguage } from "../../context/LanguageContext"
+
+export const Route = createFileRoute("/bibliografi/menneskets-matrise")({ component: mennesketsMatrise })
 
 const mennesketsMatriseContent: BookPageContent = {
   title: { no: "Menneskets matrise", en: "The Matrix of Man" },

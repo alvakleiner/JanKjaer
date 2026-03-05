@@ -1,9 +1,12 @@
+import { createFileRoute } from "@tanstack/react-router"
 import { useState } from "react"
 import { useLanguage } from "../context/LanguageContext"
 import SEO from "../components/SEO"
 import Drawer, { renderArticle } from "../components/Drawer"
 import mmInterview from "../content/intervju/mmInterview"
 import tegnTilKjaerlighet from "../content/intervju/tegnTilKjaerlighet"
+
+export const Route = createFileRoute("/intervjuer")({ component: Intervjuer })
 
 export default function Intervjuer() {
   const { lang } = useLanguage()

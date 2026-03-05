@@ -1,7 +1,10 @@
-﻿import BookLink from "../../components/BookLink"
+﻿import { createFileRoute } from "@tanstack/react-router"
+import BookLink from "../../components/BookLink"
 import { BookPageBody } from "../../components/BookPage"
 import type { BookPageContent } from "../../components/BookPage"
 import { useLanguage } from "../../context/LanguageContext"
+
+export const Route = createFileRoute("/bibliografi/menneskets-nett")({ component: mennesketsNett })
 
 const mennesketsNettContent: BookPageContent = {
   title: { no: "Menneskets nett", en: "The Human Web" },

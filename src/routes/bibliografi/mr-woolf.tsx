@@ -1,4 +1,6 @@
-import { useLocation } from "@tanstack/react-router"
+import { createFileRoute, useLocation } from "@tanstack/react-router"
+
+export const Route = createFileRoute("/bibliografi/mr-woolf")({ component: MrWoolf })
 import { useLanguage } from "../../context/LanguageContext"
 import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
 import SEO, { SITE_URL } from "../../components/SEO"

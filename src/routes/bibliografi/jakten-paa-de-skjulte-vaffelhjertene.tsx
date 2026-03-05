@@ -1,6 +1,9 @@
-﻿import { BookPageBody } from "../../components/BookPage"
+﻿import { createFileRoute } from "@tanstack/react-router"
+import { BookPageBody } from "../../components/BookPage"
 import type { BookPageContent } from "../../components/BookPage"
 import { useLanguage } from "../../context/LanguageContext"
+
+export const Route = createFileRoute("/bibliografi/jakten-paa-de-skjulte-vaffelhjertene")({ component: JaktenPaDeSkjulteVaffelhjertene })
 
 const JaktenPaDeSkjulteVaffelhjerteneContent: BookPageContent = {
   title: { no: "Jakten på de skjulte vaffelhjertene", en: "The Hunt for the Hidden Waffle Hearts" },

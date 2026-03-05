@@ -2,6 +2,10 @@ import { useLanguage } from "../context/LanguageContext"
 import { Download, X } from "lucide-react"
 import { useState } from "react"
 import SEO from "../components/SEO"
+import { createFileRoute } from "@tanstack/react-router"
+
+
+export const Route = createFileRoute("/pressemateriale")({ component: Pressemateriale })
 
 const photos = [
   {

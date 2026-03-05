@@ -1,5 +1,8 @@
+import { createFileRoute } from "@tanstack/react-router"
 import { useLanguage } from "../context/LanguageContext"
 import SEO from "../components/SEO"
+
+export const Route = createFileRoute("/galleri")({ component: Galleri })
 
 export default function Galleri() {
   const { lang } = useLanguage()

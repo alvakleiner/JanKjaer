@@ -1,7 +1,10 @@
-﻿import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
+﻿import { createFileRoute } from "@tanstack/react-router"
+import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
 import type { BookPageContent } from "../../components/BookPage"
 import { useLanguage } from "../../context/LanguageContext"
 import TrilogyBooks from "../../components/TrilogyBooks"
+
+export const Route = createFileRoute("/bibliografi/erobreren")({ component: Erobreren })
 import { transformatorNo, transformatorEn } from "../../content/bibliografi/erobreren/excerpts"
 import Drawer, { renderArticle } from "../../components/Drawer"
 import { useState } from "react"

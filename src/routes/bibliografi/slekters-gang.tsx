@@ -1,5 +1,9 @@
-﻿import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
+import { createFileRoute } from "@tanstack/react-router"
+import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
 import type { BookPageContent } from "../../components/BookPage"
+
+export const Route = createFileRoute("/bibliografi/slekters-gang")({ component: SlektersGang })
+
 
 const content: BookPageContent = {
   title: { no: "Slekters gang", en: "The Path of Kins" },

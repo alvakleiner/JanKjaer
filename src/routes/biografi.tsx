@@ -1,3 +1,4 @@
+import { createFileRoute } from "@tanstack/react-router"
 import React, { useState } from "react"
 import { useLanguage } from "../context/LanguageContext"
 import ImageSlider from "../content/biografi/ImageSlider"
@@ -6,6 +7,8 @@ import AwardsTimeline from "../components/AwardsTimeline"
 import BookLink from "../components/BookLink"
 import Drawer, { renderArticle } from "../components/Drawer"
 import SEO from "../components/SEO"
+
+export const Route = createFileRoute("/biografi")({ component: Biografi })
 
 function Biografi() {
   const { lang } = useLanguage()
