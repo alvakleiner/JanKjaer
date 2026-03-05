@@ -12,7 +12,7 @@ const images = [
   },
   {
     src: "/images/jan-m-camus.jpg",
-    caption: { no: "Jan Kjærstad hjemme på Holtet i Oslo sammen med hunden Camus, oppkalt etter den franske forfatteren Albert Camus. Foto: Klassekampen", en: "Jan Kjærstad pictured at home with his dog Camus, named after the French writer Albert Camus. Photo: Klassekampen" },
+    caption: { no: "Jan Kjærstad hjemme på Holtet i Oslo sammen med hunden Camus, oppkalt etter den franske forfatteren Albert Camus. Foto: Anniken C. Mohr / Klassekampen", en: "Jan Kjærstad pictured at home with his dog Camus, named after the French writer Albert Camus. Photo: Klassekampen" },
   },
 ]
 

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import { Search, Globe, Check, X } from "lucide-react"
+import { Search, Globe, Check, X, Mail, FileText } from "lucide-react"
 import { useLanguage } from "../context/LanguageContext" // <- juster sti ved behov
 import SearchOverlay from "./SearchOverlay"
 import { search } from "../data/searchIndex"
@@ -194,12 +194,12 @@ function Header() {
       ))}
     </nav>
     <div
-      className={`fixed z-50 bg-white md:hidden transform transition-transform duration-300 ease-in-out ${
+      className={`fixed z-50 bg-white md:hidden flex flex-col transform transition-transform duration-300 ease-in-out ${
         menuOpen ? "translate-x-0" : "-translate-x-full"
       }`}
       style={{ top: headerHeight, left: 0, right: 0, bottom: 0 }}
     >
-      <nav className="flex flex-col px-8 mt-6">
+      <nav className="flex-1 flex flex-col px-8 mt-6 overflow-y-auto">
         {/* Inline search input */}
         <div className="flex items-center gap-3 border-b border-neutral-200 pb-4 mb-2">
           <Search size={18} className="text-neutral-400 shrink-0" strokeWidth={1.5} />
@@ -283,6 +283,47 @@ function Header() {
           </>
         )}
       </nav>
+
+      {/* Mobile menu footer */}
+      <div className="border-t border-neutral-100 px-8 py-6">
+        <ul className="space-y-3 text-sm text-neutral-500">
+          <li>
+            <a
+              href="mailto:jankjaer@online.no"
+              className="inline-flex items-center gap-3 hover:text-black transition"
+            >
+              <Mail size={16} strokeWidth={1.5} />
+              jankjaer@online.no
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/profile.php?id=100049340204345#"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-3 hover:text-black transition"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a
+              href="/pressemateriale"
+              onClick={() => setMenuOpen(false)}
+              className="inline-flex items-center gap-3 hover:text-black transition"
+            >
+              <FileText size={16} strokeWidth={1.5} />
+              {lang === "no" ? "Pressemateriale" : "Press material"}
+            </a>
+          </li>
+        </ul>
+        <p className="mt-4 text-xs text-neutral-400">
+          © {new Date().getFullYear()} Jan Kjærstad
+        </p>
+      </div>
     </div>
 
     </header>
