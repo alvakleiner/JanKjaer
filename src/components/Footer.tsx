@@ -1,5 +1,6 @@
 import { ArrowUp, Mail, Facebook, FileText } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
+import { Link } from "@tanstack/react-router";
 
 function Footer() {
   const { lang } = useLanguage();
@@ -46,13 +47,13 @@ function Footer() {
             </li>
 
             <li>
-              <a
-                href="/pressemateriale"
+              <Link
+                to="/pressemateriale"
                 className="inline-flex items-center gap-3 hover:text-white transition"
               >
                 <FileText size={18} strokeWidth={1.5} />
                 {content.press[lang]}
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

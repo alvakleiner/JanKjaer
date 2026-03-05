@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, linkOptions } from "@tanstack/react-router";
 import { useLanguage } from "../context/LanguageContext";
 import BookLink from "../components/BookLink";
 
@@ -11,16 +11,26 @@ const books = [
     title: "Menneskets bølger",
     year: "2022",
     src: "/images/menneskets-bolger.jpg",
-    href: "/bibliografi/menneskets-bolger",
+    link: linkOptions({ to: "/bibliografi/menneskets-bolger" }),
   },
   {
     title: "En tid for å leve",
     year: "2021",
     src: "/images/en-tid-for-a-leve.jpg",
-    href: "/bibliografi/en-tid-for-a-leve",
+    link: linkOptions({ to: "/bibliografi/en-tid-for-a-leve" }),
   },
-  { title: "Mr Woolf", year: "2019", src: "/images/mr-woolf.jpg", href: "/bibliografi/mr-woolf" },
-  { title: "Berge", year: "2017", src: "/images/berge.jpg", href: "/bibliografi/berge" },
+  {
+    title: "Mr Woolf",
+    year: "2019",
+    src: "/images/mr-woolf.jpg",
+    link: linkOptions({ to: "/bibliografi/mr-woolf" }),
+  },
+  {
+    title: "Berge",
+    year: "2017",
+    src: "/images/berge.jpg",
+    link: linkOptions({ to: "/bibliografi/berge" }),
+  },
 ];
 
 function Home() {
@@ -106,7 +116,7 @@ function Home() {
           <div className="grid grid-cols-1 md:grid-cols-[1fr_300px] gap-10 md:gap-14 items-center">
             {/* Bok – rett under tittelen på mobil */}
             <div className="flex justify-center order-1 md:order-2 md:justify-end">
-              <BookLink href="/bibliografi/valgdager" className="no-underline">
+              <BookLink link={{ to: "/bibliografi/valgdager" }} className="no-underline">
                 <img
                   src="/images/valgdager-3d.png"
                   alt="Valgdager (2024) - bokcover"
@@ -127,7 +137,7 @@ function Home() {
                             "
               >
                 <BookLink
-                  href="/bibliografi/valgdager"
+                  link={{ to: "/bibliografi/valgdager" }}
                   className="sm:no-underline decoration-[0.7px] [&_em]:not-italic"
                 >
                   {content.bookTitle[lang]}
@@ -160,7 +170,7 @@ function Home() {
                 {books.map((b) => (
                   <div key={b.year} className="flex-none snap-start w-40">
                     <div className="flex flex-col items-center">
-                      <BookLink href={b.href} className="no-underline">
+                      <BookLink link={b.link} className="no-underline">
                         <img src={b.src} alt={b.title} className="w-40 h-auto object-contain" />
                       </BookLink>
 
@@ -178,7 +188,7 @@ function Home() {
           <div className="hidden min-[800px]:grid grid-cols-4 justify-items-center gap-4 min-[900px]:gap-6 lg:gap-8">
             {books.map((b) => (
               <div key={b.year} className="flex flex-col items-center">
-                <BookLink href={b.href} className="no-underline">
+                <BookLink link={b.link} className="no-underline">
                   <img
                     src={b.src}
                     alt={b.title}

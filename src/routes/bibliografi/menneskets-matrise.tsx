@@ -57,7 +57,7 @@ export default function mennesketsMatrise() {
             ? "Menneskets matrise er ikke lenger i salg som egen bok, men tilgjengelig i essaysamlingen "
             : "The Matrix of Man is no longer available as a standalone book, but can be found in the essay collection "}{" "}
           <BookLink
-            href="/bibliografi/kjaerstads-matrise"
+            link={{ to: "/bibliografi/kjaerstads-matrise" }}
             className="font-['Lora',serif] text-base leading-7 tracking-[0.04em] text-black italic decoration-neutral-400 hover:decoration-neutral-800 transition"
           >
             {lang === "no" ? "Kjærstads matrise" : "The Matrix of Kjærstad"}

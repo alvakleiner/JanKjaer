@@ -24,7 +24,7 @@ export default function TrilogyBooks() {
       <div className="border-l-2 border-black/10 pl-5 space-y-4">
         <div>
           <BookLink
-            href="/bibliografi/forforeren"
+            link={{ to: "/bibliografi/forforeren" }}
             className="font-['Lora',serif] text-base leading-7 tracking-[0.04em] text-black italic decoration-neutral-400 hover:decoration-neutral-800 transition"
           >
             {lang === "no" ? "Forføreren" : "The Seducer"}
@@ -35,7 +35,7 @@ export default function TrilogyBooks() {
         </div>
         <div>
           <BookLink
-            href="/bibliografi/erobreren"
+            link={{ to: "/bibliografi/erobreren" }}
             className="font-['Lora',serif] text-base leading-7 tracking-[0.04em] text-black italic decoration-neutral-400 hover:decoration-neutral-800 transition"
           >
             {lang === "no" ? "Erobreren" : "The Conqueror"}
@@ -46,7 +46,7 @@ export default function TrilogyBooks() {
         </div>
         <div>
           <BookLink
-            href="/bibliografi/oppdageren"
+            link={{ to: "/bibliografi/oppdageren" }}
             className="font-['Lora',serif] text-base leading-7 tracking-[0.04em] text-black italic decoration-neutral-400 hover:decoration-neutral-800 transition"
           >
             {lang === "no" ? "Oppdageren" : "The Discoverer"}

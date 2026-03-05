@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import Drawer, { renderArticle } from "../components/Drawer";
@@ -53,12 +53,12 @@ export default function Intervjuer() {
             className="w-48 md:w-56 h-auto object-cover"
           />
           <p className="text-sm tracking-[0.04em] font-['Lora',serif] text-black/70 mt-2 self-start">
-            <a
-              href="/pressemateriale"
+            <Link
+              to="/pressemateriale"
               className="underline underline-offset-4 decoration-neutral-300 hover:decoration-neutral-700 transition"
             >
               Foto: Cato Lein
-            </a>
+            </Link>
           </p>
         </div>
 

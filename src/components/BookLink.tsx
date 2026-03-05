@@ -1,15 +1,16 @@
+import { Link, type LinkOptions } from "@tanstack/react-router";
 import React from "react";
 
 type BookLinkProps = {
-  href: string;
+  link: LinkOptions;
   children: React.ReactNode;
   className?: string;
 };
 
-export default function BookLink({ href, children, className = "" }: BookLinkProps) {
+export default function BookLink({ link, children, className = "" }: BookLinkProps) {
   return (
-    <a href={href} className={`underline underline-offset-4 ${className}`}>
+    <Link {...link} className={`underline underline-offset-4 ${className}`}>
       <em>{children}</em>
-    </a>
+    </Link>
   );
 }

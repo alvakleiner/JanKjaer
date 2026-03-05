@@ -3,13 +3,33 @@ import { Search, Globe, Check, X, Mail, FileText } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext"; // <- juster sti ved behov
 import SearchOverlay from "./SearchOverlay";
 import { search } from "../data/searchIndex";
-
+import { Link, linkOptions } from "@tanstack/react-router";
 const navLinks = [
-  { key: "bio", href: "/biografi", label: { no: "Biografi", en: "Biography" } },
-  { key: "biblio", href: "/bibliografi", label: { no: "Bibliografi", en: "Bibliography" } },
-  { key: "intervjuer", href: "/intervjuer", label: { no: "Intervjuer", en: "Interviews" } },
-  { key: "galleri", href: "/galleri", label: { no: "Galleri", en: "Gallery" } },
-  { key: "kontakt", href: "/kontakt", label: { no: "Kontakt", en: "Contact" } },
+  {
+    key: "bio",
+    link: linkOptions({ to: "/biografi" }),
+    label: { no: "Biografi", en: "Biography" },
+  },
+  {
+    key: "biblio",
+    link: linkOptions({ to: "/bibliografi" }),
+    label: { no: "Bibliografi", en: "Bibliography" },
+  },
+  {
+    key: "intervjuer",
+    link: linkOptions({ to: "/intervjuer" }),
+    label: { no: "Intervjuer", en: "Interviews" },
+  },
+  {
+    key: "galleri",
+    link: linkOptions({ to: "/galleri" }),
+    label: { no: "Galleri", en: "Gallery" },
+  },
+  {
+    key: "kontakt",
+    link: linkOptions({ to: "/kontakt" }),
+    label: { no: "Kontakt", en: "Contact" },
+  },
 ];
 
 function Header() {
@@ -95,13 +115,13 @@ function Header() {
           </div>
 
           <div className="shrink-0">
-            <a href="/" aria-label="Gå til forsiden" className="inline-block cursor-pointer">
+            <Link to="/" aria-label="Gå til forsiden" className="inline-block cursor-pointer">
               <img
                 src="/images/signatur.png"
                 alt="Jan Kjærstad (signatur)"
                 className="h-20 sm:h-24 md:h-28 max-w-md object-contain transition-opacity hover:opacity-80"
               />
-            </a>
+            </Link>
           </div>
 
           <div className="flex flex-1 justify-end items-start lg:px-4 md:px-4 py-2">
@@ -178,13 +198,13 @@ function Header() {
 
         <nav className="hidden md:flex justify-center md:gap-16 lg:gap-22 lg:p-4 md:p-2">
           {navLinks.map((link) => (
-            <a
+            <Link
+              {...link.link}
               key={link.key}
-              href={link.href}
               className="lg:text-base md:text-sm tracking-wide pt-2 text-gray-700 hover:text-black"
             >
               {link.label[lang]}
-            </a>
+            </Link>
           ))}
         </nav>
         <div
@@ -221,9 +241,9 @@ function Header() {
                 </p>
               ) : (
                 mobileResults.map((item) => (
-                  <a
+                  <Link
                     key={item.href}
-                    href={item.href}
+                    to={item.href}
                     onClick={() => {
                       setMenuOpen(false);
                       setMobileQuery("");
@@ -247,13 +267,13 @@ function Header() {
                         </p>
                       )}
                     </div>
-                  </a>
+                  </Link>
                 ))
               )
             ) : (
               <>
-                <a
-                  href="/"
+                <Link
+                  to="/"
                   onClick={() => setMenuOpen(false)}
                   className="
                 py-4
@@ -266,24 +286,16 @@ function Header() {
               "
                 >
                   {lang === "no" ? "Hjem" : "Home"}
-                </a>
+                </Link>
                 {navLinks.map((link) => (
-                  <a
+                  <Link
+                    {...link.link}
                     key={link.key}
-                    href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className="
-                  py-4
-                  text-xl
-                  tracking-[0.12em]
-                  uppercase
-                  font-['Playfair_Display_SC',serif]
-                  text-gray-700
-                  hover:text-black
-                "
+                    className="py-4 text-xl tracking-[0.12em] uppercase font-['Playfair_Display_SC',serif] text-gray-700 hover:text-black"
                   >
                     {link.label[lang]}
-                  </a>
+                  </Link>
                 ))}
               </>
             )}
@@ -325,14 +337,14 @@ function Header() {
                 </a>
               </li>
               <li>
-                <a
-                  href="/pressemateriale"
+                <Link
+                  to="/pressemateriale"
                   onClick={() => setMenuOpen(false)}
                   className="inline-flex items-center gap-3 hover:text-black transition"
                 >
                   <FileText size={16} strokeWidth={1.5} />
                   {lang === "no" ? "Pressemateriale" : "Press material"}
-                </a>
+                </Link>
               </li>
             </ul>
             <p className="mt-4 text-xs text-neutral-400">

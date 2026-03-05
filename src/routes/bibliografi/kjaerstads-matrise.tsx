@@ -61,7 +61,7 @@ export default function kjærstadsMatrise() {
         <div className="border-l-2 border-black/10 pl-5 space-y-4">
           <div>
             <BookLink
-              href="/bibliografi/menneskets-matrise"
+              link={{ to: "/bibliografi/menneskets-matrise" }}
               className="font-['Lora',serif] text-base leading-7 tracking-[0.04em] text-black italic decoration-neutral-400 hover:decoration-neutral-800 transition"
             >
               {lang === "no" ? "Menneskets matrise" : "The Matrix of Man"}
@@ -72,7 +72,7 @@ export default function kjærstadsMatrise() {
           </div>
           <div>
             <BookLink
-              href="/bibliografi/menneskets-felt"
+              link={{ to: "/bibliografi/menneskets-felt" }}
               className="font-['Lora',serif] text-base leading-7 tracking-[0.04em] text-black italic decoration-neutral-400 hover:decoration-neutral-800 transition"
             >
               {lang === "no" ? "Menneskets felt" : "The Human Sphere"}
@@ -83,7 +83,7 @@ export default function kjærstadsMatrise() {
           </div>
           <div>
             <BookLink
-              href="/bibliografi/menneskets-nett"
+              link={{ to: "/bibliografi/menneskets-nett" }}
               className="font-['Lora',serif] text-base leading-7 tracking-[0.04em] text-black italic decoration-neutral-400 hover:decoration-neutral-800 transition"
             >
               {lang === "no" ? "Menneskets nett" : "The Human Web"}

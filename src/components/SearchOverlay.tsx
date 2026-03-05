@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Search, X } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import { search } from "../data/searchIndex";
+import { Link } from "@tanstack/react-router";
 
 type Props = {
   open: boolean;
@@ -99,8 +100,8 @@ export default function SearchOverlay({ open, onClose }: Props) {
                 <ul>
                   {results.map((item, i) => (
                     <li key={item.href}>
-                      <a
-                        href={item.href}
+                      <Link
+                        to={item.href}
                         onClick={onClose}
                         className={`flex items-center gap-4 px-5 py-3 transition-colors duration-100 ${
                           i === activeIndex ? "bg-neutral-50" : "hover:bg-neutral-50"
@@ -125,7 +126,7 @@ export default function SearchOverlay({ open, onClose }: Props) {
                             </p>
                           )}
                         </div>
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

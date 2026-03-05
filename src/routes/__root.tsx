@@ -3,6 +3,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ScrollToTop from "../components/ScrollToTop";
 import { SeoInfo } from "../lib/seo";
+import { TanStackDevtools } from "@tanstack/react-devtools";
+import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -30,6 +32,14 @@ export const Route = createRootRoute({
       <main>
         <Outlet />
       </main>
+      <TanStackDevtools
+        plugins={[
+          {
+            name: "TanStack Router",
+            render: <TanStackRouterDevtoolsPanel />,
+          },
+        ]}
+      />
       <Footer />
     </>
   ),

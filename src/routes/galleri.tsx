@@ -56,7 +56,7 @@ export default function Galleri() {
     },
   ];
 
-  const seo = {
+  const _seo = {
     title: { no: "Galleri – Jan Kjærstad", en: "Gallery – Jan Kjærstad" },
     description: {
       no: "Bilder og fotografier av den norske forfatteren Jan Kjærstad.",

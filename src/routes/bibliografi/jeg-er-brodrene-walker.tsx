@@ -1,4 +1,4 @@
-﻿import { createFileRoute } from "@tanstack/react-router";
+﻿import { createFileRoute, Link } from "@tanstack/react-router";
 import { BookPageBody, BookPageQuotes } from "../../components/BookPage";
 import type { BookPageContent } from "../../components/BookPage";
 import { useLanguage } from "../../context/LanguageContext";
@@ -91,14 +91,12 @@ export default function JegErBrodreneWalker() {
             {lang === "no"
               ? "Aschehoug Agency har gitt ut en 19 siders brosjyre med informasjon om, og utdrag fra boken. Brosjyren er på engelsk og kan lastes ned fra "
               : "Aschehoug Agency has published a 19-page pamphlet with information about, and excerpts from, the book. The pamphlet is in English and can be downloaded from "}
-            <a
-              href="/pressemateriale"
-              target="_blank"
-              rel="noreferrer"
+            <Link
+              to="/pressemateriale"
               className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
             >
               {lang === "no" ? "Pressemateriale" : "Press material"}
-            </a>
+            </Link>
             .
           </p>
         </div>

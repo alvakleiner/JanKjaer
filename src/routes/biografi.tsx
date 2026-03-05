@@ -40,7 +40,7 @@ function Biografi() {
         </>,
         <>
           I 1980 debuterte Kjærstad som forfatter med novellesamlingen{" "}
-          <BookLink href="/Bibliografi/kloden-dreier-stille-rundt">
+          <BookLink link={{ to: "/bibliografi/kloden-dreier-stille-rundt" }}>
             Kloden dreier stille rundt
           </BookLink>
           . Før debuten hadde han også rukket å prøve seg i et par ganske ulike yrker: som postbud i
@@ -49,7 +49,7 @@ function Biografi() {
         </>,
         <>
           Kjærstads litterære gjennombrudd kom med romanen{" "}
-          <BookLink href="/Bibliografi/homo-falsus-eller-det-perfekte-mord">
+          <BookLink link={{ to: "/bibliografi/homo-falsus" }}>
             Homo Falsus eller det perfekte mord
           </BookLink>{" "}
           (1984). Romanen vakte oppmerksomhet for sin formbevisste konstruksjon og for hvordan den
@@ -73,17 +73,17 @@ function Biografi() {
         <>
           I 1990-årene skrev Kjærstad sin kanskje mest kjente verkrekke: en trilogi om TV-personen
           Jonas Wergeland bestående av{" "}
-          <BookLink href="/Bibliografi/forforeren">Forføreren</BookLink> (1993),{" "}
-          <BookLink href="/Bibliografi/erobreren">Erobreren</BookLink> (1996) og{" "}
-          <BookLink href="/Bibliografi/oppdageren">Oppdageren</BookLink> (1999). For Oppdageren ble
-          Jan Kjærstad tildelt Nordisk råds litteraturpris i 2001, en av de fremste anerkjennelsene
-          innen nordisk litteratur.
+          <BookLink link={{ to: "/bibliografi/forforeren" }}>Forføreren</BookLink> (1993),{" "}
+          <BookLink link={{ to: "/bibliografi/erobreren" }}>Erobreren</BookLink> (1996) og{" "}
+          <BookLink link={{ to: "/bibliografi/oppdageren" }}>Oppdageren</BookLink> (1999). For
+          Oppdageren ble Jan Kjærstad tildelt Nordisk råds litteraturpris i 2001, en av de fremste
+          anerkjennelsene innen nordisk litteratur.
         </>,
         <>
           Kjærstad skriver fortsatt, med{" "}
-          <BookLink href="/Bibliografi/valgdager">Valgdager</BookLink> (2024) som sin foreløpig
-          siste utgivelse. Romanene hans er oversatt til en rekke språk, og han regnes i dag som en
-          av de mest markante norske forfatterne i sin generasjon.
+          <BookLink link={{ to: "/bibliografi/valgdager" }}>Valgdager</BookLink> (2024) som sin
+          foreløpig siste utgivelse. Romanene hans er oversatt til en rekke språk, og han regnes i
+          dag som en av de mest markante norske forfatterne i sin generasjon.
         </>,
       ],
       en: [
@@ -96,7 +96,7 @@ function Biografi() {
         </>,
         <>
           In 1980, Kjærstad made his literary debut with the short-story collection{" "}
-          <BookLink href="/Bibliografi/kloden-dreier-stille-rundt">
+          <BookLink link={{ to: "/bibliografi/kloden-dreier-stille-rundt" }}>
             The Earth Turns Quietly Around
           </BookLink>
           . Before his debut, he had already tried his hand at a few very different jobs—from
@@ -106,9 +106,9 @@ function Biografi() {
         </>,
         <>
           His breakthrough came with{" "}
-          <BookLink href="/Bibliografi/homo-falsus-eller-det-perfekte-mord">
+          <BookLink link={{ to: "/bibliografi/homo-falsus" }}>
             Homo Falsus, or The Perfect Murder
-          </BookLink>{" "}
+          </BookLink>
           (1984). The novel drew attention for its carefully designed structure and its exploration
           of identity, storytelling, and truth, introducing themes that would become central to his
           work.
@@ -130,17 +130,17 @@ function Biografi() {
         <>
           In the 1990s, he wrote what is perhaps his best-known work: a trilogy about the TV figure
           Jonas Wergeland consisting of{" "}
-          <BookLink href="/Bibliografi/forforeren">The Seducer</BookLink> (1993),{" "}
-          <BookLink href="/Bibliografi/erobreren">The Conqueror</BookLink> (1996), and{" "}
-          <BookLink href="/Bibliografi/oppdageren">The Discoverer</BookLink> (1999). For The
-          Discoverer, he was awarded the Nordic Council’s Literature Prize in 2001, one of the most
-          prestigious literary prizes in the Nordic countries.
+          <BookLink link={{ to: "/bibliografi/forforeren" }}>The Seducer</BookLink> (1993),{" "}
+          <BookLink link={{ to: "/bibliografi/erobreren" }}>The Conqueror</BookLink> (1996), and{" "}
+          <BookLink link={{ to: "/bibliografi/oppdageren" }}>The Discoverer</BookLink> (1999). For
+          The Discoverer, he was awarded the Nordic Council’s Literature Prize in 2001, one of the
+          most prestigious literary prizes in the Nordic countries.
         </>,
         <>
           Kjærstad continues to write, with{" "}
-          <BookLink href="/Bibliografi/valgdager">Election Days</BookLink> (2024) as his most recent
-          publication to date. His novels have been translated into many languages, and he is widely
-          regarded as one of the most significant Norwegian writers of his generation.
+          <BookLink link={{ to: "/bibliografi/valgdager" }}>Election Days</BookLink> (2024) as his
+          most recent publication to date. His novels have been translated into many languages, and
+          he is widely regarded as one of the most significant Norwegian writers of his generation.
         </>,
       ],
     },
@@ -281,8 +281,8 @@ function Biografi() {
           description: (
             <>
               Jan Kjærstad fikk i 2001 Nordisk Råds Litteraturpris for{" "}
-              <BookLink href="/Bibliografi/oppdageren">Oppdageren</BookLink>, den siste romanen i
-              trilogien om Jonas Wergeland.
+              <BookLink link={{ to: "/bibliografi/oppdageren" }}>Oppdageren</BookLink>, den siste
+              romanen i trilogien om Jonas Wergeland.
             </>
           ),
         },
@@ -324,7 +324,7 @@ function Biografi() {
           description: (
             <>
               Mottok i 1984 Norsk Litteraturkritikerlags pris for{" "}
-              <BookLink href="/bibliografi/homo-falsus-eller-det-perfekte-mord">
+              <BookLink link={{ to: "/bibliografi/homo-falsus" }}>
                 Homo Falsus eller Det perfekte mord
               </BookLink>
               .
@@ -390,8 +390,8 @@ function Biografi() {
           description: (
             <>
               In 2001, Jan Kjærstad received the Nordic Council’s Literature Prize for{" "}
-              <BookLink href="/Bibliografi/oppdageren">The Discoverer</BookLink>, the final novel in
-              the Jonas Wergeland trilogy.
+              <BookLink link={{ to: "/bibliografi/oppdageren" }}>The Discoverer</BookLink>, the
+              final novel in the Jonas Wergeland trilogy.
             </>
           ),
         },
@@ -433,7 +433,7 @@ function Biografi() {
           description: (
             <>
               Received in 1984 for{" "}
-              <BookLink href="/Bibliografi/homo-falsus-eller-det-perfekte-mord">
+              <BookLink link={{ to: "/bibliografi/homo-falsus" }}>
                 Homo Falsus, or The Perfect Murder
               </BookLink>
               .
@@ -457,7 +457,7 @@ function Biografi() {
     },
   } as const;
 
-  const seo = {
+  const _seo = {
     title: { no: "Biografi – Jan Kjærstad", en: "Biography – Jan Kjærstad" },
     description: {
       no: "Les om Jan Kjærstads liv, forfatterskap og priser. Norsk forfatter og vinner av Nordisk råds litteraturpris 2001.",

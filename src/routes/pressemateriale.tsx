@@ -1,7 +1,7 @@
 import { useLanguage } from "../context/LanguageContext";
 import { Download, X } from "lucide-react";
 import { useState } from "react";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/pressemateriale")({
   component: Pressemateriale,
@@ -210,24 +210,24 @@ export default function Pressemateriale() {
                 <>
                   Aschehoug Agency har gitt ut en 19 siders brosjyre med informasjon om, og utdrag
                   fra,{" "}
-                  <a
-                    href="/bibliografi/jeg-er-brodrene-walker"
+                  <Link
+                    to="/bibliografi/jeg-er-brodrene-walker"
                     className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
                   >
                     <em>Jeg er brødrene Walker</em>
-                  </a>
+                  </Link>
                   . Brosjyren er på engelsk.
                 </>
               ) : (
                 <>
                   Aschehoug Agency has published a 19-page pamphlet with information about and
                   excerpts from{" "}
-                  <a
-                    href="/bibliografi/jeg-er-brodrene-walker"
+                  <Link
+                    to="/bibliografi/jeg-er-brodrene-walker"
                     className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
                   >
                     <em>I Am the Brothers Walker</em>
-                  </a>
+                  </Link>
                   . The pamphlet is in English.
                 </>
               )}
