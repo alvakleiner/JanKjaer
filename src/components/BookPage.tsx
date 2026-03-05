@@ -1,5 +1,5 @@
 import type { ReactNode } from "react"
-import { useLocation } from "react-router-dom"
+import { useLocation } from "@tanstack/react-router"
 import { useLanguage } from "../context/LanguageContext"
 import { searchItems } from "../data/searchIndex"
 import SEO, { SITE_URL } from "./SEO"

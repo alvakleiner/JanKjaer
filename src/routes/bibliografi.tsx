@@ -1,5 +1,4 @@
 import Collage from "../components/Collage"
-import { Link } from "react-router-dom"
 import { useLanguage } from "../context/LanguageContext"
 import SEO from "../components/SEO"
 
@@ -131,8 +130,8 @@ export default function Bibliografi() {
           {list.map((book, i) => (
             <div key={i} className="py-1">
               {book.slug ? (
-                <Link
-                  to={`/bibliografi/${book.slug}`}
+                <a
+                  href={`/bibliografi/${book.slug}`}
                   className="
                     underline
                     underline-offset-4
@@ -145,7 +144,7 @@ export default function Bibliografi() {
                   "
                 >
                   <em>{book.title}</em> - {book.meta}
-                </Link>
+                </a>
               ) : (
                 <span className="text-gray-700">
                   <em>{book.title}</em> - {book.meta}

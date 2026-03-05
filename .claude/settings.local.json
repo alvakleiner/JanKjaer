@@ -11,7 +11,9 @@
       "Bash(git push)",
       "Bash(git add vercel.json)",
       "Bash(grep -rn \"Mr\\\\. Woolf\\\\|Valgdager\\\\|Forføreren\\\\|Oppdageren\\\\|Erobreren\\\\|Forforeren\\\\|Speil\\\\|Berge\\\\|Rand\\\\b\\\\|Slekters\\\\|Normans\\\\|Walker\\\\|Mirandas\\\\|Kongen\\\\|Oppdageren\\\\|Tegn til\\\\|Menneskets\\\\|Homo Falsus\\\\|Det store\\\\|Kloden\\\\|Stein blir\\\\|Sheherasad\\\\|Kjaerstads\\\\|Kjærstads matrise\" pages/bibliografi/*.tsx)",
-      "Bash(npx eslint src/App.tsx)"
+      "Bash(npx eslint src/App.tsx)",
+      "WebFetch(domain:tanstack.com)",
+      "Bash(pnpm build)"
     ]
   }
 }

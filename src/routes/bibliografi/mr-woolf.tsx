@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom"
+import { useLocation } from "@tanstack/react-router"
 import { useLanguage } from "../../context/LanguageContext"
 import { BookPageBody, BookPageQuotes } from "../../components/BookPage"
 import SEO, { SITE_URL } from "../../components/SEO"
