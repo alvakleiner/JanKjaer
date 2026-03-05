@@ -11,6 +11,7 @@ const images = [
   },
   {
     src: "/images/jan-herfol.jpg",
+    srcSm: "/images/jan-herfol-sm.jpg",
     caption: {
       no: "Jan Kjærstad på Herføl, stedet hvor moren vokste opp. Barndomshjemmet til moren brukes i dag som sommerhus, og har vært et viktig arbeidssted for forfatteren. Foto: Frode Hansen / VG",
       en: "Jan Kjærstad on Herføl, where his mother grew up. The house is now used as a summer house and has been an important place of work for the author. Photo: Frode Hansen / VG",
@@ -18,6 +19,7 @@ const images = [
   },
   {
     src: "/images/jkeh.jpg",
+    srcSm: "/images/jkeh-sm.jpg",
     caption: {
       no: "Jan Kjærstad på kontoret hans i familiens tidligere hjem på Frogner i Oslo. Foto: Elin Høyland",
       en: "Jan Kjærstad pictured in his office at the family's previous home in Frogner, Oslo. Photo: Elin Høyland",
@@ -60,14 +62,16 @@ function ImageSlider() {
           onTouchStart={onTouchStart}
           onTouchEnd={onTouchEnd}
         >
-          <img
-            src={images[index].src}
-            alt={images[index].caption[lang]}
-            className="
-            h-full w-auto mx-auto object-contain
-            transition-opacity duration-300
-          "
-          />
+          <picture>
+            {images[index].srcSm && (
+              <source media="(max-width: 479px)" srcSet={images[index].srcSm} />
+            )}
+            <img
+              src={images[index].src}
+              alt={images[index].caption[lang]}
+              className="h-full w-auto mx-auto object-contain transition-opacity duration-300"
+            />
+          </picture>
         </div>
 
         {/* Piler – alltid utenfor bildet, fast plass */}
@@ -102,21 +106,23 @@ function ImageSlider() {
         </button>
       </div>
 
-      {/* Bildetekst */}
-      <p
-        className="
-        mt-6
-        sm:mt-8
-        text-center
-        text-[12px]
-        sm:text-sm
-        italic
-        tracking-[0.08em]
-        font-playfair-sc
-      "
-      >
-        {images[index].caption[lang]}
-      </p>
+      {/* Bildetekst – alle i samme grid-celle så høyden alltid = lengste tekst */}
+      <div className="mt-6 sm:mt-8 grid">
+        {images.map((img, i) => (
+          <p
+            key={i}
+            aria-hidden={i !== index}
+            style={{ gridArea: "1 / 1" }}
+            className={`
+              text-center text-[12px] sm:text-sm italic tracking-[0.08em] font-playfair-sc
+              transition-opacity duration-300
+              ${i === index ? "opacity-100" : "opacity-0 pointer-events-none"}
+            `}
+          >
+            {img.caption[lang]}
+          </p>
+        ))}
+      </div>
     </div>
   );
 }
