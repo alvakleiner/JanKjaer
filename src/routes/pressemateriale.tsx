@@ -2,8 +2,30 @@ import { useLanguage } from "../context/LanguageContext";
 import { Download, X } from "lucide-react";
 import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { SeoInfo } from "@/lib/seo";
 
 export const Route = createFileRoute("/pressemateriale")({
+  head: () => ({
+    title: "Jan Kjærstad – Pressemateriale",
+    links: [
+      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+    ],
+    meta: [
+      { charset: "UTF-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1.0" },
+      { name: "description", content: "Pressemateriale og pressebilder for journalister og medier om Jan Kjærstad." },
+      { property: "og:site_name", content: SeoInfo.name },
+      { property: "og:type", content: "website" },
+      { property: "og:title", content: "Jan Kjærstad – Pressemateriale" },
+      { property: "og:description", content: "Pressemateriale og pressebilder for journalister og medier om Jan Kjærstad." },
+      { property: "og:url", content: "https://jankjaerstad.no/pressemateriale" },
+      { property: "og:image", content: "https://jankjaerstad.no/images/press/jkmfs.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Jan Kjærstad – Pressemateriale" },
+      { name: "twitter:description", content: "Pressemateriale og pressebilder for journalister og medier om Jan Kjærstad." },
+      { name: "twitter:image", content: "https://jankjaerstad.no/images/press/jkmfs.png" },
+    ],
+  }),
   component: Pressemateriale,
 });
 
@@ -63,17 +85,6 @@ type Photo = (typeof photos)[number];
 export default function Pressemateriale() {
   const { lang } = useLanguage();
   const [selected, setSelected] = useState<Photo | null>(null);
-
-  const seo = {
-    title: {
-      no: "Pressemateriale – Jan Kjærstad",
-      en: "Press Material – Jan Kjærstad",
-    },
-    description: {
-      no: "Pressemateriale og pressebilder for journalister og medier om Jan Kjærstad.",
-      en: "Press material and press photos for journalists and media about Jan Kjærstad.",
-    },
-  } as const;
 
   return (
     <section className="bg-white">
