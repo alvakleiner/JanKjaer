@@ -302,15 +302,15 @@ function Header() {
           </nav>
 
           {/* Mobile menu footer */}
-          <div className="border-t border-neutral-100 px-8 py-6">
-            <ul className="space-y-3 text-sm text-neutral-500">
+          <div className="border-t border-neutral-100 px-8 py-4">
+            <ul className="flex gap-5 text-sm text-neutral-500">
               <li>
                 <a
                   href="mailto:jankjaer@online.no"
-                  className="inline-flex items-center gap-3 hover:text-black transition"
+                  className="inline-flex items-center gap-2 hover:text-black transition"
                 >
                   <Mail size={16} strokeWidth={1.5} />
-                  jankjaer@online.no
+                  E-post
                 </a>
               </li>
               <li>
@@ -318,7 +318,7 @@ function Header() {
                   href="https://www.facebook.com/profile.php?id=100049340204345#"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-3 hover:text-black transition"
+                  className="inline-flex items-center gap-2 hover:text-black transition"
                 >
                   <svg
                     width="16"
@@ -340,16 +340,13 @@ function Header() {
                 <Link
                   to="/pressemateriale"
                   onClick={() => setMenuOpen(false)}
-                  className="inline-flex items-center gap-3 hover:text-black transition"
+                  className="inline-flex items-center gap-2 hover:text-black transition"
                 >
                   <FileText size={16} strokeWidth={1.5} />
-                  {lang === "no" ? "Pressemateriale" : "Press material"}
+                  {lang === "no" ? "Presse" : "Press"}
                 </Link>
               </li>
             </ul>
-            <p className="mt-4 text-xs text-neutral-400">
-              © {new Date().getFullYear()} Jan Kjærstad
-            </p>
           </div>
         </div>
       </header>
