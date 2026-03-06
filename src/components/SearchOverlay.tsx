@@ -118,7 +118,7 @@ export default function SearchOverlay({ open, onClose }: Props) {
 
                         <div>
                           <p className="text-sm tracking-[0.04em] font-playfair">
-                            {item.subtitle ? <em>{item.title[lang]}</em> : item.title[lang]}
+                            {item.title[lang]}
                           </p>
                           {item.subtitle && (
                             <p className="text-xs text-neutral-400 tracking-[0.04em] font-lora mt-0.5">
