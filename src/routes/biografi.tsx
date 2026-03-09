@@ -532,7 +532,8 @@ function Biografi() {
                 text-xl
                 tracking-[0.12em]
                 font-playfair-sc
-                mt-16
+                md:mt-16
+                mt-14
                 mb-6
               "
             >
