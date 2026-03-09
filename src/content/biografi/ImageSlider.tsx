@@ -21,8 +21,8 @@ const images = [
     src: "/images/jkeh.jpg",
     srcSm: "/images/jkeh-sm.jpg",
     caption: {
-      no: "Jan Kjærstad på kontoret i familiens tidligere hjem på Frogner i Oslo. Foto: Elin Høyland",
-      en: "Jan Kjærstad pictured in the office in the family's previous home in Frogner, Oslo. Photo: Elin Høyland",
+      no: "Jan Kjærstad på kontoret i familiens tidligere hjem på Uranienborg i Oslo. Foto: Elin Høyland",
+      en: "Jan Kjærstad pictured in the office in the family's previous home in Uranienborg, Oslo. Photo: Elin Høyland",
     },
   },
 ];

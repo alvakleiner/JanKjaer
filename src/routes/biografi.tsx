@@ -117,10 +117,9 @@ function Biografi() {
           <BookLink link={{ to: "/bibliografi/kloden-dreier-stille-rundt" }}>
             The Earth Turns Quietly Around
           </BookLink>
-          . Before his debut he had already tried his hand at various jobs: clearing
-          tables at the Grand Hotel's Mirror Hall, working as a postman in Oslo, and
-          substituting as a teacher. He completed his military service in 1974–75 in
-          the signals company of Brigade North.
+          . Before his debut he had already tried his hand at various jobs: as a busboy at the Grand Hotel's Mirror Hall, as a postman in Oslo, and 
+          as a substitute teacher. He completed his military service in 1974–75 in
+          the signals company of Northern Brigade.
         </>,
         <>
           Kjærstad played classical piano for ten years and in the 1970s performed in
