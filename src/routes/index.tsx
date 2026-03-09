@@ -1,4 +1,5 @@
 import { createFileRoute, linkOptions } from "@tanstack/react-router";
+import { useRef, useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import BookLink from "../components/BookLink";
 
@@ -35,6 +36,16 @@ const books = [
 
 function Home() {
   const { lang } = useLanguage();
+  const [activeBook, setActiveBook] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  function onBooksScroll() {
+    const el = scrollRef.current;
+    if (!el) return;
+    const max = el.scrollWidth - el.clientWidth;
+    const index = Math.round((el.scrollLeft / max) * (books.length - 1));
+    setActiveBook(index);
+  }
 
   const content = {
     title: { no: "Nylige utgivelser", en: "Latest releases" },
@@ -155,7 +166,7 @@ function Home() {
         <div className="max-w-5xl mx-auto px-4 md:px-8 lg:px-8 xl:px-10">
           {/* < 800px: scroller */}
           <div className="min-[800px]:hidden -mt-8">
-            <div className="overflow-x-auto pb-4 [-webkit-overflow-scrolling:touch]">
+            <div ref={scrollRef} onScroll={onBooksScroll} className="overflow-x-auto pb-4 [-webkit-overflow-scrolling:touch] [&::-webkit-scrollbar]:hidden [scrollbar-width:none]">
               <div className="flex w-max min-w-full justify-center gap-6 px-6 snap-x snap-mandatory">
                 {books.map((b) => (
                   <div key={b.year} className="flex-none snap-start w-40">
@@ -171,6 +182,15 @@ function Home() {
                   </div>
                 ))}
               </div>
+            </div>
+            {/* Prikker */}
+            <div className="flex justify-center gap-1.5 mt-3">
+              {books.map((_, i) => (
+                <div
+                  key={i}
+                  className={`h-1 rounded-full transition-all duration-300 ${i === activeBook ? "w-4 bg-neutral-500" : "w-1 bg-neutral-300"}`}
+                />
+              ))}
             </div>
           </div>
 

@@ -322,9 +322,9 @@ export default function Intervjuer() {
         </Drawer>
 
         <div className="mt-12">
-          <img src="/images/jkeh.jpg" alt="" className="w-full h-auto" />
+          <img src="/images/jkks.jpg" alt="" className="w-full h-auto" />
           <p className="text-sm tracking-[0.04em] font-lora text-black/70 mt-4">
-            Foto: Elin Høyland
+            {lang === "no" ? "Foto: Kristin Svorte" : "Photo: Kristin Svorte"}
           </p>
         </div>
       </div>
