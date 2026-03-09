@@ -468,7 +468,7 @@ function Biografi() {
   return (
     <>
       {/* Hero / portrett */}
-      <div className="md:pb-10 pb-4 flex justify-center">
+      <div className="md:pb-10 pb-4 flex justify-center px-2 md:px-0">
         <div className="hidden sm:block">
           <img src="/images/hovedbilde-biografi-md.jpg" alt="portrett" />
         </div>
