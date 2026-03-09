@@ -33,114 +33,149 @@ function Biografi() {
     paragraphs1: {
       no: [
         <>
-          Jan Kjærstad ble født 6. mars 1953 i Oslo og vokste opp på Grorud sammen med moren, faren
-          og broren. Etter fullført grunnskole i Grorud-området fortsatte han studiene i Oslo. Han
-          gikk matematisk-naturvitenskapelig linje ved Oslo Katedralskole, før han senere studerte
-          teologi ved Universitetet i Oslo og tok cand.theol.-grad i 1979.
+          Jan Kjærstad ble født 6. mars 1953 i Oslo og vokste opp på Grorud. Etter
+          grunnskolen valgte han matematisk-naturvitenskapelig linje ved Oslo
+          Katedralskole og tok artium i 1972. Senere studerte han teologi ved
+          Universitetet i Oslo og tok embetseksamen i 1979.
         </>,
         <>
-          I 1980 debuterte Kjærstad som forfatter med novellesamlingen{" "}
+          Kjærstad debuterte som forfatter i 1980 med novellesamlingen{" "}
           <BookLink link={{ to: "/bibliografi/kloden-dreier-stille-rundt" }}>
             Kloden dreier stille rundt
           </BookLink>
-          . Før debuten hadde han også rukket å prøve seg i et par ganske ulike yrker: som postbud i
-          Oslo og som ryddegutt i Speilsalen på Grand Hotel. I tillegg tjenestegjorde han i
-          militæret fra 1974 til 1975 i Sambandet ved Brigade Nord.
+          . Før debuten rakk han å prøve seg i ulike yrker: som ryddegutt i Speilsalen
+          på Grand Hotel, som postbud i Oslo 9, og som lærervikar. Han avtjente
+          førstegangstjenesten i 1974–75 i Sambandskompaniet, Brigade Nord.
         </>,
         <>
-          Kjærstads litterære gjennombrudd kom med romanen{" "}
+          Kjærstad har spilt klassisk piano i ti år, og på 1970-tallet spilte han i
+          flere band, som gitarist og keyboardist. Musikk har en fremtredende plass i
+          bøkene hans.
+        </>,
+        <>
+          Kjærstad fikk sitt litterære gjennombrudd med romanen{" "}
           <BookLink link={{ to: "/bibliografi/homo-falsus" }}>
-            Homo Falsus eller det perfekte mord
+            Homo Falsus
           </BookLink>{" "}
-          (1984). Romanen vakte oppmerksomhet for sin formbevisste konstruksjon og for hvordan den
-          utforsker identitet, fortelling og sannhet, og den pekte ut en retning som skulle bli
-          viktig i forfatterskapet.
+          (1984), som også innbrakte ham Kritikerprisen. Romanen vakte oppmerksomhet
+          for sin formbevisste konstruksjon og for hvordan den utforsker identitet,
+          fortelling og sannhet. Skrivemåten pekte ut en retning som skulle bli viktig
+          i forfatterskapet.
         </>,
         <>
-          Fra 1985 til 1989 var Kjærstad redaktør for Gyldendals litterære tidsskrift Vinduet. Her
-          bidro han til å forme litterær debatt, både gjennom redaksjonelt arbeid og egne tekster.
-          Noen av bidragene hans finner du digitalt{" "}
-          <a
-            href="https://www.vinduet.no/bidragsytere/jan-kjaerstad"
+          Fra 1985 til 1989 var Kjærstad redaktør for Vinduet, Gyldendals litterære
+          tidsskrift. Her bidro han til å forme litterær debatt, både gjennom
+          redaksjonelt arbeid og egne tekster. Noen av bidragene hans finner du
+          digitalt{" "}
+          
+          <a href="https://www.vinduet.no/bidragsytere/jan-kjaerstad"
             target="_blank"
             rel="noreferrer"
             className="underline underline-offset-4"
           >
             her
           </a>
-          .
+          . Fra 1993 til 1997 var Kjærstad, sammen med Jon Fosse, redaktør for
+          tidsskriftet BØK.
         </>,
         <>
-          I 1990-årene skrev Kjærstad sin kanskje mest kjente verkrekke: en trilogi om TV-personen
-          Jonas Wergeland bestående av{" "}
-          <BookLink link={{ to: "/bibliografi/forforeren" }}>Forføreren</BookLink> (1993),{" "}
-          <BookLink link={{ to: "/bibliografi/erobreren" }}>Erobreren</BookLink> (1996) og{" "}
-          <BookLink link={{ to: "/bibliografi/oppdageren" }}>Oppdageren</BookLink> (1999). For
-          Oppdageren ble Jan Kjærstad tildelt Nordisk råds litteraturpris i 2001, en av de fremste
-          anerkjennelsene innen nordisk litteratur.
+          Fra 1989 til 1991 bodde Kjærstad sammen med familien i Zimbabwe, noe som ga
+          anledning til å utvikle nye ideer og andre perspektiver, ikke minst på
+          nasjonen Norge. Dette dannet et viktig grunnlag for den trilogien han skrev
+          om TV-personligheten Jonas Wergeland,{" "}
+          <BookLink link={{ to: "/bibliografi/forforeren" }}>Forføreren</BookLink>{" "}
+          (1993),{" "}
+          <BookLink link={{ to: "/bibliografi/erobreren" }}>Erobreren</BookLink>{" "}
+          (1996) og{" "}
+          <BookLink link={{ to: "/bibliografi/oppdageren" }}>Oppdageren</BookLink>{" "}
+          (1999). For Oppdageren fikk han Nordisk råds litteraturpris.
         </>,
         <>
-          Kjærstad skriver fortsatt, med{" "}
-          <BookLink link={{ to: "/bibliografi/valgdager" }}>Valgdager</BookLink> (2024) som sin
-          foreløpig siste utgivelse. Romanene hans er oversatt til en rekke språk, og han regnes i
-          dag som en av de mest markante norske forfatterne i sin generasjon.
+          På 2000-tallet har Kjærstad markert seg med en rekke nye utgivelser, samtidig
+          som han har deltatt i den offentlige debatten. Romanen{" "}
+          <BookLink link={{ to: "/bibliografi/berge" }}>Berge</BookLink> (2017) ble
+          utropt til Årets bok av VG. Kjærstads foreløpig seneste romaner er{" "}
+          <BookLink link={{ to: "/bibliografi/en-tid-for-a-leve" }}>
+            En tid for å leve
+          </BookLink>{" "}
+          (2021) og{" "}
+          <BookLink link={{ to: "/bibliografi/valgdager" }}>Valgdager</BookLink>{" "}
+          (2024). Ved siden av fire billedbøker for barn har han også gitt ut fem
+          essaysamlinger. Han regnes i dag som en av de mest toneangivende forfatterne
+          i sin generasjon.
         </>,
       ],
       en: [
         <>
-          Jan Kjærstad was born on 6 March 1953 in Oslo and grew up in Grorud with his mother,
-          father, and brother. After completing compulsory schooling in the Grorud area, he
-          continued his studies in Oslo. He attended the mathematics and natural sciences program at
-          Oslo Cathedral School and later studied theology at the University of Oslo, graduating
-          with a cand.theol. degree in 1979.
+          Jan Kjærstad was born on 6 March 1953 in Oslo and grew up in Grorud. After
+          compulsory schooling he attended the mathematics and natural sciences program
+          at Oslo Cathedral School, graduating in 1972. He later studied theology at
+          the University of Oslo, graduating in 1979.
         </>,
         <>
-          In 1980, Kjærstad made his literary debut with the short-story collection{" "}
+          Kjærstad made his literary debut in 1980 with the short-story collection{" "}
           <BookLink link={{ to: "/bibliografi/kloden-dreier-stille-rundt" }}>
             The Earth Turns Quietly Around
           </BookLink>
-          . Before his debut, he had already tried his hand at a few very different jobs—from
-          working as a mail carrier in Oslo to clearing tables in Speilsalen (“the Mirror Hall”) at
-          the Grand Hotel in Oslo. He also served in the military from 1974 to 1975 in the signals
-          branch connected to Brigade North.
+          . Before his debut he had already tried his hand at various jobs: clearing
+          tables at the Grand Hotel's Mirror Hall, working as a postman in Oslo, and
+          substituting as a teacher. He completed his military service in 1974–75 in
+          the signals company of Brigade North.
         </>,
         <>
-          His breakthrough came with{" "}
+          Kjærstad played classical piano for ten years and in the 1970s performed in
+          several bands as guitarist and keyboard player. Music plays a prominent role
+          throughout his books.
+        </>,
+        <>
+          His literary breakthrough came with the novel{" "}
           <BookLink link={{ to: "/bibliografi/homo-falsus" }}>
-            Homo Falsus, or The Perfect Murder
-          </BookLink>
-          (1984). The novel drew attention for its carefully designed structure and its exploration
-          of identity, storytelling, and truth, introducing themes that would become central to his
-          work.
+            Homo Falsus
+          </BookLink>{" "}
+          (1984), which also earned him the Norwegian Critics' Prize. The novel drew
+          attention for its carefully designed structure and its exploration of
+          identity, storytelling, and truth — a way of writing that would become
+          central to his authorship.
         </>,
         <>
-          From 1985 to 1989, Kjærstad was editor of Gyldendal’s literary journal Vinduet, helping
-          shape literary debate through both editorial work and his own writing. Some of his
-          contributions can be found digitally{" "}
-          <a
-            href="https://www.vinduet.no/bidragsytere/jan-kjaerstad"
+          From 1985 to 1989, Kjærstad was editor of Vinduet, Gyldendal's literary
+          journal, helping shape literary debate through both editorial work and his
+          own writing. Some of his contributions can be found digitally{" "}
+          
+          <a href="https://www.vinduet.no/bidragsytere/jan-kjaerstad"
             target="_blank"
             rel="noreferrer"
             className="underline underline-offset-4"
           >
             here
           </a>
-          .
+          . From 1993 to 1997, he co-edited the journal BØK together with Jon Fosse.
         </>,
         <>
-          In the 1990s, he wrote what is perhaps his best-known work: a trilogy about the TV figure
-          Jonas Wergeland consisting of{" "}
-          <BookLink link={{ to: "/bibliografi/forforeren" }}>The Seducer</BookLink> (1993),{" "}
-          <BookLink link={{ to: "/bibliografi/erobreren" }}>The Conqueror</BookLink> (1996), and{" "}
-          <BookLink link={{ to: "/bibliografi/oppdageren" }}>The Discoverer</BookLink> (1999). For
-          The Discoverer, he was awarded the Nordic Council’s Literature Prize in 2001, one of the
-          most prestigious literary prizes in the Nordic countries.
+          From 1989 to 1991, Kjærstad lived with his family in Zimbabwe, an experience
+          that opened up new ideas and perspectives — not least on Norway as a nation.
+          This formed an important foundation for the trilogy he wrote about TV
+          personality Jonas Wergeland:{" "}
+          <BookLink link={{ to: "/bibliografi/forforeren" }}>The Seducer</BookLink>{" "}
+          (1993),{" "}
+          <BookLink link={{ to: "/bibliografi/erobreren" }}>The Conqueror</BookLink>{" "}
+          (1996), and{" "}
+          <BookLink link={{ to: "/bibliografi/oppdageren" }}>The Discoverer</BookLink>{" "}
+          (1999). For The Discoverer he received the Nordic Council's Literature Prize.
         </>,
         <>
-          Kjærstad continues to write, with{" "}
-          <BookLink link={{ to: "/bibliografi/valgdager" }}>Election Days</BookLink> (2024) as his
-          most recent publication to date. His novels have been translated into many languages, and
-          he is widely regarded as one of the most significant Norwegian writers of his generation.
+          In the 2000s, Kjærstad has continued to publish widely while also
+          participating in public debate. His novel{" "}
+          <BookLink link={{ to: "/bibliografi/berge" }}>Berge</BookLink> (2017) was
+          named Book of the Year by VG. His most recent novels are{" "}
+          <BookLink link={{ to: "/bibliografi/en-tid-for-a-leve" }}>
+            A Time to Live
+          </BookLink>{" "}
+          (2021) and{" "}
+          <BookLink link={{ to: "/bibliografi/valgdager" }}>Election Days</BookLink>{" "}
+          (2024). In addition to four picture books for children, he has also published
+          five essay collections. He is widely regarded as one of the most influential
+          authors of his generation.
         </>,
       ],
     },

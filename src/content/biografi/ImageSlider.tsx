@@ -5,24 +5,24 @@ const images = [
   {
     src: "/images/jan-barn.jpg",
     caption: {
-      no: "Jan Kjærstad på 17. mai (1960) utenfor blokken i Hagelundveien der han vokste opp, rett ved «skråningen». Han begynte i 1. klasse samme høst. Foto: privat",
-      en: "Jan Kjærstad on 17th of May (1960) outside the apartment block in Hagelundveien where he grew up, right next to 'the slope'. He started first grade that same autumn. Photo: private",
+      no: "Jan Kjærstad på 17. mai (1960) utenfor blokken i Hagelundveien der han vokste opp. Han begynte i 1. klasse samme høst. Foto: privat",
+      en: "Jan Kjærstad on 17th of May (1960) outside the apartment block in Hagelundveien where he grew up. He started first grade that same autumn. Photo: private",
     },
   },
   {
     src: "/images/jan-herfol.jpg",
     srcSm: "/images/jan-herfol-sm.jpg",
     caption: {
-      no: "Jan Kjærstad på Herføl, stedet hvor moren vokste opp. Barndomshjemmet til moren brukes i dag som sommerhus, og har vært et viktig arbeidssted for forfatteren. Foto: Frode Hansen / VG",
-      en: "Jan Kjærstad on Herføl, where his mother grew up. The house is now used as a summer house and has been an important place of work for the author. Photo: Frode Hansen / VG",
+      no: "Jan Kjærstad på Herføl, stedet hvor moren vokste opp. Barndomshjemmet til moren brukes i dag som fritidsbolig og har vært et viktig arbeidssted for forfatteren. Foto: Frode Hansen / VG",
+      en: "Jan Kjærstad on Herføl, where his mother grew up. The house is now used as a vacation home and has been an important place of work for the author. Photo: Frode Hansen / VG",
     },
   },
   {
     src: "/images/jkeh.jpg",
     srcSm: "/images/jkeh-sm.jpg",
     caption: {
-      no: "Jan Kjærstad på kontoret hans i familiens tidligere hjem på Frogner i Oslo. Foto: Elin Høyland",
-      en: "Jan Kjærstad pictured in his office at the family's previous home in Frogner, Oslo. Photo: Elin Høyland",
+      no: "Jan Kjærstad på kontoret i familiens tidligere hjem på Frogner i Oslo. Foto: Elin Høyland",
+      en: "Jan Kjærstad pictured in the office in the family's previous home in Frogner, Oslo. Photo: Elin Høyland",
     },
   },
 ];
