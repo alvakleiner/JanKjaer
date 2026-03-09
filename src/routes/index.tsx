@@ -53,16 +53,6 @@ function Home() {
     },
   } as const;
 
-  const seo = {
-    title: {
-      no: "Jan Kjærstad – Storyteller",
-      en: "Jan Kjærstad – Storyteller",
-    },
-    description: {
-      no: "Den offisielle nettsiden til Jan Kjærstad – prisvinnende norsk forfatter.",
-      en: "The official website of Jan Kjærstad – award-winning Norwegian author.",
-    },
-  } as const;
 
   const jsonLd = {
     "@context": "https://schema.org",

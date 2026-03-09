@@ -260,7 +260,7 @@ export default function Pressemateriale() {
       {/* Lightbox */}
       {selected && (
         <div
-          className="fixed inset-0 z-[70] bg-black/70 flex items-center justify-center p-4"
+          className="fixed inset-0 z-70 bg-black/70 flex items-center justify-center p-4"
           onClick={() => setSelected(null)}
         >
           <div className="bg-white shadow-2xl w-auto" onClick={(e) => e.stopPropagation()}>
