@@ -6,6 +6,7 @@ import ScrollToTop from "../components/ScrollToTop";
 import { SeoInfo } from "../lib/seo";
 import { TanStackDevtools } from "@tanstack/react-devtools";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
+import { Analytics } from "@vercel/analytics/react";
 import "@/index.css";
 
 import type { ReactNode } from "react";
@@ -53,6 +54,7 @@ function RootComponent() {
         ]}
       />
       <Footer />
+      <Analytics />
     </RootDocument>
   );
 }
