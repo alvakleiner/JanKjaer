@@ -118,7 +118,7 @@ function Header() {
           </div>
 
           <div className="shrink-0">
-            <Link to="/" aria-label="Gå til forsiden" className="inline-block cursor-pointer">
+            <Link to="/" aria-label="Gå til forsiden" className="inline-block cursor-pointer" onClick={() => setMenuOpen(false)}>
               <img
                 src="/images/signatur.png"
                 alt="Jan Kjærstad (signatur)"
@@ -212,7 +212,7 @@ function Header() {
         </nav>
         <div
           className={`fixed z-50 bg-white md:hidden flex flex-col transform transition-transform duration-300 ease-in-out ${
-            menuOpen ? "translate-x-0" : "-translate-x-full"
+            menuOpen ? "translate-x-0 pointer-events-auto" : "-translate-x-full pointer-events-none"
           }`}
           style={{ top: headerHeight, left: 0, right: 0, bottom: 0 }}
         >
