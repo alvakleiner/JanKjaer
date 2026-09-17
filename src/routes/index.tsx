@@ -89,6 +89,7 @@ function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       {/* Hero / portrett */}
+      <h1 className="sr-only">Jan Kjærstad</h1>
       <div className="md:pb-10 pb-4 flex justify-center px-2 md:px-0">
         <div className="hidden sm:block">
           <img src="/images/pappa.jpg" alt="portrett" />
