@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useLanguage } from "../context/LanguageContext";
 import PageTitle from "../components/PageTitle";
 
@@ -29,14 +29,13 @@ export default function Kontakt() {
         <div className="flex flex-col items-center text-center md:flex-row md:items-center md:text-left md:gap-10">
           {/* Bilde */}
           <div className="shrink-0 mb-6 md:mb-0 w-2/3 md:w-auto mx-auto md:mx-0">
-            <img
-              src="/images/jk-haand.jpg"
-              alt=""
-              className="w-full md:w-auto md:h-80 h-auto block"
-            />
-            <p className="text-xs md:text-sm tracking-[0.04em] font-lora text-black/70 mt-3">
-              {lang === "no" ? "Foto: Line Møller / VG. Bildet kan ikke brukes av andre medier." : "Photo: Line Møller / VG. The image cannot be used by other media outlets."}
-            </p>
+            <Link to="/pressemateriale" className="block">
+              <img
+                src="/images/press/jkab1.jpg"
+                alt={lang === "no" ? "Pressemateriale" : "Press material"}
+                className="w-full md:w-auto md:h-80 h-auto block transition duration-300 hover:brightness-90"
+              />
+            </Link>
           </div>
 
           {/* Tekst */}
