@@ -90,7 +90,14 @@ function Header() {
 
   return (
     <>
-      <header ref={headerRef} className="bg-white pt-2 md:pb-8">
+      {/* Holder plassen til headeren mens den er festet øverst, så siden ikke hopper */}
+      {menuOpen && <div className="md:hidden" style={{ height: headerHeight }} />}
+      <header
+        ref={headerRef}
+        className={`bg-white pt-2 md:pb-8 ${
+          menuOpen ? "max-md:fixed max-md:top-0 max-md:inset-x-0 max-md:z-50" : ""
+        }`}
+      >
         <div className="flex justify-between p-4 pb-5 md:pb-0">
           <div className="flex-1 lg:px-4 md:px-4 py-2">
             <button
