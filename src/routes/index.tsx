@@ -118,7 +118,8 @@ function Home() {
                         font-medium
                         tracking-widest
                         font-playfair
-                        mb-16
+                        md:mb-16
+                        mb-13
                     "
           >
             {content.title[lang]}
@@ -165,7 +166,7 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="mt-16 mb-20">
+      <section className="md:mt-6 md:mb-22 mt-10 mb-18">
         <div className="max-w-5xl mx-auto px-4 md:px-8 lg:px-8 xl:px-10">
           {/* < 800px: scroller */}
           <div className="min-[800px]:hidden -mt-8">
