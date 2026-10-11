@@ -40,6 +40,7 @@ import { Route as BibliografiHosSheherasadFantasiensDronningRouteImport } from '
 import { Route as BibliografiHomoFalsusRouteImport } from './routes/bibliografi/homo-falsus'
 import { Route as BibliografiForforerenRouteImport } from './routes/bibliografi/forforeren'
 import { Route as BibliografiErobrerenRouteImport } from './routes/bibliografi/erobreren'
+import { Route as BibliografiEnVerdigSakForThomasHegelRouteImport } from './routes/bibliografi/en-verdig-sak-for-thomas-hegel'
 import { Route as BibliografiEnTidForALeveRouteImport } from './routes/bibliografi/en-tid-for-a-leve'
 import { Route as BibliografiDetStoreEventyretRouteImport } from './routes/bibliografi/det-store-eventyret'
 import { Route as BibliografiBergeRouteImport } from './routes/bibliografi/berge'
@@ -214,6 +215,12 @@ const BibliografiErobrerenRoute = BibliografiErobrerenRouteImport.update({
   path: '/bibliografi/erobreren',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BibliografiEnVerdigSakForThomasHegelRoute =
+  BibliografiEnVerdigSakForThomasHegelRouteImport.update({
+    id: '/bibliografi/en-verdig-sak-for-thomas-hegel',
+    path: '/bibliografi/en-verdig-sak-for-thomas-hegel',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const BibliografiEnTidForALeveRoute =
   BibliografiEnTidForALeveRouteImport.update({
     id: '/bibliografi/en-tid-for-a-leve',
@@ -242,6 +249,7 @@ export interface FileRoutesByFullPath {
   '/bibliografi/berge': typeof BibliografiBergeRoute
   '/bibliografi/det-store-eventyret': typeof BibliografiDetStoreEventyretRoute
   '/bibliografi/en-tid-for-a-leve': typeof BibliografiEnTidForALeveRoute
+  '/bibliografi/en-verdig-sak-for-thomas-hegel': typeof BibliografiEnVerdigSakForThomasHegelRoute
   '/bibliografi/erobreren': typeof BibliografiErobrerenRoute
   '/bibliografi/forforeren': typeof BibliografiForforerenRoute
   '/bibliografi/homo-falsus': typeof BibliografiHomoFalsusRoute
@@ -278,6 +286,7 @@ export interface FileRoutesByTo {
   '/bibliografi/berge': typeof BibliografiBergeRoute
   '/bibliografi/det-store-eventyret': typeof BibliografiDetStoreEventyretRoute
   '/bibliografi/en-tid-for-a-leve': typeof BibliografiEnTidForALeveRoute
+  '/bibliografi/en-verdig-sak-for-thomas-hegel': typeof BibliografiEnVerdigSakForThomasHegelRoute
   '/bibliografi/erobreren': typeof BibliografiErobrerenRoute
   '/bibliografi/forforeren': typeof BibliografiForforerenRoute
   '/bibliografi/homo-falsus': typeof BibliografiHomoFalsusRoute
@@ -315,6 +324,7 @@ export interface FileRoutesById {
   '/bibliografi/berge': typeof BibliografiBergeRoute
   '/bibliografi/det-store-eventyret': typeof BibliografiDetStoreEventyretRoute
   '/bibliografi/en-tid-for-a-leve': typeof BibliografiEnTidForALeveRoute
+  '/bibliografi/en-verdig-sak-for-thomas-hegel': typeof BibliografiEnVerdigSakForThomasHegelRoute
   '/bibliografi/erobreren': typeof BibliografiErobrerenRoute
   '/bibliografi/forforeren': typeof BibliografiForforerenRoute
   '/bibliografi/homo-falsus': typeof BibliografiHomoFalsusRoute
@@ -353,6 +363,7 @@ export interface FileRouteTypes {
     | '/bibliografi/berge'
     | '/bibliografi/det-store-eventyret'
     | '/bibliografi/en-tid-for-a-leve'
+    | '/bibliografi/en-verdig-sak-for-thomas-hegel'
     | '/bibliografi/erobreren'
     | '/bibliografi/forforeren'
     | '/bibliografi/homo-falsus'
@@ -389,6 +400,7 @@ export interface FileRouteTypes {
     | '/bibliografi/berge'
     | '/bibliografi/det-store-eventyret'
     | '/bibliografi/en-tid-for-a-leve'
+    | '/bibliografi/en-verdig-sak-for-thomas-hegel'
     | '/bibliografi/erobreren'
     | '/bibliografi/forforeren'
     | '/bibliografi/homo-falsus'
@@ -425,6 +437,7 @@ export interface FileRouteTypes {
     | '/bibliografi/berge'
     | '/bibliografi/det-store-eventyret'
     | '/bibliografi/en-tid-for-a-leve'
+    | '/bibliografi/en-verdig-sak-for-thomas-hegel'
     | '/bibliografi/erobreren'
     | '/bibliografi/forforeren'
     | '/bibliografi/homo-falsus'
@@ -462,6 +475,7 @@ export interface RootRouteChildren {
   BibliografiBergeRoute: typeof BibliografiBergeRoute
   BibliografiDetStoreEventyretRoute: typeof BibliografiDetStoreEventyretRoute
   BibliografiEnTidForALeveRoute: typeof BibliografiEnTidForALeveRoute
+  BibliografiEnVerdigSakForThomasHegelRoute: typeof BibliografiEnVerdigSakForThomasHegelRoute
   BibliografiErobrerenRoute: typeof BibliografiErobrerenRoute
   BibliografiForforerenRoute: typeof BibliografiForforerenRoute
   BibliografiHomoFalsusRoute: typeof BibliografiHomoFalsusRoute
@@ -708,6 +722,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BibliografiErobrerenRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/bibliografi/en-verdig-sak-for-thomas-hegel': {
+      id: '/bibliografi/en-verdig-sak-for-thomas-hegel'
+      path: '/bibliografi/en-verdig-sak-for-thomas-hegel'
+      fullPath: '/bibliografi/en-verdig-sak-for-thomas-hegel'
+      preLoaderRoute: typeof BibliografiEnVerdigSakForThomasHegelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/bibliografi/en-tid-for-a-leve': {
       id: '/bibliografi/en-tid-for-a-leve'
       path: '/bibliografi/en-tid-for-a-leve'
@@ -742,6 +763,8 @@ const rootRouteChildren: RootRouteChildren = {
   BibliografiBergeRoute: BibliografiBergeRoute,
   BibliografiDetStoreEventyretRoute: BibliografiDetStoreEventyretRoute,
   BibliografiEnTidForALeveRoute: BibliografiEnTidForALeveRoute,
+  BibliografiEnVerdigSakForThomasHegelRoute:
+    BibliografiEnVerdigSakForThomasHegelRoute,
   BibliografiErobrerenRoute: BibliografiErobrerenRoute,
   BibliografiForforerenRoute: BibliografiForforerenRoute,
   BibliografiHomoFalsusRoute: BibliografiHomoFalsusRoute,

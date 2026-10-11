@@ -7,6 +7,11 @@ export const Route = createFileRoute("/bibliografi/")({ component: Bibliografi }
 const books = {
   en: [
     {
+      title: "A Worthy Case for Thomas Hegel",
+      meta: "Novel (2026)",
+      link: linkOptions({ to: "/bibliografi/en-verdig-sak-for-thomas-hegel" }),
+    },
+    {
       title: "Election Days",
       meta: "Novel (2024)",
       link: linkOptions({ to: "/bibliografi/valgdager" }),
@@ -129,6 +134,11 @@ const books = {
   ],
 
   no: [
+    {
+      title: "En verdig sak for Thomas Hegel",
+      meta: "Roman (2026)",
+      link: linkOptions({ to: "/bibliografi/en-verdig-sak-for-thomas-hegel" }),
+    },
     {
       title: "Valgdager",
       meta: "Roman (2024)",
