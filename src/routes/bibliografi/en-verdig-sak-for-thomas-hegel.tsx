@@ -22,7 +22,7 @@ const content: BookPageContent = {
       diceImg: "/images/terningkast6.png",
     },
     {
-      text: "«Med En verdig sak for Thomas Hegel bekrefter Kjærstad at han befinner seg på den aller øverste hylla sett med både norske og fremmedlandske briller. Jan Kjærstad er en usedvanlig belest og kunnskapsrik forfatter innenfor en rekke felt. Det benytter han på et svært flott og klokt vis. Om det er egyptologi, whisky eller musikk - og mye mer - så vever Kjærstad det sammen på et vis som løfter denne overraskende fortellinga opp til en roman som er av sjelden kvalitet. (...) For meg er dette litteratur på aller øverste hylle. Jan Kjærstad bekrefter sitt mesterskap på overraskende og flott vis, med en mer enn verdig roman.»",
+      text: "«Med En verdig sak for Thomas Hegel bekrefter Kjærstad at han befinner seg på den aller øverste hylla sett med både norske og fremmedlandske briller. Jan Kjærstad er en usedvanlig belest og kunnskapsrik forfatter innenfor en rekke felt. Det benytter han på et svært flott og klokt vis. Om det er egyptologi, whisky eller musikk – og mye mer – så vever Kjærstad det sammen på et vis som løfter denne overraskende fortellinga opp til en roman som er av sjelden kvalitet. (...) For meg er dette litteratur på aller øverste hylle. Jan Kjærstad bekrefter sitt mesterskap på overraskende og flott vis, med en mer enn verdig roman.»",
       source: "Tor Hammerø, Nettavisen",
       diceImg: "/images/terningkast6.png",
     },
@@ -43,15 +43,24 @@ const content: BookPageContent = {
   paragraphs: {
     no: [
       "«TILLAT MEG å betvile kjærligheten. Jo jo, jeg vet at mange vil protestere, de fleste vil protestere, gjennom hele livet blir vi tutet ørene fulle med at kjærligheten utholder alt, tror alt, håper alt, tåler alt; jeg beklager hvis jeg tar fra noen illusjonen, men det er en løgn. Og jeg snakker av erfaring. Straks skal jeg få et nytt bevis.»",
-      "Slik begynner romanen om Thomas Hegel, som har to yrker. Han etterforsker utroskap og skriver sangtekster, og han vet godt at det ikke finnes et språk for kjærligheten. Romanen er rik, elegant og spennende - tidvis en slags spionroman, tidvis en kjærlighetsroman, tidvis en kjærlighetserklæring til Oslo, men aldri bare én av delene.",
+      "Slik begynner romanen om Thomas Hegel, som har to yrker. Han etterforsker utroskap og skriver sangtekster, og han vet godt at det ikke finnes et språk for kjærligheten. Romanen er rik, elegant og spennende – tidvis en slags spionroman, tidvis en kjærlighetsroman, tidvis en kjærlighetserklæring til Oslo, men aldri bare én av delene.",
       "Romanen tar leseren med inn i det gamle hovedpostkontoret i Oslo, der Thomas Hegel har sin leilighet, og hvor han i en kinkig sak kan finne støtte i noen dråper av den riktige whiskyen eller hente inspirasjon i bøker om det gamle Egypt.",
-      "Vi blir med inn i Rådhuset på en dag da mange par vier seg, vi besøker The Dubliner, stampuben, og blir presentert for den mystiske hjelperen Alice - på et punkt må også Thomas Hegel stevne møte med en gravejournalist på Aker Brygge.",
+      "Vi blir med inn i Rådhuset på en dag da mange par vier seg, vi besøker The Dubliner, stampuben, og blir presentert for den mystiske hjelperen Alice – på et punkt må også Thomas Hegel stevne møte med en gravejournalist på Aker Brygge.",
       "De to sakene Hegel jobber med, bringer ham til barer og kafeer, tennisbaner og spesialbutikker, museer, biblioteker og konsertlokaler, filmklubber og fester; av og til må han også følge etter personer gjennom byens gater.",
       "Hvilke er de vanligste motivene når en person bedrar ens partner? Og hvilke er de uvanlige? Hvorfor blir en utro ektefelle, som ellers lever et vanlig liv, plutselig så forbausende oppfinnsom?",
       "Leseren blir innviet i kunsten å skrive et brev og hvilke knep som gjelder når man skal skrive teksten til en kjærlighetssang som får folk til å gråte.",
       "Her er Thomas Hegel med sine egne ord: «De aller fleste forbrytelser er i bunn og grunn enkle, mord også. Jeg ville jobbe med noe virkelig komplisert. Kjærligheten.»"
     ],
-    en: ["Content in English missing. Please refer to the Norwegian version."],
+    en: [
+      "«ALLOW ME to doubt love. Yes yes, I know that many will protest, most will protest, throughout our lives we are told endlessly that love endures all things, believes all things, hopes all things, bears all things; I apologize if I am taking someone's illusion away, but it is a lie. And I speak from experience. In a moment I shall have new proof.»",
+      "This is how the novel about Thomas Hegel begins – a man with two professions. He investigates infidelity and writes song lyrics, and he knows all too well that there is no language for love. The novel is rich, elegant and gripping – at times a kind of spy novel, at times a love story, at times a declaration of love to Oslo, but never just one of these things.",
+      "The novel takes the reader into the old main post office in Oslo, where Thomas Hegel has his apartment, and where in a tricky case he may find support in a few drops of the right whisky or draw inspiration from books about ancient Egypt.",
+      "We accompany him into City Hall on a day when many couples are being married, we visit The Dubliner, the regular pub, and are introduced to the mysterious helper Alice – at one point Thomas Hegel must also arrange a meeting with an investigative journalist at Aker Brygge.",
+      "The two cases Hegel is working on take him to bars and cafés, tennis courts and specialist shops, museums, libraries and concert venues, film clubs and parties; occasionally he must also follow people through the streets of the city.",
+      "What are the most common motives when a person betrays their partner? And what are the unusual ones? Why does an unfaithful spouse, who otherwise leads an ordinary life, suddenly become so surprisingly inventive?",
+      "The reader is initiated into the art of writing a letter and the tricks that apply when composing the lyrics to a love song that makes people cry.",
+      "Here is Thomas Hegel in his own words: «The vast majority of crimes are essentially simple – murder too. I wanted to work with something truly complicated. Love.»"
+    ],
   },
 };
 

@@ -8,6 +8,12 @@ export const Route = createFileRoute("/")({
 });
 
 const books = [
+    {
+    title: "Valgdager",
+    year: "2024",
+    src: "/images/valgdager.jpg",
+    link: linkOptions({ to: "/bibliografi/valgdager" }),
+  },
   {
     title: "Menneskets bølger",
     year: "2022",
@@ -26,12 +32,6 @@ const books = [
     src: "/images/mr-woolf.jpg",
     link: linkOptions({ to: "/bibliografi/mr-woolf" }),
   },
-  {
-    title: "Berge",
-    year: "2017",
-    src: "/images/berge.jpg",
-    link: linkOptions({ to: "/bibliografi/berge" }),
-  },
 ];
 
 function Home() {
@@ -49,19 +49,29 @@ function Home() {
 
   const content = {
     title: { no: "Nylige utgivelser", en: "Latest releases" },
-    bookTitle: { no: "Valgdager (2024)", en: "Election Days (2024)" },
+    bookTitle: { no: "En verdig sak for Thomas Hegel (2026)", en: "A Worthy Case for Thomas Hegel (2026)" },
     paragraphs: {
-      no: [
-        "En sommerdag på Youngstorget, 1959. En liten gutt får en plomme og en femøring av statsminister Einar Gerhardsen. Mynten kjennes så behagelig i hånden, munnen renner nesten over av plommesaft. Gutten får en åpenbaring: én dag skal han bli en rik mann.",
-        "Femøringen er fra den flunkende nye myntserien til kong Olav, antakelig verdens vakreste, med dyremotiver på den ene siden. Må du ikke da få en kjærlighet til penger? Og må ikke denne mynten gjøre deg uovervinnelig når du kaster på stikka?",
-        "Hvordan kan man nå høyt opp og langt fram når man egentlig er utrygg og vil holde seg skjult for verden? Kan man grunnlegge sin rikdom på en femøring man har fått av Landsfaderen?",
-      ],
-      en: [
-        "A summer day at Oslo's main square, 1959. A little boy receives a plum and a small coin from the Prime Minister, Einar Gerhardsen. The coin feels so pleasant in his hand, his mouth almost overflows with plum juice. The boy has a revelation: one day he will become a rich man.",
-        "Election Days follows the life story of a private investor from the suburb of Groruddalen. The novel is built around six parliamentary elections, and in each part, an apartment, a house, or a cabin plays a central role. And a woman.",
-        "How can you reach great heights and go far when you are essentially insecure and want to stay hidden from the world? Can one build wealth on a coin given by the Father of the Nation?",
-      ],
-    },
+    no: [
+      "«TILLAT MEG å betvile kjærligheten. Jo jo, jeg vet at mange vil protestere, de fleste vil protestere, gjennom hele livet blir vi tutet ørene fulle med at kjærligheten utholder alt, tror alt, håper alt, tåler alt; jeg beklager hvis jeg tar fra noen illusjonen, men det er en løgn. Og jeg snakker av erfaring. Straks skal jeg få et nytt bevis.»",
+      "Slik begynner romanen om Thomas Hegel, som har to yrker. Han etterforsker utroskap og skriver sangtekster, og han vet godt at det ikke finnes et språk for kjærligheten. Romanen er rik, elegant og spennende – tidvis en slags spionroman, tidvis en kjærlighetsroman, tidvis en kjærlighetserklæring til Oslo, men aldri bare én av delene.",
+      "Romanen tar leseren med inn i det gamle hovedpostkontoret i Oslo, der Thomas Hegel har sin leilighet, og hvor han i en kinkig sak kan finne støtte i noen dråper av den riktige whiskyen eller hente inspirasjon i bøker om det gamle Egypt.",
+      "Vi blir med inn i Rådhuset på en dag da mange par vier seg, vi besøker The Dubliner, stampuben, og blir presentert for den mystiske hjelperen Alice – på et punkt må også Thomas Hegel stevne møte med en gravejournalist på Aker Brygge.",
+      "De to sakene Hegel jobber med, bringer ham til barer og kafeer, tennisbaner og spesialbutikker, museer, biblioteker og konsertlokaler, filmklubber og fester; av og til må han også følge etter personer gjennom byens gater.",
+      "Hvilke er de vanligste motivene når en person bedrar ens partner? Og hvilke er de uvanlige? Hvorfor blir en utro ektefelle, som ellers lever et vanlig liv, plutselig så forbausende oppfinnsom?",
+      "Leseren blir innviet i kunsten å skrive et brev og hvilke knep som gjelder når man skal skrive teksten til en kjærlighetssang som får folk til å gråte.",
+      "Her er Thomas Hegel med sine egne ord: «De aller fleste forbrytelser er i bunn og grunn enkle, mord også. Jeg ville jobbe med noe virkelig komplisert. Kjærligheten.»"
+    ],
+    en: [
+      "«ALLOW ME to doubt love. Yes yes, I know that many will protest, most will protest, throughout our lives we are told endlessly that love endures all things, believes all things, hopes all things, bears all things; I apologize if I am taking someone's illusion away, but it is a lie. And I speak from experience. In a moment I shall have new proof.»",
+      "This is how the novel about Thomas Hegel begins – a man with two professions. He investigates infidelity and writes song lyrics, and he knows all too well that there is no language for love. The novel is rich, elegant and gripping – at times a kind of spy novel, at times a love story, at times a declaration of love to Oslo, but never just one of these things.",
+      "The novel takes the reader into the old main post office in Oslo, where Thomas Hegel has his apartment, and where in a tricky case he may find support in a few drops of the right whisky or draw inspiration from books about ancient Egypt.",
+      "We accompany him into City Hall on a day when many couples are being married, we visit The Dubliner, the regular pub, and are introduced to the mysterious helper Alice – at one point Thomas Hegel must also arrange a meeting with an investigative journalist at Aker Brygge.",
+      "The two cases Hegel is working on take him to bars and cafés, tennis courts and specialist shops, museums, libraries and concert venues, film clubs and parties; occasionally he must also follow people through the streets of the city.",
+      "What are the most common motives when a person betrays their partner? And what are the unusual ones? Why does an unfaithful spouse, who otherwise leads an ordinary life, suddenly become so surprisingly inventive?",
+      "The reader is initiated into the art of writing a letter and the tricks that apply when composing the lyrics to a love song that makes people cry.",
+      "Here is Thomas Hegel in his own words: «The vast majority of crimes are essentially simple – murder too. I wanted to work with something truly complicated. Love.»"
+    ],
+  },
   } as const;
 
 
@@ -118,10 +128,10 @@ function Home() {
           <div className="grid grid-cols-1 md:grid-cols-[1fr_300px] gap-10 md:gap-14 items-center">
             {/* Bok – rett under tittelen på mobil */}
             <div className="flex justify-center order-1 md:order-2 md:justify-end">
-              <BookLink link={{ to: "/bibliografi/valgdager" }} className="no-underline">
+              <BookLink link={{ to: "/bibliografi/en-verdig-sak-for-thomas-hegel" }} className="no-underline">
                 <img
-                  src="/images/valgdager-3d.png"
-                  alt="Valgdager (2024) - bokcover"
+                  src="/images/thomas-hegel-3d.png"
+                  alt="A Worthy Case for Thomas Hegel (2026) - bokcover"
                   className="w-56 md:w-72 lg:w-64 h-auto object-contain"
                 />
               </BookLink>
@@ -139,7 +149,7 @@ function Home() {
                             "
               >
                 <BookLink
-                  link={{ to: "/bibliografi/valgdager" }}
+                  link={{ to: "/bibliografi/en-verdig-sak-for-thomas-hegel" }}
                   className="sm:no-underline decoration-[0.7px] [&_em]:not-italic"
                 >
                   {content.bookTitle[lang]}
