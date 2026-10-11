@@ -155,7 +155,7 @@ export default function NormansOmraade() {
               rel="noreferrer"
               className="underline underline-offset-4 decoration-neutral-400 hover:decoration-neutral-800 transition"
             >
-              Jan Kjærstad - Normans område
+              Jan Kjærstad – Normans område
             </a>
           </p>
           <p

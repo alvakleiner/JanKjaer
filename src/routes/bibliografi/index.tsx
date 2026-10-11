@@ -343,11 +343,11 @@ export default function Bibliografi() {
                     hover:text-black
                   "
                 >
-                  <em>{book.title}</em> - {book.meta}
+                  <em>{book.title}</em> – {book.meta}
                 </Link>
               ) : (
                 <span className="text-gray-700">
-                  <em>{book.title}</em> - {book.meta}
+                  <em>{book.title}</em> – {book.meta}
                 </span>
               )}
             </div>

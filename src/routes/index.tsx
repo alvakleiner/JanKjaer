@@ -132,7 +132,7 @@ function Home() {
               <BookLink link={{ to: "/bibliografi/en-verdig-sak-for-thomas-hegel" }} className="no-underline">
                 <img
                   src="/images/thomas-hegel-3d.png"
-                  alt="En verdig sak for Thomas Hegel (2026) - bokcover"
+                  alt="En verdig sak for Thomas Hegel (2026) – bokcover"
                   className="w-56 h-auto object-contain"
                 />
               </BookLink>
@@ -153,7 +153,7 @@ function Home() {
                     <BookLink link={{ to: "/bibliografi/en-verdig-sak-for-thomas-hegel" }} className="no-underline">
                       <img
                         src="/images/thomas-hegel-3d.png"
-                        alt="En verdig sak for Thomas Hegel (2026) - bokcover"
+                        alt="En verdig sak for Thomas Hegel (2026) – bokcover"
                         className="w-72 lg:w-64 h-auto object-contain"
                       />
                     </BookLink>

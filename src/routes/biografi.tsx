@@ -133,7 +133,7 @@ function Biografi() {
           </BookLink>{" "}
           (1984), which also earned him the Norwegian Critics' Prize. The novel drew
           attention for its carefully designed structure and its exploration of
-          identity, storytelling, and truth — a way of writing that would become
+          identity, storytelling, and truth – a way of writing that would become
           central to his authorship.
         </>,
         <>
@@ -152,7 +152,7 @@ function Biografi() {
         </>,
         <>
           From 1989 to 1991, Kjærstad lived with his family in Zimbabwe, an experience
-          that opened up new ideas and perspectives — not least on Norway as a nation.
+          that opened up new ideas and perspectives – not least on Norway as a nation.
           This formed an important foundation for the trilogy he wrote about TV
           personality Jonas Wergeland:{" "}
           <BookLink link={{ to: "/bibliografi/forforeren" }}>The Seducer</BookLink>{" "}

@@ -153,7 +153,7 @@ function Header() {
             <Link to="/" aria-label="Gå til forsiden" className="inline-block cursor-pointer" onClick={() => setMenuOpen(false)}>
               <img
                 src="/images/signatur.png"
-                alt="Jan Kjærstad - Storyteller"
+                alt="Jan Kjærstad – Storyteller"
                 className="h-[calc(80px-24px*var(--p))] sm:max-md:h-[calc(96px-40px*var(--p))] md:h-28 max-md:translate-y-[calc(-1px+5px*var(--p))] max-w-md object-contain transition-opacity hover:opacity-80"
               />
             </Link>

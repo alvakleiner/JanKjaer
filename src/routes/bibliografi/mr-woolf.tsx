@@ -73,10 +73,10 @@ const content = {
     ],
     en: [
       "Dear Reader,",
-      "This novel has a special background. Midway through the writing, while everything was still chaos and I was searching for a through-line for the story, my father died. He had reached the age of 99. So it was something one could live with. And yet. In the weeks that followed — most people will recognise the situation — I found myself sitting and wondering: Who was he?",
+      "This novel has a special background. Midway through the writing, while everything was still chaos and I was searching for a through-line for the story, my father died. He had reached the age of 99. So it was something one could live with. And yet. In the weeks that followed – most people will recognise the situation – I found myself sitting and wondering: Who was he?",
       "This is a book for my father. This is a book about my father.",
       "Even if not many will see it, Mr. Woolf is also an autobiographical novel.",
-      "When I was clearing out my father's house, I found a small suitcase containing my old toys. I picked up a Matchbox car — a moving van — and abracadabra. I was a boy again, sitting in the living room moving furniture from one rug to another; or rather, they weren't rugs, they were neighbourhoods in Oslo.",
+      "When I was clearing out my father's house, I found a small suitcase containing my old toys. I picked up a Matchbox car – a moving van – and abracadabra. I was a boy again, sitting in the living room moving furniture from one rug to another; or rather, they weren't rugs, they were neighbourhoods in Oslo.",
       "Join me in a small experiment: close your eyes and think of your favourite toy from childhood. Or imagine you are up in the attic and find one of your old toys. Then think of the universes that rise up inside you when you hold it in your hand. You will now have an idea of what Mr. Woolf is about.",
       "Yours sincerely, Jan Kjærstad",
     ],
