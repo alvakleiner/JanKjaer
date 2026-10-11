@@ -142,8 +142,8 @@ function Home() {
                 {content.bookTitle[lang]}
               </BookLink>
             </h3>
-            <div className="text-base leading-6 tracking-[0.04em] font-lora text-black space-y-6">
-              <div className="flex flex-col items-center md:float-right md:ml-10 md:mb-4 mb-8">
+            <div className="text-base leading-6 tracking-[0.04em] font-lora text-black space-y-6 overflow-hidden">
+              <div className="flex flex-col items-center md:float-right md:ml-10 md:mb-4 mb-8 w-full md:w-auto">
                 <BookLink link={{ to: "/bibliografi/en-verdig-sak-for-thomas-hegel" }} className="no-underline">
                   <img
                     src="/images/thomas-hegel-3d.png"

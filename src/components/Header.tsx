@@ -55,17 +55,36 @@ function Header() {
     return () => observer.disconnect();
   }, []);
 
+  // Krymp headeren på mobil i takt med scrollingen: --p går fra 0 til 1 over de første
+  // --shrink pikslene, og headeren blir like mange piksler lavere som man har scrollet.
+  // margin-bottom vokser like mye, så innholdet under ligger i ro og følger kanten nøyaktig.
+  useEffect(() => {
+    function onScroll() {
+      const el = headerRef.current;
+      if (!el) return;
+      const shrink = parseFloat(getComputedStyle(el).getPropertyValue("--shrink")) || 0;
+      const p = shrink ? Math.min(Math.max(window.scrollY / shrink, 0), 1) : 0;
+      el.style.setProperty("--p", String(p));
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, []);
+
+  // Lås scrolling mens menyen er åpen. Kun på <html>: settes overflow også på <body>,
+  // blir body en egen scrollcontainer, og den sticky headeren forsvinner ut av syne.
   useEffect(() => {
     if (menuOpen) {
-      document.body.style.overflow = "hidden";
       document.documentElement.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "";
       document.documentElement.style.overflow = "";
       setMobileQuery("");
     }
     return () => {
-      document.body.style.overflow = "";
       document.documentElement.style.overflow = "";
     };
   }, [menuOpen]);
@@ -90,21 +109,27 @@ function Header() {
 
   return (
     <>
-      {/* Holder plassen til headeren mens den er festet øverst, så siden ikke hopper */}
-      {menuOpen && <div className="md:hidden" style={{ height: headerHeight }} />}
       <header
         ref={headerRef}
-        className={`bg-white pt-2 md:pb-8 ${
-          menuOpen ? "max-md:fixed max-md:top-0 max-md:inset-x-0 max-md:z-50" : ""
-        }`}
+        className="relative bg-white pt-2 md:pb-8 max-md:sticky max-md:top-0 max-md:z-50 max-md:bg-transparent [--p:0] max-md:[--shrink:48] sm:max-md:[--shrink:64] max-md:mb-[calc(var(--shrink)*var(--p)*1px)]"
       >
-        <div className="flex justify-between p-4 pb-5 md:pb-0">
+        {/* Bakgrunn på mobil: lett gjennomsiktig med blur. Ligger i eget lag fordi
+            backdrop-filter på selve headeren ville ødelagt plasseringen av menyen (fixed). */}
+        <div
+          aria-hidden="true"
+          className={`md:hidden absolute inset-0 -z-10 backdrop-blur-md transition-colors duration-300 ${
+            menuOpen ? "bg-white" : "bg-white/85"
+          }`}
+        />
+        <div
+          className="flex justify-between px-4 md:pt-4 md:pb-0 max-md:pt-[calc(16px-12px*var(--p))] max-md:pb-[calc(20px-12px*var(--p))]"
+        >
           <div className="flex-1 lg:px-4 md:px-4 py-2">
             <button
               aria-label="Menu"
               aria-expanded={menuOpen}
               onClick={() => setMenuOpen((v) => !v)}
-              className="md:hidden p-2 rounded focus-visible:ring-2 focus-visible:ring-black flex flex-col justify-center gap-1.5 w-8 h-8 cursor-pointer"
+              className="md:hidden p-2 rounded focus-visible:ring-2 focus-visible:ring-black flex flex-col justify-center gap-1.5 w-8 h-8 scale-[0.85] cursor-pointer"
             >
               <span
                 className={`block h-px w-6 bg-black transition-all duration-300 origin-center ${
@@ -129,7 +154,7 @@ function Header() {
               <img
                 src="/images/signatur.png"
                 alt="Jan Kjærstad - Storyteller"
-                className="h-20 sm:h-24 md:h-28 max-w-md object-contain transition-opacity hover:opacity-80"
+                className="h-[calc(80px-24px*var(--p))] sm:max-md:h-[calc(96px-40px*var(--p))] md:h-28 max-md:translate-y-[calc(-1px+5px*var(--p))] max-w-md object-contain transition-opacity hover:opacity-80"
               />
             </Link>
           </div>
@@ -152,7 +177,7 @@ function Header() {
                 onClick={() => setLangOpen((v) => !v)}
                 className="p-2 rounded cursor-pointer focus-visible:ring-2 focus-visible:ring-black"
               >
-                <Globe size={22} strokeWidth={1.5} />
+                <Globe size={22} strokeWidth={1.5} className="max-md:size-[19px]" />
               </button>
 
               {langOpen && (
@@ -221,7 +246,8 @@ function Header() {
           className={`fixed z-50 bg-white md:hidden flex flex-col transform transition-transform duration-300 ease-in-out ${
             menuOpen ? "translate-x-0 pointer-events-auto" : "-translate-x-full pointer-events-none"
           }`}
-          style={{ top: headerHeight, left: 0, right: 0, bottom: 0 }}
+          // -1 px overlapp: headerhøyden kan være en brøkdel av en piksel, og da ble det en tynn glipe
+          style={{ top: headerHeight - 1, left: 0, right: 0, bottom: 0 }}
         >
           <nav className="flex-1 flex flex-col px-8 mt-6 overflow-y-auto">
             {/* Inline search input */}
