@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { searchItems } from "../data/searchIndex";
+import PageTitle from "./PageTitle";
 
 export type BookQuote = {
   text: ReactNode | { no: ReactNode; en: ReactNode };
@@ -73,6 +74,7 @@ export function BookPageBody({ content }: BookPageBodyProps) {
 
   return (
     <>
+      <PageTitle title={content.title} />
       <h2
         className="
           text-center

@@ -1,31 +1,18 @@
 import { useLanguage } from "../context/LanguageContext";
+import PageTitle from "../components/PageTitle";
 import { Download, X } from "lucide-react";
 import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { SeoInfo } from "@/lib/seo";
+import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/pressemateriale")({
-  head: () => ({
-    title: "Jan Kjærstad – Pressemateriale",
-    links: [
-      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
-    ],
-    meta: [
-      { charset: "UTF-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1.0" },
-      { name: "description", content: "Pressemateriale og pressebilder for journalister og medier om Jan Kjærstad." },
-      { property: "og:site_name", content: SeoInfo.name },
-      { property: "og:type", content: "website" },
-      { property: "og:title", content: "Jan Kjærstad – Pressemateriale" },
-      { property: "og:description", content: "Pressemateriale og pressebilder for journalister og medier om Jan Kjærstad." },
-      { property: "og:url", content: "https://jankjaerstad.no/pressemateriale" },
-      { property: "og:image", content: "https://jankjaerstad.no/images/press/jkmfs.png" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Jan Kjærstad – Pressemateriale" },
-      { name: "twitter:description", content: "Pressemateriale og pressebilder for journalister og medier om Jan Kjærstad." },
-      { name: "twitter:image", content: "https://jankjaerstad.no/images/press/jkmfs.png" },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      title: "Pressemateriale",
+      description: "Pressemateriale og pressebilder for journalister og medier om Jan Kjærstad.",
+      path: "/pressemateriale",
+      image: "https://jankjaerstad.no/images/press/jkmfs.png",
+    }),
   component: Pressemateriale,
 });
 
@@ -104,6 +91,7 @@ export default function Pressemateriale() {
 
   return (
     <section className="bg-white">
+      <PageTitle title={{ no: "Pressemateriale", en: "Press material" }} />
       <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 mt-2 md:mt-4 mb-18">
         <h2
           className="

@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useLanguage } from "../context/LanguageContext";
+import PageTitle from "../components/PageTitle";
 
 export const Route = createFileRoute("/kontakt")({ component: Kontakt });
 
@@ -8,6 +9,7 @@ export default function Kontakt() {
 
   return (
     <section className="bg-white">
+      <PageTitle title={{ no: "Kontakt", en: "Contact" }} />
       <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 mt-2 md:mt-4 mb-18">
         {/* h2 kun på mobil */}
         <h2

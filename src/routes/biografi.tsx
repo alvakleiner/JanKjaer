@@ -5,9 +5,20 @@ import ImageSlider from "../content/biografi/ImageSlider";
 import article from "../content/biografi/taraChanceArticle";
 import AwardsTimeline from "../components/AwardsTimeline";
 import BookLink from "../components/BookLink";
+import PageTitle from "../components/PageTitle";
 import Drawer, { renderArticle } from "../components/Drawer";
+import { pageHead } from "../lib/seo";
 
-export const Route = createFileRoute("/biografi")({ component: Biografi });
+export const Route = createFileRoute("/biografi")({
+  head: () =>
+    pageHead({
+      title: "Biografi",
+      description:
+        "Les om Jan Kjærstads liv, forfatterskap og priser. Norsk forfatter og vinner av Nordisk råds litteraturpris 2001.",
+      path: "/biografi",
+    }),
+  component: Biografi,
+});
 
 function Biografi() {
   const { lang } = useLanguage();
@@ -491,16 +502,9 @@ function Biografi() {
     },
   } as const;
 
-  const _seo = {
-    title: { no: "Biografi – Jan Kjærstad", en: "Biography – Jan Kjærstad" },
-    description: {
-      no: "Les om Jan Kjærstads liv, forfatterskap og priser. Norsk forfatter og vinner av Nordisk råds litteraturpris 2001.",
-      en: "Read about Jan Kjærstad's life, works and awards. Norwegian author and winner of the Nordic Council's Literature Prize 2001.",
-    },
-  } as const;
-
   return (
     <>
+      <PageTitle title={{ no: "Biografi", en: "Biography" }} />
       {/* Hero / portrett */}
       <div className="md:pb-10 pb-4 flex justify-center px-2 md:px-0">
         <div className="hidden sm:block">

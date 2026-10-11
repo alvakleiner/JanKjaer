@@ -1,11 +1,21 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
+import PageTitle from "../components/PageTitle";
 import Drawer, { renderArticle } from "../components/Drawer";
 import mmInterview from "../content/intervju/mmInterview";
 import tegnTilKjaerlighet from "../content/intervju/tegnTilKjaerlighet";
+import { pageHead } from "../lib/seo";
 
-export const Route = createFileRoute("/intervjuer")({ component: Intervjuer });
+export const Route = createFileRoute("/intervjuer")({
+  head: () =>
+    pageHead({
+      title: "Intervjuer",
+      description: "Utvalgte intervjuer med Jan Kjærstad om forfatterskap, bøker og litteratur.",
+      path: "/intervjuer",
+    }),
+  component: Intervjuer,
+});
 
 export default function Intervjuer() {
   const { lang } = useLanguage();
@@ -21,16 +31,9 @@ export default function Intervjuer() {
     ],
   };
 
-  const seo = {
-    title: { no: "Intervjuer – Jan Kjærstad", en: "Interviews – Jan Kjærstad" },
-    description: {
-      no: "Utvalgte intervjuer med Jan Kjærstad om forfatterskap, bøker og litteratur.",
-      en: "Selected interviews with Jan Kjærstad about writing, books and literature.",
-    },
-  } as const;
-
   return (
     <section className="bg-white">
+      <PageTitle title={{ no: "Intervjuer", en: "Interviews" }} />
       <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 mt-2 md:mt-4 mb-18">
         <h2
           className="

@@ -14,7 +14,6 @@ import {} from "@tanstack/react-router";
 
 export const Route = createRootRoute({
   head: () => ({
-    title: SeoInfo.title,
     links: [
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
     ],

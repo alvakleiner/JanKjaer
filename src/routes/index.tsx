@@ -2,6 +2,7 @@ import { createFileRoute, linkOptions } from "@tanstack/react-router";
 import { useRef, useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
 import BookLink from "../components/BookLink";
+import PageTitle from "../components/PageTitle";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -94,6 +95,7 @@ function Home() {
 
   return (
     <>
+      <PageTitle />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

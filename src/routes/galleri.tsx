@@ -1,7 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useLanguage } from "../context/LanguageContext";
+import PageTitle from "../components/PageTitle";
+import { pageHead } from "../lib/seo";
 
-export const Route = createFileRoute("/galleri")({ component: Galleri });
+export const Route = createFileRoute("/galleri")({
+  head: () =>
+    pageHead({
+      title: "Galleri",
+      description: "Bilder og fotografier av den norske forfatteren Jan Kjærstad.",
+      path: "/galleri",
+    }),
+  component: Galleri,
+});
 
 export default function Galleri() {
   const { lang } = useLanguage();
@@ -56,16 +66,9 @@ export default function Galleri() {
     },
   ];
 
-  const _seo = {
-    title: { no: "Galleri – Jan Kjærstad", en: "Gallery – Jan Kjærstad" },
-    description: {
-      no: "Bilder og fotografier av den norske forfatteren Jan Kjærstad.",
-      en: "Photos and images of Norwegian author Jan Kjærstad.",
-    },
-  } as const;
-
   return (
     <section className="bg-white">
+      <PageTitle title={{ no: "Galleri", en: "Gallery" }} />
       <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 mt-2 md:mt-4 mb-18">
         <h2
           className="
