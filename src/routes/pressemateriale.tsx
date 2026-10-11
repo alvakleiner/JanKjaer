@@ -31,6 +31,22 @@ export const Route = createFileRoute("/pressemateriale")({
 
 const photos = [
   {
+    src: "/images/press/jkab1.jpg",
+    photographer: "Agnete Brun",
+    photographerLink: "",
+    downloadHref: "/images/press/Jan-Kjaerstad-8.zip",
+    size: "4756 × 6041 px",
+    ppi: "300 ppi – RGB",
+  },
+  {
+    src: "/images/press/jkab2.jpg",
+    photographer: "Agnete Brun",
+    photographerLink: "",
+    downloadHref: "/images/press/Jan-Kjaerstad-9.zip",
+    size: "5323 × 6754 px",
+    ppi: "300 ppi – RGB",
+  },
+  {
     src: "/images/press/jkfr2.jpg",
     photographer: "Fartein Rudjord",
     photographerLink: "https://www.farteinrudjord.net/",
@@ -263,7 +279,7 @@ export default function Pressemateriale() {
           className="fixed inset-0 z-70 bg-black/70 flex items-center justify-center p-4"
           onClick={() => setSelected(null)}
         >
-          <div className="bg-white shadow-2xl w-auto" onClick={(e) => e.stopPropagation()}>
+          <div className="shadow-2xl w-auto" onClick={(e) => e.stopPropagation()}>
             <div className="relative">
               <img
                 src={selected.src}
@@ -280,7 +296,7 @@ export default function Pressemateriale() {
               </button>
             </div>
 
-            <div className="p-6 space-y-3">
+            <div className="bg-white p-6 space-y-3">
               <p className="font-playfair text-lg">
                 ©{" "}
                 {selected.photographerLink ? (
