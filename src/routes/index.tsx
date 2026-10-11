@@ -125,16 +125,18 @@ function Home() {
           </h2>
 
           {/* Grid */}
-          <div>
-            <h3
-              className="
-                uppercase
-                text-xl
-                tracking-[0.12em]
-                font-playfair-sc
-                mb-6
-              "
-            >
+          <div className="text-base leading-6 tracking-[0.04em] font-lora text-black space-y-6 overflow-hidden">
+            {/* < md: bildet står over tittelen */}
+            <div className="flex flex-col items-center mb-8 w-full md:hidden">
+              <BookLink link={{ to: "/bibliografi/en-verdig-sak-for-thomas-hegel" }} className="no-underline">
+                <img
+                  src="/images/thomas-hegel-3d.png"
+                  alt="En verdig sak for Thomas Hegel (2026) - bokcover"
+                  className="w-56 h-auto object-contain"
+                />
+              </BookLink>
+            </div>
+            <h3 className="uppercase text-xl tracking-[0.12em] font-playfair-sc mb-6">
               <BookLink
                 link={{ to: "/bibliografi/en-verdig-sak-for-thomas-hegel" }}
                 className="sm:no-underline decoration-[0.7px] [&_em]:not-italic"
@@ -142,21 +144,24 @@ function Home() {
                 {content.bookTitle[lang]}
               </BookLink>
             </h3>
-            <div className="text-base leading-6 tracking-[0.04em] font-lora text-black space-y-6 overflow-hidden">
-              <div className="flex flex-col items-center md:float-right md:ml-10 md:mb-4 mb-8 w-full md:w-auto">
-                <BookLink link={{ to: "/bibliografi/en-verdig-sak-for-thomas-hegel" }} className="no-underline">
-                  <img
-                    src="/images/thomas-hegel-3d.png"
-                    alt="En verdig sak for Thomas Hegel (2026) - bokcover"
-                    className="w-56 md:w-72 lg:w-64 h-auto object-contain"
-                  />
-                </BookLink>
-              </div>
-              {content.paragraphs[lang].map((p) => (
-                <p key={p}>{p}</p>
-              ))}
-              <div className="clear-both" />
-            </div>
+            {content.paragraphs[lang].map((p, i) => (
+              <p key={p}>
+                {/* ≥ md: bildet flyter til høyre fra første avsnitt, så toppen flukter med brødteksten */}
+                {i === 0 && (
+                  <span className="hidden md:block float-right ml-10 mb-4">
+                    <BookLink link={{ to: "/bibliografi/en-verdig-sak-for-thomas-hegel" }} className="no-underline">
+                      <img
+                        src="/images/thomas-hegel-3d.png"
+                        alt="En verdig sak for Thomas Hegel (2026) - bokcover"
+                        className="w-72 lg:w-64 h-auto object-contain"
+                      />
+                    </BookLink>
+                  </span>
+                )}
+                {p}
+              </p>
+            ))}
+            <div className="clear-both" />
           </div>
         </div>
       </section>
