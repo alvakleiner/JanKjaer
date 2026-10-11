@@ -125,50 +125,37 @@ function Home() {
           </h2>
 
           {/* Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_300px] gap-10 md:gap-14 items-center">
-            {/* Bok – rett under tittelen på mobil */}
-            <div className="flex justify-center order-1 md:order-2 md:justify-end">
-              <BookLink link={{ to: "/bibliografi/en-verdig-sak-for-thomas-hegel" }} className="no-underline">
-                <img
-                  src="/images/thomas-hegel-3d.png"
-                  alt="A Worthy Case for Thomas Hegel (2026) - bokcover"
-                  className="w-56 md:w-72 lg:w-64 h-auto object-contain"
-                />
+          <div>
+            <h3
+              className="
+                uppercase
+                text-xl
+                tracking-[0.12em]
+                font-playfair-sc
+                mb-6
+              "
+            >
+              <BookLink
+                link={{ to: "/bibliografi/en-verdig-sak-for-thomas-hegel" }}
+                className="sm:no-underline decoration-[0.7px] [&_em]:not-italic"
+              >
+                {content.bookTitle[lang]}
               </BookLink>
-            </div>
-
-            {/* Tekst */}
-            <div className="order-2 md:order-1">
-              <h3
-                className="
-                                uppercase
-                                text-xl
-                                tracking-[0.12em]
-                                font-playfair-sc
-                                mb-6
-                            "
-              >
-                <BookLink
-                  link={{ to: "/bibliografi/en-verdig-sak-for-thomas-hegel" }}
-                  className="sm:no-underline decoration-[0.7px] [&_em]:not-italic"
-                >
-                  {content.bookTitle[lang]}
+            </h3>
+            <div className="text-base leading-6 tracking-[0.04em] font-lora text-black space-y-6">
+              <div className="flex flex-col items-center md:float-right md:ml-10 md:mb-4 mb-8">
+                <BookLink link={{ to: "/bibliografi/en-verdig-sak-for-thomas-hegel" }} className="no-underline">
+                  <img
+                    src="/images/thomas-hegel-3d.png"
+                    alt="En verdig sak for Thomas Hegel (2026) - bokcover"
+                    className="w-56 md:w-72 lg:w-64 h-auto object-contain"
+                  />
                 </BookLink>
-              </h3>
-              <div
-                className="
-                            text-base
-                            leading-6
-                            tracking-[0.04em]
-                            font-lora
-                            text-black
-                            space-y-6
-                        "
-              >
-                {content.paragraphs[lang].map((p) => (
-                  <p key={p}>{p}</p>
-                ))}
               </div>
+              {content.paragraphs[lang].map((p) => (
+                <p key={p}>{p}</p>
+              ))}
+              <div className="clear-both" />
             </div>
           </div>
         </div>
