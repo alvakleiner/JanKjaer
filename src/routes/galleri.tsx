@@ -70,8 +70,7 @@ export default function Galleri() {
         <h2
           className="
             text-center
-            text-[20px]
-            sm:text-2xl
+            text-2xl
             font-medium
             tracking-widest
             font-playfair

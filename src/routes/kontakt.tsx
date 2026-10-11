@@ -14,7 +14,7 @@ export default function Kontakt() {
           className="
             md:hidden
             text-center
-            text-[20px]
+            text-2xl
             font-medium
             tracking-widest
             font-playfair

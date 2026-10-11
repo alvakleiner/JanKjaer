@@ -107,7 +107,7 @@ export default function Pressemateriale() {
       <div className="max-w-3xl mx-auto px-4 md:px-8 lg:px-12 mt-2 md:mt-4 mb-18">
         <h2
           className="
-          text-center text-[20px] sm:text-2xl font-medium tracking-widest
+          text-center text-2xl font-medium tracking-widest
           font-playfair mb-8 md:mb-10
         "
         >
