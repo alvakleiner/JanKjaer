@@ -95,12 +95,12 @@ function Biografi() {
           som han har deltatt i den offentlige debatten. Romanen{" "}
           <BookLink link={{ to: "/bibliografi/berge" }}>Berge</BookLink> (2017) ble
           utropt til Årets bok av VG. Kjærstads foreløpig seneste romaner er{" "}
-          <BookLink link={{ to: "/bibliografi/en-tid-for-a-leve" }}>
-            En tid for å leve
-          </BookLink>{" "}
-          (2021) og{" "}
           <BookLink link={{ to: "/bibliografi/valgdager" }}>Valgdager</BookLink>{" "}
-          (2024). Ved siden av fire billedbøker for barn har han også gitt ut fem
+          (2024) og{" "}
+          <BookLink link={{ to: "/bibliografi/en-verdig-sak-for-thomas-hegel" }}>
+            En verdig sak for Thomas Hegel
+          </BookLink>{" "}
+          (2026). Ved siden av fire billedbøker for barn har han også gitt ut fem
           essaysamlinger. Han regnes i dag som en av de mest toneangivende forfatterne
           i sin generasjon.
         </>,
@@ -167,12 +167,12 @@ function Biografi() {
           participating in public debate. His novel{" "}
           <BookLink link={{ to: "/bibliografi/berge" }}>Berge</BookLink> (2017) was
           named Book of the Year by VG. His most recent novels are{" "}
-          <BookLink link={{ to: "/bibliografi/en-tid-for-a-leve" }}>
-            A Time to Live
-          </BookLink>{" "}
-          (2021) and{" "}
           <BookLink link={{ to: "/bibliografi/valgdager" }}>Election Days</BookLink>{" "}
-          (2024). In addition to four picture books for children, he has also published
+          (2024) and{" "}
+          <BookLink link={{ to: "/bibliografi/en-verdig-sak-for-thomas-hegel" }}>
+            A Worthy Case for Thomas Hegel
+          </BookLink>{" "}
+          (2026). In addition to four picture books for children, he has also published
           five essay collections. He is widely regarded as one of the most influential
           authors of his generation.
         </>,
