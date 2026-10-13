@@ -59,7 +59,7 @@ const content: BookPageContent = {
       "The two cases Hegel is working on take him to bars and cafés, tennis courts and specialist shops, museums, libraries and concert venues, film clubs and parties; occasionally he must also follow people through the streets of the city.",
       "What are the most common motives when a person betrays their partner? And what are the unusual ones? Why does an unfaithful spouse, who otherwise leads an ordinary life, suddenly become so surprisingly inventive?",
       "The reader is initiated into the art of writing a letter and the tricks that apply when composing the lyrics to a love song that makes people cry.",
-      "Here is Thomas Hegel in his own words: «The vast majority of crimes are essentially simple – murder too. I wanted to work with something truly complicated. Love.»"
+      "Here is Thomas Hegel in his own words: 'The vast majority of crimes are essentially simple – murder too. I wanted to work with something truly complicated. Love.'"
     ],
   },
 };
