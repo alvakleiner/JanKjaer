@@ -8,8 +8,8 @@ const valgdagerContent: BookPageContent = {
   title: { no: "Valgdager", en: "Election Days" },
   meta: { no: "Roman (2024)", en: "Novel (2024)" },
   buyLink: {
-    no: { label: "Kjøp boken her", href: "https://aschehoug.no/valgdager-1" },
-    en: { label: "Buy the book here", href: "https://aschehoug.no/valgdager-1" },
+    no: { label: "Kjøp boken her", href: "https://aschehoug.no/valgdager-3" },
+    en: { label: "Buy the book here", href: "https://aschehoug.no/valgdager-3" },
   },
   coverImage: {
     src: "/images/valgdager-3d.png",
